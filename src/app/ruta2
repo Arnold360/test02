@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'ruta2',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.ruta2.html',
+  styleUrls: ['./app.ruta2.css']
 })
 export class ruta2 {
   title = 'ruta2';
