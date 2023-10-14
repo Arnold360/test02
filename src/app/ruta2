@@ -1,1 +1,11 @@
 
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'ruta2',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class ruta2 {
+  title = 'ruta2';
+}
