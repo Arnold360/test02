@@ -10,6 +10,6 @@ export class ruta2 {
   title = 'ruta2';
   element = document.getElementById(botón);
   function sizeChange(){
-    element.style.width = "1000px";
+    this.element.style.width = "1000px";
   }
 }
