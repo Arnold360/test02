@@ -10,9 +10,9 @@ export class ruta2 {
   title: String = 'ruta2';
   element:any ;
   constructor() {
-    this.element = document.getElementById("botón");
+    element = document.getElementById("botón");
   } 
   function sizeChange(){
-    this.element.style.width = "1000px";
+    element.style.width = "1000px";
   }
 }
