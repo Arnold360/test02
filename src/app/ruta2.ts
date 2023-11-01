@@ -8,11 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ruta2 {
   title: String = 'ruta2';
-  element:any ;
+  element:any;
   constructor() {
-    this.element = document.getElementById("botón");
-  } 
-  function sizeChange(){
-    this.element.style.width = "1000px";
+  
   }
 }
