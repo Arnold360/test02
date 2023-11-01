@@ -12,4 +12,7 @@ export class ruta2 {
   constructor() {
   this.element = document.getElementById('botón');
   }
+  sizeChange() {
+    
+  }
 }
