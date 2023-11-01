@@ -10,6 +10,6 @@ export class ruta2 {
   title: String = 'ruta2';
   element:any;
   constructor() {
-  
+  element = document.getElementById('botón');
   }
 }
