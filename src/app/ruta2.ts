@@ -12,7 +12,7 @@ export class ruta2 {
   constructor() {
   this.element = document.getElementById("botón");
   }
-  function sizeChange() {
+  function sizeChange(): any {
     this.element.style.width = "100px";
     this.title = "Texto alterado";
   }
