@@ -14,5 +14,6 @@ export class ruta2 {
   }
   sizeChange() {
     this.element.style.width = "100px";
+    this.title = "Texto alterado";
   }
 }
