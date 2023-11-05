@@ -9,10 +9,17 @@ import { Component } from '@angular/core';
 export class ruta2 {
   title = '@#$__&-+(';
   element:any;
+  count:number;
   constructor() {
   this.element = document.getElementById("botón");
   }
   sizeChange() {
-    this.title = "Texto alterado";
+    if (count <= 5){
+     this.title = 'Texto alterado {count}';
+     count++;
+    }
+    else{
+      
+    }
   }
 }
