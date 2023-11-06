@@ -16,7 +16,7 @@ export class ruta2 {
   sizeChange() {
     if (this.count <= 5){
      this.title = `Texto alterado ${this.count}`;
-     count++;
+     this.count++;
     }
     else{
       
