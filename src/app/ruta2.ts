@@ -19,7 +19,7 @@ export class ruta2 {
      this.count++;
     }
     else{
-      
+      this.title = "no hay mas";
     }
   }
 }
