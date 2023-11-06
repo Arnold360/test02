@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ruta2 {
   title = '@#$__&-+('
-  count:number = 0;
+  count = 0;
+  element;
   constructor() {
   this.element = document.getElementById("botón");
   }
