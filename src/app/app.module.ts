@@ -1,3 +1,5 @@
+// other imports
+import { TscUiModule } from 'tsc-ui';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,7 +14,8 @@ import { ruta2 } from './ruta2';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TscUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
