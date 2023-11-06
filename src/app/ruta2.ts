@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruta2.css']
 })
 export class ruta2 {
-  title = '@#$__&-+(';
-  element:any;
-  count:number;
+  title = '@#$__&-+('
+  count:number = 0;
   constructor() {
   this.element = document.getElementById("botón");
   }
