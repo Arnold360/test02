@@ -14,8 +14,8 @@ export class ruta2 {
   this.element = document.getElementById("botón");
   }
   sizeChange() {
-    if (count <= 5){
-     this.title = 'Texto alterado {count}';
+    if (this.count <= 5){
+     this.title = `Texto alterado ${this.count}`;
      count++;
     }
     else{
