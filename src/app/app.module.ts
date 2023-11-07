@@ -14,8 +14,7 @@ import { ruta2 } from './ruta2';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    TscUiModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
