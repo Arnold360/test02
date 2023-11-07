@@ -20,6 +20,7 @@ export class ruta2 {
     }
     else{
       this.title = "no hay mas";
+      alert();
     }
   }
 }
