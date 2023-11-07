@@ -17,10 +17,11 @@ export class ruta2 {
     if (this.count <= 5){
      this.title = `Texto alterado ${this.count}`;
      this.count++;
+     message();
     }
     else{
       this.title = "no hay mas";
-      alert();
+      alert("este es un prueba de mensaje");
     }
   }
 }
