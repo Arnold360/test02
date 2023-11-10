@@ -18,9 +18,8 @@ export class ruta2 {
   sizeChange() {
     if (this.count <= 1){
      this.title = `Texto alterado ${this.count}`;
+     this.source = this.sources[this.count];
      this.count++;
-     this.source = this.sources[this.count]
-     
     }
     else{
       this.title = "no hay mas";
