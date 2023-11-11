@@ -24,7 +24,7 @@ export class ruta2 {
     else{
       this.title = "no hay mas";
       this.count = 0;
-      alert("este es un prueba de mensaje");
+    
     }
   }
 }
