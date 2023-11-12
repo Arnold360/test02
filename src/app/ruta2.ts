@@ -20,7 +20,7 @@ export class ruta2 {
      this.title = `Texto alterado ${this.count}`;
      this.source = this.sources[this.count];
      this.count++;
-      this.element.width = "50"; 
+     this.element.alt = "50"; 
     }
     else{
       this.title = "no hay mas";
