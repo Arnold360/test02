@@ -40,6 +40,7 @@ export class ruta2 {
        this.titles();
      } 
    }
+   }
 
     
     
