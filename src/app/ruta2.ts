@@ -16,17 +16,28 @@ export class ruta2 {
   this.element = document.getElementById("imagen");
     
   }
-  sizeChange() {
-    if (this.count <= 2){
-     this.title = `Texto alterado ${this.count}`;
-     this.source = this.sources[this.count];
+  titles(){
+    this.title = `Texto alterado ${this.count}`;
+    this.source = this.sources[this.count];
+  }
+  next() {
+    if (this.count < sources.length) {
+     this.titles();
      this.count++;
-    
     }
     else{
-      this.title = "no hay mas";
-      this.count = 0;
-    
+     this.count = 0;
+     this.titles();
     }
+  }
+   prior() {
+     if (this.count > 0) {
+       this.count--;
+       this.titles(); 
+     } 
+   }
+
+    
+    
   }
 }
