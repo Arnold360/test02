@@ -30,7 +30,7 @@ export class ruta2 {
      this.titles();
     }
   }
-   prior() {
+  prior() {
      if (this.count > 0) {
        this.count--;
        this.titles(); 
@@ -40,9 +40,10 @@ export class ruta2 {
        this.titles();
      } 
    }
-   }
+ 
+}
 
     
     
-  }
-}
+  
+
