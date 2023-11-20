@@ -1,12 +1,16 @@
 <div>
-  <nav>
-  <span>
-  <h1>Imagen moche {{title}}</h1>   
-  <button type= "button" style= "background: darkcyan; color: white" width= "50px" id="boton" (click)="next()"> NEXT </button>
-  <span>    </span>
-  <button type= "button" style= "background: darkcyan; color: white" id= "boton" (click)="prior()"> PRIOR </button>  
-  </span>
-  </nav>
+  
+  <div id = "fondo">
+    <div>
+     <span>
+      <h1>Imagen moche {{title}}</h1>   
+      <button type= "button" style= "background: darkcyan; color: white" width= "50px" id="boton" (click)="next()"> NEXT </button>
+      <span>    </span>
+      <button type= "button" style= "background: darkcyan; color: white" id= "boton" (click)="prior()"> PRIOR </button>  
+     </span>
+    </div>
+  </div>
+  
   <form>
     <label for="input"></label>
     <input id="input">
