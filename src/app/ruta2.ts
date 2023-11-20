@@ -21,9 +21,9 @@ export class ruta2 {
     this.source = this.sources[this.count];
   }
   next() {
-    if (this.count < this.sources.length - 1) {
-     this.titles();
+    if (this.count < this.sources.length  ) {
      this.count++;
+     this.title();
     }
     else{
      this.count = 0;
