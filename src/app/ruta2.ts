@@ -23,7 +23,7 @@ export class ruta2 {
   next() {
     if (this.count < this.sources.length  ) {
      this.count++;
-     this.title();
+     this.titles();
     }
     else{
      this.count = 0;
