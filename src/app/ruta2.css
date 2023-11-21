@@ -6,6 +6,9 @@
   width: 250px;
   height: 250px;
 } 
+#fondo {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKZrjpt0HYtqsvrDzpb8B1DrYus3uh8Uh4SoaS1IWZ_HHTFC-3MMk2CnJR&s=10');
+}
 nav {
   
 } 
