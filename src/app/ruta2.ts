@@ -22,12 +22,19 @@ export class ruta2 {
   "https://picsum.photos/200/300?random=1",
   "https://picsum.photos/200/300?random=2"
 ];
+  animalImages: string[] = [
+    'https://www.pexels.com/photo/1',
+    'https://www.pexels.com/photo/2',
+    'https://www.pixabay.com/photo/1',
+    'https://www.pixabay.com/photo/2',
+    // Agrega más URLs de imágenes aquí
+];
 
   sources: string[] = [
     "https://4.bp.blogspot.com/-9AMM6-R4LG8/TaB68k4nOdI/AAAAAAAACaU/61VQ0G6McdQ/s1600/TODO-EL-ARTE-MOCHICA-EN-VASIJA-FIGURA-Y-ABUNDANTE-DECORACION-CON-ASA-ESTRIBO.jpg" ,
     "https://www.meisterdrucke.es/kunstwerke/400w/Moche%20-%20Stirrup%20vase%20in%20the%20form%20of%20a%20man%20playing%20a%20drum%20200-800%20%28ce%20-%20%28MeisterDrucke-259516%29.jpg" ,
     "https://www.tierra-inca.com/album/photos/020/02044.jpg"
-      ].concat(this.imagenesAleatorias);
+      ].concat(this.imagenesAleatorias).concat(this.animalImages);
   source = "https://4.bp.blogspot.com/-9AMM6-R4LG8/TaB68k4nOdI/AAAAAAAACaU/61VQ0G6McdQ/s1600/TODO-EL-ARTE-MOCHICA-EN-VASIJA-FIGURA-Y-ABUNDANTE-DECORACION-CON-ASA-ESTRIBO.jpg";
   constructor() {
   this.element = document.getElementById("imagen");
