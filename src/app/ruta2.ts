@@ -23,10 +23,10 @@ export class ruta2 {
   "https://picsum.photos/200/300?random=2"
 ];
   animalImages: string[] = [
-    'https://www.pexels.com/photo/1',
-    'https://www.pexels.com/photo/2',
-    'https://www.pixabay.com/photo/1',
-    'https://www.pixabay.com/photo/2',
+   'https://source.unsplash.com/random/1',
+    'https://source.unsplash.com/random/2',
+    'https://source.unsplash.com/random/3',
+    'https://source.unsplash.com/random/4'
     // Agrega más URLs de imágenes aquí
 ];
 
