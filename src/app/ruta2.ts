@@ -10,7 +10,7 @@ export class ruta2 {
   title = '@#$__&-+(';
   count = 0;
   element: HTMLElement | null;
-  let imagenesAleatorias: string[] = [
+  imagenesAleatorias: string[] = [
   "https://picsum.photos/200/300",
   "https://picsum.photos/200",
   "https://picsum.photos/id/237/200/300",
