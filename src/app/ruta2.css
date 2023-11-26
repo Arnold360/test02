@@ -5,6 +5,7 @@
 #fondoBoton{
   color: blue;
   text-align: center;
+  border: 10px solid blue;
 }
 #imagen {
   width: 259px;
