@@ -3,7 +3,8 @@
   height: 50px;
 }  
 #fondoBoton{
-  
+  padding-right: 100px;
+  padding-left: 100px;
   text-align: center;
 }
 #imagen {
