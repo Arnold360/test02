@@ -6,13 +6,13 @@
   text-align: center;
 }
 #imagen {
-  width: 100%;
+  width: 259px;
   height: 250px;
 } 
 #fondo {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKZrjpt0HYtqsvrDzpb8B1DrYus3uh8Uh4SoaS1IWZ_HHTFC-3MMk2CnJR&s=10');
-  width: 450px;
-  height: 150px;
+  width: 100%;
+  height: 33%;
   text-align: left;
 }
 nav {
