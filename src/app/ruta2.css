@@ -8,6 +8,7 @@
   
   text-align: center;
   border: 10px solid blue;
+  display: flex;
 }
 #imagen {
   width: 259px;
