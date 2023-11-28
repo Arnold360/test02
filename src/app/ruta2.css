@@ -9,6 +9,7 @@
   text-align: center;
   border: 10px solid blue;
   display: flex;
+  align-items: start;
 }
 #imagen {
   width: 259px;
