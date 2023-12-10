@@ -5,8 +5,7 @@ import { ruta3 } from './ruta3';
 import {AppComponent} from './app.component';
 
 const routes: Routes = [{path: 'ruta2',  component: ruta2},
-                        {path: 'ruta3',  component: ruta3},
-                        {path: '**', component: AppComponent}];
+                        {path: 'ruta3',  component: ruta3}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
