@@ -1,12 +1,15 @@
 #fondo {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_eO_YGP-y8vT4zZDMIVTwPjsF5kz7Wj71Og&usqp=CAU');
   height: 200px;
-  width: 100%;
-  color: orange;
-  
+  width: 100%;  
 }
+
 #barranav {
   display: flex;
   align-items: start;
   justify-content: space-between;
+}
+
+a {
+  color: orange;
 }
