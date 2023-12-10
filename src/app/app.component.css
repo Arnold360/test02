@@ -1,6 +1,9 @@
 #fondo {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_eO_YGP-y8vT4zZDMIVTwPjsF5kz7Wj71Og&usqp=CAU');
   height: 200px;
+  
+}
+#barranav {
   display: flex;
   align-items: start;
   justify-content: space-between;
