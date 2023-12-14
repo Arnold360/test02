@@ -5,8 +5,9 @@
 }
 
 #barranav {
-  display: flex;
-  align-items: bottom;
+  display: grid;
+  position: relative;
+  align-items: end;
   justify-content: space-between;
   text-align: bottom;
 }
