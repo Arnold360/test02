@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ruta2 } from './ruta2';
 import { ruta3 } from './ruta3';
-import { ruta3 } from './ruta4';
+import { ruta4 } from './ruta4';
 import {AppComponent} from './app.component';
 
 const routes: Routes = [{path: 'ruta2',  component: ruta2},
