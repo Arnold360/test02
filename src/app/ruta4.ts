@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruta4.css']
 })
 export class ruta4 {
+  conferencias;
+  mitines;
+  entrevistas;
+  declaraciones = [conferencias, mitines, entrevistas];
 }
