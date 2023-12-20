@@ -10,5 +10,5 @@ export class ruta4 {
   conferencias:string[] = [];
   mitines:string[] = [];
   entrevistas:string[] = [];
-  declaraciones = [conferencias, mitines, entrevistas];
+  declaraciones = [this.conferencias, this.mitines, this.entrevistas];
 }
