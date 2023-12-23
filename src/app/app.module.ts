@@ -13,7 +13,8 @@ import { ruta2 } from './ruta2';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
