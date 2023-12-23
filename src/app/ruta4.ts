@@ -13,7 +13,7 @@ export class ruta4 {
   declaraciones:string[] = this.conferencias.concat(this.mitines).concat(this.entrevistas);
   videoActual:string = "";
 
-  changeLink( indice ){
+  changeLink( indice:int ){
 
     this.videoActual = this.declaraciones[indice];
      
