@@ -15,7 +15,7 @@ export class ruta4 {
 
   changeLink( indice ){
 
-    this.videoActual = 
+    this.videoActual = declaraciones[indice];
      
   }
 }
