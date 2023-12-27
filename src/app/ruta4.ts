@@ -12,10 +12,12 @@ export class ruta4 {
   entrevistas:string[] = ["ENTREVISTA WILLAX 2022","ENTREVISTA LA REPUBLICA 2023"];
   declaraciones:string[] = this.conferencias.concat(this.mitines).concat(this.entrevistas);
   videoActual:string = "";
+  indice:number = 0;
 
   changeLink( indice:number ){
-
+    
     this.videoActual = this.declaraciones[indice];
+    this.number += 1;
      
   }
 }
