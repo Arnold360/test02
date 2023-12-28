@@ -8,7 +8,7 @@ import {AppComponent} from './app.component';
 
 const routes: Routes = [{path: 'ruta2',  component: ruta2},
                         {path: 'ruta3',  component: ruta3},
-                        {path: 'ruta4',  component: ruta4,  children: [ {path:'ruta5', component: ruta5} ] };
+                        {path: 'ruta4',  component: ruta4,  children: [ {path:'ruta5', component: ruta5} ] }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
