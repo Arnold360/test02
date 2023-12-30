@@ -21,7 +21,7 @@ export class ruta4 {
     this.indice += 1;
      
   }
-  for(i = 0 ;  this.declaraciones.length > i ; i++){
+  for(i = 0 ; declaraciones.length > i ; i++){
     this.rutas.push("ruta" + i.toString());
   }
 }
