@@ -13,12 +13,15 @@ export class ruta4 {
   declaraciones:string[] = this.conferencias.concat(this.mitines).concat(this.entrevistas);
   videoActual:string = "";
   indice:number = 0;
-  rutas:string[] = ["ruta","ruta2","ruta3","ruta4","ruta5"]; 
+  rutas:string[] = []; 
 
   changeLink( indice:number ){
     
     this.videoActual = this.declaraciones[indice];
     this.indice += 1;
      
+  }
+  for(i = 0 ;  this.declaraciones.length > i ; i++){
+    this.rutas.push("ruta" + i.toString());
   }
 }
