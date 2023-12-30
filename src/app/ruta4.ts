@@ -13,6 +13,7 @@ export class ruta4 {
   declaraciones:string[] = this.conferencias.concat(this.mitines).concat(this.entrevistas);
   videoActual:string = "";
   indice:number = 0;
+  rutas:string[] = ["ruta","ruta2","ruta3","ruta4","ruta5"]; 
 
   changeLink( indice:number ){
     
