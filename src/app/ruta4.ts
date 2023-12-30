@@ -13,7 +13,7 @@ export class ruta4 {
   declaraciones:string[] = this.conferencias.concat(this.mitines).concat(this.entrevistas);
   videoActual:string = "";
   indice:number = 0;
-  rutas!:string[] = []; 
+  rutas:string[] = []; 
 
   
   constructor(){
