@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { ruta2 } from './ruta2';
 import { ruta3 } from './ruta3';
 import { ruta4 } from './ruta4';
+import { ruta5 } from './ruta5';
+import { ruta6 } from './ruta6';
 
 @NgModule({
   declarations: [
     AppComponent,
     ruta2,
     ruta3,
-    ruta4
+    ruta4,
+    ruta5,
+    ruta6
   ],
   imports: [
     BrowserModule,
