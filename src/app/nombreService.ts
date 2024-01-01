@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class nombreService {
 
-  entrevistas:String[] = ["entrevista1", "entrevista2", "entrevista3"];
+  entrevistas:string[] = ["entrevista1", "entrevista2", "entrevista3"];
   constructor() { }
 
 }
