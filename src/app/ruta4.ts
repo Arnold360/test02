@@ -19,10 +19,10 @@ export class ruta4 {
   nombre!:string[];
 
   
-  constructor(nombre:nombreService){
+  constructor(nombreservice:nombreService){
     for (let i = 0; this.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());
-      this.nombre = nombre;
+      this.nombre = nombreservice.nombre;
     }
   }
 
