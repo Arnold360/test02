@@ -22,7 +22,7 @@ export class ruta4 {
   constructor(nombreservice:nombreService){
     for (let i = 0; this.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());
-      this.nombre = nombreservice.nombre;
+      this.nombre = nombreservice.entrevistas;
     }
   }
 
