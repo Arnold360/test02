@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import {nombreService} from '.nombreService'
+import { nombreService } from './nombreService'
 
 @Component({
   selector: 'ruta4',
