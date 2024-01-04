@@ -12,7 +12,7 @@ export class nombreService {
   entrevistas:entrevista[] = [{nombre:"entrevista" , url:"https://www.youtube.com/embed/m3hay8aw0Pc?si=s2irA4BQisB1vgMS" }];
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
-      this.entrevistas.push{{nombre:this.nombres[i], url:this.urls[i]}};
+      this.entrevistas.push({nombre:this.nombres[i], url:this.urls[i])};
     }
   }
 }
