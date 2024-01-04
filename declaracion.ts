@@ -1,5 +1,5 @@
 
-export interface entrevista {
+export interface declaracion {
 
   nombre:string;
   url:string;
