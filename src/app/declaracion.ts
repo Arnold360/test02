@@ -1,5 +1,5 @@
 
 export interface declaracion {
-  name:string;
+  nombre:string;
   url:string;
 }
