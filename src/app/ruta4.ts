@@ -16,13 +16,13 @@ export class ruta4 {
   videoActual:string = "";
   indice:number = 0;
   rutas:string[] = []; 
-  nombre!:declaracion[];
+  nombre!:string[];
 
   
   constructor(nombreservice:nombreService){
     for (let i = 0; this.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());
-      this.nombre = nombreservice.declaraciones;
+      this.nombre.push(nombreservice.declaraciones[i].nombre);
     }
   }
 
