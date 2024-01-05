@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { nombreService } from './nombreService';
-import { entrevista } from './entrevista';
+import { declaracion } from './declaracion';
 @Component({
   selector: 'ruta4',
   templateUrl: './ruta4.html',
@@ -16,7 +16,7 @@ export class ruta4 {
   videoActual:string = "";
   indice:number = 0;
   rutas:string[] = []; 
-  nombre!:entrevista[];
+  nombre!:declaracion[];
 
   
   constructor(nombreservice:nombreService){
