@@ -26,10 +26,6 @@ export class ruta4 {
     }
   }
 
-  changeLink( indice:number ){
-    
-    this.videoActual = this.declaraciones[indice];
-    this.indice += 1;
-     
-  }
+  
+  
 }
