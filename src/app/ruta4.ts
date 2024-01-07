@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
 import { nombreService } from './nombreService';
-import { declaracion } from './declaracion';
+
 @Component({
   selector: 'ruta4',
   templateUrl: './ruta4.html',
