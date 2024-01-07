@@ -16,7 +16,7 @@ export class ruta4 {
   videoActual:string = "";
   indice:number = 0;
   rutas:string[] = []; 
-  nombre!:string[];
+  nombre:string[] = [];
 
   
   constructor(nombreservice:nombreService){
