@@ -1,5 +1,5 @@
 
-export interface declaracion {
-  nombre:string;
-  url:string;
+export class declaracion {
+  nombre!:string;
+  url!:string;
 }
