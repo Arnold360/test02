@@ -9,7 +9,7 @@ import { ruta3 } from './ruta3';
 import { ruta4 } from './ruta4';
 import { ruta5 } from './ruta5';
 import { ruta6 } from './ruta6';
-import { nombreService } from './nombreService'
+import { nombreService } from './nombreService';
 
 @NgModule({
   declarations: [
