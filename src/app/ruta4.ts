@@ -23,11 +23,11 @@ export class ruta4 {
       this.rutas.push("ruta" + i.toString());  
       this.Nombre.push(nombreservice.declaraciones[i].nombre)
     }
-     ngOnInit() {
-     // Called after the constructor and called  after the first ngOnChanges() 
-  }
+
   }
 
-  
+      ngOnInit() {
+     // Called after the constructor and called  after the first ngOnChanges() 
+  } 
   
 }
