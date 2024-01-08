@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
 
 @Injectable({
-  providedIn: 'root',
+
 })
 export class nombreService {
 
