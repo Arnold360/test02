@@ -9,7 +9,6 @@ import { ruta3 } from './ruta3';
 import { ruta4 } from './ruta4';
 import { ruta5 } from './ruta5';
 import { ruta6 } from './ruta6';
-import { declaracion } from './declaracion';
 import { nombreService } from './nombreService';
 
 @NgModule({
@@ -20,7 +19,7 @@ import { nombreService } from './nombreService';
     ruta4,
     ruta5,
     ruta6,
-    declaracion
+   
   ],
   imports: [
     BrowserModule,
