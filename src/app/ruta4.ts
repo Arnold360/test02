@@ -21,7 +21,7 @@ export class ruta4 {
   constructor(public nombreservice:nombreService){
     for (let i = 0; this.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
-      this.Nombre.push(nombreservice.declaracion[i].name)
+      this.Nombre.push(nombreservice.declaraciones[i].nombre)
     }
      ngOnInit() {
      // Called after the constructor and called  after the first ngOnChanges() 
