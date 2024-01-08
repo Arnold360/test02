@@ -1,12 +1,11 @@
 
 import { Component } from '@angular/core';
-import { nombreService } from 'nombreService';
+import { nombreService } from './nombreService';
 @Component({
   selector: 'ruta4',
   templateUrl: './ruta4.html',
   styleUrls: ['./ruta4.css'],
-  
-
+  providers: [nombreService]
 })
 export class ruta4 {
   conferencias:string[] = ["CONFERENCIA EN LA PLAZA SAN MARTIN 2022","CONFERENCIA EN ANDAHUAYLAS 2022"];
