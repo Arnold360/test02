@@ -19,7 +19,7 @@ export class nombreService {
   declaraciones:declaracion[] = [{nombre:"entrevista" , url:"https://www.youtube.com/embed/m3hay8aw0Pc?si=s2irA4BQisB1vgMS" }];
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
-      this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
+      this.declaraciones.push({nombre!, url!});
     }
   }
 }
