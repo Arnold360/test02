@@ -16,7 +16,7 @@ export class nombreService {
                    "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                    "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
                   ];
-  declaraciones:declaracion[] = [{nombre:"entrevista" , url:"https://www.youtube.com/embed/m3hay8aw0Pc?si=s2irA4BQisB1vgMS" }];
+  declaraciones:declaracion[] = [];
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre!, url!});
