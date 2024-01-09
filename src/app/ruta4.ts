@@ -16,9 +16,11 @@ export class ruta4 {
   indice:number = 0;
   rutas:string[] = []; 
   Nombre:string[] = [ "a","b","c"];
+  test!:string;
 
   
   constructor(public nombreservice:nombreService){
+    test = nombreservice.declaraciones[0].nombre;
     for (let i = 0; this.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       this.Nombre.push("c");
