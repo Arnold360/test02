@@ -16,7 +16,7 @@ export class ruta4 {
   indice:number = 0;
   rutas:string[] = []; 
   Nombre:string[] = [ "a","b","c"];
-  test!:string;
+  test!:nombreService;
 
   
   constructor(public nombreservice:nombreService){
