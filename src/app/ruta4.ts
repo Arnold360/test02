@@ -21,7 +21,7 @@ export class ruta4 {
   
   constructor(public nombreservice:nombreService){
     this.test = nombreservice;
-    for (let i = 0; this.declaraciones.length > i; i++){
+    for (let i = 0; nombreservice.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       this.Nombre.push(nombreservice.declaraciones[i].nombre);
     }
