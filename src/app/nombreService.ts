@@ -17,6 +17,8 @@ export class nombreService {
                    "https://www.youtube.com/embed/6TXE6qFPI7Y?si=-ffjiubZfRxniNeq",
                    "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                    "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
+                   "aaaaaaaaaaaaaaaaaaa",
+                   "bbbbbbbbbbbbbbbbbbbbbb"
                   ];
   declaraciones:declaracion[] = [];
   constructor() {
