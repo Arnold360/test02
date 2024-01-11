@@ -10,15 +10,17 @@ export class nombreService {
                       "ANTAURO HUMALA NO SE ARREPIENTE DE NADA Y PROMETE MEDIDAS RADICALES 08/2023",
                       "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
                       "aaaaaaaaaaaaaaaa",
-                      "bbbbbbbbbbbbbbbbbbb"
-                      
+                      "bbbbbbbbbbbbbbbbbbb",
+                      "cccccccccccccccccccccc"
                       ];
+  
   urls:string[] = ["https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo",
                    "https://www.youtube.com/embed/6TXE6qFPI7Y?si=-ffjiubZfRxniNeq",
                    "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                    "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
                    "aaaaaaaaaaaaaaaaaaa",
-                   "bbbbbbbbbbbbbbbbbbbbbb"
+                   "bbbbbbbbbbbbbbbbbbbbbb",
+                   "ccccccccccccccccccccccccccc"
                   ];
   declaraciones:declaracion[] = [];
   constructor() {
