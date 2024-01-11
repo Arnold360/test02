@@ -23,7 +23,7 @@ export class ruta4 {
     this.test = nombreservice;
     for (let i = 0; this.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
-      this.Nombre.push("c");
+      this.Nombre.push(nombreservice.declaraciones[i].nombre);
     }
 
   }
