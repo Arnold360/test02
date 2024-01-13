@@ -15,7 +15,7 @@ export class ruta4 {
   videoActual:string = "";
   indice:number = 0;
   rutas:string[] = []; 
-  element:object = document.getElementByClass("elemento");
+  element:object = document.getElementByClassName("elemento");
   
   
   constructor(public nombreservice:nombreService){
