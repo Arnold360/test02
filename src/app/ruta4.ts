@@ -16,11 +16,11 @@ export class ruta4 {
   indice:number = 0;
   rutas:string[] = []; 
   element:HTMLCollection = document.getElementsByClassName("elemento");
-  prueba!:string;
+  prueba!:number;
   
   
   constructor(public nombreservice:nombreService){
-
+    this.prueba = this.element.length;
     for (let i = 0; nombreservice.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       
