@@ -15,7 +15,7 @@ export class ruta4 {
   videoActual:string = "";
   indice:number = 0;
   rutas:string[] = []; 
-  element:HTMLCollection|null = document.getElementById("elemento").getElementsByClassName("elemento");
+  element:HTMLCollection = 
   prueba!:number;
   
   
@@ -25,11 +25,13 @@ export class ruta4 {
       this.rutas.push("ruta" + i.toString());  
       
     }
+    
 
+  
+
+      ngAfterContentInit() {
+    this.element = document.getElementById("elemento").getElementsByClassName("elemento");
   }
-
-      ngOnInit() {
-     // Called after the constructor and called  after the first ngOnChanges() 
-  } 
+  
   
 }
