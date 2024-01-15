@@ -15,7 +15,7 @@ export class ruta4 {
   videoActual:string = "";
   indice:number = 0;
   rutas:string[] = []; 
-  element:HTMLCollection = document.getElementsByClassName("elemento");
+  element:HTMLCollection = document.getElementById("elemento").getElementsByClassName("elemento");
   prueba!:number;
   
   
