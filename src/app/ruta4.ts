@@ -20,7 +20,7 @@ export class ruta4 {
   
   
   constructor(public nombreservice:nombreService){
-    this.prueba = this.element.length;
+    
     for (let i = 0; nombreservice.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       }
@@ -31,6 +31,7 @@ export class ruta4 {
 
       ngAfterContentInit() {
     this.element = document.getElementById("elemento").getElementsByClassName("elemento");
+    this.prueba = this.element.length;
   }
   
   
