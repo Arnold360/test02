@@ -30,7 +30,7 @@ export class ruta4 {
   
 
       ngAfterContentInit() {
-    this.element = document.getElementById("elemento").getElementsByClassName("elemento")?;
+    this.element = document.getElementById("elemento")?.getElementsByClassName("elemento");
     this.prueba = this.element.length;
   }
   
