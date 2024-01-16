@@ -20,8 +20,7 @@ export class ruta4 implements AfterViewInit {
   
   
   constructor(public nombreservice:nombreService){
-    this.element = document.getElementById("elemento")?.getElementsByClassName("elemento") as HTMLCollection;
-    this.prueba = this.element.length;
+    
     for (let i = 0; nombreservice.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       }
@@ -31,7 +30,8 @@ export class ruta4 implements AfterViewInit {
   
 
       ngAfterViewInit() {
-    
+    this.element = document.getElementById("elemento")?.getElementsByClassName("elemento") as HTMLCollection;
+    this.prueba = this.element.length;
   }
   
   
