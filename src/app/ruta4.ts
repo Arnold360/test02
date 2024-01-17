@@ -30,7 +30,7 @@ export class ruta4 implements AfterViewInit {
   
 
       ngAfterViewInit() {
-    this.element = document.getElementById("elemento")?.getElementsByClassName("elemento") as HTMLCollection;
+    this.element = document.getElementsByClassName("elemento") as HTMLCollection;
     this.prueba = this.element.length;
   }
   
