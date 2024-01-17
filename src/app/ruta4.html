@@ -1,8 +1,10 @@
 <div>
   <h1> HOLA MUNDO </h1>
   <div id="elemento"  >
-    <ul class="elemento" *ngFor="let declaracion of nombreservice.declaraciones; index as i" >
-    <a  [routerLink]= "rutas[i]"> {{declaracion.nombre}} {{ prueba }} <br> </a>  <br>
+    <ul>
+     <li class="elemento" *ngFor="let declaracion of nombreservice.declaraciones; index as i" >
+      <a  [routerLink]= "rutas[i]"> {{declaracion.nombre}} {{ prueba }} <br> </a>  <br>
+     </li>
     </ul>  
   </div>
   <router-outlet></router-outlet>
