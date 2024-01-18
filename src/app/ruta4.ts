@@ -29,10 +29,14 @@ export class ruta4 implements AfterViewInit {
 
   
 
-      ngAfterViewInit() {
+   ngAfterViewInit() {
     this.element = document.getElementsByClassName("elemento") as HTMLCollection;
     this.prueba = this.element.length;
   }
+
+   cambiarUrl(){
+     
+   }
   
   
 }
