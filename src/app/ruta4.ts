@@ -34,7 +34,7 @@ export class ruta4 implements AfterViewInit {
     this.prueba = this.element.length;
   }
 
-   cambiarEnlace(i){
+   cambiarEnlace(i:number){
      nombreservice.enlace = nombreservice.declaraciones[i].url;
      
    }
