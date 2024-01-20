@@ -6,7 +6,7 @@ import { nombreService } from './nombreService';
   selector: 'ruta5',
   templateUrl: './ruta5.html',
   styleUrls: ['./ruta5.css'],
-  providers: [ nombreService ];
+  providers: [ nombreService ]
 })
 export class ruta5 {
   enlace:string;
