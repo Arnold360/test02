@@ -23,7 +23,7 @@ export class nombreService {
                    "ccccccccccccccccccccccccccc"
                   ];
   declaraciones:declaracion[] = [];
-  urlEntrevistaTemplate!:string;
+  enlace!:string;
   
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
