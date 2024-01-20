@@ -5,7 +5,7 @@ import { nombreService } from './nombreService';
 @Component({
   selector: 'ruta5',
   templateUrl: './ruta5.html',
-  styleUrls: ['./ruta5.css']
+  styleUrls: ['./ruta5.css'],
   providers: [ nombreService ];
 })
 export class ruta5 {
