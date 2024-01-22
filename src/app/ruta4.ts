@@ -5,7 +5,7 @@ import { nombreService } from './nombreService';
   selector: 'ruta4',
   templateUrl: './ruta4.html',
   styleUrls: ['./ruta4.css'],
-  providers: [nombreService]
+  
 })
 export class ruta4 implements AfterViewInit {
   conferencias:string[] = ["CONFERENCIA EN LA PLAZA SAN MARTIN 2022","CONFERENCIA EN ANDAHUAYLAS 2022"];
