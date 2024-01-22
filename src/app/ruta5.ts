@@ -10,10 +10,9 @@ import { nombreService } from './nombreService';
 })
 export class ruta5 {
   
-  enlace:string;
   
   
   constructor(public servicio:nombreService){
-    this.enlace = servicio.enlace;
+    
   } 
 }
