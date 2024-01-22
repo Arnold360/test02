@@ -12,7 +12,7 @@ export class ruta5 {
   
   
   
-  constructor(public servicio:nombreService){
+  constructor(@SkipSelf() public servicio:nombreService){
     
   } 
 }
