@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, SkipSelf } from '@angular/core';
 import { nombreService } from './nombreService';
 
 @Component({
