@@ -2,7 +2,10 @@
 import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+  
 export class nombreService {
 
   nombres:string[] = ["ENTREVISTA A ANTAURO HUMALA TASSO - BEST CALE TV 01/2023", 
