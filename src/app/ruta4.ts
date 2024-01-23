@@ -17,6 +17,7 @@ export class ruta4 implements AfterViewInit {
   rutas:string[] = []; 
   element!:HTMLCollection; 
   prueba!:number;
+  prueba2!:number;
   
   
   constructor(public nombreservice:nombreService){
