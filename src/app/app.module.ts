@@ -27,7 +27,7 @@ import { nombreService } from './nombreService';
     AppRoutingModule
     
   ],
-  providers: [nombreService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
