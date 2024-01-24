@@ -26,7 +26,7 @@ export class nombreService {
                    "ccccccccccccccccccccccccccc"
                   ];
   declaraciones:declaracion[] = [];
-  enlace!:string;
+  enlace:string="https://green-stone-02820b210.3.azurestaticapps.net/ruta2";
   
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
