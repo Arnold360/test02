@@ -12,7 +12,7 @@ export class ruta5 {
   
   
   
-  constructor( public nombreservice:nombreService){
+  constructor( public servicio:nombreService){
     
   } 
 }
