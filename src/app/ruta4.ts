@@ -18,6 +18,7 @@ export class ruta4 implements AfterViewInit {
   element!:HTMLCollection; 
   prueba!:number;
   prueba2!:number;
+  prueba3:string= "https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
   
   
   constructor(public nombreservice:nombreService){
