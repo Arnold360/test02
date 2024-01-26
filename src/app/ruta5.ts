@@ -11,7 +11,7 @@ import { nombreService } from './nombreService';
 export class ruta5 {
   
   
-  
+  prueba:string = "https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
   constructor( public servicio:nombreService){
     
   } 
