@@ -6,13 +6,13 @@ import { nombreService } from './nombreService';
   selector: 'ruta5',
   templateUrl: './ruta5.html',
   styleUrls: ['./ruta5.css'],
-  providers: [ nombreService ]
+  
 })
 export class ruta5 {
   
   
   
-  constructor(@SkipSelf() public servicio:nombreService){
+  constructor( public nombreservice:nombreService){
     
   } 
 }
