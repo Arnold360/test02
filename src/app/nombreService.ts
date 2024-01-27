@@ -1,4 +1,4 @@
-
+import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
 
@@ -26,7 +26,7 @@ export class nombreService {
                    "ccccccccccccccccccccccccccc"
                   ];
   declaraciones:declaracion[] = [];
-  enlace:string="https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
+  enlace:SafeUrl;
   
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
