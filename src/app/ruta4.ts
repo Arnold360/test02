@@ -1,4 +1,4 @@
-
+import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { nombreService } from './nombreService';
 @Component({
@@ -21,7 +21,7 @@ export class ruta4 implements AfterViewInit {
   prueba3:string= "https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
   
   
-  constructor(public nombreservice:nombreService){
+  constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
     for (let i = 0; nombreservice.declaraciones.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
@@ -35,7 +35,7 @@ export class ruta4 implements AfterViewInit {
   }
 
    cambiarEnlace(i:number){
-     this.nombreservice.enlace = this.nombreservice.declaraciones[i].url;
+     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResouceUrl(this.nombreservice.declaraciones[i].url);
      this.prueba2 = i;
      
    }
