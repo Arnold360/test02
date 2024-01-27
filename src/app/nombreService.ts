@@ -26,7 +26,7 @@ export class nombreService {
                    "ccccccccccccccccccccccccccc"
                   ];
   declaraciones:declaracion[] = [];
-  enlace:SafeUrl;
+  enlace!:SafeUrl;
   
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
