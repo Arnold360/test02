@@ -1,4 +1,4 @@
-
+import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Component, SkipSelf } from '@angular/core';
 import { nombreService } from './nombreService';
 
@@ -11,9 +11,9 @@ import { nombreService } from './nombreService';
 export class ruta5 {
   
   
-  prueba:string = "https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
+  prueba:SafeUrl;
   
-  constructor( public servicio:nombreService){
-    
+  constructor( private sanitizer:DomSanitizer, public servicio:nombreService){
+    this.prueba = sanitizer.bypassSercurityTrustResourceUrl(servicio.enlace);
   } 
 }
