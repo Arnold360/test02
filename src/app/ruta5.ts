@@ -14,6 +14,6 @@ export class ruta5 {
   prueba:SafeUrl;
   
   constructor( private sanitizer:DomSanitizer, public servicio:nombreService){
-    this.prueba = sanitizer.bypassSercurityTrustResourceUrl(servicio.enlace);
+    this.prueba = sanitizer.bypassSecurityTrustResourceUrl(servicio.enlace);
   } 
 }
