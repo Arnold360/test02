@@ -12,7 +12,7 @@ export class nombreService {
                       "El cuestionado plan de ANTAURO HUMALA: BUKELIZAR el país y retirarnos de la corte IDH | #LR 12/2023",
                       "ANTAURO HUMALA NO SE ARREPIENTE DE NADA Y PROMETE MEDIDAS RADICALES 08/2023",
                       "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
-                      "DETRAS DE LA VERDAD - PIURA",
+                      "DETRAS DE LA VERDAD - PIURA 10/10/2023",
                       "aaaaaaaaaaaaaaaa",
                       "bbbbbbbbbbbbbbbbbbb",
                       "cccccccccccccccccccccc"
