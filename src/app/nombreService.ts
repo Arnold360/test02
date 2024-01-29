@@ -1,6 +1,7 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
+import RegExp from "typescript-dotnet-commonjs/System/Text/RegularExpressions";
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,7 @@ export class nombreService {
   nombre!:string;
   fechas!:string[];
   titulos!:string[];
+  regex!:RegExp;
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
