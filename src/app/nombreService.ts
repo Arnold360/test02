@@ -1,7 +1,7 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
- import { RegExp } from "RegularExpressions/Regex";
+
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +33,7 @@ export class nombreService {
   nombre!:string;
   fechas!:string[];
   titulos!:string[];
-  regex!:RegExp;
+  regex:RegExp = RegExp('\d{1,2}\/\d{1,3}');
   constructor() {
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
