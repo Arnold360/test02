@@ -28,7 +28,7 @@ export class nombreService {
                    "bbbbbbbbbbbbbbbbbbbbbb",
                    "ccccccccccccccccccccccccccc"
                   ];
-  declaraciones:declaracion[] = [];
+  declaraciones!:declaracion[];
   enlace!:SafeUrl;
   nombre!:string;
   fechas!:string[];
@@ -40,7 +40,7 @@ export class nombreService {
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
      
-      
+     
       
       
       
