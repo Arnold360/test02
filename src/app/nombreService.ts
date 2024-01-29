@@ -14,9 +14,7 @@ export class nombreService {
                       "ANTAURO HUMALA NO SE ARREPIENTE DE NADA Y PROMETE MEDIDAS RADICALES 08/2023",
                       "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
                       "DETRAS DE LA VERDAD - PIURA 10/10/2023",
-                      "aaaaaaaaaaaaaaaa",
-                      "bbbbbbbbbbbbbbbbbbb",
-                      "cccccccccccccccccccccc"
+                      
                       ];
   
   urls:string[] = ["https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo",
