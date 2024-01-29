@@ -35,7 +35,7 @@ export class nombreService {
   titulos!:string[];
   regex:RegExp = RegExp('\d{1,2}\/\d{1,3}');
   constructor() {
-    this.fechas.push("DDDDDDDDDDD");
+   
     
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
