@@ -28,7 +28,7 @@ export class nombreService {
   nombre!:string;
   fechas:string[] = [];
   titulos!:string[];
-  regex:RegExp = RegExp('\d{1,2}\/\d{1,3}');
+  regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   constructor() {
    
     
