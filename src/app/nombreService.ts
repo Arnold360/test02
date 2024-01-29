@@ -39,7 +39,7 @@ export class nombreService {
     
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
-      this.fechas.push(/\d{1,2}\/\d{1,3}/.exec(this.nombres[i])![0]);
+      this.fechas.push(/\d{1,2}\/\d{1,3}/.exec(this.nombres[0])![0]);
      
      
       
