@@ -1,7 +1,7 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
-import RegExp from "typescript-dotnet-commonjs/System/Text/RegularExpressions";
+ import { RegExp } from "RegularExpressions/Regex";
 
 @Injectable({
   providedIn: 'root'
