@@ -28,10 +28,10 @@ export class nombreService {
                    "bbbbbbbbbbbbbbbbbbbbbb",
                    "ccccccccccccccccccccccccccc"
                   ];
-  declaraciones!:declaracion[];
+  declaraciones:declaracion[] = [];
   enlace!:SafeUrl;
   nombre!:string;
-  fechas!:string[];
+  fechas:string[] = [];
   titulos!:string[];
   regex:RegExp = RegExp('\d{1,2}\/\d{1,3}');
   constructor() {
@@ -39,6 +39,7 @@ export class nombreService {
     
     for( let i = 0; this.nombres.length > i; i++) {
       this.declaraciones.push({nombre:this.nombres[i], url:this.urls[i]});
+      this.fechas.push(/\d{1,2}\/\d{1,3}/.exec(this.nombres[0])![0]);
      
      
       
