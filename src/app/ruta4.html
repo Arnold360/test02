@@ -3,7 +3,7 @@
   <div id="elemento"  >
     <ul>
      <li class="elemento" *ngFor="let declaracion of nombreservice.declaraciones; index as i" >
-      <a class="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> {{declaracion.nombre}} {{nombreservice.fechas[i]}} <br> </a>  <br>
+      <a class="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> {{declaracion.nombre}} {{nombreservice.titulos[i]}} {{nombreservice.fechas[i]}} <br> </a>  <br>
      </li>
     </ul>  
   </div>
