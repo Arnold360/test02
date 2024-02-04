@@ -5,7 +5,7 @@ a {
 }
 
 .elemento {
-
+  height: 100px;
   border-style: dotted;
   
 }
