@@ -4,12 +4,12 @@
     <ul>
      <li class="elemento" *ngFor="let declaracion of nombreservice.declaraciones; index as i" >
       <a class="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
-        <pre> <p class="tituloid">{{nombreservice.titulos[i]}}</p> <p class="fechaid">{{nombreservice.fechas[i]}}</p> </pre> <br> 
+        <div class="titulofecha"> <p class="tituloid"> {{nombreservice.titulos[i]}} </p> <p class="fechaid"> {{nombreservice.fechas[i]}} </p> </div> <br> 
       </a>  <br>
      </li>
     </ul>  
   </div>
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet
   <iframe width="420" height="315"
   src="https://www.youtube.com/embed/CpDyF4pkbAs?si=igVdbnA2Y71ThYo1">
   </iframe>
