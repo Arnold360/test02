@@ -1,1 +1,15 @@
 
+<div>
+  <h1> ENTREVISTAS deyvid</h1>
+  <div id="elemento"  >
+    <ul>
+     <li class="elemento" *ngFor="let declaracion of nombreservice.declaraciones; index as i" >
+      <a class="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
+        <div class="titulofecha"> <p class="tituloid"> {{nombreservice.titulos[i]}}&nbsp; </p> <p class="fechaid"> {{nombreservice.fechas[i]}} </p> </div> <br> 
+      </a>  <br>
+     </li>
+    </ul>  
+  </div>
+  <router-outlet></router-outlet>
+  
+</div>
