@@ -4,7 +4,7 @@
     <ul>
      <li class="elemento" *ngFor="let declaracion of nombreservice.declaraciones; index as i" >
       <a class="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
-        <div class="tituloid"> {{nombreservice.titulos[i]}} </div> <div class="fechaid"> {{nombreservice.fechas[i]}} </div> <br> 
+        <div class="titulofecha"> <p> class="tituloid"> {{nombreservice.titulos[i]}} </p> <p class="fechaid"> {{nombreservice.fechas[i]}} </p> </div> <br> 
       </a>  <br>
      </li>
     </ul>  
