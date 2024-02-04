@@ -23,7 +23,7 @@ export class ruta4 implements AfterViewInit {
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
-    for (let i = 0; nombreservice.declaraciones.length > i; i++){
+    for (let i = 0; nombreservice.entrevistas.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       }
     }
