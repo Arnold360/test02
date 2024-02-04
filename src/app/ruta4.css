@@ -6,7 +6,7 @@ a {
 
 .elemento {
   height: 50px;
-  border-style: dotted;
+  
   
 }
 
@@ -14,7 +14,7 @@ a {
 .titulofecha {
 
   display : flex;
-  border-style: dotted;
+ 
   
 }
 
