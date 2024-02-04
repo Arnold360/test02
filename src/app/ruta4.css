@@ -1,12 +1,13 @@
 a {
   font: oblique bold 120% cursive;
   text-decoration:none;
-  border-style: dotted;
-}
+  
 
 .titulofecha {
 
   display : flex;
+  border-style: dotted;
+}
   
 }
 
