@@ -27,6 +27,7 @@ export class nombreService {
   
   entrevistas:declaracion[] = [];
   mitines:declaracion[] = [];
+  declaraciones:declaracion[][] = [entrevistas, mitines];
   
   enlace!:SafeUrl;
   nombre!:string;
@@ -38,7 +39,7 @@ export class nombreService {
     for(let e = 0; this.nombres.length > e; e++) {
       
       for( let i = 0; this.nombres[e].length > i; i++) {
-         this.entrevistas.push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i]});
+         this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i]});
          this.fechas.push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.nombres[i])![0]);
          this.titulos.push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.nombres[i])![0]);
      
