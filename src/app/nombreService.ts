@@ -34,14 +34,15 @@ export class nombreService {
   regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   constructor() {
    
-    
-    for( let i = 0; this.nombres.length > i; i++) {
-      this.entrevistas.push({nombre:this.nombres[i], url:this.urls[i]});
-      this.fechas.push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.nombres[i])![0]);
-      this.titulos.push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.nombres[i])![0]);
+    for(let e = 0; this.nombres.length > e; e++) {
+      
+      for( let i = 0; this.nombres[e].length > i; i++) {
+         this.entrevistas.push({nombre:this.nombres[i], url:this.urls[i]});
+         this.fechas.push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.nombres[i])![0]);
+         this.titulos.push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.nombres[i])![0]);
      
       
-      
+    }
       
     }
   }
