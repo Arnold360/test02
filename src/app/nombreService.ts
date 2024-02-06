@@ -23,7 +23,7 @@ export class nombreService {
                    "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"
                   ];
   urlMitines:string[] = [];
-  tipoUrls:string[][] = [];
+  tipoUrls:string[][] = [urlEntrevistas, urlMitines];
   
   entrevistas:declaracion[] = [];
   mitines:declaracion[] = [];
