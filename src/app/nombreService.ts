@@ -14,7 +14,7 @@ export class nombreService {
                       "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
                       "DETRAS DE LA VERDAD - PIURA 10/10/2023",];
   nombreMitines:string[] = [];
-  tipoNombres:string[][] = [nombredeclaraciones , nombremitines];
+  tipoNombres:string[][] = [nombreEntrevistas , nombremitines];
   
   urlEntrevistas:string[] = ["https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo",
                    "https://www.youtube.com/embed/6TXE6qFPI7Y?si=-ffjiubZfRxniNeq",
