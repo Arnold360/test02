@@ -14,7 +14,7 @@ export class nombreService {
                       "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
                       "DETRAS DE LA VERDAD - PIURA 10/10/2023",];
   nombreMitines:string[] = [];
-  tipoNombres:string[][] = [nombreEntrevistas , nombremitines];
+  tipoNombres:string[][] = [this.nombreEntrevistas , this.nombremitines];
   
   urlEntrevistas:string[] = ["https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo",
                    "https://www.youtube.com/embed/6TXE6qFPI7Y?si=-ffjiubZfRxniNeq",
@@ -23,11 +23,11 @@ export class nombreService {
                    "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"
                   ];
   urlMitines:string[] = [];
-  tipoUrls:string[][] = [urlEntrevistas, urlMitines];
+  tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
   
   entrevistas:declaracion[] = [];
   mitines:declaracion[] = [];
-  declaraciones:declaracion[][] = [entrevistas, mitines];
+  declaraciones:declaracion[][] = [this.entrevistas, this.mitines];
   
   enlace!:SafeUrl;
   nombre!:string;
@@ -36,8 +36,8 @@ export class nombreService {
   tituloEntrevistas:string[] = [];
   fechaMitines:string[] = [];
   tituloMitines:string[] = [];
-  fechas:string[][] = [fechaEntrevistas, fechaMitines];
-  titulos:string[][] = [tituloEntrevistas, tituloMitines];
+  fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
+  titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
   
   regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   constructor() {
