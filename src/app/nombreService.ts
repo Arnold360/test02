@@ -42,7 +42,7 @@ export class nombreService {
   regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   constructor() {
    
-    for(let e = 0; this.nombres.length > e; e++) {
+    for(let e = 0; this.tipoNombres.length > e; e++) {
       
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i]});
