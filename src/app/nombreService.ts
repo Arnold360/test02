@@ -14,7 +14,7 @@ export class nombreService {
                       "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
                       "DETRAS DE LA VERDAD - PIURA 10/10/2023",];
   nombreMitines:string[] = [];
-  tipoNombres:string[][] = [this.nombreEntrevistas , this.nombremitines];
+  tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
   
   urlEntrevistas:string[] = ["https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo",
                    "https://www.youtube.com/embed/6TXE6qFPI7Y?si=-ffjiubZfRxniNeq",
@@ -44,7 +44,7 @@ export class nombreService {
    
     for(let e = 0; this.nombres.length > e; e++) {
       
-      for( let i = 0; this.nombres[e].length > i; i++) {
+      for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i]});
          this.fechas[e].push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.tipoNombres[e][i])![0]);
          this.titulos[e].push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.tipoNombres[e][i])![0]);
