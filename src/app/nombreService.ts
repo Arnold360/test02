@@ -20,10 +20,10 @@ export class nombreService {
                                 "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"];
   
       nombreMitines:string[] = ["ANTAURO HUMALA MITIN DESDE URUBAMBA - CUSCO 09/2022",
-                                "Antauro Humala mitin desde Juliaca "todos juntos forjaremos la segunda Republica" 09/2022"
+                                'Antauro Humala mitin desde Juliaca "todos juntos forjaremos la segunda Republica" 09/2022',
                                  ];
          urlMitines:string[] = ["https://www.youtube.com/embed/NAvU6m960CM?si=2WfGkid-FxjRyMuq",
-                                "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB"];
+                                "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
   
       tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
          tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
