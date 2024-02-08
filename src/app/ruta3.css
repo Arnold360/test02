@@ -1,1 +1,25 @@
+a {
+  font: oblique bold 120% cursive;
+  text-decoration:none;
+  
+}
 
+.elemento {
+  height: 50px;
+  
+  
+}
+
+
+.titulofecha {
+
+  display : flex;
+ 
+  
+}
+
+
+.fechaid {
+
+  color: blue;
+}
