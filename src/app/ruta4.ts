@@ -36,7 +36,7 @@ export class ruta4 implements AfterViewInit {
 
    marcarLink(i:number) {
 
-     this.element[i].color = "red";
+     this.element[i].style.color = "red";
      
    }
 
