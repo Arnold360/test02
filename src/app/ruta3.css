@@ -1,13 +1,10 @@
 a {
   font: oblique bold 120% cursive;
   text-decoration:none;
-  
-}
+ }
 a:focus {
-
   color: green;
-  
-}
+ }
 
 .elemento {
   height: 50px;
