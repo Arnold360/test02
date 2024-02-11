@@ -3,6 +3,11 @@ a {
   text-decoration:none;
   
 }
+a:focus {
+
+  color:"green";
+  
+}
 
 .elemento {
   height: 50px;
