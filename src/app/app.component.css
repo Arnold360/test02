@@ -24,7 +24,7 @@ nav ul {
 nav li {
   position: relative;
   display: inline-block;
-  width: 40%;
+  width: 30%;
   margin: 1rem 0;
      border: 1px solid red;
 }
