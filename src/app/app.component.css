@@ -13,7 +13,21 @@
   text-align: bottom;
   font-size: 200%;
 }
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
 
+nav li {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  margin: 1rem 0;
+     border: 1px solid red;
+}
 a {
   color: beige;
 }
