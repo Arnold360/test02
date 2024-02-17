@@ -10,9 +10,9 @@ export class ruta6 {
 
   // Load the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
+this.tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+this.firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var videoId = 'M7lc1UVf-VE';
 var startSeconds = 36;
@@ -20,7 +20,7 @@ var endSeconds = 45;
 
 // Replace the 'ytplayer' element with an <iframe> and
 // YouTube player after the API code downloads.
-var player;
+var player!;
 
 var playerConfig = {
   height: '360',
