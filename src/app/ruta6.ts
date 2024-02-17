@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruta6.css']
 })
 export class ruta6 { 
-  tag!;
-  firstScriptTag!;
+  tag!:HTMLElement;
+  firstScriptTag!:HTMLElement;
   
-  videoId!;
-  startSeconds!;
-  endSeconds!;
+  videoId!:String;
+  startSeconds!:Number;
+  endSeconds!:Number;
 
   player!;
   playerConfig!;
