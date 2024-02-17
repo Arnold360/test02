@@ -14,7 +14,7 @@ export class ruta6 {
   startSeconds!:Number;
   endSeconds!:Number;
 
-  player!;
+  player!:any;
   playerConfig!;
   // Load the IFrame Player API code asynchronously.
 constructor(){
