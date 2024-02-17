@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class ruta6 { 
 
   // Load the IFrame Player API code asynchronously.
+constructor(){
 var tag = document.createElement('script');
 this.tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -42,9 +43,6 @@ var playerConfig = {
     'onStateChange': onStateChange
   }
 };
-  
-constructor(){
-  
 } 
   
 function onYouTubePlayerAPIReady() {
