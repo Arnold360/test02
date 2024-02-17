@@ -53,12 +53,12 @@ constructor(){
   } 
   
 function onYouTubePlayerAPIReady() {
-  player = new YT.Player('ytplayer', playerConfig);
+  this.player = new YT.Player('ytplayer', playerConfig);
 }
 
 function onStateChange(state) {
   if (state.data === YT.PlayerState.ENDED) {
-    player.loadVideoById({
+    this.player.loadVideoById({
       videoId: videoId,
       startSeconds: startSeconds,
       endSeconds: endSeconds
