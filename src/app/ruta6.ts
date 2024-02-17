@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruta6.css']
 })
 export class ruta6 { 
-  tag!:HTMLElement;
+  tag!:HTML;
   firstScriptTag!:HTMLElement;
   
   videoId!:String;
