@@ -42,7 +42,11 @@ var playerConfig = {
     'onStateChange': onStateChange
   }
 };
-
+  
+constructor(){
+  
+} 
+  
 function onYouTubePlayerAPIReady() {
   player = new YT.Player('ytplayer', playerConfig);
 }
