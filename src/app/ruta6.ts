@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ruta6 { 
   tag!:HTMLScriptElement;
-  firstScriptTag!:HTMLElement;
+  firstScriptTag!:HTMLScriptElement;
   
   videoId!:String;
   startSeconds!:Number;
