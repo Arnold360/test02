@@ -21,7 +21,7 @@ constructor(){
   this.tag = document.createElement('script');
   this.tag.src = "https://www.youtube.com/player_api";
   this.firstScriptTag = document.getElementsByTagName('script')[0];
-  this.firstScriptTag.parentNode?.insertBefore(this.tag, this.firstScriptTag);
+  this.firstScriptTag.parentNode.insertBefore(this.tag, this.firstScriptTag);
 
   this.videoId = 'M7lc1UVf-VE';
   this.startSeconds = 36;
