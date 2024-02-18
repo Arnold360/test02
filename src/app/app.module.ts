@@ -20,7 +20,7 @@ import { nombreService } from './nombreService';
     ruta4,
     ruta5,
     ruta6,
-    
+    VideoComponent
    
   ],
   imports: [
