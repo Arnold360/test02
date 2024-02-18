@@ -14,7 +14,7 @@ import {Component, OnInit} from '@angular/core';
   ngOnInit(){
 
     this.tag = document.createElement('script');
-    this.tag.src = "https://www.youtube.com/iframe_api";
+    this.tag.src = "https://www.youtube.com/player_api";
     document.body.appendChild(this.tag);
     }
   }
