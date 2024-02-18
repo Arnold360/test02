@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruta6.css']
 })
 export class ruta6 { 
-  tag!:Element;
+  tag!:any;
   firstScriptTag!:HTMLElement;
   
   videoId!:String;
@@ -18,7 +18,7 @@ export class ruta6 {
   playerConfig!:any;
   // Load the IFrame Player API code asynchronously.
 constructor(){
-  this.tag = document.createElement('script') as HTMLElement;
+  this.tag = document.createElement('script');
   this.tag.src = "https://www.youtube.com/player_api";
   this.firstScriptTag = document.getElementsByTagName('script')[0];
   this.firstScriptTag.parentNode?.insertBefore(this.tag, this.firstScriptTag);
