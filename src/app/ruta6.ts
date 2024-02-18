@@ -33,7 +33,7 @@ constructor(){
   this.playerConfig = {
     height: '360',
     width: '640',
-    videoId: videoId,
+    videoId: this.videoId,
     playerVars: {
       autoplay: 1, // Auto-play the video on load
       controls: 0, // Show pause/play buttons in player
@@ -42,8 +42,8 @@ constructor(){
       fs: 1, // Hide the full screen button
       cc_load_policy: 0, // Hide closed captions
       iv_load_policy: 3, // Hide the Video Annotations
-      start: startSeconds,
-      end: endSeconds,
+      start: this.startSeconds,
+      end: this.endSeconds,
       autohide: 0, // Hide video controls when playing
     },
     events: {
