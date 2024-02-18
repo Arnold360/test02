@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
   selector: 'app-video2'
 })
 
-  export class VideoComponent2 implements OnInit {
+  export class VideoComponent2  {
 
     tag!:any;
   firstScriptTag!:HTMLElement;
@@ -66,4 +66,5 @@ constructor(){
       endSeconds: this.endSeconds
     });
   }
+}
 }
