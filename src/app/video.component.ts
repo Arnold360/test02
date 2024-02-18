@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 
 
 @Component({
-  template:'<youtube-player videoId="XqZsoesa55w"></youtube-player>',
+  template:'<youtube-player videoId="dQw4w9WgXcQ" suggestedQuality="highres" [height]="600" [width]="1080" [startSeconds]="43" [endSeconds]="60"></youtube-player>',
+    
   selector: 'app-video'
 })
 
