@@ -19,7 +19,7 @@ export class ruta6 {
   // Load the IFrame Player API code asynchronously.
 constructor(){
   this.tag = document.createElement('script');
-  this.tag.src = "https://www.youtube.com/player_api";
+  this.tag.src = "https://www.youtube.com/iframe_api";
   this.firstScriptTag = document.getElementsByTagName('script')[0];
   this.firstScriptTag.parentNode?.insertBefore(this.tag, this.firstScriptTag);
 
@@ -53,11 +53,11 @@ constructor(){
   } 
   
  onYouTubePlayerAPIReady() {
-  this.player = new global.YT.Player('ytplayer', this.playerConfig);
+  this.player = new YT.Player('ytplayer', this.playerConfig);
 }
 
  onStateChange(state) {
-  if (state.data === global.YT.PlayerState.ENDED) {
+  if (state.data === YT.PlayerState.ENDED) {
     this.player.loadVideoById({
       videoId: this.videoId,
       startSeconds: this.startSeconds,
