@@ -47,7 +47,7 @@ constructor(){
       autohide: 0, // Hide video controls when playing
     },
     events: {
-      'onStateChange': onStateChange
+      'onStateChange': this.onStateChange
     }
    };
   } 
@@ -56,7 +56,7 @@ constructor(){
   this.player = new window['YT'].Player('ytplayer', this.playerConfig);
 }
 
- onStateChange(state) {
+ onStateChange(state:any) {
   if (state.data === window['YT'].PlayerState.ENDED) {
     this.player.loadVideoById({
       videoId: this.videoId,
