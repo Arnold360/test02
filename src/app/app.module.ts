@@ -11,7 +11,7 @@ import { ruta4 } from './ruta4';
 import { ruta5 } from './ruta5';
 import { ruta6 } from './ruta6';
 import { nombreService } from './nombreService';
-
+import {VideoComponent} from './video.component';
 @NgModule({
   declarations: [
     AppComponent,
