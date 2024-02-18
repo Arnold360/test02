@@ -25,7 +25,8 @@ import { nombreService } from './nombreService';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    YouTubePlayerModule
     
   ],
   providers: [],
