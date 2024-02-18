@@ -15,11 +15,11 @@ export class ruta6 {
   endSeconds!:Number;
 
   player!:any;
-  playerConfig!;
+  playerConfig!:any;
   // Load the IFrame Player API code asynchronously.
 constructor(){
   this.tag = document.createElement('script');
-  this.tag.src = "https://www.youtube.com/iframe_api";
+  this.tag.src = "https://www.youtube.com/player_api";
   this.firstScriptTag = document.getElementsByTagName('script')[0];
   this.firstScriptTag.parentNode?.insertBefore(this.tag, this.firstScriptTag);
 
