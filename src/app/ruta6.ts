@@ -52,11 +52,11 @@ constructor(){
    };
   } 
   
-function onYouTubePlayerAPIReady() {
+ onYouTubePlayerAPIReady() {
   this.player = new YT.Player('ytplayer', this.playerConfig);
 }
 
-function onStateChange(state) {
+ onStateChange(state) {
   if (state.data === YT.PlayerState.ENDED) {
     this.player.loadVideoById({
       videoId: this.videoId,
