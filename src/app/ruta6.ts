@@ -20,7 +20,7 @@ export class ruta6 {
 constructor(){
   
   this.firstScriptTag = document.getElementsByTagName('script')[0];
-  this.firstScriptTag.parentNode.insertBefore(this.tag, this.firstScriptTag);
+  this.firstScriptTag.parentNode.insertBefore(this.firstScriptTag, document.getElement.ById("marka"));
 
   this.videoId = 'M7lc1UVf-VE';
   this.startSeconds = 36;
