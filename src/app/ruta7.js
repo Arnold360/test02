@@ -1,3 +1,13 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'ruta7',
+  templateUrl: './ruta7.html',
+  
+})
+export class ruta6 { 
+ 
+
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
@@ -45,4 +55,5 @@ function onStateChange(state) {
       endSeconds: endSeconds
     });
   }
+}
 }
