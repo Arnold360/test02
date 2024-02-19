@@ -9,11 +9,11 @@ import {Component, OnInit} from '@angular/core';
   export class VideoComponent2  {
 
     tag!:any;
-  firstScriptTag!:HTMLElement;
+  firstScriptTag!:any;
   
-  videoId!:String;
-  startSeconds!:Number;
-  endSeconds!:Number;
+  videoId!:string;
+  startSeconds!:number;
+  endSeconds!:number;
 
   player!:any;
   playerConfig!:any;
