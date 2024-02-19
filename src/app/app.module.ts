@@ -10,7 +10,6 @@ import { ruta3 } from './ruta3';
 import { ruta4 } from './ruta4';
 import { ruta5 } from './ruta5';
 import { ruta6 } from './ruta6';
-import { ruta7 } from './ruta7';
 import { nombreService } from './nombreService';
 import {VideoComponent} from './video.component';
 import {VideoComponent2} from './video.component2';
@@ -22,7 +21,7 @@ import {VideoComponent2} from './video.component2';
     ruta4,
     ruta5,
     ruta6,
-    ruta7,
+    
     VideoComponent,
     VideoComponent2
    
