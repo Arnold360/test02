@@ -23,7 +23,7 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators":"7.23.9",
+    
     "@types/youtube-player":"~5.5.11",
     "@types/youtube":"~0.0.29",
     "@angular/youtube-player": "~16.2.0",
