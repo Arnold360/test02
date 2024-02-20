@@ -21,7 +21,6 @@ import {VideoComponent2} from './video.component2';
     ruta4,
     ruta5,
     ruta6,
-    
     VideoComponent,
     VideoComponent2
    
