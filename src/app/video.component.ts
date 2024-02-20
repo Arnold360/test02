@@ -18,4 +18,8 @@ import {Component, OnInit} from '@angular/core';
     this.tag.src = "https://www.youtube.com/player_api";
     document.body.appendChild(this.tag);
     }
+
+  ngAfterViewInit(){
+    
+   }
   }
