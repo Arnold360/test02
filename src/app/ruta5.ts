@@ -18,3 +18,5 @@ export class ruta5 {
     this.video = document.getElementById("vid") as HTMLIFrameElement;
     this.video.contentWindow.document.body.getElementsByTagName('video')[0];
 }
+
+}
