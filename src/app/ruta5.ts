@@ -1,5 +1,5 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
-import { Component, SkipSelf } from '@angular/core';
+import { Component, SkipSelf, AfterViewInit } from '@angular/core';
 import { nombreService } from './nombreService';
 
 @Component({
@@ -8,7 +8,7 @@ import { nombreService } from './nombreService';
   styleUrls: ['./ruta5.css'],
   
 })
-export class ruta5 {
+export class ruta5 implements AfterViewInit{
   
   video:any;
   prueba:SafeUrl;
@@ -17,5 +17,10 @@ export class ruta5 {
     this.prueba = servicio.enlace;
     this.video = (document.getElementById("vid") as HTMLIFrameElement).contentWindow.document.body.getElementsByTagName('video')[0];
 }
+  ngAfterViewInit(){
+
+    
+    
+  }
 
 }
