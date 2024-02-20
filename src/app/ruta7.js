@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './ruta7.html',
   
 })
-export class ruta6 { 
+export class ruta7 { 
  
 
 
