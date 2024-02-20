@@ -10,16 +10,16 @@ import { nombreService } from './nombreService';
 })
 export class ruta5 implements AfterViewInit{
   
-  video:any;
+  video!:any;
   prueba:SafeUrl;
   
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
-    this.video = (document.getElementById("vid") as HTMLIFrameElement).contentWindow.document.body.getElementsByTagName('video')[0];
+    
 }
   ngAfterViewInit(){
 
-    
+    this.video = (document.getElementById("vid") as HTMLIFrameElement).contentWindow.document.body.getElementsByTagName('video')[0];
     
   }
 
