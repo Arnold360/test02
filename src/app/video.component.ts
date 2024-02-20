@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
   selector: 'app-video'
 })
 
-  export class VideoComponent implements OnInit {
+  export class VideoComponent implements OnInit, AfterViewInit {
 
   tag!:any;
   
