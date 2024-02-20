@@ -10,10 +10,11 @@ import { nombreService } from './nombreService';
 })
 export class ruta5 {
   
-  
+  video:any;
   prueba:SafeUrl;
   
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
+    this.video = document.getElementById("vid").contentWindow.document.body.getElementsByTagName('video')[0];
   } 
 }
