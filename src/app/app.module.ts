@@ -23,7 +23,8 @@ import {VideoComponent2} from './video.component2';
     ruta5,
     ruta6,
     VideoComponent,
-    VideoComponent2
+    VideoComponent2,
+    ruta7
    
   ],
   imports: [
