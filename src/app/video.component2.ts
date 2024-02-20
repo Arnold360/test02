@@ -55,7 +55,7 @@ constructor(){
   } 
   
  onYouTubePlayerAPIReady() {
-  this.player = new YT.Player(document.getElemendById('ytplayer'), this.playerConfig);
+  this.player = new YT.Player(document.getElementById('ytplayer'), this.playerConfig);
 }
 
  onStateChange(state:any) {
