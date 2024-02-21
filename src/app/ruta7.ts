@@ -14,7 +14,7 @@ export class ruta7 {
 
   this.button.addEventListener('click', this.playVideo, !1);
 
-  contructor(){}
+  constructor(){}
 
  playVideo(e:number) {
 
@@ -27,6 +27,7 @@ export class ruta7 {
            setTimeout(this.checkTime, 100);
         }
     }
+ }
 
     this.video.currentTime = this.startTime;
     this.video.play();
