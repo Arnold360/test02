@@ -33,3 +33,4 @@ export class ruta7 {
     this.video.play();
     checkTime();
 }
+}
