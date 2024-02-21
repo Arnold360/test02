@@ -18,7 +18,7 @@ export class ruta5 {
     this.prueba = servicio.enlace;
     this.iframe = document.getElementById("vid") as HTMLIFrameElement;
     this.video = this.iframe.contentWindow.document.body.getElementsByTagName('video')[0];
-    this.video.autoplay = true;
+    
    
     
 }
