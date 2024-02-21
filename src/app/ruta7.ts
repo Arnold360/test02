@@ -24,13 +24,13 @@ export class ruta7 {
         } else {
            /* call checkTime every 1/10th 
               second until endTime */
-           setTimeout(checkTime, 100);
+           setTimeout(this.checkTime, 100);
         }
     }
  
 
     this.video.currentTime = this.startTime;
     this.video.play();
-    this.checkTime();
+    checkTime();
 }
 }
