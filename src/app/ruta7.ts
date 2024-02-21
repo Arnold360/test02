@@ -8,7 +8,7 @@ import {Component} from "@angular/core";
   
 export class ruta7 {
   button:HTMLElement = document.getElementById('play');
-  video:HTMLElement = document.getElementById('video');
+  video:HTMLVideoElement = document.getElementById('video');
   startTime:number = 10;
   endTime:number = 20;
 
