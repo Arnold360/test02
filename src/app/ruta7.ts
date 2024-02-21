@@ -14,6 +14,8 @@ export class ruta7 {
 
   this.button.addEventListener('click', this.playVideo, !1);
 
+  contructor(){}
+
  playVideo(e:number) {
 
     checkTime() {
