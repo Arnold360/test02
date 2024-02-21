@@ -17,7 +17,7 @@ export class ruta5 {
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
     this.iframe = document.getElementById("vid") as HTMLIFrameElement;
-    this.video = this.iframe.contentWindow.document.body.getElementsByTagName('video')[0];
+    
     
    
     
