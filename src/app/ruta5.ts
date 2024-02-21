@@ -20,6 +20,7 @@ export class ruta5 implements AfterViewInit{
   ngAfterViewInit(){
 
     this.video = (document.getElementById("vid") as HTMLIFrameElement).contentWindow.document.body.getElementsByTagName('video')[0];
+    this.video.autoplay=true;
     
   }
 
