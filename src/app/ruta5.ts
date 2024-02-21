@@ -8,7 +8,7 @@ import { nombreService } from './nombreService';
   styleUrls: ['./ruta5.css'],
   
 })
-export class ruta5 implements AfterViewInit{
+export class ruta5 {
   
   iframe!:any;
   video!:any;
