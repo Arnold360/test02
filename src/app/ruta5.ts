@@ -28,7 +28,7 @@ export class ruta5 implements AfterViewInit{
   }
  metodo() {
     this.video = this.iframe.contentWindow.document.body.getElementsByTagName('video')[0];
-    this.video.autoplay=true;
+    this.video.autoplay = true;
   }
    
 
