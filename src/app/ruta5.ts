@@ -21,7 +21,7 @@ export class ruta5 {
 }
   
  metodo() {
-    this.iframe.autoplay = true;
+ 
    
   }
    
