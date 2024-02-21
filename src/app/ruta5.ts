@@ -10,18 +10,25 @@ import { nombreService } from './nombreService';
 })
 export class ruta5 implements AfterViewInit{
   
+  iframe!:any;
   video!:any;
   prueba:SafeUrl;
   
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
-    
+    this.iframe = document.getElementById("vid") as HTMLIFrameElement;
 }
   ngAfterViewInit(){
 
-    this.video = (document.getElementById("vid") as HTMLIFrameElement).contentWindow.document.body.getElementsByTagName('video')[0];
-    this.video.autoplay=true;
+    
+    
+    
     
   }
+  iframe.onload(){
+    this.video = this.iframe.contentWindow.document.body.getElementsByTagName('video')[0];
+    this.video.autoplay=true;
+  }
+  
 
 }
