@@ -14,7 +14,7 @@ export class ruta7 {
 
   this.button.addEventListener('click', this.playVideo, !1);
 
- playVideo(e) {
+ playVideo(e:number) {
 
     checkTime() {
         if (this.video.currentTime >= this.endTime) {
