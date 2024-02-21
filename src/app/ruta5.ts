@@ -17,7 +17,7 @@ export class ruta5 implements AfterViewInit{
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
     this.iframe = document.getElementById("vid") as HTMLIFrameElement;
-    this.iframe.onload = metodo;
+    this.iframe.onload = this.metodo;
 }
   ngAfterViewInit(){
 
