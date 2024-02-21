@@ -11,10 +11,10 @@ export class ruta7 {
   video:HTMLElement = document.getElementById('video');
   startTime:number = 10;
   endTime:number = 20;
-;
+
 
   constructor(){ 
-  this.button.addEventListener('click', this.playVideo) }
+  this.button.addEventListener('click', this.playVideo); }
 
  playVideo() {
 
