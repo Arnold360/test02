@@ -1,24 +1,33 @@
+import {Component} from "@angular/core";
 
-var button = document.getElementById('play')
-var video = document.getElementById('video');
-var startTime = 10;
-var endTime = 20;
 
-button.addEventListener('click', playVideo, !1);
+@Component({selector:"ruta7",
+            templateUrl:"./ruta7.html"
+            })
 
-function playVideo(e) {
+  
+export class ruta7 {
+  button:HTMLElement = document.getElementById('play')
+  video:HTMLElement = document.getElementById('video');
+  startTime:number = 10;
+  endTime:number = 20;
 
-    function checkTime() {
-        if (video.currentTime >= endTime) {
-           video.pause();
+  this.button.addEventListener('click', this.playVideo, !1);
+
+ playVideo(e) {
+
+    checkTime() {
+        if (this.video.currentTime >= this.endTime) {
+           this.video.pause();
         } else {
            /* call checkTime every 1/10th 
               second until endTime */
-           setTimeout(checkTime, 100);
+           setTimeout(this.checkTime, 100);
         }
     }
 
-    video.currentTime = startTime;
-    video.play();
-    checkTime();
+    this.video.currentTime = this.startTime;
+    this.video.play();
+    this.checkTime();
+}
 }
