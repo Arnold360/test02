@@ -17,6 +17,7 @@ export class ruta5 implements AfterViewInit{
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
     this.iframe = document.getElementById("vid") as HTMLIFrameElement;
+    this.iframe.onload = metodo;
 }
   ngAfterViewInit(){
 
@@ -25,10 +26,10 @@ export class ruta5 implements AfterViewInit{
     
     
   }
-  this.iframe.onload = function() {
+ metodo() {
     this.video = this.iframe.contentWindow.document.body.getElementsByTagName('video')[0];
     this.video.autoplay=true;
   }
-  
+   
 
 }
