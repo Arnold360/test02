@@ -19,15 +19,9 @@ export class ruta5 implements AfterViewInit{
     this.iframe = document.getElementById("vid") as HTMLIFrameElement;
     this.iframe.onload = this.metodo;
 }
-  ngAfterViewInit(){
-
-    
-    
-    
-    
-  }
+  
  metodo() {
-    this.video = this.iframe.contentWindow.document.body.getElementsByTagName('video')[0];
+    this.iframe.autoplay = true;
    
   }
    
