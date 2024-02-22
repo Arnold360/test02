@@ -24,7 +24,7 @@ export class ruta7 {
         } else {
            /* call checkTime every 1/10th 
               second until endTime */
-           setTimeout(this.checkTime, 100);
+           setTimeout(this.playVideo.checkTime, 100);
         }
     }
  
