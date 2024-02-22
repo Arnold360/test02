@@ -17,7 +17,7 @@ export class ruta7 {
   this.button.addEventListener('click', this.playVideo); }
 
   checkTime() {
-        if (currentTime >= this.endTime) {
+        if (video.currentTime >= this.endTime) {
            this.video.pause();
         } else {
            /* call checkTime every 1/10th 
