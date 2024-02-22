@@ -15,6 +15,7 @@ export class ruta5 {
   prueba:SafeUrl;
   button:HTMLElement = document.getElementById('play');
   endTime:number = 20;
+  startTime:number = 10;
   
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
