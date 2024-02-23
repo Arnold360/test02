@@ -14,7 +14,7 @@ export class ruta7 {
   endTime:number = 20;
   
   constructor(){ 
-    this.button.addEventListener('click', this.playVideo); 
+   
 
   }
 
