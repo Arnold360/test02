@@ -14,9 +14,17 @@ export class ruta7 {
   endTime:number = 20;
   
   constructor(){ 
-   
+     button = document.getElementById('play');
+  video =  <HTMLVideoElement> document.getElementById('video');
+  startTime:number = 10;
+  endTime:number = 20;
+  
+  constructor(){ 
+    this.button.addEventListener('click', this.playVideo); 
 
   }
+
+  
 
   checkTime() {
         if (this.video.currentTime >= this.endTime) {
