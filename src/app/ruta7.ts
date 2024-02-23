@@ -31,7 +31,10 @@ export class ruta7 {
            setTimeout(this.checkTime, 100);
         }
     }
-
+ pausa(){
+   this.video.pause();
+ }
+  
  playVideo() {
 
 
