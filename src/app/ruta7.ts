@@ -10,8 +10,8 @@ export class ruta7 {
 
     button = document.getElementById('play');
   video =  <HTMLVideoElement> document.getElementById('video');
-  startTime:number = 10;
-  endTime:number = 20;
+  startTime:number = 3;
+  endTime:number = 10;
   
   
   
@@ -34,8 +34,6 @@ export class ruta7 {
 
  playVideo() {
 
-   
-    this.checkTime();
 
     this.video.currentTime = this.startTime;
     this.video.play();
