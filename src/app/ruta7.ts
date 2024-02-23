@@ -16,7 +16,7 @@ export class ruta7 {
   
   
   constructor(){ 
-    this.button.addEventListener('click', this.playVideo); 
+ 
 
   }
 
