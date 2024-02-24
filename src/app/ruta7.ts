@@ -13,7 +13,7 @@ export class ruta7 {
   startTime:number = 3;
   endTime:number = 10;
   
-  @ViewChild("video", { static: true, read: ElementRef })
+  @ViewChild("video")
    video: ElementRef;
 
  
