@@ -9,7 +9,7 @@ import {Component, ViewChild, ElementRef} from "@angular/core";
 export class ruta7 {
 
   button = document.getElementById('play');
-  video = document.getElementById('video');
+  
   startTime:number = 3;
   endTime:number = 10;
   
