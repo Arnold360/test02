@@ -13,7 +13,7 @@ export class ruta7 implements AfterViewInit {
   startTime:number = 3;
   endTime:number = 10;
   
-  @ViewChild("video")
+  @ViewChild("cmp")
    video: ElementRef;
 
  
