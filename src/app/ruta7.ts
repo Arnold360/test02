@@ -27,12 +27,12 @@ export class ruta7 {
     this.video.nativeElement.muted = true;
   }
 
-  //checkTime() {
-        if (this.video.currentTime >= this.endTime) {
-           this.video.pause();
+  /*checkTime() {
+      if (this.video.currentTime >= this.endTime) {
+         this.video.pause();
         } else {
-           /* call checkTime every 1/10th 
-              second until endTime */
+            call checkTime every 1/10th 
+              second until endTime 
            setTimeout(this.checkTime, 100);
         }
     }
@@ -46,5 +46,5 @@ export class ruta7 {
     this.video.currentTime = this.startTime;
     this.video.play();
     this.checkTime();
-}//
+}*/
 }
