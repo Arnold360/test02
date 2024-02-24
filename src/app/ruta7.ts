@@ -27,7 +27,7 @@ export class ruta7 {
     this.video.nativeElement.muted = true;
   }
 
-  checkTime() {
+  //checkTime() {
         if (this.video.currentTime >= this.endTime) {
            this.video.pause();
         } else {
@@ -46,5 +46,5 @@ export class ruta7 {
     this.video.currentTime = this.startTime;
     this.video.play();
     this.checkTime();
-}
+}//
 }
