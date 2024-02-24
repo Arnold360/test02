@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef} from "@angular/core";
+import {Component, ViewChild, ElementRef, AfterViewInit} from "@angular/core";
 
 
 @Component({selector:"ruta7",
@@ -6,7 +6,7 @@ import {Component, ViewChild, ElementRef} from "@angular/core";
             })
 
   
-export class ruta7 {
+export class ruta7 implements AfterViewInit {
 
   button = document.getElementById('play');
   
