@@ -23,7 +23,7 @@ export class ruta7 {
 
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.video.nativeElement.muted = true;
   }
 
