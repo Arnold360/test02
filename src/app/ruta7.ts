@@ -12,7 +12,7 @@ export class ruta7 implements AfterViewInit {
   
   startTime:number = 3;
   endTime:number = 10;
-  
+  duration!:number;
   @ViewChild("cmp")
    video: ElementRef;
 
@@ -25,10 +25,11 @@ export class ruta7 implements AfterViewInit {
 
   ngAfterViewInit() {
     this.video.nativeElement.muted = true;
+    this.duration = this.video.nativeElement.querySelector('video').duration;
   }
 
   /*checkTime() {
-      if (this.video.currentTime >= this.endTime) {
+      if (this.video.currentTime >= this.endTime) { 
          this.video.pause();
         } else {
             call checkTime every 1/10th 
