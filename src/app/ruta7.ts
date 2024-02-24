@@ -13,20 +13,13 @@ export class ruta7 implements AfterViewInit {
   startTime:number = 3;
   endTime:number = 10;
   duration!:number;
-  @ViewChild("cmp")
-   video: ElementRef;
-
- 
-  
   constructor(){ 
  
 
   }
 
   ngAfterViewInit() {
-    this.video.nativeElement.muted = true;
-    this.duration = this.video.nativeElement.querySelector('#video').duration;
-    this.video.nativeElement.src = "https://www.w3schools.com/tags/movie.mp4";
+   
   }
 
   /*checkTime() {
