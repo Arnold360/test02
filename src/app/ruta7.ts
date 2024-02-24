@@ -25,7 +25,7 @@ export class ruta7 implements AfterViewInit {
 
   ngAfterViewInit() {
     this.video.nativeElement.muted = true;
-    this.duration = this.video.nativeElement.querySelector('video').duration;
+    this.duration = this.video.nativeElement.querySelector('#video').duration;
   }
 
   /*checkTime() {
