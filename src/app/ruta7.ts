@@ -13,14 +13,19 @@ export class ruta7 {
   startTime:number = 3;
   endTime:number = 10;
   
-  
+  @ViewChild("video", { static: true, read: ElementRef })
+   video: ElementRef;
+
+ 
   
   constructor(){ 
  
 
   }
 
-  
+  ngOnInit() {
+    this.video.nativeElement.muted = true;
+  }
 
   checkTime() {
         if (this.video.currentTime >= this.endTime) {
