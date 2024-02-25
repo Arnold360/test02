@@ -18,7 +18,10 @@ export class ruta7 implements AfterViewInit {
  
 
   }
-
+   metodo(e:any, video:any){
+       this.currentTime = video.currentTime;
+   }
+  
    onMetadata(e:any, video:any) {
        this.duration = 1000;
        this.currentTime = video.currentTime;
