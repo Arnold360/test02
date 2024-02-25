@@ -19,8 +19,9 @@ export class ruta7 implements AfterViewInit {
   }
 
    onMetadata(e:any, video:any) {
+       this.duration = 1000;
        console.log('metadata: ', e);
-       console.log('duration: ', this.duration = video.duration);
+       console.log('duration: ');
      }
 
   ngAfterViewInit() {
