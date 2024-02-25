@@ -13,6 +13,7 @@ export class ruta7 implements AfterViewInit {
   startTime:number = 3;
   endTime:number = 10;
   duration:number = 2000;
+  currentTime!:number;
   constructor(){ 
  
 
@@ -20,6 +21,7 @@ export class ruta7 implements AfterViewInit {
 
    onMetadata(e:any, video:any) {
        this.duration = 1000;
+       this.currentTime = video.currentTime;
        console.log('metadata: ', e);
        console.log('duration:  ', this.duration = video.duration);
      }
