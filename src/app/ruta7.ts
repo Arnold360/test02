@@ -18,7 +18,7 @@ export class ruta7 implements AfterViewInit {
 
   }
 
-   onMetadata(e, video) {
+   onMetadata(e:any, video:any) {
        console.log('metadata: ', e);
        console.log('duration: ', this.duration = video.duration);
      }
