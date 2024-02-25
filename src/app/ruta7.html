@@ -1,3 +1,4 @@
 <button id="play" type= "button" >boton1</button>
-<video #cmp id="video" controls ></video>
+<video width="480" controls #video (loadedmetadata)="onMetadata($event, video)"><video>
 <p>vvvv {{duration}}</p>
+/
