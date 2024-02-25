@@ -1,6 +1,6 @@
 <button id="play" type= "button" (click)= "evento($event, video)" >boton1</button>
-<p>vvvv {{duration}} {{avideo.currentTime}} {{currentTime}} </p>
-<video width="480" src="https://www.w3schools.com/tags/movie.mp4" controls #avideo 
+<p>vvvv {{duration}} {{video.currentTime}} {{currentTime}} </p>
+<video width="480" src="https://www.w3schools.com/tags/movie.mp4" controls #video 
       (loadedmetadata)="onMetadata($event, video)"><video>
 
 
