@@ -18,7 +18,7 @@ export class ruta7 implements AfterViewInit {
  
 
   }
-   metodo(e:any, video:any){
+   evento(e:any, video:any){
        this.currentTime = video.currentTime;
    }
   
