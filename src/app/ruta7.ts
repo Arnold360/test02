@@ -12,7 +12,7 @@ export class ruta7 implements AfterViewInit {
   
   startTime:number = 3;
   endTime:number = 10;
-  duration!:number;
+  duration!:number = 2000;
   constructor(){ 
  
 
