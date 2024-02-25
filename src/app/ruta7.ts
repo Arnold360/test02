@@ -27,7 +27,7 @@ export class ruta7 implements AfterViewInit {
        this.currentTime = avideo.currentTime;
        console.log('metadata: ', e);
        console.log('duration:  ', this.duration = avideo.duration);
-       setTimeout(this.onMetadata, 3000, e, avideo);
+       
      }
      
 
