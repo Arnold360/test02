@@ -36,13 +36,13 @@ export class ruta7 implements AfterViewInit, OnInit {
   }
 
   // Autoplay
-  onReady(event) {
+  onReady(event:any) {
     this.player.mute();         
     this.player.playVideo();    
   }
 
   // Loop
-  onStateChange(event) {
+  onStateChange(event:any) {
     if (event.data === 0) {
       this.player.playVideo();  
     }
