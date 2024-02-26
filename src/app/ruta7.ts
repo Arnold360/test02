@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef, AfterViewInit} from "@angular/core";
+import {Component, ViewChild, ElementRef, AfterViewInit, Input} from "@angular/core";
 
 
 @Component({selector:"ruta7",
