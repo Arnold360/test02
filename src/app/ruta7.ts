@@ -6,7 +6,7 @@ import {Component, ViewChild, ElementRef, AfterViewInit} from "@angular/core";
             })
 
   
-export class ruta7 implements AfterViewInit {
+export class ruta7 implements AfterViewInit, OnInit {
 
   button = document.getElementById('play');
   
@@ -14,10 +14,41 @@ export class ruta7 implements AfterViewInit {
   endTime:number = 10;
   duration:number = 2000;
   currentTime!:number;
+  @ViewChild('player') player: any;
+  videoId: string;
+
+  @Input()
+  set id(id: string) {
+    this.videoId = id;
+  }
   constructor(){ 
  
 
   }
+
+  
+
+
+  ngOnInit() {
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(tag);
+  }
+
+  // Autoplay
+  onReady() {
+    this.player.mute();         
+    this.player.playVideo();    
+  }
+
+  // Loop
+  onStateChange(event) {
+    if (event.data === 0) {
+      this.player.playVideo();  
+    }
+  }
+
+  
    evento(e:any, video:any){
        this.currentTime = video.currentTime;
       if(!video.paused){video.pause();}
