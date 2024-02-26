@@ -20,7 +20,8 @@ export class ruta7 implements AfterViewInit {
   }
    evento(e:any, video:any){
        this.currentTime = video.currentTime;
-       video.pause();
+      if(video.pause){video.pause();}
+      else { video.play();}
    }
 
   progreso(e:any, video:any){
