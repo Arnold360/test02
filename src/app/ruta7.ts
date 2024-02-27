@@ -15,10 +15,9 @@ export class ruta7 implements AfterViewInit, OnInit {
   duration:number = 2000;
   currentTime!:number;
   @ViewChild('player') player: any;
+  
   videoId: string;
-
-  @Input()
-  set id(id: string) {
+  @Input() set id(id: string) {
     this.videoId = id;
   }
   constructor(){ 
