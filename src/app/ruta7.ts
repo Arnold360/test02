@@ -17,6 +17,9 @@ export class ruta7 implements AfterViewInit, OnInit {
   @ViewChild('player') player: any;
   
   videoId: string;
+  get id(): string {
+    return this.videoId;
+}
   @Input() set id(id: string) {
     this.videoId = id;
   }
