@@ -9,6 +9,7 @@ import {Component, ViewChild, ElementRef, AfterViewInit, OnInit, Input} from "@a
 export class ruta7 implements AfterViewInit, OnInit {
 
   button = document.getElementById('play');
+  tag:any;
   
   startTime:number = 3;
   endTime:number = 10;
