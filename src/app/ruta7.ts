@@ -43,6 +43,7 @@ export class ruta7 implements AfterViewInit, OnInit {
   onReady(event:any) {
     this.player.mute();         
     this.player.playVideo();   
+    this.player.endSeconds = 2405;
     this.player.seekTo(720, false);
   }
 
