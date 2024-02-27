@@ -60,7 +60,7 @@ export class ruta7 implements AfterViewInit, OnInit {
   
    evento(e:any, video:any){
       this.currentTime = video.currentTime;
-      this.player.seekTo(3600, true);
+      this.player.seekTo(2400, true);
       if(!video.paused){video.pause();}
       else { video.play();
              video.currentTime = 3; }
