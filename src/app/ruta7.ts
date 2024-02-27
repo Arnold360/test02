@@ -9,7 +9,7 @@ import {Component, ViewChild, ElementRef, AfterViewInit, OnInit, Input} from "@a
 export class ruta7 implements AfterViewInit, OnInit {
 
   button = document.getElementById('play');
-  tag:any;
+  tag!:any;
   
   startTime:number = 3;
   endTime:number = 10;
@@ -34,9 +34,9 @@ export class ruta7 implements AfterViewInit, OnInit {
 
 
   ngOnInit() {
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(tag);
+    this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/player_api";
+    document.body.appendChild(this.tag);
   }
 
   // Autoplay
