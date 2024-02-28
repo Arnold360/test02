@@ -41,7 +41,6 @@ export class ruta7 implements AfterViewInit, OnInit {
     this.player.endSeconds = 2410;
     this.player.startSeconds = 2400;
     this.player.playVideo();  
-    this.player.seekTo(720, false);
   }
 
   // Loop
@@ -52,8 +51,7 @@ export class ruta7 implements AfterViewInit, OnInit {
   }
 
   actualizacion(e:any, video:any){
-
-    this.currentTime = video.currentTime;
+      this.currentTime = video.currentTime;
   }
   
    evento(e:any, video:any){
