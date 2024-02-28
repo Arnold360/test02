@@ -25,14 +25,10 @@ export class ruta7 implements AfterViewInit, OnInit {
   set id(id: string) {
     this.videoId = id;
   }
-  constructor(){ 
- 
-
-  }
-
   
-
-
+  constructor(){ 
+  }
+  
   ngOnInit() {
     this.tag = document.createElement('script');
     this.tag.src = "https://www.youtube.com/player_api";
@@ -42,9 +38,9 @@ export class ruta7 implements AfterViewInit, OnInit {
   // Autoplay
   onReady(event:any) {
     this.player.mute();         
-    this.player.playVideo();   
     this.player.endSeconds = 2410;
     this.player.startSeconds = 2400;
+    this.player.playVideo();  
     this.player.seekTo(720, false);
   }
 
