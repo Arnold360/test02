@@ -46,8 +46,9 @@ export class ruta7 implements AfterViewInit, OnInit {
   // Loop
   onStateChange(event:any) {
     if (event.data === 0) {
-      
+      this.player.startSeconds = 2400;
       this.player.unMute();
+      
       this.player.playVideo();  
      }
   }
