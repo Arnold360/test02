@@ -53,16 +53,10 @@ export class ruta7 implements AfterViewInit, OnInit {
      }
   }
 
-  actualizacion(e:any, video:any){
-      this.currentTime = video.currentTime;
-  }
-  
-   evento(e:any, video:any){
-      this.currentTime = video.currentTime;
+   evento(e:any){
+    
       this.player.seekTo(2400, true);
-      if(!video.paused){video.pause();}
-      else { video.play();
-             video.currentTime = 3; }
+     
    }
   
 
