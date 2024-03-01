@@ -1,5 +1,4 @@
 <button id="play" type= "button" (click)= "evento($event)" >boton1</button>
-<p>vvvv {{duration}} {{video.currentTime}} {{currentTime}} </p>
 <youtube-player #player [videoId]="videoId" (ready)="onReady($event)" 
   (stateChange)="onStateChange($event)"></youtube-player>
 
