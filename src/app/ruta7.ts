@@ -41,7 +41,7 @@ export class ruta7 implements AfterViewInit, OnInit {
     this.player.endSeconds = 2410;
     
     
-    this.player.seekTo(2400, true);
+    this.player.seekTo();
   }
 
   // Loop
