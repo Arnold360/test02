@@ -64,19 +64,7 @@ export class ruta7 implements AfterViewInit, OnInit {
       else { video.play();
              video.currentTime = 3; }
    }
-
-  progreso(e:any, video:any){
-       this.currentTime = video.currentTime;
-  }
   
-   onMetadata(e:any, video:any) {
-       this.duration = 1000;
-       this.currentTime = video.currentTime;
-       console.log('metadata: ', e);
-       console.log('duration:  ', this.duration = video.duration);
-       
-     }
-     
 
   ngAfterViewInit() {
    
