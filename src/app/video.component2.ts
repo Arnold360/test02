@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 
 @Component({
-  template:'./video.component2.html',
+  templateUrl:'./video.component2.html',
   selector: 'app-video2'
 })
 
