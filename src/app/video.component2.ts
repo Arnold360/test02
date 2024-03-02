@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 
 @Component({
-  template:'<div id="ytplayer"></div> <script></script>',
+  template:'<div id="ytplayer"></div> ',
   selector: 'app-video2'
 })
 
