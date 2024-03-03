@@ -18,21 +18,21 @@ export class nombreService {
                                 "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                                 "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
                                 "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"];
-             urlYts:string[] = [];
+  urlEntrevistasYts:string[] = [];
   
   
       nombreMitines:string[] = ["ANTAURO HUMALA MITIN DESDE URUBAMBA - CUSCO 09/2022",
-                                'Antauro Humala mitin desde Juliaca "todos juntos forjaremos la segunda Republica" 09/2022',
-                                 ];
+                                'Antauro Humala mitin desde Juliaca "todos juntos forjaremos la segunda Republica" 09/2022' ];
          urlMitines:string[] = ["https://www.youtube.com/embed/NAvU6m960CM?si=2WfGkid-FxjRyMuq",
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
+      urlMitinesYts:string[] = [];
   
       tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
          tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
-    
+      tipoUrlsYts:string[][] = [this.urlEntrevistasYts, this.urlMitinesYts];
   
-      entrevistas:declaracion[] = [];
-          mitines:declaracion[] = [];
+    entrevistas:declaracion[] = [];
+        mitines:declaracion[] = [];
   declaraciones:declaracion[][] = [this.entrevistas, this.mitines];
 
   enlaceYt!:string;
@@ -53,10 +53,9 @@ export class nombreService {
     for(let e = 0; this.tipoNombres.length > e; e++) {
       
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
-         this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i]});
+         this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.urlYts[e][i]});
          this.fechas[e].push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.tipoNombres[e][i])![0]);
          this.titulos[e].push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.tipoNombres[e][i])![0]);
-         this.urlYts
         
      
       
