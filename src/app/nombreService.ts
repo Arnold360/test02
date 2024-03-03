@@ -18,6 +18,8 @@ export class nombreService {
                                 "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                                 "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
                                 "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"];
+             urlYts:string[] = [];
+  
   
       nombreMitines:string[] = ["ANTAURO HUMALA MITIN DESDE URUBAMBA - CUSCO 09/2022",
                                 'Antauro Humala mitin desde Juliaca "todos juntos forjaremos la segunda Republica" 09/2022',
@@ -32,7 +34,8 @@ export class nombreService {
       entrevistas:declaracion[] = [];
           mitines:declaracion[] = [];
   declaraciones:declaracion[][] = [this.entrevistas, this.mitines];
-  
+
+  enlaceYt!:string;
   enlace!:SafeUrl;
    nombre!:string;
   
@@ -53,6 +56,8 @@ export class nombreService {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i]});
          this.fechas[e].push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.tipoNombres[e][i])![0]);
          this.titulos[e].push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.tipoNombres[e][i])![0]);
+         this.urlYts
+        
      
       
     }
