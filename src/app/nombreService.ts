@@ -18,14 +18,14 @@ export class nombreService {
                                 "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                                 "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
                                 "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"];
-  urlEntrevistasYts:string[] = [];
+  urlEntrevistasYts:string[] = ["HfCjXPMj5VA", "6TXE6qFPI7Y", "ta50OnS7UQo", "zOO7PIKJd5k", "QEffxGNTHRQ"];
   
   
       nombreMitines:string[] = ["ANTAURO HUMALA MITIN DESDE URUBAMBA - CUSCO 09/2022",
                                 'Antauro Humala mitin desde Juliaca "todos juntos forjaremos la segunda Republica" 09/2022' ];
          urlMitines:string[] = ["https://www.youtube.com/embed/NAvU6m960CM?si=2WfGkid-FxjRyMuq",
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
-      urlMitinesYts:string[] = [];
+      urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
   
       tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
          tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
@@ -53,7 +53,7 @@ export class nombreService {
     for(let e = 0; this.tipoNombres.length > e; e++) {
       
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
-         this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.urlYts[e][i]});
+         this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.tipoUrlsYts[e][i]});
          this.fechas[e].push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.tipoNombres[e][i])![0]);
          this.titulos[e].push(/([a-zA-Z-#|:áéíóú]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.tipoNombres[e][i])![0]);
         
