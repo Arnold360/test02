@@ -4,7 +4,7 @@
  <iframe id="vid" width="560" height="315" [src]= "servicio.enlace" style="border:none;overflow:hidden" 
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>{{prueba}}</iframe>
-  <youtube-player #player  [videoId]="/(?<=[a-z]+\/).(?=\?si)/.exec(servico.urlEntrevistas[0])"></youtube-player>
+  <youtube-player #player  [videoId]="/(?<=[a-z]+\/).*(?=\?si)/.exec(servico.urlEntrevistas[0])"></youtube-player>
   <button id="play">boton</button>
 
  
