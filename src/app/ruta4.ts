@@ -18,14 +18,11 @@ export class ruta4 implements AfterViewInit {
   element!:HTMLCollection; 
   prueba!:number;
   prueba2!:number;
-  prueba3:string= "https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
   
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
-    for (let i = 0; nombreservice.entrevistas.length > i; i++){
-      this.rutas.push("ruta" + i.toString());  
-      }
+  
     }
     
 
