@@ -19,35 +19,13 @@ export class ruta5 {
   
   constructor(public servicio:nombreService){
     this.prueba = servicio.enlace;
-    this.iframe = document.getElementById("vid") as HTMLIFrameElement;
-    this.video = this.iframe.contentWindow.getElementsByTagName("video")[0];
-    this.button.addEventListener('click', this.playVideo); 
+    
  
     
    }
   
  
 
-  checkTime() {
-        if (this.video.currentTime >= this.endTime) {
-           this.video.pause();
-        } else {
-           /* call checkTime every 1/10th 
-              second until endTime */
-           setTimeout(this.checkTime, 100);
-        }
-    }
-
- playVideo() {
-
-   
-    this.checkTime();
-
-    this.video.currentTime = this.startTime;
-    this.video.play();
-    this.checkTime();
-}
-  
  
    
 
