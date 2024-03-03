@@ -17,7 +17,7 @@ export class ruta4 implements AfterViewInit {
   rutas:string[] = []; 
   element!:HTMLCollection; 
   prueba!:number;
-  prueba2!:number;
+  
   
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
@@ -37,8 +37,7 @@ export class ruta4 implements AfterViewInit {
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.entrevistas[i].url);
      this.nombreservice.enlaceYt = this.nombreservice.entrevistas[i].urlYt;
      this.nombreservice.nombre = this.nombreservice.entrevistas[i].nombre;
-     this.prueba2 = i;
-   
+     
      
    }
   
