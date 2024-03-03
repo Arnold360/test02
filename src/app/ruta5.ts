@@ -12,14 +12,13 @@ export class ruta5 {
   
   iframe!:any;
   video!:any;
-  prueba:SafeUrl;
+  
   button:HTMLElement = document.getElementById('play');
   endTime:number = 20;
   startTime:number = 10;
   
   constructor(public servicio:nombreService){
-    this.prueba = servicio.enlace;
-    
+   
  
     
    }
