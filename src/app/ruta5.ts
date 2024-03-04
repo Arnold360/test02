@@ -12,7 +12,7 @@ export class ruta5 implements OnInit {
   
   iframe!:any;
   video!:any;
-  
+  tag!:any;
   button:HTMLElement = document.getElementById('play');
   endTime:number = 20;
   startTime:number = 10;
