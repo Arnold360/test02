@@ -42,7 +42,11 @@ export class ruta5 implements OnInit {
        this.player.playVideo(); 
      }
   }
- 
+   evento(e:any){
+    
+      this.player.seekTo(2400, true);
+     
+   }
    
 
 }
