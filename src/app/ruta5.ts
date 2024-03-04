@@ -1,5 +1,5 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
-import { Component, SkipSelf, AfterViewInit, OnInit } from '@angular/core';
+import { Component, SkipSelf, AfterViewInit, OnInit, ViewChild } from '@angular/core';
 import { nombreService } from './nombreService';
 
 @Component({
