@@ -2,5 +2,5 @@
 <div>
   <h2> {{servicio.nombre}} </h2>
  <youtube-player #player  [videoId]="servicio.enlaceYt" (ready)="onReady($event)" (stateChange)="onStateChange($event)"></youtube-player>
-  <button id="play">boton</button>
+  <button id="play" (click)="evento()">boton</button>
 </div>
