@@ -16,6 +16,7 @@ export class ruta7 implements AfterViewInit, OnInit {
   duration:number = 2000;
   currentTime!:number;
   @ViewChild('player') player: any;
+  @ViewChild('player2') player2: any;
   
   videoId: string;
   @Input("videoId") 
@@ -56,7 +57,7 @@ export class ruta7 implements AfterViewInit, OnInit {
 
    evento(e:any){
     
-     this.player.loadVideoById({'videoId': 'bHQqvYy5KYo',
+     this.player2.loadVideoById({'videoId': 'bHQqvYy5KYo',
                'startSeconds': 5,
                'endSeconds': 60,
                'suggestedQuality': 'large'});
