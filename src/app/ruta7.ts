@@ -56,7 +56,10 @@ export class ruta7 implements AfterViewInit, OnInit {
 
    evento(e:any){
     
-      this.player.seekTo(2400, true);
+     loadVideoById({'videoId': 'bHQqvYy5KYo',
+               'startSeconds': 5,
+               'endSeconds': 60,
+               'suggestedQuality': 'large'});
      
    }
   
