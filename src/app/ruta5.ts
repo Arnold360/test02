@@ -1,5 +1,5 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
-import { Component, SkipSelf, AfterViewInit } from '@angular/core';
+import { Component, SkipSelf, AfterViewInit, OnInit } from '@angular/core';
 import { nombreService } from './nombreService';
 
 @Component({
@@ -8,7 +8,7 @@ import { nombreService } from './nombreService';
   styleUrls: ['./ruta5.css'],
   
 })
-export class ruta5 {
+export class ruta5 implements OnInit {
   
   iframe!:any;
   video!:any;
@@ -23,7 +23,11 @@ export class ruta5 {
     
    }
   
- 
+  ngOnInit() {
+    this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/player_api";
+    document.body.appendChild(this.tag);
+  }
 
  
    
