@@ -16,6 +16,7 @@ export class ruta5 implements OnInit {
   button:HTMLElement = document.getElementById('play');
   endTime:number = 20;
   startTime:number = 10;
+  @ViewChild('player') player: any;
   
   constructor(public servicio:nombreService){
    
@@ -28,7 +29,19 @@ export class ruta5 implements OnInit {
     this.tag.src = "https://www.youtube.com/player_api";
     document.body.appendChild(this.tag);
   }
+  onReady(event:any) {
+    
+    this.player.playVideo();
+    
+  }
 
+  // Loop
+  onStateChange(event:any) {
+    if (event.data === 0) {
+      
+       this.player.playVideo(); 
+     }
+  }
  
    
 
