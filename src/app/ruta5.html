@@ -1,6 +1,6 @@
 
 <div>
   <h2> {{servicio.nombre}} </h2>
- <youtube-player #player  [videoId]="servicio.enlaceYt" (onReady)="onReady($event)" (onStateChange)="onStateChange($event)")></youtube-player>
+ <youtube-player #player  [videoId]="servicio.enlaceYt" (Ready)="onReady($event)" (StateChange)="onStateChange($event)")></youtube-player>
   <button id="play">boton</button>
 </div>
