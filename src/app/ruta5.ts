@@ -37,10 +37,10 @@ export class ruta5 implements OnInit {
 
   // Loop
   onStateChange(event:any) {
-    /*if (event.data === 0) {
+    if (event.data === -1) {
       
        this.player.playVideo(); 
-     } */
+     } 
   }
    evento(){
     
