@@ -18,7 +18,7 @@ export class nombreService {
                                 "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                                 "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
                                 "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"];
-  urlEntrevistasYts:string[] = ["HfCjXPMj5VA", "6TXE6qFPI7Y", "ta50OnS7UQo", "zOO7PIKJd5k", "QEffxGNTHRQ"];
+  urlEntrevistasYts:string[] = ["HfCjXPMj5VA", "6TXE6qFPI7Y?si=-ffjiubZfRxniNeq&start=40", "ta50OnS7UQo", "zOO7PIKJd5k", "QEffxGNTHRQ"];
   
   
       nombreMitines:string[] = ["ANTAURO HUMALA MITIN DESDE URUBAMBA - CUSCO 09/2022",
