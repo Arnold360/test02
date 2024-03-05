@@ -39,8 +39,8 @@ export class ruta5 implements OnInit {
   onStateChange(event:any) {
     /*if (event.data === 0) {
       
-       this.player.playVideo(); */
-     }
+       this.player.playVideo(); 
+     } */
   }
    evento(){
     
