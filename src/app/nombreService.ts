@@ -12,13 +12,15 @@ export class nombreService {
                                 "El cuestionado plan de ANTAURO HUMALA: BUKELIZAR el país y retirarnos de la corte IDH | #LR 12/2023",
                                 "ANTAURO HUMALA NO SE ARREPIENTE DE NADA Y PROMETE MEDIDAS RADICALES 08/2023",
                                 "ENTREVISTA EN LA MIRA GO TV CUSCO 13/11/2023",
-                                "DETRAS DE LA VERDAD - PIURA 10/10/2023",];
+                                "DETRAS DE LA VERDAD - PIURA 10/10/2023",
+                               "Entrevistas / Invitado: Myr.EP (r) Antauro Humala Tasso | La Noticia Perú 18/07/23"
      urlEntrevistas:string[] = ["https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo&amp;rel=0&amp;autoplay=1&amp;color=white&amp;start=40",
                                 "https://www.youtube.com/embed/6TXE6qFPI7Y?si=-ffjiubZfRxniNeq&start=40",
                                 "https://www.youtube.com/embed/ta50OnS7UQo?si=cPlY9EBohYopIEqP",
                                 "https://www.youtube.com/embed/zOO7PIKJd5k?si=t5slTL6tQSpWXAiR",
-                                "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK"];
-  urlEntrevistasYts:string[] = ["HfCjXPMj5VA", "6TXE6qFPI7Y", "ta50OnS7UQo", "zOO7PIKJd5k", "QEffxGNTHRQ"];
+                                "https://www.youtube.com/embed/QEffxGNTHRQ?si=ss40OZepvpDanJjK",
+                                "https://www.youtube.com/embed/xoLQeGL8Enw?si=K0z-sclDO5RRIRMM" ];
+  urlEntrevistasYts:string[] = ["HfCjXPMj5VA", "6TXE6qFPI7Y", "ta50OnS7UQo", "zOO7PIKJd5k", "QEffxGNTHRQ", "xoLQeGL8Enw"];
   
   
       nombreMitines:string[] = ["ANTAURO HUMALA MITIN DESDE URUBAMBA - CUSCO 09/2022",
