@@ -49,7 +49,8 @@ export class nombreService {
    fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
   titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
   
-  regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
+        regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
+  tiempoSalto:number = 0;
   constructor() {
    
     for(let e = 0; this.tipoNombres.length > e; e++) {
