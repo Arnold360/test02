@@ -47,14 +47,14 @@ export class nombreService {
   
        fechaEntrevistas:string[] = [];
       tituloEntrevistas:string[] = [];
-destacadosEntrevistas:number[][] = [];
+destacadosEntrevistas:Number[][] = [];
     
        fechaMitines:string[] = [];
       tituloMitines:string[] = [];
-destacadosMitines:number[][] = [];
+destacadosMitines:NUmber[][] = [];
         fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
        titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
-  destacados:number[][][] = [this.destacadosMitines, this.destacadosEntrevistas];
+  destacados:Number[][][] = [this.destacadosMitines, this.destacadosEntrevistas];
   
   
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
