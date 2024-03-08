@@ -49,11 +49,11 @@ export class nombreService {
   
        fechaEntrevistas:string[] = [];
       tituloEntrevistas:string[] = [];
-destacadosEntrevistas:Number[][] = [];
+destacadoEntrevistas:Number[][] = [];
     
        fechaMitines:string[] = [];
       tituloMitines:string[] = [];
-destacadosMitines:Number[][] = [];
+destacadoMitines:Number[][] = [];
         fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
        titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
   destacados:Number[][][] = [this.destacadosEntrevistas, this.destacadosMitines];
