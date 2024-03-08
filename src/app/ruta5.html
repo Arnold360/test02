@@ -1,6 +1,6 @@
 
 <div>
-  <h2> {{servicio.nombre}} </h2>
+  <h2> {{servicio.titulo}} </h2>
  <youtube-player #player  [videoId]="servicio.enlaceYt" (ready)="onReady($event)" (stateChange)="onStateChange($event)"></youtube-player>
   <button id="play1" (click)="evento()">Destacado1</button>
   <button id="play2" (click)="evento()">Destacado2</button>
