@@ -56,7 +56,7 @@ destacadoEntrevistas:Number[][] = [];
 destacadoMitines:Number[][] = [];
         fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
        titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
-  destacados:Number[][][] = [this.destacadosEntrevistas, this.destacadosMitines];
+  destacados:Number[][][] = [this.destacadoEntrevistas, this.destacadoMitines];
   
 
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
