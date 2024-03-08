@@ -16,7 +16,7 @@ export class ruta5 implements OnInit {
   button:HTMLElement = document.getElementById('play');
   endTime:number = 20;
   startTime:number = 10;
-  prueba!:number;
+  prueba!:Number;
   @ViewChild('player') player: any;
   
   constructor(public servicio:nombreService){
