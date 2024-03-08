@@ -48,7 +48,7 @@ export class nombreService {
   
        fechaEntrevistas:string[] = [];
       tituloEntrevistas:string[] = [];
-destacadosEntrevistas:Number[][] = [[1800]];
+destacadosEntrevistas:Number[][] = [];
     
        fechaMitines:string[] = [];
       tituloMitines:string[] = [];
