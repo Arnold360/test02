@@ -44,7 +44,7 @@ export class ruta5 implements OnInit {
   }
    evento(){
     
-      this.player.seekTo(2400, true);
+      this.player.seekTo(this.servicio.destacadosEntrevistas[0][0], true);
      
    }
    
