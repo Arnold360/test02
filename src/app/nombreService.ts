@@ -58,7 +58,7 @@ destacadosMitines:number[][] = [];
   
   
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
-  tiempoSalto:number = 0;
+  tiempoSalto:Number = 0;
   constructor() {
    
     for(let e = 0; this.declaraciones.length > e; e++) {
