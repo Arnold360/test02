@@ -42,8 +42,9 @@ export class nombreService {
   declaraciones:declaracion[][] = [this.entrevistas, this.mitines];
 
   enlaceYt!:string;
-  enlace!:SafeUrl;
-   nombre!:string;
+    enlace!:SafeUrl;
+    nombre!:string;
+    titulo!:string;
   
        fechaEntrevistas:string[] = [];
       tituloEntrevistas:string[] = [];
