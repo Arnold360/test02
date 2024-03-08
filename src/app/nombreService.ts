@@ -61,7 +61,7 @@ destacadosMitines:number[][] = [];
   tiempoSalto:number = 0;
   constructor() {
    
-    for(let e = 0; this.Declaraciones.length > e; e++) {
+    for(let e = 0; this.declaraciones.length > e; e++) {
       
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.tipoUrlsYts[e][i]});
