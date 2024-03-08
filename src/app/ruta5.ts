@@ -42,7 +42,7 @@ export class ruta5 implements OnInit {
        this.player.playVideo(); 
      } 
   }
-   evento(i){
+   evento(i:number){
     
       this.player.seekTo(this.servicio.destacado[i], true);
      
