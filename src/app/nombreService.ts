@@ -45,6 +45,7 @@ export class nombreService {
     enlace!:SafeUrl;
     nombre!:string;
     titulo!:string;
+  destacado!:Number[];
   
        fechaEntrevistas:string[] = [];
       tituloEntrevistas:string[] = [];
@@ -57,7 +58,7 @@ destacadosMitines:Number[][] = [];
        titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
   destacados:Number[][][] = [this.destacadosEntrevistas, this.destacadosMitines];
   
-  
+
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   tiempoSalto:Number = 0;
   
