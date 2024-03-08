@@ -51,7 +51,7 @@ destacadosEntrevistas:Number[][] = [];
     
        fechaMitines:string[] = [];
       tituloMitines:string[] = [];
-destacadosMitines:NUmber[][] = [];
+destacadosMitines:Number[][] = [];
         fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
        titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
   destacados:Number[][][] = [this.destacadosMitines, this.destacadosEntrevistas];
