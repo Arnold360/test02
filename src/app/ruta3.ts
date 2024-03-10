@@ -34,7 +34,8 @@ export class ruta3 implements AfterViewInit {
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.mitines[i].url);
      this.nombreservice.nombre = this.nombreservice.mitines[i].nombre;
-     this.prueba2 = i;
+     this.nombreservice.enlaceYt = this.nombreservice.mitines[i].urlYt;
+     this.nombreservice.destacado = this.nombreservice.destacadoMitines[i];
      
    }
   
