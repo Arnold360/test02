@@ -1,10 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-!doctype html{
-   background-image: url('https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—watercolor leaves set background_1157905.png');
-  /*background-size: cover;*/
-  height: 100%;
-  width: 100%;  
-  display: grid;
-  position: relative;
-  align-items: end;
-}
