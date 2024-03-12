@@ -40,6 +40,7 @@ nav li {
 
 .bardown {
   display: none;
+  color: white;
 }
 .baritem:hover .bardown {
   display: block;
