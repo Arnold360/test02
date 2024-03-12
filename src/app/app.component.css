@@ -40,12 +40,17 @@ nav li {
 
 .bardown {
   display: none;
+  position:absolute;
   color: white;
 }
 .baritem:hover .bardown {
   display: block;
 }
-  
+ .baritem {
+   position: relative;
+   display: inline-block;
+   
+ } 
 
 a {
   color: beige;
