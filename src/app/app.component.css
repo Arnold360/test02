@@ -35,8 +35,17 @@ nav li {
   display: inline-block;
   width: 30%;
   margin: 1rem 0;
-     border: 1px solid red;
+  border: 1px solid red;
 }
+
+.bardown {
+  display: none;
+}
+.baritem:hover .bardown {
+  display: block;
+}
+  
+
 a {
   color: beige;
 }
