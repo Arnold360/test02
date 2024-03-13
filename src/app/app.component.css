@@ -1,12 +1,4 @@
-body {
- 
-  /*background-size: cover;*/
-  height: 100%;
-  width: 100%;  
-  display: grid;
-  position: relative;
-  align-items: end;
-}
+
 #fondo {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_eO_YGP-y8vT4zZDMIVTwPjsF5kz7Wj71Og&usqp=CAU');
   height: 200px;
