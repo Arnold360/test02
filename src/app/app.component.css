@@ -59,7 +59,7 @@ a {
  border-radius: 3px
 }
 
-.gg-list::after,
+
 .gg-list::before {
  content: "";
  display: block;
