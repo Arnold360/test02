@@ -7,12 +7,18 @@
   position: relative;
   align-items: end;
 }
+@media screen and (max-width: 600px){
 
+  #fondo {
+    background-image: url("https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—traditional simple golden luxury japanese_980806.png");
+  }
+  
+}
 #barranav {
   display: flex;
   justify-content: space-between;
   text-align: bottom;
-  font-size: 150%;
+  font-size: 150%; 
 }
 nav ul {
   margin: 0;
