@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test02';
   x = window.matchMedia('(max- width: 700px)');
-
+  constructor(){
+    this.cambiarColor();
+  }
   cambiarColor(){
     if(this.x.matches){
       document.body.style.backgroundColor = "red";
@@ -17,4 +19,6 @@ export class AppComponent {
       document.body.style.backgroundColor = "blue";
     }
   }
+
+  this.x.addEventListener("change", this.cambiarColor);
 }
