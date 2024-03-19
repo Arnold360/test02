@@ -10,7 +10,7 @@ export class AppComponent {
   x = window.matchMedia('(max- width: 700px)');
 
   cambiarColor(){
-    if(x.matches){
+    if(this.x.matches){
       document.body.style.backgroundColor = "red";
     }
     else{
