@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test02';
+  x = window.matchMedia('(max- width: 700px)');
 }
