@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test02';
   x = window.matchMedia('(max- width: 700px)');
+
+  cambiarColor(){
+    if(x.matches){
+      document.body.style.backgroundColor = "red";
+    }
+    else{
+      document.body.style.backgroundColor = "blue";
+    }
+  }
 }
