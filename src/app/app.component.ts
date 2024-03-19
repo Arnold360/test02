@@ -10,6 +10,7 @@ export class AppComponent {
   x = window.matchMedia('(max- width: 700px)');
   constructor(){
     this.cambiarColor();
+    this.x.addEventListener("change", this.cambiarColor);
   }
   cambiarColor(){
     if(this.x.matches){
@@ -20,5 +21,5 @@ export class AppComponent {
     }
   }
 
-  this.x.addEventListener("change", this.cambiarColor);
+  
 }
