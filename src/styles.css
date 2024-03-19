@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-#fondo1 {
-   background-image: url('https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—watercolor leaves set background_1157905.png');
-  /**/
+/*#fondo1 {
+  background-image: url('https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—watercolor leaves set background_1157905.png');
+  
   height: 100%;
   width: 100%;  
   display: grid;
   position: relative;
   align-items: end;
-}
+}*/
 /*#fondo2 {
   background-image: url("https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—cartoon plant red leaves leaves_3900901.png");
   background-size: 200px 120px;
