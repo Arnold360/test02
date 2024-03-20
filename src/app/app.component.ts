@@ -11,7 +11,7 @@ export class AppComponent {
   
   constructor(){
     this.cambiarColor();
-    this.x.addEventListener("change", () => { this.cambiarColor } );
+    this.x.addEventListener("change", () => { this.cambiarColor() } );
   }
   
   cambiarColor(){
