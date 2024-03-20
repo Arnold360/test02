@@ -15,10 +15,10 @@ export class AppComponent {
   }
   
   cambiarColor(){
-    if(this.x.matches){
+    if (this.x.matches) {
       document.body.style.backgroundColor = "red";
     }
-    else{
+    else {
       document.body.style.backgroundColor = "blue";
     }
   }
