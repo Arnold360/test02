@@ -60,6 +60,7 @@ a {
 }
 
  .gg-list {
+ display: none;
  box-sizing: border-box;
  position: relative;
  display: block;
