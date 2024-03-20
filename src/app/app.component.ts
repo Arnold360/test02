@@ -17,6 +17,7 @@ export class AppComponent {
   cambiarColor(){
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
+      document.getElementsByClassName("gg-list")[0].style.display = "block";
     }
     else {
       document.body.style.backgroundColor = "blue";
