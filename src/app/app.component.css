@@ -63,7 +63,6 @@ a {
  display: none;
  box-sizing: border-box;
  position: relative;
- display: block;
  transform: scale(var(--ggs,1));
  width: 22px;
  height: 20px;
