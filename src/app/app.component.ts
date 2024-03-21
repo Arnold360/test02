@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test02';
   x = window.matchMedia("(max-width: 700px)");
-  elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
+
   
   constructor(){
     this.cambiarColor();
@@ -18,7 +18,7 @@ export class AppComponent {
   cambiarColor(){
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
-      this.elemento.style.display = "block";
+      (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0].style.display = "block";
     }
     else {
       document.body.style.backgroundColor = "blue";
