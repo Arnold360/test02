@@ -22,7 +22,7 @@ export class AppComponent {
     }
     else {
       document.body.style.backgroundColor = "blue";
-      this.elemento.style.display = "none";
+      
      
     }
   }
