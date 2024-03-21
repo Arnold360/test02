@@ -21,7 +21,7 @@ export class AppComponent {
     }
     else {
       document.body.style.backgroundColor = "blue";
-      (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0].style.display = "block";
+      (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0].style.display = "none";
     }
   }
 
