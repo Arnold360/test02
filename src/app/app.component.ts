@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(){
     this.cambiarColor();
     this.x.addEventListener("change", () => { this.cambiarColor() } );
-    this.elemento.display = "none";
+    this.elemento.style.display = "none";
   }
   
   cambiarColor(){
