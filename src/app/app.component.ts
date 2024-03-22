@@ -9,10 +9,12 @@ export class AppComponent implements AfterViewInit {
   title = 'test02';
   x = window.matchMedia("(max-width: 700px)");
   elemento!:HTMLElement;
+  elemento2:HTMLElement;
   
   constructor(){
     
     this.x.addEventListener("change", () => { this.cambiarColor() } );
+    this.elemento2 = document.createElement("div");
  
   }
   
