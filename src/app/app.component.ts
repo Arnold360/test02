@@ -28,8 +28,9 @@ export class AppComponent implements AfterViewInit {
     }
   }
 ngAfterViewInit(){
-  this.cambiarColor();
   this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
+  this.cambiarColor();
+ 
 }
   
 }
