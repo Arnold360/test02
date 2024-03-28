@@ -12,6 +12,7 @@ export class AppComponent implements AfterViewInit {
   elemento2:HTMLElement;
   elemento3!:HTMLElement;
   elemento4!:HTMLElement;
+  elemento5!:HTMLElement;
   
   constructor(){
     
@@ -29,13 +30,16 @@ export class AppComponent implements AfterViewInit {
     }
     else {
       document.body.style.backgroundColor = "blue";
+      this.elemento5.appendChild(this.element4);
       this.elemento.style.display = "none";
+      
      
     }
   }
 ngAfterViewInit(){
   this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
   this.elemento4 =  document.getElementById("barranav");
+  this.elemento5 =  document.getElementById("fondo");
   this.cambiarColor();
  
 }
