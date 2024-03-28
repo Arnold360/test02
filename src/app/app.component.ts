@@ -35,7 +35,7 @@ export class AppComponent implements AfterViewInit {
   }
 ngAfterViewInit(){
   this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
-  this.elemento4 =  document.getElementsById("barranav");
+  this.elemento4 =  document.getElementById("barranav");
   this.cambiarColor();
  
 }
