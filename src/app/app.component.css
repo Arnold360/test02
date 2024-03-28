@@ -46,7 +46,7 @@ nav li {
   position:absolute;
   color: white;
 }
-.baritem:hover .bardown {
+.baritem:hover, .bardown {
   display: block;
 }
  .baritem {
