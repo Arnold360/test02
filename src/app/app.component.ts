@@ -30,7 +30,7 @@ export class AppComponent implements AfterViewInit {
     }
     else {
       document.body.style.backgroundColor = "blue";
-      this.elemento5.appendChild(this.element4);
+      this.elemento5.appendChild(this.elemento4);
       this.elemento.style.display = "none";
       
      
