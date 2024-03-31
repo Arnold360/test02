@@ -20,7 +20,7 @@
 }
 }*/
 #barranav {
-  display: flex;
+ 
   justify-content: space-between;
   text-align: bottom;
   font-size: 150%; 
