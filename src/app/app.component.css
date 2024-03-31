@@ -71,7 +71,7 @@ a {
  border-radius: 3px
 }
 .gg-list:hover .barranav {
-  display: flex;
+  display: block;
 }
 
 .gg-list::after,
