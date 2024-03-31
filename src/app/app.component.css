@@ -70,7 +70,7 @@ a {
  border: 2px solid;
  border-radius: 3px
 }
-.gg-list:hover nav #barranav {
+.gg-list:hover nav .barranav {
   display: flex;
 }
 
