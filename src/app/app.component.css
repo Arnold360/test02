@@ -91,6 +91,6 @@ a {
 .gg-list::after {
  border-radius: 30px;
  width: 80px;
- left: 70px
+ left: 70px;
  z-index: +1;
 } 
