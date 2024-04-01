@@ -70,9 +70,7 @@ a {
  border: 20px solid;
  border-radius: 30px
 }
-.gg-list:hover ~ .barranav {
-  display: block;
-}
+
 
 .gg-list::after,
 .gg-list::before {
