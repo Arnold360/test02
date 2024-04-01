@@ -43,7 +43,9 @@ ngAfterViewInit(){
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
   this.cambiarColor();
- 
+  this.elemento.onmouseover = this.mouseOver;
 }
-  
+  mouseOver(){
+    this.elemento4.style.display = "flex";
+  }
 }
