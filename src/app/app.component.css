@@ -92,4 +92,5 @@ a {
  border-radius: 30px;
  width: 80px;
  left: 70px
+ z-index: +1;
 } 
