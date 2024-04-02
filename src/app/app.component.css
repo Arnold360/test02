@@ -60,7 +60,7 @@ a {
   color: beige;
 }
 
-.gg-list:hover .barranav {
+.gg-list:hover ~ .barranav {
  display: block; 
   
 }
