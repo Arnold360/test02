@@ -60,6 +60,11 @@ a {
   color: beige;
 }
 
+.gg-list:hover .barranav {
+ display: block; 
+  
+}
+
  .gg-list {
  
  box-sizing: border-box;
