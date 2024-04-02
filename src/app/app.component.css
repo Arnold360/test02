@@ -60,8 +60,8 @@ a {
   color: beige;
 }
 
-.gg-list:hover ~ .barranav {
- display: block; 
+.gg-list ~ .barranav {
+ display: none; 
   
 }
 
