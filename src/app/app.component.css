@@ -19,11 +19,11 @@
     background-image: url("https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—traditional simple golden luxury japanese_980806.png");
 }
 }*/
-#barranav {
+.gg-list ~ #barranav {
  
   justify-content: space-between;
   text-align: bottom;
-  font-size: 150%; 
+  font-size: 250%; 
   
 }
 
