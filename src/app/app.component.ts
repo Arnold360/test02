@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   elemento3!:HTMLElement;
   elemento4!:HTMLElement;
   elemento5!:HTMLElement;
+  elemento6!:HTMLElement;
   
   constructor(){
     
@@ -42,11 +43,13 @@ ngAfterViewInit(){
   this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
+  this.elemento6 =  document.getElementById("parrafo");
+  
   this.cambiarColor();
-  this.elemento4.onmouseover = this.mouseOver;
+  this.elemento6.onmouseover = this.mouseOver;
 }
   mouseOver(){
-    this.elemento4.style.display = "flex";
+    this.elemento4.style.display = "none";
     this.elemento4.style.fontSize = "100%";
   }
 }
