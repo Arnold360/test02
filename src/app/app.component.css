@@ -29,8 +29,8 @@
   display: block;
 }
 
-#parrafo:hover {
-  display: none;
+#parrafo:hover ~ #barranav {
+  display: flex;
   color: red;
 }
 
