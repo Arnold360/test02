@@ -19,17 +19,12 @@
     background-image: url("https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—traditional simple golden luxury japanese_980806.png");
 }
 }*/
-.gg-list ~ #barranav {
+#barranav {
  
   justify-content: space-between;
   text-align: bottom;
   font-size: 250%; 
   }
-.gg-list:hover  {
-  display: none;
-}
-
-
 
 nav ul {
   margin: 0;
@@ -55,18 +50,16 @@ nav li {
 .baritem:hover .bardown {
   display: block;
 }
- .baritem {
+.baritem {
    position: relative;
    display: inline-block;
-   
- } 
+    } 
 
 a {
   color: beige;
 }
 
  .gg-list {
- 
  box-sizing: border-box;
  position: relative;
  transform: scale(var(--ggs,1));
@@ -97,5 +90,4 @@ a {
  border-radius: 30px;
  width: 80px;
  left: 70px;
- z-index: +1;
 } 
