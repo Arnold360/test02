@@ -29,6 +29,11 @@
   display: block;
 }
 
+#parrafo:hover {
+  display: none;
+  color: red;
+}
+
 nav ul {
   margin: 0;
   padding: 0;
