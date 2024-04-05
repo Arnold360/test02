@@ -46,10 +46,7 @@ ngAfterViewInit(){
   this.elemento6 =  document.getElementById("parrafo");
   
   this.cambiarColor();
-  this.elemento6.onmouseover = this.mouseOver;
+  
 }
-  mouseOver(){
-    this.elemento6.style.display = "none";
-    
-  }
+
 }
