@@ -27,12 +27,12 @@ export class AppComponent implements AfterViewInit {
       document.body.style.backgroundColor = "red";
       this.elemento.style.display = "block";
      /* this.elemento.appendChild(this.elemento4);*/
-      this.elemento4.style.display = "none";
+      this.elemento4.style.display = "flex";
     }
     else {
       document.body.style.backgroundColor = "blue";
       this.elemento4.style.display = "flex";
-     /* this.elemento5.appendChild(this.elemento4);*/
+      this.elemento5.appendChild(this.elemento4);
       this.elemento.style.display = "none";
       
      
@@ -43,9 +43,10 @@ ngAfterViewInit(){
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
   this.cambiarColor();
- /* this.elemento.onmouseover = this.mouseOver;*/
+  this.elemento.onmouseover = this.mouseOver;
 }
   mouseOver(){
     this.elemento4.style.display = "flex";
+    this.elemento4.style.fontSize = "250%";
   }
 }
