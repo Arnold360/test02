@@ -69,8 +69,6 @@ a {
  border: 20px solid;
  border-radius: 30px
 }
-
-
 .gg-list::after,
 .gg-list::before {
  content: "";
@@ -86,9 +84,11 @@ a {
  0 40px 0,
  0 80px 0
 }
-
 .gg-list::after {
  border-radius: 30px;
  width: 80px;
  left: 70px;
 } 
+.gg-list:hover #barranav{
+  display: none;
+}
