@@ -67,7 +67,7 @@ a {
  
  box-sizing: border-box;
  position: relative;
-
+ transform: scale(var(--ggs,1));
  width: 220px;
  height: 200px;
  border: 20px solid;
