@@ -24,7 +24,9 @@
   justify-content: space-between;
   text-align: bottom;
   font-size: 250%; 
-  
+  }
+.gg-list:hover ~ #barranav {
+  display: block;
 }
 
 nav ul {
