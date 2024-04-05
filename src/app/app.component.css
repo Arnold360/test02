@@ -25,14 +25,11 @@
   text-align: bottom;
   font-size: 250%; 
   }
-.gg-list:hover ~ #barranav {
-  display: block;
+.gg-list:hover  {
+  display: none;
 }
 
-#parrafo:hover ~ #barranav {
-  display: flex;
-  color: red;
-}
+
 
 nav ul {
   margin: 0;
