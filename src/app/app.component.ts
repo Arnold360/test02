@@ -49,7 +49,7 @@ ngAfterViewInit(){
   this.elemento6.onmouseover = this.mouseOver;
 }
   mouseOver(){
-    this.elemento4.style.display = "none";
-    this.elemento4.style.fontSize = "100%";
+    this.elemento6.style.display = "none";
+    
   }
 }
