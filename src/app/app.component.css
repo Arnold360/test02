@@ -72,6 +72,13 @@ a {
 #parrafo:hover {
   display:none; 
 }
+#parrafo2 {
+  border: 3px solid;
+}
+#parrafo2:hover {
+  display:none;
+}
+
 /*.gg-list::after,
 .gg-list::before {
  content: "";
