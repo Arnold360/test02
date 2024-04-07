@@ -60,7 +60,7 @@ a {
 }
 
  .gg-list {
- z-index: 100;
+ 
  box-sizing: border-box;
  position: relative;
  transform: scale(var(--ggs,1));
