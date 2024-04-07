@@ -71,6 +71,9 @@ a {
 .gg-list:hover { 
   display: none;
 }
+#parrafo {
+  border: 3px solid;
+}
 #parrafo:hover {
   display:none; 
 }
