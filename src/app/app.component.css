@@ -90,5 +90,5 @@ a {
  left: 70px;
 } 
 .gg-list:hover #barranav{
-  display: none;
+  display: flex;
 }
