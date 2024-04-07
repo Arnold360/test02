@@ -60,7 +60,6 @@ a {
 }
 
  .gg-list {
- 
  box-sizing: border-box;
  position: relative;
  transform: scale(var(--ggs,1));
@@ -69,7 +68,10 @@ a {
  border: 20px solid;
  border-radius: 30px
 }
-.gg-list::after,
+.gg-list:hover { 
+  display: none;
+}
+/*.gg-list::after,
 .gg-list::before {
  content: "";
  display: block;
@@ -89,4 +91,4 @@ a {
  width: 80px;
  left: 70px;
 } 
-
+*/
