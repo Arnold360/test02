@@ -50,7 +50,7 @@ ngAfterViewInit(){
   
 }
   mousehover(){
-    this.elemento4.style.display = "flex";
+    this.elemento6.style.display = "none";
   }
 
 }
