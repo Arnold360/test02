@@ -14,6 +14,7 @@ export class AppComponent implements AfterViewInit {
   elemento4!:HTMLElement;
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
+  elemento7!:HTMLElement;
   
   constructor(){
     
@@ -26,15 +27,15 @@ export class AppComponent implements AfterViewInit {
   cambiarColor(){
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
-      this.elemento.style.display = "block";
-      this.elemento.appendChild(this.elemento4);
+      this.elemento7.style.display = "block";
+      this.elemento7.appendChild(this.elemento4);
       this.elemento4.style.display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
       this.elemento4.style.display = "flex";
       this.elemento5.appendChild(this.elemento4);
-      this.elemento.style.display = "none";
+      this.elemento7.style.display = "none";
       
      
     }
@@ -44,6 +45,7 @@ ngAfterViewInit(){
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
   this.elemento6 =  document.getElementById("parrafo");
+  this.elemento7 =  document.getElementById("parrafo2");
  /* this.elemento.onmouseover = this.mousehover;*/
   
   this.cambiarColor();
