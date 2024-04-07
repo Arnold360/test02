@@ -71,7 +71,7 @@ a {
 .gg-list:hover { 
   display: none;
 }
-.parrafo:hover {
+#parrafo:hover {
   display:none; 
 }
 /*.gg-list::after,
