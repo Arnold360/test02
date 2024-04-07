@@ -73,7 +73,10 @@ a {
   display:none; 
 }
 #parrafo2 {
-  border: 3px solid;
+  width: 220px;
+ height: 200px;
+ border: 20px solid;
+ border-radius: 30px
 }
 #parrafo2:hover {
   display:none;
