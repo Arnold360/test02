@@ -44,13 +44,13 @@ ngAfterViewInit(){
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
   this.elemento6 =  document.getElementById("parrafo");
-  this.elemento.onmouseover = this.mousehover;
+ /* this.elemento.onmouseover = this.mousehover;*/
   
   this.cambiarColor();
   
 }
-  mousehover(){
+ /* mousehover(){
     this.elemento6.style.display = "none";
-  }
+  }*/
 
 }
