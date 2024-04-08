@@ -27,7 +27,7 @@ export class AppComponent implements AfterViewInit {
   cambiarColor(){
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
-      getComputedStyle(this.elemento7).display = "block";
+      getComputedStyle(this.elemento).display = "block";
       this.elemento.appendChild(this.elemento4);
       getComputedStyle(this.elemento4).display = "none";
     }
