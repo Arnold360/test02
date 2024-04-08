@@ -55,9 +55,9 @@ a {
 }
 
  .gg-list {
- /*box-sizing: border-box;
+ box-sizing: border-box;
  position: relative;
- transform: scale(var(--ggs,1));*/
+ transform: scale(var(--ggs,1));
  width: 220px;
  height: 200px;
  border: 20px solid;
@@ -66,21 +66,8 @@ a {
 .gg-list:hover { 
   display: none;
 }
-#parrafo {
-  border: 3px solid;
-}
-#parrafo:hover {
-  display:none; 
-}
-#parrafo2 {
-  width: 220px;
- height: 200px;
- border: 20px solid;
- border-radius: 30px
-}
-#parrafo2:hover {
-  display:none;
-}
+
+
 #emvoltura {
   width: 230px;
  height: 210px;
