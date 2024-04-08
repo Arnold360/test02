@@ -86,7 +86,7 @@ a {
  height: 210px;
 }
 
-/*.gg-list::after,
+.gg-list::after,
 .gg-list::before {
  content: "";
  display: block;
@@ -106,4 +106,4 @@ a {
  width: 80px;
  left: 70px;
 } 
-*/
+
