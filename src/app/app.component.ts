@@ -28,14 +28,14 @@ export class AppComponent implements AfterViewInit {
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
       getComputedStyle(this.elemento7).display = "block";
-      this.elemento7.appendChild(this.elemento4);
+      this.elemento.appendChild(this.elemento4);
       getComputedStyle(this.elemento4).display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
       getComputedStyle(this.elemento4).display = "flex";
       this.elemento5.appendChild(this.elemento4);
-      getComputedStyle(this.elemento7).display = "none";
+      getComputedStyle(this.elemento).display = "none";
       
      
     }
@@ -45,7 +45,6 @@ ngAfterViewInit(){
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
   this.elemento6 =  document.getElementById("parrafo");
-  this.elemento7 =  document.getElementById("parrafo2");
  /* this.elemento.onmouseover = this.mousehover;*/
   
   this.cambiarColor();
