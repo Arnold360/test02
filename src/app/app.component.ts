@@ -28,13 +28,13 @@ export class AppComponent implements AfterViewInit {
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
       this.elemento7.style.display = "block";
-      this.elemento7.appendChild(this.elemento4);
+     /* this.elemento7.appendChild(this.elemento4);*/
       this.elemento4.style.display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
       this.elemento4.style.display = "flex";
-      this.elemento5.appendChild(this.elemento4);
+     /* this.elemento5.appendChild(this.elemento4);*/
       this.elemento7.style.display = "none";
       
      
