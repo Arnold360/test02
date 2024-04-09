@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
-    this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("background-color");
+    
  
   }
   
@@ -46,6 +46,7 @@ ngAfterViewInit(){
   this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
+  this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("background-color");
 
   this.elemento4.onmouseover = this.mousehover;
   
