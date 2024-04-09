@@ -45,7 +45,7 @@ ngAfterViewInit(){
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
 
-  this.elemento.onmouseover = this.mousehover;
+  this.elemento4.onmouseover = this.mousehover;
   
   this.cambiarColor();
   
