@@ -51,7 +51,7 @@ ngAfterViewInit(){
   
 }
   mousehover(){
-    this.elemento6.style.display = "none";
+    this.elemento.style.display = "none";
   }
 
 }
