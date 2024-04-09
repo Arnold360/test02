@@ -15,12 +15,14 @@ export class AppComponent implements AfterViewInit {
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
   elemento7!:HTMLElement;
+  prueba!:string;
   
   constructor(){
     
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
+    this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("background-color");
  
   }
   
