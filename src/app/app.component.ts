@@ -26,16 +26,16 @@ export class AppComponent implements AfterViewInit {
   
   cambiarColor(){
     if (this.x.matches) {
-      getComputedStyle(document.body).backgroundColor = "red";
-      getComputedStyle(this.elemento).display = "block";
+      window.getComputedStyle(document.body).backgroundColor = "red";
+      window.getComputedStyle(this.elemento).display = "block";
       this.elemento.appendChild(this.elemento4);
-      getComputedStyle(this.elemento4).display = "none";
+      window.getComputedStyle(this.elemento4).display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
-      getComputedStyle(this.elemento4).display = "flex";
+      window.getComputedStyle(this.elemento4).display = "flex";
       this.elemento5.appendChild(this.elemento4);
-      getComputedStyle(this.elemento).display = "none";
+      window.getComputedStyle(this.elemento).display = "none";
       
      
     }
