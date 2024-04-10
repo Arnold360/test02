@@ -46,7 +46,7 @@ ngAfterViewInit(){
   this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
   this.elemento4 =  document.getElementById("barranav");
   this.elemento5 =  document.getElementById("fondo");
-  this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("background-color");
+  this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
 
   this.elemento4.onmouseover = this.mousehover;
   
