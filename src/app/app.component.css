@@ -64,7 +64,7 @@ a {
  border-radius: 30px
 }
 .gg-list:hover { 
-  display: none;
+  display: none !important;
 }
 
 
