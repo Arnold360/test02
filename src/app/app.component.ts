@@ -13,10 +13,7 @@ export class AppComponent implements AfterViewInit {
   elemento3!:HTMLElement;
   elemento4!:HTMLElement;
   elemento5!:HTMLElement;
-  computedElement!:CSSStyleDeclaration;
-  computedElement2!:CSSStyleDeclaration;
-  computedElement3!:CSSStyleDeclaration;
-  
+ 
   prueba!:string;
   
   constructor(){
@@ -31,31 +28,25 @@ export class AppComponent implements AfterViewInit {
   cambiarColor(){
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
-      this.computedElement.display = "block";
+      this.elemento.style.display = "block";
       this.elemento.appendChild(this.elemento4);
-      this.computedElement2.display = "none";
+      this.elemento4.style.display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
-      this.computedElement2.display = "flex";
+      this.elemento4.style.display = "flex";
       this.elemento5.appendChild(this.elemento4);
-      this.computedElement.display = "none";
+      this.elemento.style.display = "none";
       
      
     }
   }
 ngAfterViewInit(){
-  this.elemento =  (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
-  this.elemento4 =  document.getElementById("barranav");
-  this.elemento5 =  document.getElementById("fondo");
+  this.elemento = (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
+  this.elemento4 = document.getElementById("barranav");
+  this.elemento5 = document.getElementById("fondo");
   this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
 
-  this.computedElement = window.getComputedStyle(this.elemento);
-  this.computedElement2 = window.getComputedStyle(this.elemento4);
-  this.computedElement3 = window.getComputedStyle(this.elemento5);
-
-
- 
   
   this.cambiarColor();
   
