@@ -13,8 +13,10 @@ export class AppComponent implements AfterViewInit {
   elemento3!:HTMLElement;
   elemento4!:HTMLElement;
   elemento5!:HTMLElement;
-  elemento6!:HTMLElement;
-  elemento7!:HTMLElement;
+  computedElement!:CSSStyleDeclaration;
+  computedElement2!:CSSStyleDeclaration;
+  computedElement3!:CSSStyleDeclaration;
+  
   prueba!:string;
   
   constructor(){
@@ -28,16 +30,16 @@ export class AppComponent implements AfterViewInit {
   
   cambiarColor(){
     if (this.x.matches) {
-      window.getComputedStyle(document.body).backgroundColor = "red";
-      window.getComputedStyle(this.elemento).display = "block";
+      document.body.style.backgroundColor = "red";
+      this.computedElement.display = "block";
       this.elemento.appendChild(this.elemento4);
-      window.getComputedStyle(this.elemento4).display = "none";
+      this.computedElement2.display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
-      window.getComputedStyle(this.elemento4).display = "flex";
+      this.computedElement2.display = "flex";
       this.elemento5.appendChild(this.elemento4);
-      window.getComputedStyle(this.elemento).display = "none";
+      this.computedElement.display = "none";
       
      
     }
@@ -48,7 +50,12 @@ ngAfterViewInit(){
   this.elemento5 =  document.getElementById("fondo");
   this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
 
-  this.elemento4.onmouseover = this.mousehover;
+  this.computedElement = window.getComputedStyle(this.elemento);
+  this.computedElement2 = window.getComputedStyle(this.elemento4);
+  this.computedElement3 = window.getComputedStyle(this.elemento5);
+
+
+ 
   
   this.cambiarColor();
   
