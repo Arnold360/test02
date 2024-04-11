@@ -63,7 +63,7 @@ a {
  border: 20px solid;
  border-radius: 30px
 }
-.gg-list:hover ~ #barranav { 
+#emvoltura:hover ~ #barranav { 
  display: flex !important;
 }
 .gg-list:hover {
