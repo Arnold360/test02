@@ -63,8 +63,8 @@ a {
  border: 20px solid;
  border-radius: 30px
 }
-.gg-list:hover { 
-  display: none !important;
+.gg-list:hover .barranav { 
+ display: flex !important;
 }
 
 
