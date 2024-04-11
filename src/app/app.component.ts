@@ -13,7 +13,7 @@ export class AppComponent implements AfterViewInit {
   elemento3!:HTMLElement;
   elemento4!:HTMLElement;
   elemento5!:HTMLElement;
- 
+  elemento6!:HTMLElement;
   prueba!:string;
   
   constructor(){
@@ -29,13 +29,13 @@ export class AppComponent implements AfterViewInit {
     if (this.x.matches) {
       document.body.style.backgroundColor = "red";
       this.elemento.style.display = "block";
-      /*this.elemento.appendChild(this.elemento4);*/
+      this.elemento6.appendChild(this.elemento4);
       this.elemento4.style.display = "none";
     }
     else {
       document.body.style.backgroundColor = "blue";
       this.elemento4.style.display = "flex";
-      /*this.elemento5.appendChild(this.elemento4);*/
+      this.elemento5.appendChild(this.elemento4);
       this.elemento.style.display = "none";
       
      
@@ -45,6 +45,7 @@ ngAfterViewInit(){
   this.elemento = (document.getElementsByClassName("gg-list") as HTMLCollectionOf<HTMLElement>)[0];
   this.elemento4 = document.getElementById("barranav");
   this.elemento5 = document.getElementById("fondo");
+  this.elemento6 = document.getElementById("emvoltura");
   this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
 
   
