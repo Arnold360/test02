@@ -66,6 +66,9 @@ a {
 .gg-list:hover #barranav { 
  display: flex !important;
 }
+.gg-list:hover {
+ display: none !important;
+}
 
 
 #emvoltura {
