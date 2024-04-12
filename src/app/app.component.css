@@ -63,7 +63,7 @@ a {
  border: 20px solid;
  border-radius: 30px
 }
-#emvoltura:hover #barranav li { 
+#emvoltura:hover #barranav { 
  display: block !important;
  justify-content: right;
 }
