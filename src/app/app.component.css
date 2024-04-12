@@ -64,7 +64,7 @@ a {
  border-radius: 30px
 }
 #emvoltura:hover  #barranav { 
- display: block !important;
+ display: flex !important;
  justify-content: right;
 }
 #emvoltura:hover .gg-list {
