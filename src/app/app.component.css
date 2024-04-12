@@ -65,7 +65,7 @@ a {
 }
 #emvoltura:hover  #barranav { 
  display: block !important;
- justify-content: left;
+ justify-content: right;
 }
 #emvoltura:hover .gg-list {
  display: none !important;
