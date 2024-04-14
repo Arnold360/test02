@@ -26,3 +26,8 @@ a:focus {
 
   color: blue;
 }
+
+#video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+}
