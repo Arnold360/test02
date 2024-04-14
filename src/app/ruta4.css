@@ -30,4 +30,5 @@ a:focus {
 #video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
+  overflow: hidden;
 }
