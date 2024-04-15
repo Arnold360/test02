@@ -28,7 +28,7 @@ a:focus {
 }
 
 #video-wrapper {
-  
+  position: absolute;
   
 }
 #elementoExterno {
