@@ -1,4 +1,6 @@
 #video {
   position: absolute;
+  padding-bottom: 56.25%;
+  overflow: hidden;
 }
 
