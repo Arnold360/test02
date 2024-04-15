@@ -29,6 +29,7 @@ a:focus {
 
 #video-wrapper {
   position: absolute;
+  border: 3px solid black;
   
 }
 #elementoExterno {
