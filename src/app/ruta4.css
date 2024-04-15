@@ -28,9 +28,8 @@ a:focus {
 }
 
 #video-wrapper {
-  position: absolute;
-  padding-bottom: 56.25%;
-  overflow: hidden;
+  
+  
 }
 #elementoExterno {
   border: 3px solid black;
