@@ -32,3 +32,7 @@ a:focus {
   padding-bottom: 56.25%;
   overflow: hidden;
 }
+#elementoExterno {
+  border: 3px solid black;
+  
+}
