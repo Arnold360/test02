@@ -31,3 +31,6 @@ a:focus {
   height: 56%;
   width:100%;
 }
+#elementoExterno {
+  position: relative;
+}
