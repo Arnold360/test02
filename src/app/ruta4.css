@@ -26,14 +26,12 @@ a:focus {
 
   color: blue;
 }
-
-#video-wrapper {
-  position: absolute;
-  border: 30px solid black;
-  
-}
 #elementoExterno {
   position: relative;
   border: 3px solid black;
+}
+#video-wrapper {
+  position: absolute;
+  border: 10px solid black;
   
 }
