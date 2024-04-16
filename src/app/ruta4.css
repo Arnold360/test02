@@ -27,10 +27,7 @@ a:focus {
   color: blue;
 }
 #video-wrapper {
-  position: absolute;
-  height: 100%;
-  width:100%;
-}
-#elementoExterno {
   position: relative;
+  height: auto;
+  max-width:100%;
 }
