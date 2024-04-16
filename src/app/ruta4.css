@@ -9,25 +9,17 @@ a:focus {
 
 .elemento {
   height: 50px;
-  
-  
-}
-
+  border: 3px black solid
+  }
 
 .titulofecha {
-
-  display : flex;
- 
-  
-}
-
+ display : flex;
+ }
 
 .fechaid {
-
-  color: blue;
+ color: blue;
 }
+
 #video-wrapper {
-  position: relative;
-  height: auto;
-  max-width:100%;
+  
 }
