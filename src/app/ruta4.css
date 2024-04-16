@@ -9,8 +9,11 @@ a:focus {
 
 .elemento {
   height: 50px;
-  border: 3px black solid
+ 
   }
+#elemento {
+   border: 3px black solid
+}
 
 .titulofecha {
  display : flex;
