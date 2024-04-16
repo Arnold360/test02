@@ -31,7 +31,7 @@ a:focus {
   border: 3px solid black;
 }
 #video-wrapper {
-  position: absolute;
+  position: relative;
   border: 10px solid black;
   
 }
