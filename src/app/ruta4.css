@@ -13,6 +13,7 @@ a:focus {
   }
 #elemento {
    border: 3px black solid;
+   height: 3px black solid;
 }
 
 .titulofecha {
