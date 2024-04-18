@@ -26,6 +26,6 @@ a:focus {
 #video-wrapper {
   position: relative;
   border: 3px black solid;
-  overflow: scroll;
+  overflow: hidden;
   
 }
