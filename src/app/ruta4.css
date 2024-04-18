@@ -24,5 +24,6 @@ a:focus {
 }
 
 #video-wrapper {
-  
+  position: relative;
+  overflow: hidden;
 }
