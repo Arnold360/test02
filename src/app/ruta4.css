@@ -12,7 +12,7 @@ a:focus {
  
   }
 #elemento {
-   border: 3px black solid
+   border: 3px black solid;
 }
 
 .titulofecha {
@@ -25,5 +25,7 @@ a:focus {
 
 #video-wrapper {
   position: relative;
+  border: 3px black solid;
+  overflow: scroll;
   
 }
