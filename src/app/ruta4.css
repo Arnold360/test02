@@ -28,6 +28,6 @@ a:focus {
   height: 700px;
   position: relative;
   border: 3px black solid;
-  overflow: scroll;
+  overflow: hidden;
   
 }
