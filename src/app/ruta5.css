@@ -1,5 +1,6 @@
 #video {
-  position: absolute;
+  position: relative;
+  height: 350px;
   width: 100%;
   }
 youtube-player {
