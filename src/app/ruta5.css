@@ -3,6 +3,7 @@
   position: relative;
   height: 350px;
   width: 100%;
+  overflow: hidden;
   }
 youtube-player {
   position: absolute;
