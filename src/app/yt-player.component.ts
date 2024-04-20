@@ -8,6 +8,7 @@ import {Component, AfterViewInit} from '@angular/core';
 
   export class YtPlayerComponent implements AfterViewInit {
   @ViewChild("youTubePlayer") youTubePlayer: ElementRef<HTMLDivElement>;
+  @ViewChild("player") player:any;
 
   videoHeight: number | undefined;
   videoWidth: number | undefined;
@@ -30,5 +31,16 @@ import {Component, AfterViewInit} from '@angular/core';
     // so you keep the ratio
     this.videoHeight = this.videoWidth * 0.6;
     this.changeDetectorRef.detectChanges();
+  }
+   onReady(event:any) {
+    
+    this.player.playVideo();
+    
+  }
+   onStateChange(event:any) {
+    if (event.data === -1) {
+      
+       this.player.playVideo(); 
+     } 
   }
 }
