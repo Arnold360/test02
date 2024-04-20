@@ -30,19 +30,10 @@ export class ruta5 implements OnInit {
     this.tag.src = "https://www.youtube.com/player_api";
     document.body.appendChild(this.tag);
   }
-  onReady(event:any) {
-    
-    this.player.playVideo();
-    
-  }
+ 
 
   // Loop
-  onStateChange(event:any) {
-    if (event.data === -1) {
-      
-       this.player.playVideo(); 
-     } 
-  }
+ 
    evento(i:number){
     
      this.player.seekTo(this.servicio.destacado[i], true);
