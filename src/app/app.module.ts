@@ -1,4 +1,4 @@
-
+https://github.com/Arnold360/test02/blob/master/src/app/app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { YouTubePlayerModule } from '@angular/youtube-player';
@@ -14,6 +14,7 @@ import { ruta7 } from './ruta7';
 import { nombreService } from './nombreService';
 import {VideoComponent} from './video.component';
 import {VideoComponent2} from './video.component2';
+import {YtPlayerComponent} from './yt-player.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +26,8 @@ import {VideoComponent2} from './video.component2';
     ruta7,
     VideoComponent,
     VideoComponent2,
-    
-   
-  ],
+    YtPlayerComponent,
+     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
