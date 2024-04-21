@@ -21,12 +21,13 @@ import { nombreService } from "./nombreService";
   constructor(private changeDetectorRef: ChangeDetectorRef, public servicio: nombreService) {}
 
   ngOnInit() {
-    this.tag = document.createElement('script');
-    this.tag.src = "https://www.youtube.com/player_api";
-    document.body.appendChild(this.tag);
+   
   }
   
   ngAfterViewInit(): void {
+    this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/player_api";
+    document.body.appendChild(this.tag);
     this.onResize();
     window.addEventListener("resize", this.onResize.bind(this));
   }
