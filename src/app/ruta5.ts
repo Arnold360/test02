@@ -25,11 +25,7 @@ export class ruta5 implements OnInit {
     
    }
   
-  ngOnInit() {
-    this.tag = document.createElement('script');
-    this.tag.src = "https://www.youtube.com/player_api";
-    document.body.appendChild(this.tag);
-  }
+  
  
 
   // Loop
