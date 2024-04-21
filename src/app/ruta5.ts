@@ -24,12 +24,7 @@ export class ruta5 implements OnInit {
   
   
  
-  evento(i:number) {
-    
-     this.player.player.seekTo(this.servicio.destacado[i], true);
-     this.prueba = this.servicio.destacado[i];
-     
-   }
+  
    
 
 }
