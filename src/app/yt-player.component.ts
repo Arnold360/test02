@@ -10,7 +10,7 @@ import { nombreService } from "./nombreService";
 
   export class YtPlayerComponent implements AfterViewInit, OnInit {
   @ViewChild("youTubePlayer") youTubePlayer: ElementRef<HTMLDivElement>;
-  @ViewChild("player") player:any;
+  @ViewChild("player") player: any;
 
   videoHeight: number | undefined;
   videoWidth: number | undefined;
