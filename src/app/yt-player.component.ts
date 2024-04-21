@@ -18,16 +18,18 @@ import { nombreService } from "./nombreService";
 
   @Input("videoID") videoID: string;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef, public servicio: nombreService) {}
+  constructor(private changeDetectorRef: ChangeDetectorRef, public servicio: nombreService) {
+    this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/player_api";
+    document.body.appendChild(this.tag);
+  }
 
   ngOnInit() {
    
   }
   
   ngAfterViewInit(): void {
-    this.tag = document.createElement('script');
-    this.tag.src = "https://www.youtube.com/player_api";
-    document.body.appendChild(this.tag);
+    
     this.onResize();
     window.addEventListener("resize", this.onResize.bind(this));
   }
