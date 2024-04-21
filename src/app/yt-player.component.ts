@@ -1,4 +1,5 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, ChangeDetectorRef, Input } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef,
+         ChangeDetectorRef, Input, OnInit} from '@angular/core';
 import { nombreService } from "./nombreService";
 
 @Component({
@@ -18,6 +19,12 @@ import { nombreService } from "./nombreService";
 
   constructor(private changeDetectorRef: ChangeDetectorRef, public servicio: nombreService) {}
 
+  ngOnInit() {
+    this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/player_api";
+    document.body.appendChild(this.tag);
+  }
+  
   ngAfterViewInit(): void {
     this.onResize();
     window.addEventListener("resize", this.onResize.bind(this));
