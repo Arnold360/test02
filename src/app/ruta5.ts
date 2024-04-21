@@ -15,7 +15,7 @@ export class ruta5 implements OnInit {
   endTime:number = 20;
   startTime:number = 10;
   prueba!:Number;
-  @ViewChild('player') player: any;
+  @ViewChild('player1') player: any;
   
   constructor(public servicio:nombreService) {}
   
