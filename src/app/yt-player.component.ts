@@ -14,6 +14,7 @@ import { nombreService } from "./nombreService";
 
   videoHeight: number | undefined;
   videoWidth: number | undefined;
+  tag!:any;
 
   @Input("videoID") videoID: string;
 
