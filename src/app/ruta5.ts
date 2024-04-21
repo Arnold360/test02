@@ -19,18 +19,12 @@ export class ruta5 implements OnInit {
   prueba!:Number;
   @ViewChild('player') player: any;
   
-  constructor(public servicio:nombreService){
-   
- 
-    
-   }
+  constructor(public servicio:nombreService){}
+  ngOnInit{}
   
   
  
-
-  // Loop
- 
-   evento(i:number){
+  evento(i:number){
     
      this.player.player.seekTo(this.servicio.destacado[i], true);
      this.prueba = this.servicio.destacado[i];
