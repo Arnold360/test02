@@ -5,7 +5,7 @@ import { nombreService } from "./nombreService";
 @Component({
   selector: 'yt-player',
   templateUrl: './yt-player.component.html',
-  styleUrls:['./yt-player.component.css']
+  styleUrls:['./yt-player.component.css'],
   })
 
   export class YtPlayerComponent implements AfterViewInit, OnInit {
