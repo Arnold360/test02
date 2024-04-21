@@ -8,7 +8,7 @@ import { nombreService } from "./nombreService";
   styleUrls:['./yt-player.component.css']
   })
 
-  export class YtPlayerComponent implements AfterViewInit {
+  export class YtPlayerComponent implements AfterViewInit, OnInit {
   @ViewChild("youTubePlayer") youTubePlayer: ElementRef<HTMLDivElement>;
   @ViewChild("player") player:any;
 
