@@ -1,4 +1,4 @@
-https://github.com/Arnold360/test02/blob/master/src/app/app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { YouTubePlayerModule } from '@angular/youtube-player';
