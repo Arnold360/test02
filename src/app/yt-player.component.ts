@@ -19,13 +19,13 @@ import { nombreService } from "./nombreService";
   @Input("videoID") videoID: string;
 
   constructor(private changeDetectorRef: ChangeDetectorRef, public servicio: nombreService) {
-    this.tag = document.createElement('script');
-    this.tag.src = "https://www.youtube.com/player_api";
-    document.body.appendChild(this.tag);
+    
   }
 
   ngOnInit() {
-   
+   this.tag = document.createElement('script');
+    this.tag.src = "https://www.youtube.com/player_api";
+    document.body.appendChild(this.tag);
   }
   
   ngAfterViewInit(): void {
