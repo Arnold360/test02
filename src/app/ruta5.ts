@@ -12,7 +12,6 @@ export class ruta5 implements OnInit {
   
   iframe!:any;
   video!:any;
-  button:HTMLElement = document.getElementById('play');
   endTime:number = 20;
   startTime:number = 10;
   prueba!:Number;
