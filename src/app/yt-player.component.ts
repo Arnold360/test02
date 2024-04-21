@@ -1,4 +1,5 @@
 import {Component, AfterViewInit} from '@angular/core';
+import {nombreService} from "./nombreService";
 
 @Component({
   selector: 'yt-player',
@@ -15,7 +16,7 @@ import {Component, AfterViewInit} from '@angular/core';
 
   @Input("videoID") videoID: string;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) {}
+  constructor(private changeDetectorRef: ChangeDetectorRef, private servicio: nombreService) {}
 
   ngAfterViewInit(): void {
     this.onResize();
