@@ -3,10 +3,4 @@
   position: relative;
   height: 600px;
   
-  overflow: hidden;
-  }
-youtube-player {
-  position: absolute;
-  width:100%;
-  border: 3px solid black;
 }
