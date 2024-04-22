@@ -50,7 +50,7 @@ import { nombreService } from "./nombreService";
     
   }
    onStateChange(event:any) {
-    if (event.data === -1) {
+    if (event.data === 0) {
       
        this.player.playVideo(); 
      } 
