@@ -1,6 +1,6 @@
 
-<div id="youTubePlayer">
-  <youtube-player id="player" [width]="videoWidth" [height]="videoHeight" [videoId]="videoID"
+<div #youTubePlayer>
+  <youtube-player #player [width]="videoWidth" [height]="videoHeight" [videoId]="videoID"
     (ready)="onReady($event)" (stateChange)="onStateChange($event)"></youtube-player>
   <button id="play1" (click)="evento(1)">Destacado1</button>
   <button id="play2" (click)="evento(2)">Destacado2</button>
