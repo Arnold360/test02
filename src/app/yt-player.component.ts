@@ -54,6 +54,10 @@ import { nombreService } from "./nombreService";
       
        this.player.playVideo(); 
      } 
+   if (event.data === -1) {
+      
+       this.player.playVideo(); 
+     } 
   }
   evento(i:number) {
     
