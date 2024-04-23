@@ -8,7 +8,7 @@ import { nombreService } from './nombreService';
   styleUrls: ['./ruta5.css'],
   
 })
-export class ruta5 implements OnInit {
+export class ruta5 implements OnInit, AfterViewInit {
   
   iframe!:any;
   video!:any;
@@ -26,6 +26,10 @@ export class ruta5 implements OnInit {
   
  
   
-   
+   ngAfterViewInit() {
+
+     this.player.evento(2);
+     
+   }
 
 }
