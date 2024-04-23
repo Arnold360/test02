@@ -18,7 +18,7 @@ export class ruta5 implements OnInit {
   @ViewChild('player1') player: any;
   
   constructor(public servicio:nombreService) {
-    this.player.evento(2);
+  
   }
   
   ngOnInit() {}
