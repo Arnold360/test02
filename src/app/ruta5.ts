@@ -21,7 +21,9 @@ export class ruta5 implements OnInit, AfterViewInit {
   
   }
   
-  ngOnInit() {}
+  ngOnInit() {
+    this.player.palabra = "abcdefghijklmnñopqrstuvwxyz";
+  }
   
   
  
