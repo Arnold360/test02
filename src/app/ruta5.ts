@@ -27,7 +27,7 @@ export class ruta5 implements OnInit, AfterViewInit {
  
   
    ngAfterViewInit() {
-     this.player.playVideo();
+    
      this.player.evento(2);
      
    }
