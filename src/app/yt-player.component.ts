@@ -15,7 +15,8 @@ import { nombreService } from "./nombreService";
   videoHeight: number | undefined;
   videoWidth: number | undefined;
   tag!:any;
-
+  palabra!: string;
+  
   @Input("videoID") videoID: string;
 
   constructor(private changeDetectorRef: ChangeDetectorRef, public servicio: nombreService) {
