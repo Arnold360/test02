@@ -20,7 +20,7 @@
 }
 #barranav {
   position: relative;
-  hight: 200px;
+  hight: auto;
   width: 100%;
   justify-content: right;
   text-align: bottom;
