@@ -21,6 +21,7 @@
   justify-content: right;
   text-align: bottom;
   font-size: 200%; 
+  overflow: hidden;
   }
 
 nav ul {
