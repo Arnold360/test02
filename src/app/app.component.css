@@ -15,13 +15,14 @@
 }
 }*/
 #barranav {
- 
+  position: relative;
   justify-content: right;
   text-align: bottom;
   font-size: 250%; 
   }
 
 nav ul {
+  position: absolute;
   margin: 0;
   padding: 0;
   list-style: none;
