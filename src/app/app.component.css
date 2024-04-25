@@ -66,7 +66,10 @@ a {
  display: none !important;
 }
 
-
+#emvoltura:hover #barranav , #emvoltura:hover li { 
+ display: block !important;
+ justify-content: right;
+}
 
 #emvoltura {
   width: 200px;
