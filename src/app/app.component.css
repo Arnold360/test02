@@ -1,12 +1,13 @@
 
-/*#fondo {
+#fondo {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_eO_YGP-y8vT4zZDMIVTwPjsF5kz7Wj71Og&usqp=CAU');
-  height: 100px;
+  height: 200px;
   width: 100%;  
   display: grid;
   position: relative;
-  align-items: end;
-}*/
+  align-items: end; 
+  border: 3px solid black;
+}
 
 
 /*@media screen and (max-height: 700px){
@@ -15,17 +16,12 @@
 }
 }*/
 
-#fondo {
-  border: 3px solid black;
-  width: 100%;
-  height: 200px;
-}
 #barranav {
   position: relative;
 
   width: 100%;
   justify-content: right;
-  vertical-align: text-bottom;
+  text-align: bottom;
   font-size: 100%; 
   
   }
