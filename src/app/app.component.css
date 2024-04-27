@@ -17,7 +17,7 @@
 }*/
 
 #barranav {
-  position: relative;
+  position: absolute;
   border: 10px solid yellow;
   width: 100%;
   height: auto;
