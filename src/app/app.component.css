@@ -20,7 +20,7 @@
   position: absolute;
   border: 10px solid yellow;
   width: 100%;
-  height: auto;
+  height: 3em;
   justify-content: right;
   vertical-align: bottom;
   font-size: 100%; 
