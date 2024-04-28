@@ -68,8 +68,8 @@ a {
 /* barranav se inserta en #emvoltura por medio de el script ts 
    cuando se cambia el tamaño de la pantalla */
   
-#emvoltura:hover #barranav  {
- display: block !important;
+#emvoltura:hover #barranav , #emvoltura:hover ul {
+ display: flex !important;
  
 }
 
