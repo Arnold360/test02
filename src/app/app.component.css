@@ -69,7 +69,7 @@ a {
    cuando se cambia el tamaño de la pantalla */
   
 #emvoltura:hover #barranav , #emvoltura:hover ul {
-
+ display: block !important;
  
 }
 
