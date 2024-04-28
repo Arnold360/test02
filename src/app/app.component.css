@@ -68,13 +68,12 @@ a {
 /* barranav se inserta en #emvoltura por medio de el script ts 
    cuando se cambia el tamaño de la pantalla */
   
-#emvoltura:hover #barranav {
+#emvoltura:hover #barranav , #emvoltura:hover ul {
  justify-content: left;
+ display: block !important;
 }
 
-#emvoltura:hover ul {
- display: block !important;
- }
+
 
 #emvoltura {
  position: relative;
