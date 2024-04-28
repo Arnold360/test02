@@ -69,12 +69,14 @@ a {
    cuando se cambia el tamaño de la pantalla */
   
 #emvoltura:hover #barranav {
- display: inline !important;
+ display: flex !important;
  }
-
  #emvoltura:hover ul {
-   display: block;
-}
+ display: block;
+ }
+ #emvoltura:hover li {
+ margin: 1em;
+ }
 
 
 #emvoltura {
