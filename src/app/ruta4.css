@@ -8,8 +8,8 @@ a:focus {
 }
 
 .elemento {
-  height: 50px;
- 
+  height: auto;
+  margin: 3em;
   }
 #elemento {
    
