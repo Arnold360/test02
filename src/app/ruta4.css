@@ -1,3 +1,7 @@
+html {
+  font-size: 20px;
+}
+
 a {
   font: oblique bold 120% cursive;
   text-decoration:none;
@@ -9,7 +13,7 @@ a:focus {
 
 .elemento {
   height: auto;
-  margin: 3em;
+  margin: 3rem;
   }
 #elemento {
    
