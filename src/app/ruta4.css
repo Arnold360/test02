@@ -1,6 +1,4 @@
-html {
-  font-size: 200px;
-}
+
 
 a {
   font: oblique bold 120% cursive;
@@ -11,7 +9,7 @@ a:focus {
   color: green;
 }
 ul {
-  font-size: 10px;
+  font-size: 15px;
 }
 .elemento {
   height: auto;
