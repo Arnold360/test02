@@ -10,10 +10,12 @@ a {
 a:focus {
   color: green;
 }
-
+ul {
+  font-size: 20px;
+}
 .elemento {
   height: auto;
-  margin: 3rem;
+  margin: 3em;
   }
 #elemento {
    
