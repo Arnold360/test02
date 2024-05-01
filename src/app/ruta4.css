@@ -25,7 +25,7 @@ ul {
 }
 
 .titulofecha {
- display : block;
+ display : inline;
  border: 2px solid purple;
  }
 
