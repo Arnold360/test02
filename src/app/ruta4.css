@@ -21,7 +21,7 @@ ul {
 }
 
 .titulofecha {
- display : flex;
+ display : inline;
  }
 
 .fechaid {
