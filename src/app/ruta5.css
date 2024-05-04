@@ -1,7 +1,7 @@
-#video {
+#videotitulo {
   border: 3px solid black;
   position: relative;
   height: 600px;
-  
-}
+  padding-left: 2em;
+  }
 
