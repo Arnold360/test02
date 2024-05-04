@@ -37,10 +37,7 @@ import { nombreService } from "./nombreService";
 
   onResize(): void {
     // you can remove this line if you want to have wider video player than 1200px
-    this.videoWidth = Math.min(
-      this.youTubePlayer.nativeElement.clientWidth,
-      600
-    );
+    this.videoWidth = Math.min( this.youTubePlayer.nativeElement.clientWidth, 700 );
     // so you keep the ratio
     this.videoHeight = this.videoWidth * 0.6;
     this.changeDetectorRef.detectChanges();
