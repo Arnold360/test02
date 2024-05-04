@@ -1,5 +1,5 @@
 
-<div #youTubePlayer>
+<div #youTubePlayer id="parent">
   <youtube-player #player [width]="videoWidth" [height]="videoHeight" [videoId]="videoID"
     (ready)="onReady($event)" (stateChange)="onStateChange($event)"></youtube-player>
   <div id="botones">
