@@ -10,7 +10,7 @@
 }
 
 
-@media screen and (max-height: 700px){
+@media screen and (max-width: 700px){
   #fondo {
     background-image: url("https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—traditional simple golden luxury japanese_980806.png");
 }
