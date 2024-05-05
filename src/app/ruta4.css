@@ -12,7 +12,7 @@ a {
   
 }
 a:focus {
-  color: green;
+  color: green !important;
 }
 ul {
   font-size: 15px;
