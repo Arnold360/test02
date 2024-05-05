@@ -1,7 +1,10 @@
-#videotitulo {
-  border: 3px solid black;
-  position: relative;
-  height: 600px;
-  padding-left: 2em;
-  }
-
+@media screen and (max-height: 700px) {
+  
+   #videotitulo {
+     border: 3px solid black;
+     position: relative;
+     height: 600px;
+     padding-left: 2em;
+    }
+  
+}
