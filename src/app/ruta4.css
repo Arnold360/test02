@@ -1,4 +1,10 @@
-
+@media screen and (min-width: 900px) {
+  
+  ul {
+    padding-left: 10px;  
+  }
+  
+}
 
 a {
   font: oblique bold 120% cursive;
