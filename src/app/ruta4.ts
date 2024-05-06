@@ -1,5 +1,5 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { nombreService } from './nombreService';
 @Component({
   selector: 'ruta4',
@@ -20,6 +20,7 @@ export class ruta4 implements AfterViewInit {
   
   
   
+  
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
   
@@ -29,8 +30,8 @@ export class ruta4 implements AfterViewInit {
    ngAfterViewInit() {
     this.element = document.getElementsByClassName("elemento") as HTMLCollection;
     this.prueba = this.element.length;
-  }
-
+    this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
+     }
   
 
    cambiarEnlace(i:number){
