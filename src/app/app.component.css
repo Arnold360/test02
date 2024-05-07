@@ -41,7 +41,7 @@ nav ul {
 }
 
 nav li {
-  width: 100%;
+  width: auto;
   height: auto;
   margin: 0em;
   border: 1px solid red;
