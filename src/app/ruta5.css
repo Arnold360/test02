@@ -1,4 +1,4 @@
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 650px) {
   
    #videotitulo {
      border: 3px solid black;
