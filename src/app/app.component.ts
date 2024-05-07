@@ -7,7 +7,7 @@ import { Component, AfterViewInit } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit {
   title = 'test02';
-  x = window.matchMedia("(max-width: 700px)");
+  x = window.matchMedia("(max-width: 1000px)");
   elemento!:HTMLElement;
   elemento2:HTMLElement;
   elemento3!:HTMLElement;
