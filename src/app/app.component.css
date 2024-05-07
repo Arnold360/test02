@@ -43,7 +43,8 @@ nav ul {
 nav li {
   width: auto;
   height: auto;
-  margin: 0em;
+  margin-right: 0.5em;
+  
   border: 1px solid red;
 }
 
