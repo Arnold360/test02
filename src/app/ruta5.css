@@ -1,10 +1,17 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 650px) {
   
    #videotitulo {
      border: 3px solid black;
      position: relative;
      height: 600px;
      padding-left: 15px;
+    }
+  
+}
+@media screen and (min-width: 650px) {
+  
+   yt-player {
+     margin-left: 50px;
     }
   
 }
