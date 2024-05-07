@@ -58,10 +58,10 @@ a {
  box-sizing: border-box;
  position: relative;
  transform: scale(var(--ggs,1));
- width: 220px;
- height: 200px;
- border: 20px solid;
- border-radius: 30px
+ width: 100px;
+ height: 100px;
+ border: 10px solid;
+ border-radius: 15px
 }
 
 #emvoltura:hover .gg-list {
