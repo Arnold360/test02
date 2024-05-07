@@ -4,14 +4,9 @@
      border: 3px solid black;
      position: relative;
      height: 600px;
-     padding-left: 15px;
+     padding-left: 50px;
     }
   
 }
-@media screen and (min-width: 650px) {
+
   
-   yt-player {
-     margin-left: 50px;
-    }
-  
-}
