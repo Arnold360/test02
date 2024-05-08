@@ -59,6 +59,7 @@ a {
  box-sizing: border-box;
  position: relative;
  vertical-align: top;
+ justify-content: right;
  transform: scale(var(--ggs,1));
  width: 100px;
  height: 100px;
