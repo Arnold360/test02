@@ -58,6 +58,7 @@ a {
  .gg-list {
  box-sizing: border-box;
  position: relative;
+ vertical-align: top;
  transform: scale(var(--ggs,1));
  width: 100px;
  height: 100px;
