@@ -28,7 +28,7 @@
   }
 
 nav ul {
-  display: block;
+  display: flex;
   
   margin: 0;
   padding: 0;
@@ -43,7 +43,7 @@ nav ul {
 nav li {
  
   height: auto;
-  margin: 0.5em;
+  margin: auto;
   display: flex;
   border: 1px solid red;
 }
