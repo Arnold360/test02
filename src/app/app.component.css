@@ -86,6 +86,7 @@ a {
 
 #emvoltura {
  position: relative;
+ vertical-align: top;
  width: 200px;
  height: auto;
 }
