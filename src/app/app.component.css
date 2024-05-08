@@ -44,7 +44,7 @@ nav li {
  
   height: auto;
   margin: 0.5em;
-  
+  display: flex;
   border: 1px solid red;
 }
 
