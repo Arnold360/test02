@@ -21,8 +21,8 @@
   border: 10px solid yellow;
   width: 100%;
   height: auto;
-  justify-content: right;
-  vertical-align: bottom;
+  
+
   font-size: 100%; 
   box-sizing: border-box;
   
@@ -85,8 +85,6 @@ a {
 
 
 #emvoltura {
- 
- vertical-align: text-top;
  width: 200px;
  height: auto;
 }
