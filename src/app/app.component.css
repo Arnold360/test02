@@ -89,6 +89,7 @@ a {
 #emvoltura {
  width: 200px;
  height: auto;
+ border: 2px solid yellow; 
 }
 
 .gg-list::after,
