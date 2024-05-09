@@ -16,6 +16,10 @@
     align-items: start;
     justify-items: end;
   }
+  
+  #emvolutura {
+    width: 200px;
+  }
 }
 
 #barranav {
