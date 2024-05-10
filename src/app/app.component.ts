@@ -27,13 +27,13 @@ export class AppComponent implements AfterViewInit {
   
   cambiarColor(){
     if (this.x.matches) {
-      document.body.style.backgroundColor = "red";
+      document.body.style.backgroundColor = "sky blue";
       this.elemento.style.display = "block";
       this.elemento6.appendChild(this.elemento4);
       this.elemento4.style.display = "none";
     }
     else {
-      document.body.style.backgroundColor = "blue";
+      document.body.style.backgroundColor = "pink";
       this.elemento4.style.display = "flex";
       this.elemento5.appendChild(this.elemento4);
       this.elemento.style.display = "none";
