@@ -16,7 +16,8 @@
     align-items: start;
     justify-items: end;
   }
-  
+}
+ @media screen and (max-width: 800px) { 
   #emvoltura {
     width: 100px;
   }
