@@ -15,10 +15,8 @@
     justify-items: end;
     grid: 100% / auto auto auto;
   }
-}
- @media screen and (max-width: 800px) { 
-  #emvoltura {
-    width: 100px;
+  #chakana {
+    grid-column-start: 2;
   }
 }
 
@@ -121,7 +119,6 @@ a {
   border: 2px solid white;
   width: 150px;
   height: 150px;
-  grid-column-start: 2;
   left: 0px;
   right: 0px;
   
