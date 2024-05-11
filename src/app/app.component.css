@@ -1,6 +1,5 @@
 
 #fondo {
-  
   height: 200px;
   width: 100%;  
   display: grid;
@@ -12,9 +11,9 @@
 
 @media screen and (max-width: 800px) {
   #fondo {
-    
     align-items: start;
     justify-items: end;
+    grid: 100% / auto auto auto;
   }
 }
  @media screen and (max-width: 800px) { 
