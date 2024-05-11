@@ -3,7 +3,7 @@
   height: 200px;
   width: 100%;  
   display: grid;
-  grid: auto auto / auto auto auto
+  grid: auto auto / auto auto auto;
   position: relative;
   align-items: end; 
   border: 3px solid red;
