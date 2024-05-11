@@ -121,6 +121,7 @@ a {
   border: 2px solid white;
   width: 150px;
   height: 150px;
+  grid-column-start: 2;
   left: 0px;
   right: 0px;
   
