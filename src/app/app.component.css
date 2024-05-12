@@ -126,7 +126,7 @@ a {
   height: 150px;
   }
 #cuadrado {
-    position: fixed;
+    
     background-color: red;
     width: 75%;
     height: 75%;
@@ -136,7 +136,7 @@ a {
     left: 0px;
   }
 #rectanguloH {
-    position: fixed;
+    z-index: -2;
     background-color: red;
     width: 100%;
     height: 25%;
@@ -146,7 +146,7 @@ a {
     left: 0px;
   }
 #rectanguloV {
-    position: fixed;
+    z-index: -4;
     background-color: red;
     width: 25%;
     height: 100%;
