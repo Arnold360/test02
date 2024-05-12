@@ -119,6 +119,7 @@ a {
 } 
 
 #chakana {
+  position: relative;
   grid-row-start: 1;
   grid-column: 2;
   border: 2px solid white;
