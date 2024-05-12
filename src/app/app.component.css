@@ -127,10 +127,10 @@ a {
 #cuadrado {
     position: absolute;
     background-color: red;
-    width: 63%;
-    height: 63%;
-    top: 37.5px;
-    left: 37.5px;
+    width: 62.5%;
+    height: 62.5%;
+    top: 28.5px;
+    left: 28.5px;
      }
 #rectanguloH {
     position: absolute;
