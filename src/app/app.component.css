@@ -93,6 +93,7 @@ a {
  width: auto;
  height: auto;
  border: 2px solid yellow; 
+ grid-column: 3;
 }
 
 .gg-list::after,
