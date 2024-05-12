@@ -10,7 +10,7 @@
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   #fondo {
     align-items: start;
     justify-items: end;
