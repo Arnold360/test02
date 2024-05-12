@@ -127,7 +127,7 @@ a {
   height: 150px;
   }
 #cuadrado {
-    
+    position: absolute;
     background-color: red;
     width: 75%;
     height: 75%;
