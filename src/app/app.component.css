@@ -136,6 +136,7 @@ a {
     left: 0px;
   }
 #rectanguloH {
+    position: relative;
     z-index: -2;
     background-color: red;
     width: 100%;
@@ -146,6 +147,7 @@ a {
     left: 0px;
   }
 #rectanguloV {
+    position: relative;
     z-index: -4;
     background-color: red;
     width: 25%;
