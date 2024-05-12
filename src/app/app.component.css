@@ -126,7 +126,7 @@ a {
   }
 #cuadrado {
     position: absolute;
-    background-color: red;
+    background-color: #FF4000;
     width: 62.5%;
     height: 62.5%;
     top: 28.5px;
@@ -134,14 +134,14 @@ a {
      }
 #rectanguloH {
     position: absolute;
-    background-color: red;
+    background-color: #FF4000;
     width: 100%;
     height: 25%;
     top: 55px;
   }
 #rectanguloV {
     position: absolute;
-    background-color: red;
+    background-color: #FF4000;
     width: 25%;
     height: 100%;
     right: 55px;
