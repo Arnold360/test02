@@ -19,6 +19,9 @@
   #chakana {
     grid-column-start: 2;
   }
+  #emvoltura {
+    display: block;
+  }
 }
 
 #barranav {
@@ -92,6 +95,7 @@ a {
  width: auto;
  height: auto;
  border: 2px solid yellow; 
+ display: none !important;
 }
 
 .gg-list::after,
