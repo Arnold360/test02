@@ -104,19 +104,19 @@ a {
  display: block;
  box-sizing: border-box;
  position: absolute;
- width: 10px;
- height: 10px;
+ width: 0.625em;
+ height: 0.625em;
  background: currentColor;
- top: 15px;
- left: 15px;
+ top: 1em;
+ left: 1em;
  box-shadow:
- 0 20px 0,
- 0 40px 0
+ 0 1.25em 0,
+ 0 2.5em 0
 }
 .gg-list::after {
- border-radius: 15px;
- width: 40px;
- left: 30px;
+ border-radius: 1em;
+ width: 2.5em;
+ left: 1.875em;
 } 
 
 #chakana {
