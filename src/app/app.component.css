@@ -120,6 +120,7 @@ a {
 } 
 
 #chakana {
+  font- size: 0.5em;
   position: relative;
   grid-row-start: 1;
   grid-column: 2;
