@@ -123,9 +123,9 @@ a {
   position: relative;
   grid-row-start: 1;
   grid-column: 2;
-  border: 2px solid white;
-  width: 150px;
-  height: 150px;
+  border: 0.125em solid white;
+  width: 9.875em;
+  height: 9.875em;
   }
 #cuadrado {
     position: absolute;
