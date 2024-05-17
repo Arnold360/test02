@@ -29,6 +29,7 @@ export class ruta3 implements AfterViewInit {
    ngAfterViewInit() {
     this.element = document.getElementsByClassName("elemento") as HTMLCollection;
     this.prueba = this.element.length;
+    this.cambiarEnlace(this.nombreservice.mitines.length - 1);
   }
 
    cambiarEnlace(i:number){
