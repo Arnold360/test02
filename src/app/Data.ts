@@ -21,9 +21,9 @@ export class Data {
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
 
-    nombreExposiciones:string[] = [];
-       urlExposiciones:string[] = []
-    urlExposicionesYts:string[] = []
+    nombreExposiciones:string[] = ["ANTAURO HUMALA - NACIONALISMO o ETNONACIONALISMO 2004 t180 t240 t300 t360"];
+       urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS"]
+    urlExposicionesYts:string[] = ["IpQEAhpm_VA"]
   
       tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
          tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
