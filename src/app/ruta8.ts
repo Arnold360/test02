@@ -30,15 +30,15 @@ export class ruta8 implements AfterViewInit {
    ngAfterViewInit() {
     this.element = document.getElementsByClassName("elemento") as HTMLCollection;
     this.prueba = this.element.length;
-    this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
+    this.cambiarEnlace(this.nombreservice.exposiciones.length - 1);
      }
   
 
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.entrevistas[i].url);
-     this.nombreservice.enlaceYt = this.nombreservice.entrevistas[i].urlYt;
-     this.nombreservice.titulo = this.nombreservice.tituloEntrevistas[i];
-     this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
+     this.nombreservice.enlaceYt = this.nombreservice.exposiciones[i].urlYt;
+     this.nombreservice.titulo = this.nombreservice.tituloExposiciones[i];
+     this.nombreservice.destacado = this.nombreservice.destacadoExposiciones[i];
      
      
    }
