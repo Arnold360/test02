@@ -30,13 +30,15 @@ export class nombreService {
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
   
-      tipoNombres:string[][] = [Data.nombreEntrevistas , Data.nombreMitines];
-         tipoUrls:string[][] = [Data.urlEntrevistas, Data.urlMitines];
-      tipoUrlsYts:string[][] = [Data.urlEntrevistasYts, Data.urlMitinesYts];
-  
+      tipoNombres:string[][] = [Data.nombreEntrevistas , Data.nombreMitines, Data.nombreExposiciones];
+         tipoUrls:string[][] = [Data.urlEntrevistas, Data.urlMitines, Data.urlExposiciones];
+      tipoUrlsYts:string[][] = [Data.urlEntrevistasYts, Data.urlMitinesYts, Data.urlExposicionesYts];
+   
     entrevistas:declaracion[] = [];
         mitines:declaracion[] = [];
-  declaraciones:declaracion[][] = [this.entrevistas, this.mitines];
+   exposiciones:declaracion[] = [];
+  
+  declaraciones:declaracion[][] = [this.entrevistas, this.mitines, this.exposiciones];
 
   enlaceYt!:string;
     enlace!:SafeUrl;
@@ -46,14 +48,17 @@ export class nombreService {
   
        fechaEntrevistas:string[] = [];
       tituloEntrevistas:string[] = [];
-destacadoEntrevistas:Number[][] = [];
-    
+ destacadoEntrevistas:Number[][] = [];
        fechaMitines:string[] = [];
       tituloMitines:string[] = [];
-destacadoMitines:Number[][] = [];
-        fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines];
-       titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines];
-  destacados:Number[][][] = [this.destacadoEntrevistas, this.destacadoMitines];
+ destacadoMitines:Number[][] = [];
+      fechaExposiciones:string[] = [];
+     tituloExposiciones:string[] = [];
+destacadoExposiciones:Number[][] = [];
+  
+        fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines, this.fechaExposiciones];
+       titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines, this.tituloExposiciones];
+  destacados:Number[][][] = [this.destacadoEntrevistas, this.destacadoMitines, this.destacadoExposiciones];
   
 
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
