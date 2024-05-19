@@ -30,6 +30,10 @@ export class nombreService {
          urlMitines:string[] = ["https://www.youtube.com/embed/NAvU6m960CM?si=2WfGkid-FxjRyMuq",
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
+
+    nombreExposiciones:string[] = ["ANTAURO HUMALA - NACIONALISMO o ETNONACIONALISMO 09/2004 t1800 t2400 t3000 t3600"];
+       urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS"];
+    urlExposicionesYts:string[] = ["IpQEAhpm_VA"];
   
       tipoNombres:string[][];
          tipoUrls:string[][];
