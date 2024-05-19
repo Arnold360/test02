@@ -31,10 +31,9 @@ export class nombreService {
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
   
-      tipoNombres:string[][] = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones];
-         tipoUrls:string[][] = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones];
-      tipoUrlsYts:string[][] = [this.data.urlEntrevistasYts, this.data.urlMitinesYts, this.data.urlExposicionesYts];
-   
+      tipoNombres:string[][];
+         tipoUrls:string[][];
+      tipoUrlsYts:string[][];
     entrevistas:declaracion[] = [];
         mitines:declaracion[] = [];
    exposiciones:declaracion[] = [];
@@ -66,6 +65,10 @@ destacadoExposiciones:Number[][] = [];
   tiempoSalto:Number = 0;
   
   constructor(public data:Data) {
+       tipoNombres = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones];
+         tipoUrls  = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones];
+      tipoUrlsYts  = [this.data.urlEntrevistasYts, this.data.urlMitinesYts, this.data.urlExposicionesYts];
+   
     for(let e = 0; this.declaraciones.length > e; e++) {
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.tipoUrlsYts[e][i]});
