@@ -65,9 +65,9 @@ destacadoExposiciones:Number[][] = [];
   tiempoSalto:Number = 0;
   
   constructor(public data:Data) {
-       this.tipoNombres = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones];
-         this.tipoUrls  = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones];
-      this.tipoUrlsYts  = [this.data.urlEntrevistasYts, this.data.urlMitinesYts, this.data.urlExposicionesYts];
+       this.tipoNombres = [this.nombreEntrevistas , this.nombreMitines, this.nombreExposiciones];
+         this.tipoUrls  = [this.urlEntrevistas, this.urlMitines, this.urlExposiciones];
+      this.tipoUrlsYts  = [this.urlEntrevistasYts, this.urlMitinesYts, this.urlExposicionesYts];
    
     for(let e = 0; this.declaraciones.length > e; e++) {
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
