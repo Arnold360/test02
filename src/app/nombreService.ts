@@ -1,6 +1,7 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 import { declaracion } from './declaracion';
+import { Data } from './Data';
 
 
 @Injectable({
