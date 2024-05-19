@@ -1,4 +1,8 @@
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 
 export class Data {
   nombreEntrevistas:string[] = ["ENTREVISTA A ANTAURO HUMALA TASSO - BEST CALE TV 01/2023 t1800 t2400 t3000 t3600 "  , 
