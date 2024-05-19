@@ -65,7 +65,7 @@ destacadoExposiciones:Number[][] = [];
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   tiempoSalto:Number = 0;
   
-  constructor(Data:Data) {
+  constructor(public Data:Data) {
     for(let e = 0; this.declaraciones.length > e; e++) {
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.tipoUrlsYts[e][i]});
