@@ -20,6 +20,10 @@ export class Data {
          urlMitines:string[] = ["https://www.youtube.com/embed/NAvU6m960CM?si=2WfGkid-FxjRyMuq",
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
+
+    nombreExposiciones:string[] = [];
+       urlExposiciones:string[] = []
+    urlExposicionesYts:string[] = []
   
       tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
          tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
