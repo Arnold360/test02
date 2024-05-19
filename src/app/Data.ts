@@ -29,4 +29,5 @@ export class Data {
          tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
       tipoUrlsYts:string[][] = [this.urlEntrevistasYts, this.urlMitinesYts];
   
+  constructor(){}  
 }
