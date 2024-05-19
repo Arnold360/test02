@@ -11,7 +11,7 @@ import { ruta4 } from './ruta4';
 import { ruta5 } from './ruta5';
 import { ruta6 } from './ruta6';
 import { ruta7 } from './ruta7';
-import { Data } from './Data';
+
 import { nombreService } from './nombreService';
 import { VideoComponent } from './video.component';
 import { VideoComponent2 } from './video.component2';
@@ -19,7 +19,6 @@ import { YtPlayerComponent } from './yt-player.component';
 @NgModule({
   declarations: [
     AppComponent,
-    Data,
     ruta2,
     ruta3,
     ruta4,
