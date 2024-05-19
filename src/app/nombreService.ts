@@ -9,7 +9,7 @@ import { Data } from './Data';
 })
   
 export class nombreService {
-    Data:Data = new Data();
+    
    /*nombre fecha y tiempo de highlights en segundos*/
     nombreEntrevistas:string[] = ["ENTREVISTA A ANTAURO HUMALA TASSO - BEST CALE TV 01/2023 t1800 t2400 t3000 t3600 "  , 
                                   "El cuestionado plan de ANTAURO HUMALA: BUKELIZAR el país y retirarnos de la corte IDH | #LR 12/2023 t1800 t2400 t3000 t3600",
@@ -65,7 +65,7 @@ destacadoExposiciones:Number[][] = [];
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   tiempoSalto:Number = 0;
   
-  constructor() {
+  constructor(Data:Data) {
     for(let e = 0; this.declaraciones.length > e; e++) {
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.tipoUrlsYts[e][i]});
