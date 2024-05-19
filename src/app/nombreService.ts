@@ -30,9 +30,9 @@ export class nombreService {
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
   
-      tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
-         tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
-      tipoUrlsYts:string[][] = [this.urlEntrevistasYts, this.urlMitinesYts];
+      tipoNombres:string[][] = [Data.nombreEntrevistas , Data.nombreMitines];
+         tipoUrls:string[][] = [Data.urlEntrevistas, Data.urlMitines];
+      tipoUrlsYts:string[][] = [Data.urlEntrevistasYts, Data.urlMitinesYts];
   
     entrevistas:declaracion[] = [];
         mitines:declaracion[] = [];
