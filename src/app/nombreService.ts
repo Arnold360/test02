@@ -9,7 +9,7 @@ import { Data } from './Data';
 })
   
 export class nombreService {
-    Data:Data = new Data();
+    Data:Data;
    /*nombre fecha y tiempo de highlights en segundos*/
     nombreEntrevistas:string[] = ["ENTREVISTA A ANTAURO HUMALA TASSO - BEST CALE TV 01/2023 t1800 t2400 t3000 t3600 "  , 
                                   "El cuestionado plan de ANTAURO HUMALA: BUKELIZAR el país y retirarnos de la corte IDH | #LR 12/2023 t1800 t2400 t3000 t3600",
