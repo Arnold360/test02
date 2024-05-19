@@ -9,6 +9,7 @@ import { Data } from './Data';
 })
   
 export class nombreService {
+    Data:Data = new Data():
    /*nombre fecha y tiempo de highlights en segundos*/
     nombreEntrevistas:string[] = ["ENTREVISTA A ANTAURO HUMALA TASSO - BEST CALE TV 01/2023 t1800 t2400 t3000 t3600 "  , 
                                   "El cuestionado plan de ANTAURO HUMALA: BUKELIZAR el país y retirarnos de la corte IDH | #LR 12/2023 t1800 t2400 t3000 t3600",
@@ -30,9 +31,9 @@ export class nombreService {
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
   
-      tipoNombres:string[][] = [Data.nombreEntrevistas , Data.nombreMitines, Data.nombreExposiciones];
-         tipoUrls:string[][] = [Data.urlEntrevistas, Data.urlMitines, Data.urlExposiciones];
-      tipoUrlsYts:string[][] = [Data.urlEntrevistasYts, Data.urlMitinesYts, Data.urlExposicionesYts];
+      tipoNombres:string[][] = [this.Data.nombreEntrevistas , this.Data.nombreMitines, this.Data.nombreExposiciones];
+         tipoUrls:string[][] = [this.Data.urlEntrevistas, this.Data.urlMitines, this.Data.urlExposiciones];
+      tipoUrlsYts:string[][] = [this.Data.urlEntrevistasYts, this.Data.urlMitinesYts, this.Data.urlExposicionesYts];
    
     entrevistas:declaracion[] = [];
         mitines:declaracion[] = [];
