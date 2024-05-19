@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 
 export class Data {
+
+   /*nombre fecha y tiempo de highlights en segundos*/
   nombreEntrevistas:string[] = ["ENTREVISTA A ANTAURO HUMALA TASSO - BEST CALE TV 01/2023 t1800 t2400 t3000 t3600 "  , 
                                   "El cuestionado plan de ANTAURO HUMALA: BUKELIZAR el país y retirarnos de la corte IDH | #LR 12/2023 t1800 t2400 t3000 t3600",
                                   "ANTAURO HUMALA NO SE ARREPIENTE DE NADA Y PROMETE MEDIDAS RADICALES 08/2023 t1800 t2400 t3000 t3600",
