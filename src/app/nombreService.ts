@@ -44,11 +44,11 @@ destacadoExposiciones:Number[][] = [];
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   tiempoSalto:Number = 0;
   
-  constructor() {
+  constructor(data:Data) {
     
-       this.tipoNombres = [Data.nombreEntrevistas , Data.nombreMitines, Data.nombreExposiciones];
-         this.tipoUrls  = [Data.urlEntrevistas, Data.urlMitines, Data.urlExposiciones];
-      this.tipoUrlsYts  = [Data.urlEntrevistasYts, Data.urlMitinesYts, Data.urlExposicionesYts];
+       this.tipoNombres = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones];
+         this.tipoUrls  = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones];
+      this.tipoUrlsYts  = [this.data.urlEntrevistasYts, this.data.urlMitinesYts, this.data.urlExposicionesYts];
    
     for(let e = 0; this.declaraciones.length > e; e++) {
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
