@@ -9,6 +9,8 @@ import { Data } from './Data';
 })
   
 export class nombreService {
+
+     data:Data = new Data();
     
       tipoNombres:string[][];
          tipoUrls:string[][];
@@ -44,7 +46,7 @@ destacadoExposiciones:Number[][] = [];
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
   tiempoSalto:Number = 0;
   
-  constructor(data:Data) {
+  constructor() {
     
        this.tipoNombres = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones];
          this.tipoUrls  = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones];
