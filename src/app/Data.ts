@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-
 export class Data {
 
    /*nombre fecha y tiempo de highlights en segundos*/
