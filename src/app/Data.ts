@@ -27,9 +27,6 @@ export class Data {
        urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS"];
     urlExposicionesYts:string[] = ["IpQEAhpm_VA"];
   
-      tipoNombres:string[][] = [this.nombreEntrevistas , this.nombreMitines];
-         tipoUrls:string[][] = [this.urlEntrevistas, this.urlMitines];
-      tipoUrlsYts:string[][] = [this.urlEntrevistasYts, this.urlMitinesYts];
-  
+      
   constructor(){}  
 }
