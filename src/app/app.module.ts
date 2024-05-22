@@ -26,6 +26,7 @@ import { YtPlayerComponent } from './yt-player.component';
     ruta5,
     ruta6,
     ruta7,
+    ruta8,
     VideoComponent,
     VideoComponent2,
     YtPlayerComponent,
