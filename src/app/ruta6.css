@@ -1,1 +1,37 @@
 
+@media screen and (max-width: 1200px) {
+  ul {
+       padding-left: 10px;  
+      }
+  }
+
+a {
+  font: oblique bold 120% cursive;
+  text-decoration:none;
+   }
+a:focus {
+  color: green !important;
+   }
+
+ul {
+  font-size: 15px;
+  border: 2px solid pink;
+  } 
+
+.elemento {
+  height: auto;
+  margin: 20px;
+  border: 2px solid black;
+  }
+
+.enlace {
+  border: 2px solid orange;
+ }
+
+.fechaid {
+ color: orange;
+}
+
+#video-wrapper {
+ 
+  }
