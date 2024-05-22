@@ -3,7 +3,7 @@
     <ul>
      <li class="elemento" *ngFor="let entrevista of nombreservice.exposiciones; index as i" >
       <a class="enlace" id="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
-       <span class="tituloid"> {{nombreservice.tituloEntrevistas[i]}}&nbsp; </span> <span class="fechaid"> {{nombreservice.fechaEntrevistas[i]}} </span>  
+       <span class="tituloid"> {{nombreservice.tituloExposiciones[i]}}&nbsp; </span> <span class="fechaid"> {{nombreservice.fechaExposiciones[i]}} </span>  
       </a>  
      </li>
     </ul>  
