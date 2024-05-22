@@ -35,7 +35,7 @@ export class ruta8 implements AfterViewInit {
   
 
    cambiarEnlace(i:number){
-     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.entrevistas[i].url);
+     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.exposiciones[i].url);
      this.nombreservice.enlaceYt = this.nombreservice.exposiciones[i].urlYt;
      this.nombreservice.titulo = this.nombreservice.tituloExposiciones[i];
      this.nombreservice.destacado = this.nombreservice.destacadoExposiciones[i];
