@@ -20,7 +20,7 @@ export class ruta6 implements AfterViewInit {
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
-    for (let i = 0; nombreservice.entrevistas.length > i; i++){
+    for (let i = 0; nombreservice.etnonacionalismo.length > i; i++){
       this.rutas.push("ruta" + i.toString());  
       }
     }
@@ -32,7 +32,7 @@ export class ruta6 implements AfterViewInit {
   }
 
    cambiarEnlace(i:number){
-     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.mitines[i].url);
+     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.etnonacionalismo[i].url);
      this.nombreservice.nombre = this.nombreservice.etnonacionalismo[i].nombre;
      this.prueba2 = i;
      
