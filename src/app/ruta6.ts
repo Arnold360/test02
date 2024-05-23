@@ -33,7 +33,7 @@ export class ruta6 implements AfterViewInit {
 
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.mitines[i].url);
-     this.nombreservice.nombre = this.nombreservice.mitines[i].nombre;
+     this.nombreservice.nombre = this.nombreservice.etnonacionalismo[i].nombre;
      this.prueba2 = i;
      
    }
