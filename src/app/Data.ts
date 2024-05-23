@@ -27,7 +27,7 @@ export class Data {
        urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS"];
     urlExposicionesYts:string[] = ["IpQEAhpm_VA"];
 
-  nombresEtnonacionalismo:strig[] = ["carlos milla (Cosmovision) Parte 1 2003 t1800 t2400 t3000 t3600"];
+  nombresEtnonacionalismo:string[] = ["carlos milla (Cosmovision) Parte 1 2003 t1800 t2400 t3000 t3600"];
      urlsEtnonacionalismo:string[] = ["https://www.youtube.com/embed/Wd0tujOlw0c?si=EecZzKLYSnr_2IQW"];
   urlsEtnonacionalismoYts:string[] = ["Wd0tuj01w0c"];
       
