@@ -16,11 +16,12 @@ export class nombreService {
          tipoUrls:string[][];
       tipoUrlsYts:string[][];
   
-    entrevistas:declaracion[] = [];
-        mitines:declaracion[] = [];
-   exposiciones:declaracion[] = [];
+       entrevistas:declaracion[] = [];
+           mitines:declaracion[] = [];
+      exposiciones:declaracion[] = [];
+  etnonacionalismo:declaracion[] = [];
   
-  declaraciones:declaracion[][] = [this.entrevistas, this.mitines, this.exposiciones];
+  declaraciones:declaracion[][] = [this.entrevistas, this.mitines, this.exposiciones, this.etnonacionalismo];
 
   enlaceYt!:string;
     enlace!:SafeUrl;
