@@ -37,10 +37,13 @@ export class nombreService {
       fechaExposiciones:string[] = [];
      tituloExposiciones:string[] = [];
 destacadoExposiciones:Number[][] = [];
+       fechasEtnonacionalismo:string[] = [];
+      titulosEtnonacionalismo:string[] = [];
+  destacadosEtnonacionalismo:Number[][] = [];
   
-        fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines, this.fechaExposiciones];
-       titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines, this.tituloExposiciones];
-  destacados:Number[][][] = [this.destacadoEntrevistas, this.destacadoMitines, this.destacadoExposiciones];
+        fechas:string[][] = [this.fechaEntrevistas, this.fechaMitines, this.fechaExposiciones, this.fechasEtnonacionalismo];
+       titulos:string[][] = [this.tituloEntrevistas, this.tituloMitines, this.tituloExposiciones, this.titulosEtnonacionalismo];
+  destacados:Number[][][] = [this.destacadoEntrevistas, this.destacadoMitines, this.destacadoExposiciones, this.destacadosEtnonacionalismo];
   
 
         regex:RegExp = RegExp('\d{1,2}\/\d{1,4}');
@@ -48,9 +51,9 @@ destacadoExposiciones:Number[][] = [];
   
   constructor() {
     
-       this.tipoNombres = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones];
-         this.tipoUrls  = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones];
-      this.tipoUrlsYts  = [this.data.urlEntrevistasYts, this.data.urlMitinesYts, this.data.urlExposicionesYts];
+       this.tipoNombres = [this.data.nombreEntrevistas , this.data.nombreMitines, this.data.nombreExposiciones, this.data.nombresEtnonacionalismo];
+         this.tipoUrls  = [this.data.urlEntrevistas, this.data.urlMitines, this.data.urlExposiciones, this.data.urlsEtnonacionalismo];
+      this.tipoUrlsYts  = [this.data.urlEntrevistasYts, this.data.urlMitinesYts, this.data.urlExposicionesYts, this.data.urlsEtnonacionalismoYts];
    
     for(let e = 0; this.declaraciones.length > e; e++) {
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
