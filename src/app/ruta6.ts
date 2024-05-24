@@ -22,15 +22,15 @@ export class ruta6 implements AfterViewInit {
 
    ngAfterViewInit() {
     
-    this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
+    this.cambiarEnlace(this.nombreservice.etnonacionalismo.length - 1);
      }
   
 
    cambiarEnlace(i:number){
-     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.entrevistas[i].url);
-     this.nombreservice.enlaceYt = this.nombreservice.entrevistas[i].urlYt;
-     this.nombreservice.titulo = this.nombreservice.tituloEntrevistas[i];
-     this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
+     this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.etnonacionalismo[i].url);
+     this.nombreservice.enlaceYt = this.nombreservice.etnonacionalismo[i].urlYt;
+     this.nombreservice.titulo = this.nombreservice.titulosEtnonacionalismo[i];
+     this.nombreservice.destacado = this.nombreservice.destacadosEtnonacionalismo[i];
      
      
    }
