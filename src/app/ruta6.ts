@@ -21,8 +21,7 @@ export class ruta6 implements AfterViewInit {
     
 
    ngAfterViewInit() {
-    this.element = document.getElementsByClassName("elemento") as HTMLCollection;
-    this.prueba = this.element.length;
+    
     this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
      }
   
