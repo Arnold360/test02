@@ -7,7 +7,7 @@ import { nombreService } from './nombreService';
   styleUrls: ['./ruta6.css'],
   
 })
-export class ruta4 implements AfterViewInit {
+export class ruta6 implements AfterViewInit {
   
 
   
