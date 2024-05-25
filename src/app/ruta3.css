@@ -1,27 +1,36 @@
+@media screen and (max-width: 1200px) {
+  ul {
+       padding-left: 10px;  
+      }
+  }
+
 a {
   font: oblique bold 120% cursive;
   text-decoration:none;
- }
+   }
 a:focus {
-  color: green;
- }
+  color: green !important;
+   }
+
+ul {
+  font-size: 15px;
+  border: 2px solid pink;
+  } 
 
 .elemento {
-  height: 50px;
-  
-  
-}
+  height: auto;
+  margin: 20px;
+  border: 2px solid black;
+  }
 
-
-.titulofecha {
-
-  display : flex;
- 
-  
-}
-
+.enlace {
+  border: 2px solid orange;
+ }
 
 .fechaid {
-
-  color: blue;
+ color: orange;
 }
+
+#video-wrapper {
+ 
+  }
