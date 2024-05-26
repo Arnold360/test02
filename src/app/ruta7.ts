@@ -88,4 +88,4 @@ export class ruta7 implements AfterViewInit, OnInit {
     this.video.play();
     this.checkTime();
 }
-}
+}*/
