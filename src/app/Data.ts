@@ -29,7 +29,7 @@ export class Data {
 
   nombresEtnonacionalismo:string[] = ["carlos milla (Cosmovision) Parte 1 09/2003 t1800 t2400 t3000 t3600"];
      urlsEtnonacionalismo:string[] = ["https://www.youtube.com/embed/Wd0tujOlw0c?si=EecZzKLYSnr_2IQW"];
-  urlsEtnonacionalismoYts:string[] = ["Wd0tuj01w0c"];
+  urlsEtnonacionalismoYts:string[] = ["Wd0tujO1w0c"];
       
   constructor(){}  
 }
