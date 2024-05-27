@@ -9,13 +9,6 @@ import { nombreService } from './nombreService';
 })
 export class ruta3 implements AfterViewInit {
 
-  videoActual:string = "";
-  indice:number = 0;
-  rutas:string[] = []; 
-  element!:HTMLCollection; 
-  prueba!:number;
-  prueba2!:number;
-  prueba3:string= "https://www.youtube.com/embed/HfCjXPMj5VA?si=WcMHdlsjn3uzewKo";
   
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
@@ -27,8 +20,7 @@ export class ruta3 implements AfterViewInit {
     
 
    ngAfterViewInit() {
-    this.element = document.getElementsByClassName("elemento") as HTMLCollection;
-    this.prueba = this.element.length;
+    
     this.cambiarEnlace(this.nombreservice.mitines.length - 1);
   }
 
