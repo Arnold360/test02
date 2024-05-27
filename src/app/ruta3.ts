@@ -13,9 +13,7 @@ export class ruta3 implements AfterViewInit {
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
-    for (let i = 0; nombreservice.mitines.length > i; i++){
-      this.rutas.push("ruta" + i.toString());  
-      }
+      
     }
     
 
