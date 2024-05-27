@@ -60,7 +60,7 @@ destacadoExposiciones:Number[][] = [];
       for( let i = 0; this.tipoNombres[e].length > i; i++) {
          this.declaraciones[e].push({nombre:this.tipoNombres[e][i], url:this.tipoUrls[e][i], urlYt:this.tipoUrlsYts[e][i]});
          this.fechas[e].push(/\d{1,2}\/(\d{1,2}\/)?\d{1,4}/.exec(this.tipoNombres[e][i])![0]);
-         this.titulos[e].push(/([0-9a-zA-Z-#|:áéíóú/.()]+\s)+(?=(\d{1,2}\/(\d{1,2}\/)?\d{1,4}))?/.exec(this.tipoNombres[e][i])![0]);
+         this.titulos[e].push(/([0-9a-zA-Z-#|:áéíóú/.()]+\s)+(?=\d{1,2}\/(\d{1,2}\/)?\d{1,4})?/.exec(this.tipoNombres[e][i])![0]);
          this.destacados[e].push( /t(\d+)\st(\d+)\st(\d+)\st(\d+)/.exec(this.tipoNombres[e][i]).map(this.agregarDestacados) );
        }
       }
