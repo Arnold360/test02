@@ -27,9 +27,11 @@ export class Data {
        urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS"];
     urlExposicionesYts:string[] = ["IpQEAhpm_VA"];
 
-  nombresEtnonacionalismo:string[] = ["carlos milla (Cosmovision) Parte 1  09/2003 t1800 t2400 t3000 t3600"];
-     urlsEtnonacionalismo:string[] = ["https://www.youtube.com/embed/Wd0tujOlw0c?si=EecZzKLYSnr_2IQW"];
-  urlsEtnonacionalismoYts:string[] = ["Wd0tujOlw0c"];
+  nombresEtnonacionalismo:string[] = ["carlos milla (Cosmovision) Parte 1  09/2003 t1800 t2400 t3000 t3600",
+                                      "Fausto Reinaga- Documental 0/2014 t180 t2400 t300 t360"];
+     urlsEtnonacionalismo:string[] = ["https://www.youtube.com/embed/Wd0tujOlw0c?si=EecZzKLYSnr_2IQW",
+                                      "https://www.youtube.com/embed/7Sg3Ynt2KPc?si=jCX4PglubrsEroXs"];
+  urlsEtnonacionalismoYts:string[] = ["Wd0tujOlw0c", "7Sg3Ynt2KPc"];
       
   constructor(){}  
 }
