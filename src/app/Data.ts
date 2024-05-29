@@ -27,7 +27,7 @@ export class Data {
                                    "ANTAURO - Guerra de 1879 y postguerra - Rol del Tayta Cáceres  14/09/2023 t1800 t2400 t3000 t3600" ];
        urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS",
                                    "https://www.youtube.com/embed/l9Og6Pcrx-M?si=INZ348Q9g18u58gg", ];
-    urlExposicionesYts:string[] = ["IpQEAhpm_VA","l90g6Pcrx-M"];
+    urlExposicionesYts:string[] = ["IpQEAhpm_VA", "l90g6Pcrx-M"];
 
   nombresEtnonacionalismo:string[] = ["carlos milla (Cosmovision) Parte 1  09/2003 t1800 t2400 t3000 t3600",
                                       "carlos milla (Cosmovision) Parte 2  09/2003 t1800 t2400 t3000 t3600",
