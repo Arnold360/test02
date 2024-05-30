@@ -137,7 +137,7 @@ a {
   }
 #cuadrado {
     position: absolute;
-    background-color: var(--orange);
+    background-color: var(--blue);
     width: 6.2em;
     height: 6.2em;
     top: 1.75em;
