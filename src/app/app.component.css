@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 800px) {
   :root {
-  --blue: #1e90ff;
+  --blue1: #1e90ff;
   --white: #ffffff;
   --orange: #FF4000;
 }
@@ -26,11 +26,9 @@
     justify-self: center;
   }
   .parteDeChakana {
-    background-color: var(--blue);
+    background-color: var(--blue1);
   } 
-  #cuadrado {
-    background-color: var(--orange);
-  }
+ 
 }
 
 #barranav {
