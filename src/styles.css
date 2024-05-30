@@ -12,3 +12,8 @@
   background-image: url("https://arnoldbotello.blob.core.windows.net/imagenes/—Pngtree—cartoon plant red leaves leaves_3900901.png");
   background-size: 200px 120px;
 }*/
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --orange: #FF4000;
+}
