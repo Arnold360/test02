@@ -11,6 +11,11 @@
 
 
 @media screen and (max-width: 800px) {
+  :root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --orange: #FF4000;
+}
   #fondo {
     align-items: start;
     justify-items: end;
