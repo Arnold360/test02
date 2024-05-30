@@ -23,6 +23,9 @@
   .parteDeChakana {
     background-color: var(--blue);
   } 
+  #cuadrado {
+    background-color: var(--orange);
+  }
 }
 
 #barranav {
