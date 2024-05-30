@@ -11,11 +11,7 @@
 
 
 @media screen and (max-width: 800px) {
-  :root {
-  --blue1: #1e90ff;
-  --white: #ffffff;
-  --orange: #FF4000;
-}
+ 
   #fondo {
     align-items: start;
     justify-items: end;
@@ -25,9 +21,7 @@
     grid-column-start: 2;
     justify-self: center;
   }
-  .parteDeChakana {
-    background-color: var(--blue1);
-  } 
+  --blue: red;
  
 }
 
