@@ -19,7 +19,7 @@
 }
 @media screen and (max-width: 800px) {
   :root {
-    --orange: --blue;
-    --blue: --orange;
+    --orange: #1e90ff;
+    --blue: #FF4000;
   }
 }
