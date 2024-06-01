@@ -15,17 +15,16 @@ a:focus {
 
 ul {
   font-size: 15px;
-  border: 2px solid pink;
+
   } 
 
 .elemento {
   height: auto;
   margin: 20px;
-  border: 2px solid black;
   }
 
 .enlace {
-  border: 2px solid orange;
+  
  }
 
 .fechaid {
