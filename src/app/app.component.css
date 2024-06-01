@@ -96,7 +96,7 @@ a {
  transform: scale(var(1,1));
  width: 6.25em;
  height: 6.25em;
- border: 0.625em solid;
+ border: 0.625em solid beige;
  border-radius: 1em;
 }
 
