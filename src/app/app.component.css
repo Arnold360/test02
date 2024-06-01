@@ -57,7 +57,9 @@ a {
   height: auto;
   font-size: 1.5em;
 }
-
+a:hover {
+  color: #b0c2f2;
+} 
 
 
 #emvoltura:hover .gg-list {
