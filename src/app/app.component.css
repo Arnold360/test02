@@ -112,8 +112,8 @@ a {
  top: 1em;
  left: 1em;
  box-shadow:
- 0 1.25em 0,
- 0 2.5em 0
+ 0 1.25em 0 beige,
+ 0 2.5em 0 beige;
 }
 .gg-list::after {
  border-radius: 1em;
