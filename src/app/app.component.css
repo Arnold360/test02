@@ -27,7 +27,6 @@
 #barranav {
   grid-row-start: 2;
   grid-column: 1 / span 3;
-  border: 10px solid yellow;
   width: 100%;
   height: auto;
   font-size: 100%; 
