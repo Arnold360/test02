@@ -67,7 +67,7 @@ a:visited {
 a:hover {
   color: blue;
 } 
-a:cliked{
+a:active{
   color: red;
 }
 
