@@ -13,13 +13,13 @@
   background-size: 200px 120px;
 }*/
 :root {
-  --blue: #1e90ff;
+  --blue:  #5d9b9b;
   --white: #ffffff;
-  --orange: #FF4000;
+  --orange: #ff7514;
 }
 @media screen and (max-width: 800px) {
   :root {
-    --orange: #1e90ff;
-    --blue: #FF4000;
+    --orange:  #5d9b9b;
+    --blue: #ff7514;
   }
 }
