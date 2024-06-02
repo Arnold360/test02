@@ -47,7 +47,7 @@ export class ruta4 implements AfterViewInit {
      this.nombreservice.enlaceYt = this.nombreservice.entrevistas[i].urlYt;
      this.nombreservice.titulo = this.nombreservice.tituloEntrevistas[i];
      this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
-     changeLinkColor(i);
+     this.changeLinkColor(i);
      
      
      
