@@ -27,11 +27,11 @@ export class ruta4 implements AfterViewInit {
     }
 
   changeLinkColor(i:number) {
-             document.getElementById("link" + i).style.color = "red";
+             document.getElementById("enlace" + i).style.color = "red";
         }
 
   resetLinkColor(i:number) {
-             document.getElementById("link" + i).style.color = "blue";
+             document.getElementById("enlace" + i).style.color = "blue";
         }    
      
 
