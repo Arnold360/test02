@@ -65,13 +65,13 @@ a:visited {
   color: green;
 }
 a:hover {
-  color: blue;
+  color: --blue;
 } 
 a:active {
   color: red;
 }
 a:focus {
-  color: pink;
+  color: blue;
 }
 
 
