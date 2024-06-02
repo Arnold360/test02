@@ -16,7 +16,7 @@ export class ruta4 implements AfterViewInit {
   indice:number = 0;
   rutas:string[] = []; 
   element!:HTMLCollection; 
-  prueba!:number;
+  elementoColoreado:string;
   
   
   
