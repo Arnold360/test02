@@ -25,6 +25,15 @@ export class ruta4 implements AfterViewInit {
     
   
     }
+
+   changeLinkColor() {
+            let linkElement = document.getElementById("link");
+            linkElement.style.color = "red";
+        }
+
+  resetLinkColor() {
+            let reset_link = document.getElementById("link");
+            reset_link.style.color = "blue";
     
 
    ngAfterViewInit() {
