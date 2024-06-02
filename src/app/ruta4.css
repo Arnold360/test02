@@ -9,7 +9,7 @@ a {
   text-decoration:none;
    }
 a:focus {
-  color: green !important;
+  color: green;
    }
 
 ul {
