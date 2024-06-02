@@ -16,7 +16,7 @@ export class ruta4 implements AfterViewInit {
   indice:number = 0;
   rutas:string[] = []; 
   element!:HTMLCollection; 
-  elementoColoreado:string;
+  elementoColoreado:HTMLElement;
   
   
   
@@ -27,11 +27,12 @@ export class ruta4 implements AfterViewInit {
     }
 
   changeLinkColor(i:number) {
-             document.getElementById("enlace" + i).style.color = "red";
+            this.elementoColoreado = document.getElementById("enlace" + i);
+            this.elementoColoreado.style.color = "red";
         }
 
-  resetLinkColor(i:number) {
-             document.getElementById("enlace" + i).style.color = "blue";
+  resetLinkColor() {
+             this.elementoColoreado.style.color = "blue";
         }    
      
 
@@ -47,6 +48,7 @@ export class ruta4 implements AfterViewInit {
      this.nombreservice.enlaceYt = this.nombreservice.entrevistas[i].urlYt;
      this.nombreservice.titulo = this.nombreservice.tituloEntrevistas[i];
      this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
+     this.resetLinkColor();
      this.changeLinkColor(i);
      
      
