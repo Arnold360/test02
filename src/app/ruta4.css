@@ -3,9 +3,8 @@
        padding-left: 10px;  
       }
   }
-
+/* color purple automatic*/
 a {
-  color: purple;
   font: oblique bold 120% cursive;
   text-decoration:none;
    }
