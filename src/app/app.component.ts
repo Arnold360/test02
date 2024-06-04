@@ -25,13 +25,14 @@ export class AppComponent implements AfterViewInit {
  
   }
   
-  changeLinkColor(i:number) {
-            this.elementoColoreado = document.getElementById("enlace" + i);
-            this.elementoColoreado.style.color = "red";
+  changeLinkColor(e:any) {
+           
+            e.style.color = "red";
+         
         }
 
-  resetLinkColor() {
-             this.elementoColoreado.style.color = "purple";
+  resetLinkColor(e) {
+             e.style.color = "purple";
         }   
   
   cambiarColor(){
