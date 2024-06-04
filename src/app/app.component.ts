@@ -31,7 +31,7 @@ export class AppComponent implements AfterViewInit {
          
         }
 
-  resetLinkColor(e) {
+  resetLinkColor(e:any) {
              e.style.color = "purple";
         }   
   
