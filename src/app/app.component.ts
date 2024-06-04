@@ -25,18 +25,27 @@ export class AppComponent implements AfterViewInit {
  
   }
   
+  changeLinkColor(i:number) {
+            this.elementoColoreado = document.getElementById("enlace" + i);
+            this.elementoColoreado.style.color = "red";
+        }
+
+  resetLinkColor() {
+             this.elementoColoreado.style.color = "purple";
+        }   
+  
   cambiarColor(){
-    if (this.x.matches) {
-      document.body.style.backgroundColor = "#87CEEB";
-      this.elemento6.style.display = "block";
-      this.elemento6.appendChild(this.elemento4);
-      this.elemento4.style.display = "none";
-    }
-    else {
-      document.body.style.backgroundColor = "pink";
-      this.elemento4.style.display = "flex";
-      this.elemento5.appendChild(this.elemento4);
-      this.elemento6.style.display = "none";
+       if (this.x.matches) {
+          document.body.style.backgroundColor = "#87CEEB";
+          this.elemento6.style.display = "block";
+          this.elemento6.appendChild(this.elemento4);
+          this.elemento4.style.display = "none";
+      }
+      else {
+         document.body.style.backgroundColor = "pink";
+         this.elemento4.style.display = "flex";
+         this.elemento5.appendChild(this.elemento4);
+         this.elemento6.style.display = "none";
       
      
     }
@@ -47,10 +56,9 @@ ngAfterViewInit(){
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
   this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
-
-  
   this.cambiarColor();
-  
+  this.changeLinkColor();
+  this.resetLinkColor();
 }
   mousehover(){
     this.elemento4.style.display = "none";
