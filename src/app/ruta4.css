@@ -18,6 +18,7 @@ ul {
   } 
 
 .elemento {
+   color: blue;
   height: auto;
   margin: 20px;
   }
@@ -31,5 +32,5 @@ ul {
 }
 
 #video-wrapper {
- color: blue;
+
   }
