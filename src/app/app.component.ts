@@ -58,8 +58,7 @@ ngAfterViewInit(){
   this.elemento6 = document.getElementById("emvoltura");
   this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
   this.cambiarColor();
-  this.changeLinkColor();
-  this.resetLinkColor();
+  
 }
   mousehover(){
     this.elemento4.style.display = "none";
