@@ -5,7 +5,7 @@
   }
 
 a {
-  
+  color: blue;
   font: oblique bold 120% cursive;
   text-decoration:none;
    }
@@ -18,7 +18,7 @@ ul {
   } 
 
 .elemento {
-   color: blue;
+   
   height: auto;
   margin: 20px;
   }
