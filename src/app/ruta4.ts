@@ -32,7 +32,7 @@ export class ruta4 implements AfterViewInit {
         }
 
   resetLinkColor() {
-             this.elementoColoreado.style.color = "blue";
+             this.elementoColoreado.style.color = "purple";
         }    
      
 
