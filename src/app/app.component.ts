@@ -21,7 +21,7 @@ export class AppComponent implements AfterViewInit {
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
-    this.elementoColoreado = document.getElementById("vara1");
+    this.elementoColoreado = document.getElementById("link1");
  
   }
   
