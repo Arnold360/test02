@@ -14,7 +14,7 @@ export class AppComponent implements AfterViewInit {
   elemento4!:HTMLElement;
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
-  prueba!:string;
+  elementoColoreado!:HTMLElement;
   
   constructor(){
     
@@ -28,7 +28,8 @@ export class AppComponent implements AfterViewInit {
   changeLinkColor(e:any) {
            
             e.style.color = "red";
-         
+            this.resetLinkColor(this.elementoColoreado);
+            this.elementoColoreado = e;
         }
 
   resetLinkColor(e:any) {
@@ -56,7 +57,7 @@ ngAfterViewInit(){
   this.elemento4 = document.getElementById("barranav");
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
-  this.prueba = window.getComputedStyle(this.elemento).getPropertyValue("height");
+ 
   this.cambiarColor();
   
 }
