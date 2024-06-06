@@ -32,8 +32,8 @@ export class AppComponent implements AfterViewInit {
             this.elementoColoreado = e;
         }
 
-  resetLinkColor(e:HTMLElement) {
-             e.style.color = "purple";
+  resetLinkColor(i:HTMLElement) {
+             i.style.color = "purple";
         }   
   
   cambiarColor(){
