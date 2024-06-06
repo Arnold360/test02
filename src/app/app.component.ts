@@ -33,7 +33,7 @@ export class AppComponent implements AfterViewInit {
         }
 
   resetLinkColor(i:HTMLElement) {
-             i.style.color = "purple";
+             i.style.color = "green";
         }   
   
   cambiarColor(){
