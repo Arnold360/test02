@@ -3,12 +3,12 @@
   <h1 id="header"> ENTREVISTAS </h1>
     <ul>
      <li class="elemento" *ngFor="let entrevista of nombreservice.entrevistas; index as i" >
-      <a class="enlace" [id]="'enlace' + i" href="#video" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
+      <a class="enlace" [id]="'enlace' + i" href="#test" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
        <span class="tituloid"> {{nombreservice.tituloEntrevistas[i]}}&nbsp; </span> <span class="fechaid"> {{nombreservice.fechaEntrevistas[i]}} </span>  
       </a>  
      </li>
     </ul>  
-  
+  <div id="test">aaaaa</div>
   <router-outlet id="video"></router-outlet>
 
 </div>
