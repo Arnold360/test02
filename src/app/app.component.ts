@@ -15,13 +15,16 @@ export class AppComponent implements AfterViewInit {
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
   elementoColoreado!:HTMLElement;
+  listaDeLinks:HTMLElement[];
   
   constructor(){
     
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
-    
+    for(let i = 0; i <= 3; i++ ){
+      this.listaDeLinks = document.getElementById
+    }
  
   }
   
