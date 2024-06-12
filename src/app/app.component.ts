@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-
+import { nombreService } from './nombreService';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,7 +17,7 @@ export class AppComponent implements AfterViewInit {
   elementoColoreado!:HTMLElement;
   listaDeLinks:HTMLElement[];
   
-  constructor(){
+  constructor( public nombreservice:nombreService){
     
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
