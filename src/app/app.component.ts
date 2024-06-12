@@ -58,7 +58,7 @@ ngAfterViewInit(){
   this.elemento4 = document.getElementById("barranav");
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
-  this.elementoColoreado = document.getElementById("link" + (this.nombreservice.linkActual));
+  this.elementoColoreado = document.getElementById("link" + 4 );
   this.cambiarColor();
   
 }
