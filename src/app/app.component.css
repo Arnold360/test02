@@ -6,6 +6,7 @@
   grid: auto auto / auto auto auto;
   position: relative;
   justify-items: center;
+  margin-bottom: 80px;
 
 }
 
@@ -16,7 +17,7 @@
     align-items: start;
     justify-items: end;
     grid: 100% / auto auto auto;
-    margin-bottom: 80px;
+    margin-bottom: auto;
   }
   #chakana {
     grid-column-start: 2;
