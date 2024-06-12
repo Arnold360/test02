@@ -22,7 +22,7 @@ export class ruta4 implements AfterViewInit {
   
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
-    
+     this.nombreservice.linkActual = 4;
   
     }
 
