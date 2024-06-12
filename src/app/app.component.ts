@@ -23,7 +23,7 @@ export class AppComponent implements AfterViewInit {
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
     for(let i = 1; i <= 4; i++ ){
-      this.listaDeLinks.add(document.getElementById("link" + i));
+      this.listaDeLinks.push(document.getElementById("link" + i));
     }
  
   }
@@ -60,7 +60,7 @@ ngAfterViewInit(){
   this.elemento4 = document.getElementById("barranav");
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
-  this.elementoColoreado = document.getElementById("link1");
+  this.elementoColoreado = document.getElementById("link" + );
   this.cambiarColor();
   
 }
