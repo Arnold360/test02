@@ -9,7 +9,7 @@ import { Data } from './Data';
 })
   
 export class nombreService {
-
+     linkActual!:Number;
      data:Data = new Data();
     
       tipoNombres:string[][];
