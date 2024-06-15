@@ -1,4 +1,4 @@
-deimport { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { nombreService } from './nombreService';
 @Component({
   selector: 'app-root',
