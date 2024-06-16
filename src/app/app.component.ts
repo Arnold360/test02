@@ -1,11 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { nombreService } from './nombreService';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'test02';
   x = window.matchMedia("(max-width: 800px)");
   elemento!:HTMLElement;
@@ -59,12 +59,14 @@ ngAfterViewInit(){
   this.elemento4 = document.getElementById("barranav");
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
-  /* random html element as place holder*/
-  this.elementoColoreado = document.getElementById("link" + this.linkActual );
-  this.elementoColoreado.style.color = "red";
+ 
 
   this.cambiarColor();
   
+}
+ngOnInit(){
+  this.elementoColoreado = document.getElementById("link" + this.linkActual );
+  this.elementoColoreado.style.color = "red";
 }
   mousehover(){
     this.elemento4.style.display = "none";
