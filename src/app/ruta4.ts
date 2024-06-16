@@ -17,6 +17,7 @@ export class ruta4 implements AfterViewInit {
   rutas:string[] = []; 
   element!:HTMLCollection; 
   elementoColoreado:HTMLElement;
+  test!:Number;
   
   
   
@@ -40,7 +41,7 @@ export class ruta4 implements AfterViewInit {
      this.element = document.getElementsByClassName("elemento") as HTMLCollection;
      this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
      this.cambiarEnlace(this.nombreservice.entrevistas.length - (this.linkActual));
-     
+     this.test = this.linkActual;
      }
   
 
