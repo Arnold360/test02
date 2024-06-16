@@ -61,7 +61,7 @@ ngAfterViewInit(){
   this.elemento6 = document.getElementById("emvoltura");
   /* random html element as place holder*/
   this.elementoColoreado = document.getElementById("link" + this.linkActual );
-  this.elementoColoreado.style.color = red;
+  this.elementoColoreado.style.color = "red";
 
   this.cambiarColor();
   
