@@ -15,6 +15,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
   elementoColoreado!:HTMLElement;
+  linkActual!:Number;
   
   
   constructor( public nombreservice:nombreService){
