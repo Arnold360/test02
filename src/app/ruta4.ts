@@ -18,6 +18,7 @@ export class ruta4 implements AfterViewInit {
   element!:HTMLCollection; 
   elementoColoreado:HTMLElement;
   test!:Number;
+  linkActual!:Number;
   
   
   
