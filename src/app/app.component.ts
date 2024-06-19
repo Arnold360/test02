@@ -66,7 +66,7 @@ ngAfterViewInit(){
   
 }
 ngOnInit(){
-  this.elementoColoreado = document.getElementById("link" + 4 );
+  this.elementoColoreado = document.getElementById("link" + (this.linkActual) );
   this.elementoColoreado.style.color = "red";
 }
   mousehover(){
