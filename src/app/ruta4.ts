@@ -1,6 +1,8 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { nombreService } from './nombreService';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'ruta4',
   templateUrl: './ruta4.html',
@@ -18,13 +20,15 @@ export class ruta4 implements AfterViewInit {
   element!:HTMLCollection; 
   elementoColoreado:HTMLElement;
   test!:Number;
-  linkActual!:any;
+  linkActual:number;
+ 
   
   
   
   
-  constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
-      nombreservice.linkActual = 4;
+  constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService, private route: ActivatedRoute){
+
+    this.linkActual = this.route.snapshot.paramMap.get('id');
   
     }
 
