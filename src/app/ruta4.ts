@@ -28,7 +28,7 @@ export class ruta4 implements AfterViewInit {
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService, private route: ActivatedRoute){
 
-    this.linkActual = this.route.snapshot.paramMap.get('id');
+    this.linkActual = this.route.snapshot.paramMap.get('linkActual');
   
     }
 
