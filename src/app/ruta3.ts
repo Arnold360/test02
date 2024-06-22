@@ -9,10 +9,10 @@ import { nombreService } from './nombreService';
 })
 export class ruta3 implements AfterViewInit {
 
-  test: nombreService;
   
-  constructor(private sanitizer:DomSanitizer, private nombreservice:nombreService){
-    this.test = nombreservice;
+  
+  constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
+    
       
     }
     
