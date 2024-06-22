@@ -11,7 +11,7 @@ export class ruta3 implements AfterViewInit {
 
   
   
-  constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
+  constructor(private sanitizer:DomSanitizer, private nombreservice:nombreService){
     
       
     }
