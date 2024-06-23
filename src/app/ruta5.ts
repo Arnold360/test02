@@ -16,10 +16,12 @@ export class ruta5 implements OnInit, AfterViewInit {
   endTime:number = 20;
   startTime:number = 10;
   prueba!:Number;
+  linkActual:number;
   @ViewChild('player1') player: any;
   
   constructor(public servicio:nombreService, private activatedRoute: ActivatedRoute) {
   
+   this.linkActual = +this.activatedRoute.snapshot.params['linkActual'];
   }
   
   ngOnInit() {
