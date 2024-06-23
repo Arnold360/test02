@@ -15,7 +15,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
   elementoColoreado!:HTMLElement;
-  linkActual!:Number;
+  
   
   
   constructor( public nombreservice:nombreService){
@@ -23,7 +23,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
-  
+    
  
   }
   
