@@ -22,6 +22,7 @@ export class ruta5 implements OnInit, AfterViewInit {
   constructor(public servicio:nombreService, private activatedRoute: ActivatedRoute) {
   
    this.linkActual = +this.activatedRoute.snapshot.params['linkActual'];
+   servicio.linkActual = this.linkActual;
   }
   
   ngOnInit() {
