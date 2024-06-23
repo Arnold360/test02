@@ -9,7 +9,7 @@ import { Data } from './Data';
 })
   
 export class nombreService {
-     linkActual!:Number;
+     
      data:Data = new Data();
     
       tipoNombres:string[][];
@@ -22,11 +22,12 @@ export class nombreService {
   etnonacionalismo:declaracion[] = [];
   
   declaraciones:declaracion[][] = [this.entrevistas, this.mitines, this.exposiciones, this.etnonacionalismo];
-
-  enlaceYt!:string;
-    enlace!:SafeUrl;
-    nombre!:string;
-    titulo!:string;
+  
+  linkActual!:Number;
+   enlaceYt!:string;
+     enlace!:SafeUrl;
+     nombre!:string;
+     titulo!:string;
   destacado!:Number[];
   
        fechaEntrevistas:string[] = [];
