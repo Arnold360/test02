@@ -1,6 +1,7 @@
 import { SafeUrl, DomSanitizer} from '@angular/platform-browser';
 import { Component, SkipSelf, AfterViewInit, OnInit, ViewChild } from '@angular/core';
 import { nombreService } from './nombreService';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ruta5',
@@ -17,7 +18,7 @@ export class ruta5 implements OnInit, AfterViewInit {
   prueba!:Number;
   @ViewChild('player1') player: any;
   
-  constructor(public servicio:nombreService) {
+  constructor(public servicio:nombreService, private activatedRoute: ActivatedRoute) {
   
   }
   
