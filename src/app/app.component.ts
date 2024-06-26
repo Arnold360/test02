@@ -60,14 +60,13 @@ ngAfterViewInit(){
   this.elemento4 = document.getElementById("barranav");
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
- 
-
   this.cambiarColor();
+  this.elementoColoreado = document.getElementById("link" + this.nombreservice.linkActual );
+  this.elementoColoreado.style.color = "red";
   
 }
 ngOnInit(){
-  this.elementoColoreado = document.getElementById("link" + this.nombreservice.linkActual );
-  this.elementoColoreado.style.color = "red";
+ 
 }
   mousehover(){
     this.elemento4.style.display = "none";
