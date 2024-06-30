@@ -9,6 +9,7 @@ import { ruta8 } from './ruta8';
 import {AppComponent} from './app.component';
 
 const routes: Routes = [   
+  { path: '*/:linkActual', component: AppComponent},
   { path: 'ruta2',  component: ruta2 },
   { path: 'ruta3',  component: ruta3,  children: [{path:'ruta5', component:ruta5}] },
   { path: 'ruta4/:linkActual1',  component: ruta4,  children: [{path:'ruta5/:linkActual', component:ruta5}] }, 
