@@ -15,14 +15,16 @@ export class AppComponent implements AfterViewInit, OnInit {
   elemento5!:HTMLElement;
   elemento6!:HTMLElement;
   elementoColoreado!:HTMLElement;
+  linkActual:number;
   
   
   
-  constructor( public nombreservice:nombreService){
+  constructor( public nombreservice:nombreService, private activatedRoute: ActivatedRoute){
     
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
+    this.linkActual = +this.activatedRoute.snapshot.params['linkActual'];
     
  
   }
@@ -61,7 +63,7 @@ ngAfterViewInit(){
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
   this.cambiarColor();
-  this.elementoColoreado = document.getElementById("link" + this.nombreservice.linkActual );
+  this.elementoColoreado = document.getElementById("link" + this.linkActual );
   this.elementoColoreado.style.color = "red";
   
 }
