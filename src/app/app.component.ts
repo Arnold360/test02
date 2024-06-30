@@ -26,7 +26,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.x.addEventListener("change", () => { this.cambiarColor() } );
     this.elemento2 = document.createElement("div");
     this.elemento3 = document.createElement("li");
-    this.linkActual = +this.activatedRoute.snapshot.params['linkActual'];
+    this.linkActual = +this.activatedRoute.snapshot.params['linkActual2'];
     
  
   }
