@@ -10,7 +10,7 @@
 
 }
 .active-link {
-  color: red;
+  color: black;
 }
 
 @media screen and (max-width: 800px) {
