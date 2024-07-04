@@ -63,8 +63,8 @@ a {
 a:link{
   color: yellow;
 }
-a:visited { 
-  color: green;
+/*a:visited { 
+  color: green;*/
 }
 a:hover {
   color: --blue;
