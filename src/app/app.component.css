@@ -67,16 +67,16 @@ a:link{
   color: green;
 }*/
 a:hover {
-  color: --blue;
+  color: var(--blue);
 } 
 a:active {
   color: red;
 }
-a:focus {
+/*a:focus {
   color: blue;
-}
+}*/
 .active-link {
-  color: black;
+  color: red;
 }
 
 #emvoltura:hover .gg-list {
