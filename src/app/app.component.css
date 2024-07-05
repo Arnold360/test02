@@ -69,10 +69,10 @@ a:link{
 a:hover {
   color: var(--blue);
 } 
-a:active {
+/*a:active {
   color: red;
 }
-/*a:focus {
+a:focus {
   color: blue;
 }*/
 .active-link {
