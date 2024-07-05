@@ -101,6 +101,7 @@ a:focus {
  width: auto;
  height: auto;
  grid-column: 3;
+ color: red;
 }
 
  .gg-list {
