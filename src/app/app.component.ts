@@ -31,7 +31,7 @@ export class AppComponent implements AfterViewInit, OnInit {
  
   }
   
-  changeLinkColor(e:HTMLElement) {
+/* changeLinkColor(e:HTMLElement) {
            if( e != this.elementoColoreado){
             e.style.color = "red";
             this.resetLinkColor(this.elementoColoreado);
@@ -41,7 +41,7 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   resetLinkColor(i:HTMLElement) {
              i.style.color = "green";
-        }   
+        }  */ 
   
   cambiarColor(){
        if (this.x.matches) {
@@ -65,8 +65,6 @@ ngAfterViewInit(){
   this.elemento5 = document.getElementById("fondo");
   this.elemento6 = document.getElementById("emvoltura");
   this.cambiarColor();
-  this.elementoColoreado = document.getElementById("link" + this.linkActual );
-  this.elementoColoreado.style.color = "red";
   
 }
 ngOnInit(){
