@@ -67,7 +67,7 @@ a:link{
   color: green;
 }*/
 a:hover {
-  color: var(--blue);
+  color: red;
 } 
 /*a:active {
   color: red;
