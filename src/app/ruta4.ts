@@ -19,12 +19,11 @@ export class ruta4 implements AfterViewInit {
   rutas:string[] = []; 
   element!:HTMLCollection; 
   elementoColoreado:HTMLElement;
-  test:any = '3';
-  linkActual:any;
+  
  
   
   
-  
+
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
   
