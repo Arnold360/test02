@@ -15,7 +15,15 @@ export class ruta3 implements AfterViewInit {
     
       
     }
-    
+  
+    changeLinkColor(i:number) {
+            this.elementoColoreado = document.getElementById("enlace" + i);
+            this.elementoColoreado.style.color = "red";
+        }
+
+  resetLinkColor() {
+             this.elementoColoreado.style.color = "purple";
+        }    
 
    ngAfterViewInit() {
     
