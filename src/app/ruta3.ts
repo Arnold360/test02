@@ -9,7 +9,7 @@ import { nombreService } from './nombreService';
 })
 export class ruta3 implements AfterViewInit {
 
-  
+  elementoColoreado:HTMLElement;
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService){
     
@@ -28,7 +28,8 @@ export class ruta3 implements AfterViewInit {
    ngAfterViewInit() {
     
     this.cambiarEnlace(this.nombreservice.mitines.length - 1);
-  }
+    
+   }
 
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.mitines[i].url);
@@ -36,6 +37,8 @@ export class ruta3 implements AfterViewInit {
      this.nombreservice.enlaceYt = this.nombreservice.mitines[i].urlYt;
      this.nombreservice.titulo = this.nombreservice.tituloMitines[i];
      this.nombreservice.destacado = this.nombreservice.destacadoMitines[i];
+     this.resetLinkColor();
+     this.changeLinkColor(i);
      
    }
   
