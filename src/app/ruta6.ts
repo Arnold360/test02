@@ -36,6 +36,7 @@ export class ruta6 implements AfterViewInit {
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.etnonacionalismo[i].url);
      this.nombreservice.enlaceYt = this.nombreservice.etnonacionalismo[i].urlYt;
+     this.nombreservice.nombre = this.nombreservice.etnonacionalismo[i].nombre;
      this.nombreservice.titulo = this.nombreservice.titulosEtnonacionalismo[i];
      this.nombreservice.destacado = this.nombreservice.destacadosEtnonacionalismo[i];
      this.resetLinkColor();
