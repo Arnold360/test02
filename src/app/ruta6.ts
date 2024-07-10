@@ -9,7 +9,7 @@ import { nombreService } from './nombreService';
 })
 export class ruta6 implements AfterViewInit {
   
-
+  elementoColoreado:HTMLElement;
   
   
   
@@ -31,7 +31,8 @@ export class ruta6 implements AfterViewInit {
      this.nombreservice.enlaceYt = this.nombreservice.etnonacionalismo[i].urlYt;
      this.nombreservice.titulo = this.nombreservice.titulosEtnonacionalismo[i];
      this.nombreservice.destacado = this.nombreservice.destacadosEtnonacionalismo[i];
-     
+     this.resetLinkColor();
+     this.changeLinkColor(i);
      
    }
   
