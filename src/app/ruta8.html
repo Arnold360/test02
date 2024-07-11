@@ -2,7 +2,7 @@
   <h1 id="header"> EXPOSICIONES </h1>
     <ul>
      <li class="elemento" *ngFor="let exposicion of nombreservice.exposiciones; index as i" >
-      <a class="enlace" id="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
+      <a class="enlace" id="'enlace' + i" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
        <span class="tituloid"> {{nombreservice.tituloExposiciones[i]}}&nbsp; </span> <span class="fechaid"> {{nombreservice.fechaExposiciones[i]}} </span>  
       </a>  
      </li>
