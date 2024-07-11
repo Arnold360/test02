@@ -3,7 +3,7 @@
   <h1 id="header"> ETNONACIONALISMO </h1>
     <ul>
      <li class="elemento" *ngFor="let etno of nombreservice.etnonacionalismo; index as i" >
-      <a class="enlace" id="enlace" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
+      <a class="enlace" id="'enlace' + i" routerLink= "ruta5" (click)="cambiarEnlace(i)"> 
        <span class="tituloid"> {{nombreservice.titulosEtnonacionalismo[i]}}&nbsp; </span> <span class="fechaid"> {{nombreservice.fechasEtnonacionalismo[i]}} </span>  
       </a>  
      </li>
