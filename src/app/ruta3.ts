@@ -26,7 +26,7 @@ export class ruta3 implements AfterViewInit {
         }    
 
    ngAfterViewInit() {
-    this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
+    this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.mitines.length - 1));
     this.cambiarEnlace(this.nombreservice.mitines.length - 1);
     
    }
