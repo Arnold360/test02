@@ -23,7 +23,7 @@ export class Data {
                                 "https://www.youtube.com/embed/tYaX9DInKC8?si=Ny_ApypSzr_MwFXB",];
       urlMitinesYts:string[] = ["NAvU6m960CM", "tYaX9DInKC8"];
 
-    nombreExposiciones:string[] = ["ANTAURO HUMALA - NACIONALISMO o ETNONACIONALISMO  09/2004 t0000 t0085 t0216 t0336",
+    nombreExposiciones:string[] = ["ANTAURO HUMALA - NACIONALISMO o ETNONACIONALISMO  09/2004 t0000 t0085 t0216 t0343",
                                    "ANTAURO - Guerra de 1879 y postguerra - Rol del Tayta Cáceres  14/09/2023 t1800 t2400 t3000 t3600" ];
        urlExposiciones:string[] = ["https://www.youtube.com/embed/IpQEAhpm_VA?si=PVw_m7r6LaykzuiS",
                                    "https://www.youtube.com/embed/l9Og6Pcrx-M?si=INZ348Q9g18u58gg", ];
