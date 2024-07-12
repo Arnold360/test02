@@ -8,16 +8,8 @@ import { nombreService } from './nombreService';
   
 })
 export class ruta8 implements AfterViewInit {
-  conferencias:string[] = ["CONFERENCIA EN LA PLAZA SAN MARTIN 2022","CONFERENCIA EN ANDAHUAYLAS 2022"];
-  mitines:string[] = ["MITIN EN ANDAHUAYLAS 2022","MITIN EN CUSCO 2022"];
-  entrevistas:string[] = ["ENTREVISTA WILLAX 2022","ENTREVISTA LA REPUBLICA 2023", "ENTREVISTA EN CUSCO 2023"];
-  declaraciones:string[] = this.conferencias.concat(this.mitines).concat(this.entrevistas);
-  videoActual:string = "";
-  indice:number = 0;
-  rutas:string[] = []; 
-  element!:HTMLCollection; 
-  prueba!:number;
-  
+
+  elementoColoreado:HTMLElement;
   
   
   
@@ -28,8 +20,7 @@ export class ruta8 implements AfterViewInit {
     
 
    ngAfterViewInit() {
-    this.element = document.getElementsByClassName("elemento") as HTMLCollection;
-    this.prueba = this.element.length;
+    this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.exposiciones.length - 1));
     this.cambiarEnlace(this.nombreservice.exposiciones.length - 1);
      }
   
