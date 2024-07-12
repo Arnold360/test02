@@ -17,7 +17,15 @@ export class ruta8 implements AfterViewInit {
     
   
     }
-    
+  
+  changeLinkColor(i:number) {
+            this.elementoColoreado = document.getElementById("enlace" + i);
+            this.elementoColoreado.style.color = "red";
+        }
+
+  resetLinkColor() {
+             this.elementoColoreado.style.color = "purple";
+        }    
 
    ngAfterViewInit() {
     this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.exposiciones.length - 1));
@@ -30,7 +38,8 @@ export class ruta8 implements AfterViewInit {
      this.nombreservice.enlaceYt = this.nombreservice.exposiciones[i].urlYt;
      this.nombreservice.titulo = this.nombreservice.tituloExposiciones[i];
      this.nombreservice.destacado = this.nombreservice.destacadoExposiciones[i];
-     
+     this.resetLinkColor();
+     this.changeLinkColor(i);
      
    }
   
