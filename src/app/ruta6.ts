@@ -28,7 +28,7 @@ export class ruta6 implements AfterViewInit {
         }    
 
    ngAfterViewInit() {
-    this.elementoColoreado = document.getElementById("enlace" +  i);
+    this.elementoColoreado = document.getElementById("enlace" +  (this.nombreservice.etnonacionalismo.length - 1));
     this.cambiarEnlace(this.nombreservice.etnonacionalismo.length - 1);
      }
   
