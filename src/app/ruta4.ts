@@ -40,9 +40,9 @@ export class ruta4 implements AfterViewInit {
      
 
    ngAfterViewInit() {
+     this.elementoVideo = document.getElementById("video");
      this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
      this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
-     this.elementoVideo = document.getElementById("video");
      }
   
 
@@ -54,7 +54,7 @@ export class ruta4 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     this.elementoVideo.scrollIntoView();
+     this.elementoVideo.scrollIntoView( { behavior: 'smooth' } );
      
      
      
