@@ -42,7 +42,7 @@ export class ruta4 implements AfterViewInit {
    ngAfterViewInit() {
      this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
      this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
-     this.elememtoVideo = document.getElementById("video");
+     this.elementoVideo = document.getElementById("video");
      }
   
 
