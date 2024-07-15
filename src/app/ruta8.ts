@@ -10,6 +10,7 @@ import { nombreService } from './nombreService';
 export class ruta8 implements AfterViewInit {
 
   elementoColoreado:HTMLElement;
+  elementoVideo:HTMLElement;
   
   
   
@@ -40,6 +41,8 @@ export class ruta8 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadoExposiciones[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
+     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 1000 );
+   }
      
    }
   
