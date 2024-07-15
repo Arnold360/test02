@@ -41,7 +41,7 @@ export class ruta3 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadoMitines[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}) }, 500 );
+     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 500 );
    }
   
 
