@@ -42,9 +42,8 @@ export class ruta8 implements AfterViewInit {
      this.resetLinkColor();
      this.changeLinkColor(i);
      setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 1000 );
-   }
-     
-   }
+   
+     }
   
 
 }
