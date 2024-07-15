@@ -17,7 +17,7 @@ export class ruta3 implements AfterViewInit {
       
     }
   
-    changeLinkColor(i:number) {
+  changeLinkColor(i:number) {
             this.elementoColoreado = document.getElementById("enlace" + i);
             this.elementoColoreado.style.color = "red";
         }
@@ -32,7 +32,9 @@ export class ruta3 implements AfterViewInit {
     this.cambiarEnlace(this.nombreservice.mitines.length - 1);
     
    }
-
+   scrollAVideo() {
+     this.elementoVideo.scrollIntoView( { behavior: 'smooth' } );
+   }
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.mitines[i].url);
      this.nombreservice.nombre = this.nombreservice.mitines[i].nombre;
@@ -41,7 +43,7 @@ export class ruta3 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadoMitines[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     setTimeout(this.elementoVideo.scrollIntoView, 500 );
+     setTimeout(this.scrollAVideo, 500 );
    }
   
 
