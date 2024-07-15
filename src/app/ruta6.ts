@@ -43,7 +43,7 @@ export class ruta6 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadosEtnonacionalismo[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     this.elementoVideo.scrollIntoView( { behavior: 'smooth'} );
+     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 1000 );
      
    }
   
