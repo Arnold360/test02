@@ -29,7 +29,7 @@ export class ruta3 implements AfterViewInit {
    ngAfterViewInit() {
     this.elementoVideo = document.getElementById("video");
     this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.mitines.length - 1));
-    this.cambiarEnlace(this.nombreservice.mitines.length - 1);
+    setTimeout(() => { this.cambiarEnlace(this.nombreservice.mitines.length - 1); }, 1000 );
     
    }
    
@@ -41,7 +41,7 @@ export class ruta3 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadoMitines[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 1000 );
+     this.elementoVideo.scrollIntoView({behavior: 'smooth'});
    }
   
 
