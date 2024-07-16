@@ -31,7 +31,8 @@ export class ruta6 implements AfterViewInit {
    ngAfterViewInit() {
     this.elementoVideo = document.getElementById("video");
     this.elementoColoreado = document.getElementById("enlace" +  (this.nombreservice.etnonacionalismo.length - 1));
-    this.cambiarEnlace(this.nombreservice.etnonacionalismo.length - 1);
+   
+      setTimeout(() => { this.cambiarEnlace(this.nombreservice.etnonacionalismo.length - 1); }, 1000 );
      }
   
 
@@ -43,7 +44,7 @@ export class ruta6 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadosEtnonacionalismo[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 1000 );
+     this.elementoVideo.scrollIntoView({behavior: 'smooth'});
      
    }
   
