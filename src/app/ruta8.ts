@@ -31,8 +31,8 @@ export class ruta8 implements AfterViewInit {
    ngAfterViewInit() {
     this.elementoVideo = document.getElementById("video");
     this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.exposiciones.length - 1));
-    this.cambiarEnlace(this.nombreservice.exposiciones.length - 1);
-     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 1000 );
+    
+     setTimeout(() => { this.cambiarEnlace(this.nombreservice.exposiciones.length - 1); }, 1000 );
      }
   
 
