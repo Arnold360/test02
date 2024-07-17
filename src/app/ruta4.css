@@ -39,7 +39,10 @@ ul {
 .fechaid {
  color: orange;
 }
-
+#video {
+  width: auto;
+  height: auto;
+  }
 #video-wrapper {
 
   }
