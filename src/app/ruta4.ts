@@ -44,6 +44,7 @@ export class ruta4 implements AfterViewInit {
      this.elementoVideo = document.getElementById("video");
      this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
      setTimeout(() => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 2000 );
+     this.elementoVideo.scrollIntoView({behavior: 'smooth'});
      }
   
    cambiarEnlace(i:number){
