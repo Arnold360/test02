@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./ruta4.css'],
   
 })
-export class ruta4 implements AfterViewInit {
+export class ruta4 implements AfterViewInit, OnInit {
   conferencias:string[] = ["CONFERENCIA EN LA PLAZA SAN MARTIN 2022","CONFERENCIA EN ANDAHUAYLAS 2022"];
   mitines:string[] = ["MITIN EN ANDAHUAYLAS 2022","MITIN EN CUSCO 2022"];
   entrevistas:string[] = ["ENTREVISTA WILLAX 2022","ENTREVISTA LA REPUBLICA 2023", "ENTREVISTA EN CUSCO 2023"];
@@ -43,8 +43,11 @@ export class ruta4 implements AfterViewInit {
      this.nombreservice.enlaceYt = this.nombreservice.entrevistas[(this.nombreservice.entrevistas.length - 1)].urlYt;
      this.elementoVideo = document.getElementById("video");
      this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
-     /*setTimeout(() => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 2000 );*/
+     
      }
+  ngOnInit(){
+    setTimeout(() => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 2000 );
+  }
   
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.entrevistas[i].url);
