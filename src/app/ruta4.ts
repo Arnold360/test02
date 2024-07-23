@@ -60,7 +60,7 @@ export class ruta4 implements AfterViewInit, OnInit {
      this.elementoVideo.scrollIntoView({ block: "nearest",
                                         inline: "center",
                                       behavior: "smooth",
-                                    alignToTop: false });
+                                    alignToTop: "false" });
    }
   
 
