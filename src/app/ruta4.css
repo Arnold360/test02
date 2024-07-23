@@ -41,3 +41,7 @@ ul {
 #video-wrapper {
 
   }
+#video {
+  height: 2000px;
+  position: relative;
+}
