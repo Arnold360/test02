@@ -31,8 +31,7 @@ export class ruta5 implements OnInit, AfterViewInit {
   
   
   ngAfterViewInit() {
-    document.getElementById("videotitulo").scrollIntoView({behavior: 'smooth',
-                                                              block: 'start'});
+  
   }
 
   
