@@ -41,10 +41,10 @@ export class ruta4 implements AfterViewInit, OnInit {
         }    
      
   ngAfterViewInit() {
-
+    
     this.elementoVideo = document.getElementById("video");
     this.elementoColoreado = document.getElementById("enlace" + (this.nombreservice.entrevistas.length - 1));
-    
+    setTimeout(() => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 1000 );
         }
   
   ngOnInit() {
