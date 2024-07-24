@@ -41,7 +41,7 @@ export class ruta4 implements AfterViewInit, OnInit {
      
   ngAfterViewInit() {
     
-        setTimeout(() => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 1000);
+      this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
   }
   
   ngOnInit{
