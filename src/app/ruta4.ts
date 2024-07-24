@@ -25,10 +25,12 @@ export class ruta4 implements AfterViewInit, OnInit {
   
 
   
-  constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService) {
+  constructor(private sanitizer:DomSanitizer,
+              public nombreservice:nombreService) {
+    
+  setTimeout( () => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 1000);
   
-     
-    }
+       }
 
   changeLinkColor(i:number) {
             this.elementoColoreado = document.getElementById("enlace" + i);
@@ -41,10 +43,9 @@ export class ruta4 implements AfterViewInit, OnInit {
      
   ngAfterViewInit() {
     
-      this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
   }
   
-  ngOnInit{
+  ngOnInit() {
     
   }
   
@@ -56,7 +57,9 @@ export class ruta4 implements AfterViewInit, OnInit {
      this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     setTimeout(() => { this.elementoVideo.scrollIntoView({ block: "start", inline: "center", behavior: "smooth" }); }, 1000);
+     setTimeout(() => { this.elementoVideo.scrollIntoView({ block: "start", 
+                                                           inline: "center",
+                                                         behavior: "smooth" }); }, 1000);
    }
   
 
