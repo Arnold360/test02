@@ -27,10 +27,9 @@ export class ruta4 implements AfterViewInit, OnInit {
   
   constructor(private sanitizer:DomSanitizer,
               public nombreservice:nombreService) {
-    
-  setTimeout( () => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 1000);
   
-       }
+  
+        }
 
   changeLinkColor(i:number) {
             this.elementoColoreado = document.getElementById("enlace" + i);
@@ -43,11 +42,11 @@ export class ruta4 implements AfterViewInit, OnInit {
      
   ngAfterViewInit() {
     
-  }
+        }
   
   ngOnInit() {
-    
-  }
+    setTimeout( () => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 1000);
+        }
   
    cambiarEnlace(i:number){
      this.nombreservice.enlace = this.sanitizer.bypassSecurityTrustResourceUrl(this.nombreservice.entrevistas[i].url);
