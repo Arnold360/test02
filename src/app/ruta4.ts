@@ -56,9 +56,7 @@ export class ruta4 implements AfterViewInit, OnInit {
      this.nombreservice.destacado = this.nombreservice.destacadoEntrevistas[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     setTimeout(() => { this.elementoVideo.scrollIntoView({ block: "start",
-                                                            inline: "center",
-                                                            behavior: "smooth" }); }, 1000);
+     setTimeout(() => { this.elementoVideo.scrollIntoView({ block: "start", inline: "center", behavior: "smooth" }); }, 1000);
    }
   
 
