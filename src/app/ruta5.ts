@@ -18,10 +18,10 @@ export class ruta5 implements OnInit, AfterViewInit {
   prueba!:Number;
   linkActual:number;
   @ViewChild('player1') player: any;
-  titulo:string;
+  
   
   constructor(public servicio:nombreService, private activatedRoute: ActivatedRoute) {
-   this.titulo = servicio.titulo;
+
    servicio.linkActual = this.linkActual;
   }
   
