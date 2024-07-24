@@ -27,7 +27,7 @@ export class ruta4 implements AfterViewInit, OnInit {
   
   constructor(private sanitizer:DomSanitizer, public nombreservice:nombreService) {
     
-    setTimeout(() => { this.cambiarEnlace(this.nombreservice.entrevistas.length - 1); }, 2000 );
+    this.cambiarEnlace(this.nombreservice.entrevistas.length - 1);
      
     }
 
