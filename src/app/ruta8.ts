@@ -43,7 +43,7 @@ export class ruta8 implements AfterViewInit {
      this.nombreservice.destacado = this.nombreservice.destacadoExposiciones[i];
      this.resetLinkColor();
      this.changeLinkColor(i);
-     this.elementoVideo.scrollIntoView({behavior: 'smooth'});
+     setTimeout(() => { this.elementoVideo.scrollIntoView({behavior: 'smooth'}); }, 800);
    
      }
   
