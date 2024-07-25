@@ -63,7 +63,7 @@ export class ruta4 implements AfterViewInit, OnInit {
      this.changeLinkColor(i);
      setTimeout(() => { this.elementoVideo.scrollIntoView({ block: "start", 
                                                            inline: "center",
-                                                         behavior: "smooth" }); }, 1000);
+                                                         behavior: "smooth" }); }, 800);
    }
   
 
