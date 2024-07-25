@@ -1,13 +1,14 @@
 @media screen and (min-width: 1200px) {
   
    #videotitulo {
-     
      position: relative;
      height: 600px;
      padding-left: 150px;
      margin-top: 75px;
     }
-  
-}
+ }
 
+  #titulo {
+     margin-bottom: 50px;
+    }
   
