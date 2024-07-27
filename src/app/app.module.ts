@@ -10,9 +10,9 @@ import { ruta3 } from './ruta3';
 import { ruta4 } from './ruta4';
 import { ruta5 } from './ruta5';
 import { ruta6 } from './ruta6';
-
 import { ruta8 } from './ruta8';
-import { Data } from './Data';
+import { Juego } from './juego';
+import {  Data } from './Data';
 import { nombreService } from './nombreService';
 import { VideoComponent } from './video.component';
 import { VideoComponent2 } from './video.component2';
@@ -26,6 +26,7 @@ import { YtPlayerComponent } from './yt-player.component';
     ruta5,
     ruta6,
     ruta8,
+    Juego,
     VideoComponent,
     VideoComponent2,
     YtPlayerComponent,
