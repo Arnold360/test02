@@ -1,11 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
-@Component({
-  selector: 'juego',
-  templateUrl: './juego.html',
-  styleUrls: ['./juego.css'],
-  
-})
+
 interface Pelota {
 	x: number;
 	y: number;
@@ -16,6 +11,13 @@ interface Raqueta {
 	x: number;
 	y: number;
 }
+@Component({
+  selector: 'juego',
+  templateUrl: './juego.html',
+  styleUrls: ['./juego.css'],
+  
+})
+
   
 export class Juego implements Pelota, Raqueta {
 
