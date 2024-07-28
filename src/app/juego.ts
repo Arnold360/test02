@@ -1,99 +1,73 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
 
+// tennis-game.component.ts
+import { Component, ElementRef } from '@angular/core';
 
-interface Pelota {
-	x: number;
-	y: number;
-	vx: number;
-	vy: number;
-}
-interface Raqueta {
-	x: number;
-	y: number;
-}
 @Component({
   selector: 'juego',
-  templateUrl: './juego.html',
+  template: './juego.html',
   styleUrls: ['./juego.css'],
-  
 })
+export class Juego {
+  private canvas: HTMLCanvasElement;
+  private ctx: CanvasRenderingContext2D;
 
-  
-export class Juego implements Pelota, Raqueta {
+  private ballX = 300;
+  private ballY = 200;
+  private ballSpeedX = 5;
+  private ballSpeedY = 5;
 
-// Obtener el canvas y su contexto
-const canvas = document.getElementById('tenis') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+  private paddle1Y = 150;
+  private paddle2Y = 150;
 
-// Definir constantes para el juego
-const ANCHO_CANVAS = canvas.width;
-const ALTO_CANVAS = canvas.height;
-const TAMANO_PELOTA = 20;
-const VELOCIDAD_PELOTA = 5;
-const TAMANO_RAQUETA = 100;
-const VELOCIDAD_RAQUETA = 10;
+  constructor(private elementRef: ElementRef) {}
 
-// Definir la pelota y la raqueta
+  ngAfterViewInit() {
+    this.canvas = this.elementRef.nativeElement.querySelector('canvas');
+    this.ctx = this.canvas.getContext('2d');
 
+    setInterval(() => {
+      this.clearCanvas();
+      this.drawBall();
+      this.drawPaddles();
+      this.updateBallPosition();
+    }, 16);
+  }
 
+  private clearCanvas() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
 
+  private drawBall() {
+    this.ctx.beginPath();
+    this.ctx.arc(this.ballX, this.ballY, 10, 0, Math.PI * 2);
+    this.ctx.fillStyle = 'white';
+    this.ctx.fill();
+  }
 
-let pelota: Pelota = {
-	x: ANCHO_CANVAS / 2,
-	y: ALTO_CANVAS / 2,
-	vx: VELOCIDAD_PELOTA,
-	vy: VELOCIDAD_PELOTA,
-};
+  private drawPaddles() {
+    this.ctx.beginPath();
+    this.ctx.rect(0, this.paddle1Y, 10, 100);
+    this.ctx.fillStyle = 'white';
+    this.ctx.fill();
 
-let raqueta: Raqueta = {
-	x: 0,
-	y: ALTO_CANVAS / 2 - TAMANO_RAQUETA / 2,
-};
+    this.ctx.beginPath();
+    this.ctx.rect(this.canvas.width - 10, this.paddle2Y, 10, 100);
+    this.ctx.fillStyle = 'white';
+    this.ctx.fill();
+  }
 
-// Función para dibujar la pelota y la raqueta
-function dibujar() {
-	ctx.clearRect(0, 0, ANCHO_CANVAS, ALTO_CANVAS);
-	ctx.fillStyle = 'white';
-	ctx.beginPath();
-	ctx.arc(pelota.x, pelota.y, TAMANO_PELOTA, 0, Math.PI * 2);
-	ctx.fill();
-	ctx.fillStyle = 'black';
-	ctx.fillRect(raqueta.x, raqueta.y, TAMANO_RAQUETA, 10);
+  private updateBallPosition() {
+    this.ballX += this.ballSpeedX;
+    this.ballY += this.ballSpeedY;
+
+    if (this.ballY <= 0 || this.ballY >= this.canvas.height - 10) {
+      this.ballSpeedY *= -1;
+    }
+
+    if (this.ballX <= 0 || this.ballX >= this.canvas.width - 10) {
+      this.ballSpeedX *= -1;
+    }
+  }
 }
 
-// Función para actualizar la posición de la pelota y la raqueta
-function actualizar() {
-	pelota.x += pelota.vx;
-	pelota.y += pelota.vy;
-	if (pelota.x + TAMANO_PELOTA > ANCHO_CANVAS || pelota.x - TAMANO_PELOTA < 0) {
-		pelota.vx = -pelota.vx;
-	}
-	if (pelota.y + TAMANO_PELOTA > ALTO_CANVAS || pelota.y - TAMANO_PELOTA < 0) {
-		pelota.vy = -pelota.vy;
-	}
-	if (pelota.x + TAMANO_PELOTA > raqueta.x && pelota.x - TAMANO_PELOTA < raqueta.x + TAMANO_RAQUETA && pelota.y + TAMANO_PELOTA > raqueta.y && pelota.y - TAMANO_PELOTA < raqueta.y + 10) {
-		pelota.vy = -pelota.vy;
-	}
-}
 
-// Función para manejar los eventos de teclado
-function manejarTeclado(evento: KeyboardEvent) {
-	if (evento.key === 'ArrowUp') {
-		raqueta.y -= VELOCIDAD_RAQUETA;
-	} else if (evento.key === 'ArrowDown') {
-		raqueta.y += VELOCIDAD_RAQUETA;
-	}
-}
-
-// Iniciar el juego
-setInterval(() => {
-	actualizar();
-	dibujar();
-}, 16); // 16ms = 60fps
-
-// Agregar evento de teclado
-document.addEventListener('keydown', manejarTeclado);
-
-
-  
-}
