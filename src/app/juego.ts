@@ -55,6 +55,13 @@ export class Juego {
     this.ctx.fillStyle = 'white';
     this.ctx.fill();
   }
+  
+  changePaddle1(n: number) {
+     this.paddle1Y += n;
+  }
+  changePaddle2(n: number) {
+    this.paddle2Y += n;
+  }
 
   private updateBallPosition() {
     this.ballX += this.ballSpeedX;
