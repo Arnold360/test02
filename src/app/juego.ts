@@ -4,7 +4,7 @@ import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'juego',
-  template: './juego.html',
+  templateUrl: './juego.html',
   styleUrls: ['./juego.css'],
 })
 export class Juego {
