@@ -62,6 +62,7 @@ export class Juego {
   changePaddle2(n: number) {
     this.paddle2Y += n;
   }
+  colission() {}
 
   private updateBallPosition() {
     this.ballX += this.ballSpeedX;
