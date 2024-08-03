@@ -67,7 +67,8 @@ export class Juego {
   private updateBallPosition() {
     this.ballX += this.ballSpeedX;
     this.ballY += this.ballSpeedY;
-
+    if (this.ballY <= this.paddle1Y - 50 || this.ballY >= this.paddle1Y + 50)
+    {
     if (this.ballY <= 0 || this.ballY >= this.canvas.height - 10) {
       this.ballSpeedY *= -1;
     }
