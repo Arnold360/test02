@@ -18,6 +18,8 @@ export class Juego {
 
   private paddle1Y = 150;
   private paddle2Y = 150;
+       paddleWidth = 20;
+  
 
   constructor(private elementRef: ElementRef) {}
 
@@ -46,12 +48,12 @@ export class Juego {
 
   private drawPaddles() {
     this.ctx.beginPath();
-    this.ctx.rect(0, this.paddle1Y, 10, 100);
+    this.ctx.rect(0, this.paddle1Y, this.paddleWidth, 100);
     this.ctx.fillStyle = 'white';
     this.ctx.fill();
 
     this.ctx.beginPath();
-    this.ctx.rect(this.canvas.width - 10, this.paddle2Y, 10, 100);
+    this.ctx.rect(this.canvas.width - this.paddleWidth, this.paddle2Y, 10, 100);
     this.ctx.fillStyle = 'white';
     this.ctx.fill();
   }
@@ -62,7 +64,11 @@ export class Juego {
   changePaddle2(n: number) {
     this.paddle2Y += n;
   }
-  colission() {}
+  colission() {
+    if(this.ballX <= 10){
+      
+    }
+  }
 
   private updateBallPosition() {
     this.ballX += this.ballSpeedX;
