@@ -18,7 +18,8 @@ export class Juego {
 
   private paddle1Y = 150;
   private paddle2Y = 150;
-       paddleWidth = 20;
+  paddleWidth: number = 20;
+  paddleColission: boolean = false;
   
 
   constructor(private elementRef: ElementRef) {}
@@ -31,7 +32,9 @@ export class Juego {
       this.clearCanvas();
       this.drawBall();
       this.drawPaddles();
+      this.colission();
       this.updateBallPosition();
+      this.paddleColission = false;
     }, 16);
   }
 
@@ -65,9 +68,13 @@ export class Juego {
     this.paddle2Y += n;
   }
   colission() {
-    if(this.ballX <= 10){
-      
+    if(this.ballX <= this.paddleWidth && (this.ballY <= this.paddle1Y + 50 || this.ballX >= this.paddle1Y - 50) {
+       this.paddleColission = true;
     }
+    if(this.ballX <= this.canvas.width - (this.paddleWidth + 10) && (this.ballY <= this.paddle2Y + 50 || this.ballX >= this.paddle2Y - 50)) {
+       this.paddleColission = true;
+    }
+    
   }
 
   private updateBallPosition() {
@@ -78,7 +85,7 @@ export class Juego {
       this.ballSpeedY *= -1;
     }
     
-    if (this.ballX <= 0 || this.ballX >= this.canvas.width - 10) {
+    if (this.ballX <= 0 || this.ballX >= this.canvas.width - 10 || this.paddleColission) {
       this.ballSpeedX *= -1;
     }
   }
