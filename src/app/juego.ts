@@ -56,7 +56,7 @@ export class Juego {
     this.ctx.fill();
 
     this.ctx.beginPath();
-    this.ctx.rect(this.canvas.width - this.paddleWidth, this.paddle2Y, 10, 100);
+    this.ctx.rect(this.canvas.width - this.paddleWidth, this.paddle2Y, this.paddleWidth, 100);
     this.ctx.fillStyle = 'white';
     this.ctx.fill();
   }
