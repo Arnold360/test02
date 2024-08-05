@@ -68,10 +68,10 @@ export class Juego {
     this.paddle2Y += n;
   }
   colission() {
-    if((this.ballX <= this.paddleWidth) && (this.ballY <= this.paddle1Y + 50 && this.ballY >= this.paddle1Y - 50)) {
+    if(this.ballX <= this.paddleWidth && this.ballY <= this.paddle1Y + 50 && this.ballY >= this.paddle1Y - 50) {
        this.paddleColission = true;
     }
-    if(this.ballX >= (this.canvas.width - (this.paddleWidth + 10)) && (this.ballY <= this.paddle2Y + 50 && this.ballY >= this.paddle2Y - 50)) {
+    if(this.ballX >= (this.canvas.width - (this.paddleWidth + 10)) && this.ballY <= this.paddle2Y + 50 && this.ballY >= this.paddle2Y - 50) {
        this.paddleColission = true;
     }
     
