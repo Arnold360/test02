@@ -21,6 +21,8 @@ export class Juego {
   paddleWidth: number = 20;
   paddleColission: boolean = false;
   
+  HostListener('ontouchstart',['$event.target'])
+  mover(evento:any){}
 
   constructor(private elementRef: ElementRef) {}
 
