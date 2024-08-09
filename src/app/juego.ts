@@ -22,7 +22,7 @@ export class Juego {
   paddleColission: boolean = false;
   
   HostListener('ontouchstart',['$event.target'])
-  mover(evento:any){}
+  mover(boton:any){}
 
   constructor(private elementRef: ElementRef) {}
 
