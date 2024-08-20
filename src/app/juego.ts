@@ -1,5 +1,5 @@
 
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'juego',
