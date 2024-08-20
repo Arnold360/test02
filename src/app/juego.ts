@@ -24,14 +24,14 @@ export class Juego {
   mover(boton:any){}
   
   @HostListener('window:keydown.s', ['$event'])
-  moverPaleta(){ this.changePaddle1(50); }
+  moverPaleta1Abajo(){ this.changePaddle1(50); }
   @HostListener('window:keydown.w', ['$event'])
-  moverPaleta(){ this.changePaddle1(-50); }
+  moverPaleta1Arriba(){ this.changePaddle1(-50); }
 
   @HostListener('window:keydown.down', ['$event'])
-  moverPaleta(){ this.changePaddle2(50); }
+  moverPaleta2Abajo(){ this.changePaddle2(50); }
   @HostListener('window:keydown.up', ['$event'])
-  moverPaleta(){ this.changePaddle2(-50); }
+  moverPaleta2Arriba(){ this.changePaddle2(-50); }
   
   constructor(private elementRef: ElementRef) {}
 
