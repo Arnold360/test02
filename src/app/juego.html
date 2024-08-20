@@ -13,7 +13,7 @@ Aquí tienes un ejemplo básico de un juego de tenis utilizando HTML Canvas y Ty
 	</style>
 </head>
 <body>
-  <canvas #canvas width="600" height="400"></canvas>
+  <canvas  #canvas width="600" height="400" (ontouchstart)= "changePaddle1(50)"></canvas>
   <div id="button1">
     <button class="button" id="button1up" (click)="changePaddle1(50)">Player1</button>
     <button class="button" id="button1down" (click)="changePaddle1(-50)">Player1</button>
