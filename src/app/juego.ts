@@ -23,7 +23,7 @@ export class Juego {
   @HostListener('ontouchstart',['$event.target'])
   mover(boton:any){}
   @HostListener('window:keydown.enter', ['$event'])
-  moverPaleta(){ changePaddle(50); }
+  moverPaleta(){ this.changePaddle1(50); }
   
   constructor(private elementRef: ElementRef) {}
 
