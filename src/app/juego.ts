@@ -28,9 +28,9 @@ export class Juego {
   @HostListener('window:keydown.w', ['$event'])
   moverPaleta1Arriba(){ this.changePaddle1(-50); }
 
-  @HostListener('window:keydown.down', ['$event'])
+  @HostListener('window:keydown.l', ['$event'])
   moverPaleta2Abajo(){ this.changePaddle2(50); }
-  @HostListener('window:keydown.up', ['$event'])
+  @HostListener('window:keydown.o', ['$event'])
   moverPaleta2Arriba(){ this.changePaddle2(-50); }
   
   constructor(private elementRef: ElementRef) {}
