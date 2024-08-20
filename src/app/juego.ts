@@ -22,8 +22,16 @@ export class Juego {
   
   @HostListener('ontouchstart',['$event.target'])
   mover(boton:any){}
-  @HostListener('window:keydown.a', ['$event'])
+  
+  @HostListener('window:keydown.s', ['$event'])
   moverPaleta(){ this.changePaddle1(50); }
+  @HostListener('window:keydown.w', ['$event'])
+  moverPaleta(){ this.changePaddle1(-50); }
+
+  @HostListener('window:keydown.down', ['$event'])
+  moverPaleta(){ this.changePaddle2(50); }
+  @HostListener('window:keydown.up', ['$event'])
+  moverPaleta(){ this.changePaddle2(-50); }
   
   constructor(private elementRef: ElementRef) {}
 
