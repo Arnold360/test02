@@ -1,5 +1,4 @@
 
-// tennis-game.component.ts
 import { Component, ElementRef } from '@angular/core';
 
 @Component({
