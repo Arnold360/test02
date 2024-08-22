@@ -20,8 +20,8 @@ export class Juego {
   paddleWidth: number = 20;
   paddleColission: boolean = false;
   
-  @HostListener('ontouchstart',['$event.target'])
-  mover(boton:any){}
+  @HostListener('ontouchstart',['$event'])
+  moverPaleta1Abajo(){ this.changePaddle1(50); }
   
   @HostListener('window:keydown.s', ['$event'])
   moverPaleta1Abajo(){ this.changePaddle1(50); }
