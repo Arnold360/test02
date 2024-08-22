@@ -21,7 +21,7 @@ export class Juego {
   paddleColission: boolean = false;
   
   @HostListener('ontouchstart',['$event'])
-  moverPaleta1Abajo(){ this.changePaddle1(50); }
+  tactilPaleta1Abajo(){ this.changePaddle1(50); }
   
   @HostListener('window:keydown.s', ['$event'])
   moverPaleta1Abajo(){ this.changePaddle1(50); }
