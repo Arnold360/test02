@@ -20,7 +20,7 @@ export class Juego {
   paddleWidth: number = 20;
   paddleColission: boolean = false;
   
-  @HostListener('ontouchstart',['$event'])
+  @HostListener('touchstart',['$event'])
   tactilPaleta1Abajo(){ this.changePaddle1(50); }
   
   @HostListener('window:keydown.s', ['$event'])
