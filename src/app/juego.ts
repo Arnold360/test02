@@ -19,7 +19,59 @@ export class Juego {
   private paddle2Y = 150;
   paddleWidth: number = 20;
   paddleColission: boolean = false;
-  
+  `TouchEvent.touches[1]` would represent the second touch point in a multi-touch event.
+
+If there are multiple touches detected, `TouchEvent.touches` returns an array of `Touch` objects, where:
+
+- `TouchEvent.touches[0]` represents the first touch point
+- `TouchEvent.touches[1]` represents the second touch point
+- `TouchEvent.touches[2]` represents the third touch point, and so on...
+
+Each `Touch` object in the array contains the same properties as I mentioned earlier:
+
+- `identifier`
+- `target`
+- `screenX` and `screenY`
+- `clientX` and `clientY`
+- `pageX` and `pageY`
+- `radiusX` and `radiusY`
+- `rotationAngle`
+- `force`
+
+
+/* Assuming a two-finger touch
+TouchEvent.touches = [
+  {
+    "identifier": 1,
+    "target": HTMLDivElement,
+    "screenX": 100,
+    "screenY": 200,
+    "clientX": 50,
+    "clientY": 100,
+    "pageX": 50,
+    "pageY": 100,
+    "radiusX": 5,
+    "radiusY": 5,
+    "rotationAngle": 0,
+    "force": 1
+  },
+  {
+    "identifier": 2,
+    "target": HTMLDivElement,
+    "screenX": 300,
+    "screenY": 400,
+    "clientX": 250,
+    "clientY": 300,
+    "pageX": 250,
+    "pageY": 300,
+    "radiusX": 5,
+    "radiusY": 5,
+    "rotationAngle": 0,
+    "force": 1
+  }
+];*/
+
+
   @HostListener('touchstart',['$event'])
   tactilPaleta1Abajo(evento: TouchEvent){ this.changePaddle1(50); }
   
