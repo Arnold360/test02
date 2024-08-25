@@ -19,26 +19,7 @@ export class Juego {
   private paddle2Y = 150;
   paddleWidth: number = 20;
   paddleColission: boolean = false;
-  `TouchEvent.touches[1]` would represent the second touch point in a multi-touch event.
-
-If there are multiple touches detected, `TouchEvent.touches` returns an array of `Touch` objects, where:
-
-- `TouchEvent.touches[0]` represents the first touch point
-- `TouchEvent.touches[1]` represents the second touch point
-- `TouchEvent.touches[2]` represents the third touch point, and so on...
-
-Each `Touch` object in the array contains the same properties as I mentioned earlier:
-
-- `identifier`
-- `target`
-- `screenX` and `screenY`
-- `clientX` and `clientY`
-- `pageX` and `pageY`
-- `radiusX` and `radiusY`
-- `rotationAngle`
-- `force`
-
-
+  
 /* Assuming a two-finger touch
 TouchEvent.touches = [
   {
