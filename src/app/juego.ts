@@ -19,7 +19,7 @@ export class Juego {
   private paddle2Y = 150;
   paddleWidth: number = 20;
   paddleColission: boolean = false;
-  test!: string;
+  test!: Touch;
 /* Assuming a two-finger touch
 TouchEvent.touches = [
   {
