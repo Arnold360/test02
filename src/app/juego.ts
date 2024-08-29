@@ -19,7 +19,7 @@ export class Juego {
   private paddle2Y = 150;
   paddleWidth: number = 20;
   paddleColission: boolean = false;
-  
+  test!: string;
 /* Assuming a two-finger touch
 TouchEvent.touches = [
   {
@@ -54,7 +54,9 @@ TouchEvent.touches = [
 
 
   @HostListener('touchstart',['$event'])
-  tactilPaleta1Abajo(evento: TouchEvent){ this.changePaddle1(50); }
+  tactilPaleta1Abajo(evento: TouchEvent){ this.changePaddle1(50); 
+                                        this.test = evento.touches[0];
+                                        }
   
   @HostListener('window:keydown.s', ['$event'])
   moverPaleta1Abajo(){ this.changePaddle1(50); }
