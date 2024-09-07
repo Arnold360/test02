@@ -2,3 +2,26 @@
   height: 100px;
   width: 100px;
 }
+
+
+.court {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+}
+
+.paddle {
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  background-color: white;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
