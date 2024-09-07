@@ -20,6 +20,10 @@ export class Juego {
   paddleWidth: number = 20;
   paddleColission: boolean = false;
   test!: Touch;
+
+
+   leftPaddleY = 200;
+  rightPaddleY = 200;
 /* Assuming a two-finger touch
 TouchEvent.touches = [
   {
@@ -67,6 +71,31 @@ TouchEvent.touches = [
   moverPaleta2Abajo(){ this.changePaddle2(50); }
   @HostListener('window:keydown.o', ['$event'])
   moverPaleta2Arriba(){ this.changePaddle2(-50); }
+
+  @HostListener('window:touchstart', ['$event'])
+  onTouch(event: TouchEvent) {
+    const touch = event.touches[0];
+    const courtRect = (event.target as HTMLElement).getBoundingClientRect();
+    const touchX = touch.clientX - courtRect.left;
+    const touchY = touch.clientY - courtRect.top;
+
+    if (touchX < courtRect.width / 2) {
+      this.movePaddle('left', touchY);
+    } else {
+      this.movePaddle('right', touchY);
+    }
+  }
+
+   movePaddle(side: 'left' | 'right', y: number) {
+    if (side === 'left') {
+      this.leftPaddleY = y - 50; // Center the paddle on the touch point
+    } else {
+      this.rightPaddleY = y - 50;
+    }
+  }
+
+
+
   
   constructor(private elementRef: ElementRef) {}
 
