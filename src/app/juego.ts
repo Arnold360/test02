@@ -10,7 +10,7 @@ export class Juego {
 
 
 
-  public leftPaddleY = 200;
+  public leftPaddleY = 250;
   public rightPaddleY = 200;
   public ballX = 390;
   public ballY = 290;
