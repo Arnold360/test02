@@ -11,7 +11,7 @@ export class Juego {
 
 
   public leftPaddleY = 250;
-  public rightPaddleY = 200;
+  public rightPaddleY = 250;
   public ballX = 390;
   public ballY = 290;
   ballSpeedX = 2;
