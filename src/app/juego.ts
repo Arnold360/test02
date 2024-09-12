@@ -16,6 +16,8 @@ export class Juego {
   public ballY = 290;
   ballSpeedX = 2;
   ballSpeedY = 2;
+  leftScore = 0;
+  rightScore = 0;
 
 
 
@@ -78,11 +80,18 @@ startGame() {
   }
 
   resetBall() {
-    this.ballX = window.innerWidth / 2 - 10;
-    this.ballY = window.innerHeight / 2 - 10;
-    this.ballSpeedX = 2;
-    this.ballSpeedY = 2;
+  this.ballX = window.innerWidth / 2 - 10;
+  this.ballY = window.innerHeight / 2 - 10;
+  this.ballSpeedX = 2;
+  this.ballSpeedY = 2;
+
+  // Actualizar puntuación
+  if (this.ballX <= 0) {
+    this.rightScore++;
+  } else if (this.ballX >= window.innerWidth - 20) {
+    this.leftScore++;
   }
+}
 
 
  
