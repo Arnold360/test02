@@ -46,11 +46,14 @@ export class Juego {
     this.startGame();
   }
 
-  startGame() {
-    setInterval(() => {
-      this.updateBallPosition();
-    }, 16); // Approximately 60 frames per second
-  }
+startGame() {
+  const gameLoop = () => {
+    this.updateBallPosition();
+    requestAnimationFrame(gameLoop);
+  };
+  gameLoop();
+}
+
 
   updateBallPosition() {
     this.ballX += this.ballSpeedX;
