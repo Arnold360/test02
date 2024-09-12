@@ -5,14 +5,19 @@ Aquí tienes un ejemplo básico de un juego de tenis utilizando HTML Canvas y Ty
 ```
 <head>
 	<title>Tenis</title>
-	
 </head>
+
+<div class="scoreboard">
+  <div class="left-score">{{ leftScore }}</div>
+  <div class="right-score">{{ rightScore }}</div>
+</div>
  
 <div class="court" (touchstart)="onTouch($event)">
   <div class="paddle left" [style.top.px]="leftPaddleY"></div>
   <div class="paddle right" [style.top.px]="rightPaddleY"></div>
   <div class="ball" [style.left.px]="ballX" [style.top.px]="ballY"></div>
 </div>
+
 
 
 
