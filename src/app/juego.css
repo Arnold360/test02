@@ -1,13 +1,10 @@
 
-
-
 .court {
   width: 100vw;
   height: 100vh;
   position: relative;
   background-color: green;
 }
-
 
 .paddle {
   position: absolute;
@@ -32,3 +29,18 @@
   background-color: yellow;
   border-radius: 50%;
 }
+
+.scoreboard {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: white;
+}
+
+.left-score, .right-score {
+  margin: 0 20px;
+}
+
