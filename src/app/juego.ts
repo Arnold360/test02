@@ -93,6 +93,47 @@ startGame() {
   }
 }
 
+   ngAfterViewInit() {
+    this.drawCourt();
+  }
+
+  drawCourt() {
+    const canvas = document.getElementById('tennisCourt') as HTMLCanvasElement;
+    const ctx = canvas.getContext('2d');
+
+    if (ctx) {
+      const width = canvas.width;
+      const height = canvas.height;
+      const imageData = ctx.createImageData(width, height);
+
+      // Define the color for the gold bricks
+      const goldColor = { r: 255, g: 215, b: 0, a: 255 };
+
+      // Draw bricks
+      const brickWidth = 50;
+      const brickHeight = 20;
+      for (let y = 0; y < height; y += brickHeight) {
+        for (let x = 0; x < width; x += brickWidth) {
+          this.drawBrick(imageData, x, y, brickWidth, brickHeight, goldColor);
+        }
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+    }
+  }
+
+  drawBrick(imageData: ImageData, x: number, y: number, width: number, height: number, color: { r: number, g: number, b: number, a: number }) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {
+        const index = ((y + i) * imageData.width + (x + j)) * 4;
+        imageData.data[index] = color.r;
+        imageData.data[index + 1] = color.g;
+        imageData.data[index + 2] = color.b;
+        imageData.data[index + 3] = color.a;
+      }
+    }
+  }
+
 
  
       
