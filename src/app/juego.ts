@@ -115,7 +115,7 @@ startGame() {
       const brickHeight = 20;
       for (let y = 0; y < height; y += brickHeight) {
         for (let x = 0; x < width; x += brickWidth) {
-          this.drawBrick(imageData, x, y, brickWidth, brickHeight, goldColor, shadowColor);
+          this.drawBrickWithShadow(imageData, x, y, brickWidth, brickHeight, goldColor, shadowColor);
         }
       }
 
@@ -123,8 +123,8 @@ startGame() {
     }
   }
 
-  drawBrick(imageData: ImageData, x: number, y: number, width: number, height: number, 
-            color: { r: number, g: number, b: number, a: number, shadowColor: { r: number, g: number, b: number, a: number }) {
+  drawBrickWithShadow(imageData: ImageData, x: number, y: number, width: number, height: number, 
+            color: { r: number, g: number, b: number, a: number }, shadowColor: { r: number, g: number, b: number, a: number }) {
     for (let i = 0; i < height; i++) {
       for (let j = 0; j < width; j++) {
         const index = ((y + i) * imageData.width + (x + j)) * 4;
