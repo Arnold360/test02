@@ -108,13 +108,14 @@ startGame() {
 
       // Define the color for the gold bricks
       const goldColor = { r: 255, g: 215, b: 0, a: 255 };
+      const shadowColor = { r: 184, g: 134, b: 11, a: 255 }; // Darker gold for shadow
 
       // Draw bricks
       const brickWidth = 50;
       const brickHeight = 20;
       for (let y = 0; y < height; y += brickHeight) {
         for (let x = 0; x < width; x += brickWidth) {
-          this.drawBrick(imageData, x, y, brickWidth, brickHeight, goldColor);
+          this.drawBrick(imageData, x, y, brickWidth, brickHeight, goldColor, shadowColor);
         }
       }
 
@@ -122,7 +123,8 @@ startGame() {
     }
   }
 
-  drawBrick(imageData: ImageData, x: number, y: number, width: number, height: number, color: { r: number, g: number, b: number, a: number }) {
+  drawBrick(imageData: ImageData, x: number, y: number, width: number, height: number, 
+            color: { r: number, g: number, b: number, a: number, shadowColor: { r: number, g: number, b: number, a: number }) {
     for (let i = 0; i < height; i++) {
       for (let j = 0; j < width; j++) {
         const index = ((y + i) * imageData.width + (x + j)) * 4;
@@ -132,11 +134,27 @@ startGame() {
         imageData.data[index + 3] = color.a;
       }
     }
+   // Draw the shadow on the right side
+   for (let i = 0; i < height; i++) {
+      const index = ((y + i) * imageData.width + (x + width - 1)) * 4;
+      imageData.data[index] = shadowColor.r;
+      imageData.data[index + 1] = shadowColor.g;
+      imageData.data[index + 2] = shadowColor.b;
+      imageData.data[index + 3] = shadowColor.a;
+    }
+
+    // Draw the shadow on the bottom side
+   for (let j = 0; j < width; j++) {
+      const index = ((y + height - 1) * imageData.width + (x + j)) * 4;
+      imageData.data[index] = shadowColor.r;
+      imageData.data[index + 1] = shadowColor.g;
+      imageData.data[index + 2] = shadowColor.b;
+      imageData.data[index + 3] = shadowColor.a;
+    }
   }
 
 
  
-      
 }
 
 
