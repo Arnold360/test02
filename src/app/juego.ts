@@ -18,11 +18,16 @@ export class Juego {
   ballSpeedY = 2;
   leftScore = 0;
   rightScore = 0;
+  canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
+  ctx = canvas.getContext('2d')!;
+  canvasWidth = canvas.width / 2;
+  canvasHeight = canvas.height / 2;
+  radius = 20;
+  dx = 2;
+  dy = 2;
 
 
-
-
-  @HostListener('window:touchstart', ['$event'])
+ @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
     const touch = event.touches[0];
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
@@ -73,6 +78,19 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
     ctx.stroke();
   } 
+
+  update(canvas: HTMLCanvasElement) {
+    this.canvasWidth += this.dx;
+    this.canvasHeight += this.dy;
+
+    // Check for collision with the walls
+    if (this.canvasWidth + this.radius > canvas.width || this.canvasWidth - this.radius < 0) {
+      this.dx = -this.dx;
+    }
+    if (this.canvasHeight + this.radius > canvas.height || this.canvasHeight - this.radius < 0) {
+      this.dy = -this.dy;
+    }
+  }
 
   updateBallPosition() {
     this.ballX += this.ballSpeedX;
@@ -149,6 +167,13 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.strokeStyle = 'rgb(139, 69, 19)'; // Dark brown color
     ctx.strokeRect(x, y, width, height);
   }
+
+  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ball.draw(ctx);
+  ball.update(canvas);
+  requestAnimationFrame(() => animate(ctx, ball, canvas));
+}
 
 
  
