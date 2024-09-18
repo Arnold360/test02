@@ -104,22 +104,17 @@ startGame() {
     if (ctx) {
       const width = canvas.width;
       const height = canvas.height;
-      const imageData = ctx.createImageData(width, height);
-
-      // Define the color for the gold bricks
-      const goldColor = { r: 255, g: 215, b: 0, a: 255 };
-      const shadowColor = { r: 184, g: 134, b: 11, a: 255 }; // Darker gold for shadow
+     
 
       // Draw bricks
       const brickWidth = 50;
       const brickHeight = 20;
       for (let y = 0; y < height; y += brickHeight) {
         for (let x = 0; x < width; x += brickWidth) {
-          this.drawBrickWithShadow(imageData, x, y, brickWidth, brickHeight, goldColor, shadowColor);
+          this.drawBrickWithGradient(ctx, x, y, brickWidth, brickHeight);
         }
       }
 
-      ctx.putImageData(imageData, 0, 0);
     }
   }
 
