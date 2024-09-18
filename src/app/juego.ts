@@ -55,7 +55,24 @@ startGame() {
   };
   gameLoop();
 }
+  
+drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
+    const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
+    gradient.addColorStop(0, 'white');
+    gradient.addColorStop(0.3, 'silver');
+    gradient.addColorStop(1, 'gray');
 
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Add some highlights for a metallic effect
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.beginPath();
+    ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
+    ctx.stroke();
+  } 
 
   updateBallPosition() {
     this.ballX += this.ballSpeedX;
