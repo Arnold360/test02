@@ -123,34 +123,17 @@ startGame() {
     }
   }
 
-  drawBrickWithShadow(imageData: ImageData, x: number, y: number, width: number, height: number, 
-            color: { r: number, g: number, b: number, a: number }, shadowColor: { r: number, g: number, b: number, a: number }) {
-    for (let i = 0; i < height; i++) {
-      for (let j = 0; j < width; j++) {
-        const index = ((y + i) * imageData.width + (x + j)) * 4;
-        imageData.data[index] = color.r;
-        imageData.data[index + 1] = color.g;
-        imageData.data[index + 2] = color.b;
-        imageData.data[index + 3] = color.a;
-      }
-    }
-   // Draw the shadow on the right side
-   for (let i = 0; i < height; i++) {
-      const index = ((y + i) * imageData.width + (x + width - 1)) * 4;
-      imageData.data[index] = shadowColor.r;
-      imageData.data[index + 1] = shadowColor.g;
-      imageData.data[index + 2] = shadowColor.b;
-      imageData.data[index + 3] = shadowColor.a;
-    }
+ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+    const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
+    gradient.addColorStop(0, 'rgb(255, 215, 0)'); // Gold color
+    gradient.addColorStop(1, 'rgb(184, 134, 11)'); // Darker gold for shadow
 
-    // Draw the shadow on the bottom side
-   for (let j = 0; j < width; j++) {
-      const index = ((y + height - 1) * imageData.width + (x + j)) * 4;
-      imageData.data[index] = shadowColor.r;
-      imageData.data[index + 1] = shadowColor.g;
-      imageData.data[index + 2] = shadowColor.b;
-      imageData.data[index + 3] = shadowColor.a;
-    }
+    ctx.fillStyle = gradient;
+    ctx.fillRect(x, y, width, height);
+
+    // Optional: Add a border to each brick for better separation
+    ctx.strokeStyle = 'rgb(139, 69, 19)'; // Dark brown color
+    ctx.strokeRect(x, y, width, height);
   }
 
 
