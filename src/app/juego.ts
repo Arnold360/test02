@@ -131,6 +131,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
           this.drawBrickWithGradient(ctx, x, y, brickWidth, brickHeight);
         }
       }
+      // Draw silver tennis ball
+      this.drawSilverBall(ctx, width / 2, height / 2, 10);
 
     }
   }
