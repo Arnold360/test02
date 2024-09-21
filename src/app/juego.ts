@@ -169,7 +169,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw(ctx);
   ball.update(canvas);
-  requestAnimationFrame(() => animate(ctx, ball, canvas));
+  requestAnimationFrame(() => this.animate(ctx, ball, canvas));
 }
 
 
