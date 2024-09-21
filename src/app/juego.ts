@@ -20,7 +20,6 @@ export class Juego {
   rightScore = 0;
   canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
   ctx = canvas.getContext('2d')!;
-  canvasHeight = this.canvas.height / 2;
   Ball = {canvasWidth: this.canvas.width / 2, canvasHeight: this.canvas.height / 2, radius: 20, dx: 2,  dy: 2};
 
 
@@ -78,15 +77,15 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   } 
 
   update(canvas: HTMLCanvasElement) {
-    this.canvasWidth += this.dx;
-    this.canvasHeight += this.dy;
+    this.Ball.canvasWidth += this.Ball.dx;
+    this.Ball.canvasHeight += this.Ball.dy;
 
     // Check for collision with the walls
-    if (this.canvasWidth + this.radius > canvas.width || this.canvasWidth - this.radius < 0) {
-      this.dx = -this.dx;
+    if (this.Ball.canvasWidth + this.Ball.radius > canvas.width || this.Ball.canvasWidth - this.Ball.radius < 0) {
+      this.Ball.dx = -this.Ball.dx;
     }
-    if (this.canvasHeight + this.radius > canvas.height || this.canvasHeight - this.radius < 0) {
-      this.dy = -this.dy;
+    if (this.Ball.canvasHeight + this.Ball.radius > canvas.height || this.Ball.canvasHeight - this.Ball.radius < 0) {
+      this.Ball.dy = -this.Ball.dy;
     }
   }
 
