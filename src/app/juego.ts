@@ -21,7 +21,7 @@ export class Juego {
   canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
   ctx = canvas.getContext('2d')!;
   canvasHeight = this.canvas.height / 2;
-  Ball = {canvasWidth = this.canvas.width / 2,  radius = 20, dx = 2,  dy = 2};
+  Ball = {canvasWidth: this.canvas.width / 2, canvasHeight: this.canvas.height / 2, radius: 20, dx: 2,  dy: 2};
 
 
  @HostListener('window:touchstart', ['$event'])
