@@ -20,9 +20,7 @@ export class Juego {
   rightScore = 0;
   canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
   ctx = this.canvas.getContext('2d')!;
-  Ball: {canvasWidth:number, canvasHeight:number, radius:number, dx:number,
-         dy:number} = {canvasWidth: this.canvas.width / 2, canvasHeight: this.canvas.height / 2, radius: 20, dx: 2,  dy: 2};
-
+  
 
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
