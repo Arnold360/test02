@@ -166,7 +166,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.strokeRect(x, y, width, height);
   }
 
-  animate(ctx: CanvasRenderingContext2D, ball: Ball, canvas: HTMLCanvasElement) {
+  animate(ctx: CanvasRenderingContext2D, ball: {canvasWidth:number, canvasHeight:number,
+       radius:number, dx:number,dy:number}, canvas: HTMLCanvasElement) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw(ctx);
   ball.update(canvas);
