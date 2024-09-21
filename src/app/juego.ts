@@ -19,7 +19,7 @@ export class Juego {
   leftScore = 0;
   rightScore = 0;
   canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
-  ctx = canvas.getContext('2d')!;
+  ctx = this.canvas.getContext('2d')!;
   Ball = {canvasWidth: this.canvas.width / 2, canvasHeight: this.canvas.height / 2, radius: 20, dx: 2,  dy: 2};
 
 
