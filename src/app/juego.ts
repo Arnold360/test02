@@ -77,18 +77,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.stroke();
   } 
 
-  update(canvas: HTMLCanvasElement) {
-    this.Ball.canvasWidth += this.Ball.dx;
-    this.Ball.canvasHeight += this.Ball.dy;
-
-    // Check for collision with the walls
-    if (this.Ball.canvasWidth + this.Ball.radius > canvas.width || this.Ball.canvasWidth - this.Ball.radius < 0) {
-      this.Ball.dx = -this.Ball.dx;
-    }
-    if (this.Ball.canvasHeight + this.Ball.radius > canvas.height || this.Ball.canvasHeight - this.Ball.radius < 0) {
-      this.Ball.dy = -this.Ball.dy;
-    }
-  }
+  
 
   updateBallPosition() {
     this.ballX += this.ballSpeedX;
@@ -166,13 +155,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.strokeRect(x, y, width, height);
   }
 
-  animate(ctx: CanvasRenderingContext2D, ball: {canvasWidth:number, canvasHeight:number,
-       radius:number, dx:number,dy:number}, canvas: HTMLCanvasElement) {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  this.drawSilverBall(ctx, ball.canvasWidth, ball.canvasHeight, ball.radius);
-  this.update(canvas);
-  requestAnimationFrame(() => this.animate(ctx, ball, canvas));
-}
+  
 
 
  
