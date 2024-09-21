@@ -20,11 +20,8 @@ export class Juego {
   rightScore = 0;
   canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
   ctx = canvas.getContext('2d')!;
-  canvasWidth = canvas.width / 2;
-  canvasHeight = canvas.height / 2;
-  radius = 20;
-  dx = 2;
-  dy = 2;
+  canvasHeight = this.canvas.height / 2;
+  Ball = {canvasWidth = this.canvas.width / 2,  radius = 20, dx = 2,  dy = 2};
 
 
  @HostListener('window:touchstart', ['$event'])
@@ -51,6 +48,7 @@ export class Juego {
 
    ngOnInit() {
     this.startGame();
+    this.animate(this.ctx, this.Ball, this.canvas);
   }
 
 startGame() {
@@ -168,7 +166,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.strokeRect(x, y, width, height);
   }
 
-  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
+  animate(ctx: CanvasRenderingContext2D, ball: Ball, canvas: HTMLCanvasElement) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw(ctx);
   ball.update(canvas);
