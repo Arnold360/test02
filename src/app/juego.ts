@@ -48,7 +48,7 @@ export class Juego {
 
    ngOnInit() {
     this.startGame();
-    this.animate(this.ctx, this.Ball, this.canvas);
+    
   }
 
 startGame() {
