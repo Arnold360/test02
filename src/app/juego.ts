@@ -122,8 +122,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     
 
     if (this.ctx) {
-      const width = canvas.width;
-      const height = canvas.height;
+      const width = this.canvas.width;
+      const height = this.canvas.height;
      
 
       // Draw bricks
