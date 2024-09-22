@@ -51,7 +51,8 @@ export class Juego {
   }
 
    ngOnInit() {
-    this.startGame();
+   
+    this.animate(this.ctx, this.canvas);
     
   }
 
@@ -63,11 +64,11 @@ startGame() {
   gameLoop();
 }
 
- animate(ctx: CanvasRenderingContext2D, ball: Ball, canvas: HTMLCanvasElement) {
+ animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ball.draw(ctx);
-    ball.update(canvas);
-    requestAnimationFrame(() => animate(ctx, ball, canvas));
+    this.update(canvas);
+    requestAnimationFrame(() => animate(ctx, canvas));
 }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
