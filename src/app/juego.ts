@@ -118,8 +118,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   }
 
   drawCourt() {
-    canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
-    ctx = this.canvas.getContext('2d')!;
+    const canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
+    const ctx = this.canvas.getContext('2d')!;
 
     if (ctx) {
       const width = canvas.width;
