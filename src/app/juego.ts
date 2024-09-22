@@ -76,7 +76,18 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.stroke();
   } 
 
-  
+   update(canvas: HTMLCanvasElement) {
+    this.x += this.dx;
+    this.y += this.dy;
+
+    // Check for collision with the walls
+    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+      this.dx = -this.dx;
+    }
+    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+      this.dy = -this.dy;
+    }
+  }
 
   updateBallPosition() {
     this.ballX += this.ballSpeedX;
