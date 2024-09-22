@@ -20,8 +20,8 @@ export class Juego {
   rightScore = 0;
   canvas!:HTMLCanvasElement;
   ctx!:CanvasRenderingContext2D;
-  x = this.canvas.width;
-  y = this.canvas.height;
+  x = 300;
+  y = 300;
   radius = 20;
   dx = 2;
   dy = 2;
