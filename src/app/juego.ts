@@ -18,8 +18,8 @@ export class Juego {
   ballSpeedY = 2;
   leftScore = 0;
   rightScore = 0;
-  canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
-  ctx = this.canvas.getContext('2d')!;
+  canvas1 = document.getElementById('tennisCourt')! as HTMLCanvasElement;
+  ctx = this.canvas1.getContext('2d')!;
   
   
 
