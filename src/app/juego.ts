@@ -18,8 +18,8 @@ export class Juego {
   ballSpeedY = 2;
   leftScore = 0;
   rightScore = 0;
-  canvas1 = document.getElementById('tennisCourt')! as HTMLCanvasElement;
-  ctx = this.canvas1.getContext('2d')!;
+  canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
+  ctx = this.canvas.getContext('2d')!;
   
   
 
@@ -119,10 +119,9 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   }
 
   drawCourt() {
-    const canvas = document.getElementById('tennisCourt') as HTMLCanvasElement;
-    const ctx = canvas.getContext('2d');
+    
 
-    if (ctx) {
+    if (this.ctx) {
       const width = canvas.width;
       const height = canvas.height;
      
@@ -132,11 +131,11 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
       const brickHeight = 20;
       for (let y = 0; y < height; y += brickHeight) {
         for (let x = 0; x < width; x += brickWidth) {
-          this.drawBrickWithGradient(ctx, x, y, brickWidth, brickHeight);
+          this.drawBrickWithGradient(this.ctx, x, y, brickWidth, brickHeight);
         }
       }
       // Draw silver tennis ball
-      this.drawSilverBall(ctx, width / 2, height / 2, 10);
+      this.drawSilverBall(this.ctx, width / 2, height / 2, 10);
 
     }
   }
