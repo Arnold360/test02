@@ -19,7 +19,7 @@ export class Juego {
   leftScore = 0;
   rightScore = 0;
   canvas!:HTMLCanvasElement;
-  cxt!:CanvasRenderingContext2D;
+  ctx!:CanvasRenderingContext2D;
   
   
 
