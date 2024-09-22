@@ -56,11 +56,18 @@ export class Juego {
   }
 
 startGame() {
-  const gameLoop = () => {
+    const gameLoop = () => {
     this.updateBallPosition();
     requestAnimationFrame(gameLoop);
   };
   gameLoop();
+}
+
+ animate(ctx: CanvasRenderingContext2D, ball: Ball, canvas: HTMLCanvasElement) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ball.draw(ctx);
+    ball.update(canvas);
+    requestAnimationFrame(() => animate(ctx, ball, canvas));
 }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
