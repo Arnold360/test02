@@ -66,7 +66,7 @@ startGame() {
 
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    this.draw(ctx);
+    this.drawSilverBall(ctx);
     this.update(canvas);
     requestAnimationFrame(() => this.animate(ctx, canvas));
 }
