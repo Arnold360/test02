@@ -141,8 +141,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
    ngAfterViewInit() {
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
-    this.x = this.canvas.width;
-    this.y = this.canvas.height;
+    this.x = this.canvas.width / 2;
+    this.y = this.canvas.height / 2;
     this.drawCourt();
   }
 
