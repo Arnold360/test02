@@ -20,8 +20,8 @@ export class Juego {
   rightScore = 0;
   canvas!:HTMLCanvasElement;
   ctx!:CanvasRenderingContext2D;
-  x = 300;
-  y = 300;
+  x: number;
+  y: number;
   radius = 20;
   dx = 2;
   dy = 2;
@@ -133,6 +133,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
    ngAfterViewInit() {
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
+    this.x = this.canvas.width;
+    this.y = this.canvas.height;
     this.drawCourt();
   }
 
