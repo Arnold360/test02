@@ -144,6 +144,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
     this.drawCourt();
+    this.animate(this.ctx, this.canvas);
   }
 
   drawCourt() {
