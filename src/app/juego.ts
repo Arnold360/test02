@@ -52,7 +52,7 @@ export class Juego {
 
    ngOnInit() {
    
-    this.animate(this.ctx, this.canvas);
+   
     
   }
 
