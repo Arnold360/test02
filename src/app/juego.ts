@@ -66,6 +66,7 @@ startGame() {
 
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
     this.update(canvas);
     requestAnimationFrame(() => this.animate(ctx, canvas));
@@ -144,6 +145,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
     this.drawCourt();
+    this.drawSilverBall(this.ctx, width / 2, height / 2, 10);
     this.animate(this.ctx, this.canvas);
 
   }
@@ -163,8 +165,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
           this.drawBrickWithGradient(this.ctx, x, y, brickWidth, brickHeight);
         }
       }
-      // Draw silver tennis ball
-      this.drawSilverBall(this.ctx, width / 2, height / 2, 10);
+      
 
     }
   }
