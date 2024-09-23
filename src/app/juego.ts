@@ -12,8 +12,6 @@ export class Juego {
 
   public leftPaddleY = 250;
   public rightPaddleY = 250;
-  public ballX = 390;
-  public ballY = 290;
   ballSpeedX = 2;
   ballSpeedY = 2;
   leftScore = 0;
@@ -52,17 +50,8 @@ export class Juego {
 
    ngOnInit() {
    
-   
-    
-  }
+   }
 
-startGame() {
-    const gameLoop = () => {
-    this.updateBallPosition();
-    requestAnimationFrame(gameLoop);
-  };
-  gameLoop();
-}
 
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -103,41 +92,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     }
   }
 
-  updateBallPosition() {
-    this.ballX += this.ballSpeedX;
-    this.ballY += this.ballSpeedY;
 
-    // Check for collision with top and bottom walls
-    if (this.ballY <= 0 || this.ballY >= window.innerHeight - 20) {
-      this.ballSpeedY = -this.ballSpeedY;
-    }
-
-    // Check for collision with paddles
-    if (this.ballX <= 20 && this.ballY >= this.leftPaddleY && this.ballY <= this.leftPaddleY + 100) {
-      this.ballSpeedX = -this.ballSpeedX;
-    } else if (this.ballX >= window.innerWidth - 40 && this.ballY >= this.rightPaddleY && this.ballY <= this.rightPaddleY + 100) {
-      this.ballSpeedX = -this.ballSpeedX;
-    }
-
-    // Check for out of bounds
-    if (this.ballX <= 0 || this.ballX >= window.innerWidth - 20) {
-      this.resetBall();
-    }
-  }
-
-  resetBall() {
-  this.ballX = window.innerWidth / 2 - 10;
-  this.ballY = window.innerHeight / 2 - 10;
-  this.ballSpeedX = 2;
-  this.ballSpeedY = 2;
-
-  // Actualizar puntuación
-  if (this.ballX <= 0) {
-    this.rightScore++;
-  } else if (this.ballX >= window.innerWidth - 20) {
-    this.leftScore++;
-  }
-}
 
    ngAfterViewInit() {
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
@@ -151,12 +106,9 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   }
 
   drawCourt() {
-    
     if (this.ctx) {
       const width = this.canvas.width;
       const height = this.canvas.height;
-     
-
       // Draw bricks
       const brickWidth = 50;
       const brickHeight = 20;
@@ -165,8 +117,6 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
           this.drawBrickWithGradient(this.ctx, x, y, brickWidth, brickHeight);
         }
       }
-      
-
     }
   }
 
@@ -183,10 +133,6 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.strokeRect(x, y, width, height);
   }
 
-  
-
-
- 
 }
 
 
