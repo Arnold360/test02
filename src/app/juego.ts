@@ -7,9 +7,7 @@ import { Component, ElementRef, HostListener } from '@angular/core';
   styleUrls: ['./juego.css'],
 })
 export class Juego {
-
-
-
+ 
   public leftPaddleY = 250;
   public rightPaddleY = 250;
   ballSpeedX = 2;
@@ -24,8 +22,6 @@ export class Juego {
   dx = 2;
   dy = 2;
   
-  
-
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
     const touch = event.touches[0];
@@ -51,7 +47,6 @@ export class Juego {
    ngOnInit() {
    
    }
-
 
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
