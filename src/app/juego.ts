@@ -142,6 +142,25 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
 
     ctx.fillStyle = shadowGradient;
     ctx.fillRect(x, y, width, height);
+
+   // Añadir textura para mayor realismo
+    ctx.globalAlpha = 0.2; // Hacer la textura semi-transparente
+    for (let i = 0; i < width; i += 5) {
+      for (let j = 0; j < height; j += 5) {
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+        ctx.fillRect(x + i, y + j, 2, 2); // Pequeños puntos blancos
+      }
+    }
+    ctx.globalAlpha = 1.0; // Restaurar la opacidad
+
+ // Añadir reflejos especulares
+    ctx.beginPath();
+    ctx.moveTo(x + width * 0.1, y + height * 0.1);
+    ctx.lineTo(x + width * 0.3, y + height * 0.1);
+    ctx.lineTo(x + width * 0.2, y + height * 0.3);
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.fill();
   }
 
 }
