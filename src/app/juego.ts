@@ -126,6 +126,22 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     // Optional: Add a border to each brick for better separation
     ctx.strokeStyle = 'rgb(139, 69, 19)'; // Dark brown color
     ctx.strokeRect(x, y, width, height);
+
+   // Añadir un reflejo para simular el brillo del oro
+    const highlightGradient = ctx.createLinearGradient(x, y, x + width, y + height);
+    highlightGradient.addColorStop(0, 'rgba(255, 255, 255, 0.6)'); // Blanco semi-transparente
+    highlightGradient.addColorStop(0.3, 'rgba(255, 255, 255, 0)'); // Transparente
+
+    ctx.fillStyle = highlightGradient;
+    ctx.fillRect(x, y, width, height);
+
+  // Añadir una sombra para dar más profundidad
+    const shadowGradient = ctx.createLinearGradient(x, y, x + width, y + height);
+    shadowGradient.addColorStop(0.7, 'rgba(0, 0, 0, 0)'); // Transparente
+    shadowGradient.addColorStop(1, 'rgba(0, 0, 0, 0.5)'); // Negro semi-transparente
+
+    ctx.fillStyle = shadowGradient;
+    ctx.fillRect(x, y, width, height);
   }
 
 }
