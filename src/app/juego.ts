@@ -110,12 +110,42 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
       for (let y = 0; y < height; y += brickHeight) {
         for (let x = 0; x < width; x += brickWidth) {
           this.drawBrickWithGradient(this.ctx, x, y, brickWidth, brickHeight);
-        }
-      }
+         }
+       }
+     }
+   }
+
+drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  // Gradiente de fondo y sombra
+  const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
+  gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
+  gradient.addColorStop(0.7, 'rgb(184, 134, 11)'); // Oro oscuro
+  gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(x, y, width, height);
+
+  // Textura con ruido
+  ctx.globalAlpha = 0.2;
+  for (let i = 0; i < width; i += 5) {
+    for (let j = 0; j < height; j += 5) {
+      ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
+      ctx.fillRect(x + i, y + j, 2, 2);
     }
   }
+  ctx.globalAlpha = 1.0;
 
- drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  // Reflejo especular
+  ctx.beginPath();
+  ctx.moveTo(x + width * 0.2, y + height * 0.1);
+  ctx.lineTo(x + width * 0.4, y + height * 0.1);
+  ctx.lineTo(x + width * 0.3, y + height * 0.3);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+  ctx.fill();
+}
+
+/** drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
     const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
     gradient.addColorStop(0, 'rgb(255, 215, 0)'); // Gold color
     gradient.addColorStop(1, 'rgb(184, 134, 11)'); // Darker gold for shadow
@@ -161,7 +191,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.closePath();
     ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
     ctx.fill();
-  }
+  }**/
 
 }
 
