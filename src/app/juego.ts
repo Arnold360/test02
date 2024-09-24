@@ -19,8 +19,8 @@ export class Juego {
   x: number;
   y: number;
   radius = 20;
-  dx = 2;
-  dy = 2;
+  dx = 20;
+  dy = 20;
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
