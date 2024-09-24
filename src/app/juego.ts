@@ -48,13 +48,29 @@ export class Juego {
    
    }
 
- animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
+ animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
+    const now = performance.now();
+    const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
-    this.update(canvas);
-    requestAnimationFrame(() => this.animate(ctx, canvas));
-}
+    this.update(canvas, deltaTime);
+    requestAnimationFrame(() => this.animate(ctx, canvas, now));
+ }
+  
+ update(canvas: HTMLCanvasElement, deltaTime: number) {
+    
+    this.x += this.dx * deltaTime;
+    this.y += this.dy * deltaTime;
+
+    // Check for collision with the walls
+    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+      this.dx = -this.dx;
+    }
+    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+      this.dy = -this.dy;
+    }
+  }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
@@ -74,18 +90,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.stroke();
   } 
 
-   update(canvas: HTMLCanvasElement) {
-    this.x += this.dx;
-    this.y += this.dy;
-
-    // Check for collision with the walls
-    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
-      this.dx = -this.dx;
-    }
-    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
-      this.dy = -this.dy;
-    }
-  }
+  
 
 
 
