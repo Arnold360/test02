@@ -128,7 +128,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
        }
      }
    }
-drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+drawBrickWith3DEffect(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
   // Gradiente de fondo y sombra
   const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
   gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
@@ -155,6 +155,26 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   ctx.lineTo(x + width * 0.3, y + height * 0.3);
   ctx.closePath();
   ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+  ctx.fill();
+
+  // Efecto 3D: sombra inferior
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+  ctx.beginPath();
+  ctx.moveTo(x, y + height);
+  ctx.lineTo(x + width, y + height);
+  ctx.lineTo(x + width - 10, y + height + 10);
+  ctx.lineTo(x - 10, y + height + 10);
+  ctx.closePath();
+  ctx.fill();
+
+  // Efecto 3D: sombra lateral
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+  ctx.beginPath();
+  ctx.moveTo(x + width, y);
+  ctx.lineTo(x + width + 10, y + 10);
+  ctx.lineTo(x + width + 10, y + height + 10);
+  ctx.lineTo(x + width, y + height);
+  ctx.closePath();
   ctx.fill();
 }
 
