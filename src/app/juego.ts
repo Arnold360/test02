@@ -52,7 +52,7 @@ export class Juego {
     const now = performance.now();
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    /*this.drawCourt();*/
+    this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
@@ -104,7 +104,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.ctx = this.canvas.getContext('2d')!;
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
-    /*this.drawCourt();*/
+    this.drawCourt();
     this.drawSilverBall(this.ctx, this.canvas.width / 2, this.canvas.height / 2, 10);
     this.animate(this.ctx, this.canvas);
 
