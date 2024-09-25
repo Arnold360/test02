@@ -128,54 +128,46 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
        }
      }
    }
- drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
-  // Gradiente de fondo y sombra
-  const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
-  gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
-  gradient.addColorStop(0.7, 'rgb(184, 134, 11)'); // Oro oscuro
-  gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
+drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number, rows: number, cols: number) {
+  const brickWidth = width / cols;
+  const brickHeight = height / rows;
+  const mortar = 2; // Ancho del mortero
 
-  ctx.fillStyle = gradient;
-  ctx.fillRect(x, y, width, height);
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const offsetX = (row % 2 === 0) ? 0 : brickWidth / 2;
+      const brickX = x + col * brickWidth + offsetX;
+      const brickY = y + row * brickHeight;
 
-  // Textura con ruido simplificada aún más
-  ctx.globalAlpha = 0.1;
-  for (let i = 0; i < width; i += 15) {
-    for (let j = 0; j < height; j += 15) {
-      ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
-      ctx.fillRect(x + i, y + j, 2, 2);
+      // Gradiente de fondo y sombra
+      const gradient = ctx.createLinearGradient(brickX, brickY, brickX + brickWidth, brickY + brickHeight);
+      gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
+      gradient.addColorStop(0.7, 'rgb(184, 134, 11)'); // Oro oscuro
+      gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
+
+      ctx.fillStyle = gradient;
+      ctx.fillRect(brickX + mortar, brickY + mortar, brickWidth - mortar * 2, brickHeight - mortar * 2);
+
+      // Textura con ruido simplificada
+      ctx.globalAlpha = 0.1;
+      for (let i = 0; i < brickWidth; i += 15) {
+        for (let j = 0; j < brickHeight; j += 15) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
+          ctx.fillRect(brickX + i + mortar, brickY + j + mortar, 2, 2);
+        }
+      }
+      ctx.globalAlpha = 1.0;
+
+      // Reflejo especular simplificado
+      ctx.beginPath();
+      ctx.moveTo(brickX + brickWidth * 0.2, brickY + brickHeight * 0.1);
+      ctx.lineTo(brickX + brickWidth * 0.4, brickY + brickHeight * 0.1);
+      ctx.lineTo(brickX + brickWidth * 0.3, brickY + brickHeight * 0.3);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+      ctx.fill();
     }
   }
-  ctx.globalAlpha = 1.0;
-
-  // Reflejo especular simplificado
-  ctx.beginPath();
-  ctx.moveTo(x + width * 0.2, y + height * 0.1);
-  ctx.lineTo(x + width * 0.4, y + height * 0.1);
-  ctx.lineTo(x + width * 0.3, y + height * 0.3);
-  ctx.closePath();
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-  ctx.fill();
-
-  // Efecto 3D: sombra inferior simplificada
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-  ctx.beginPath();
-  ctx.moveTo(x, y + height);
-  ctx.lineTo(x + width, y + height);
-  ctx.lineTo(x + width - 5, y + height + 5);
-  ctx.lineTo(x - 5, y + height + 5);
-  ctx.closePath();
-  ctx.fill();
-
-  // Efecto 3D: sombra lateral simplificada
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-  ctx.beginPath();
-  ctx.moveTo(x + width, y);
-  ctx.lineTo(x + width + 5, y + 5);
-  ctx.lineTo(x + width + 5, y + height + 5);
-  ctx.lineTo(x + width, y + height);
-  ctx.closePath();
-  ctx.fill();
 }
 
 
