@@ -103,10 +103,6 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.stroke();
   } 
 
-  
-
-
-
    ngAfterViewInit() {
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
@@ -132,7 +128,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
        }
      }
    }
-function drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
   // Gradiente de fondo y sombra
   const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
   gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
