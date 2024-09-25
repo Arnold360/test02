@@ -62,8 +62,16 @@ export class Juego {
     
     this.x += this.dx * deltaTime;
     this.y += this.dy * deltaTime;
+   /* ajustar posicion de la pelota para que no pase demasiado el limite y
+     evitar bugs*/
     if (this.x + this.radius > canvas.width) {
       this.x = canvas.width - (this.radius - 1);
+    }
+    if (this.x - this.radius < 0) {
+      this.x = this.radius - 1;
+    }
+    if (this.y - this.radius > 0) {
+      this.y = this.radius - 1;
     }
     if (this.y + this.radius > canvas.height) {
       this.y = canvas.height - (this.radius - 1);
