@@ -110,7 +110,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
 
   }
 
-  drawCourt() {
+ /* drawCourt() {
     if (this.ctx) {
       const width = this.canvas.width;
       const height = this.canvas.height;
@@ -123,7 +123,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
          }
        }
      }
-   }
+   }*/
 
 drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
   // Gradiente de fondo y sombra
