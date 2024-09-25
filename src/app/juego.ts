@@ -70,11 +70,11 @@ export class Juego {
     if (this.x - this.radius < 0) {
       this.x = this.radius - 1;
     }
-    if (this.y - this.radius > 0) {
-      this.y = this.radius - 1;
-    }
     if (this.y + this.radius > canvas.height) {
       this.y = canvas.height - (this.radius - 1);
+    }
+    if (this.y - this.radius < 0) {
+      this.y = this.radius - 1;
     }
     // Check for collision with the walls
     if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
