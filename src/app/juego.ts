@@ -63,10 +63,10 @@ export class Juego {
     this.x += this.dx * deltaTime;
     this.y += this.dy * deltaTime;
     if (this.x + this.radius > canvas.width) {
-      this.x = canvas.width - (this.radius - 5);
+      this.x = canvas.width - (this.radius - 1);
     }
     if (this.y + this.radius > canvas.height) {
-      this.y = canvas.height - (this.radius - 5);
+      this.y = canvas.height - (this.radius - 1);
     }
     // Check for collision with the walls
     if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
