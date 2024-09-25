@@ -128,7 +128,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
        }
      }
    }
-drawBrickWith3DEffect(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
   // Gradiente de fondo y sombra
   const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
   gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
