@@ -132,8 +132,38 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
        }
      }
    }
+function drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  // Gradiente de fondo y sombra
+  const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
+  gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
+  gradient.addColorStop(0.7, 'rgb(184, 134, 11)'); // Oro oscuro
+  gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
 
-drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  ctx.fillStyle = gradient;
+  ctx.fillRect(x, y, width, height);
+
+  // Textura con ruido simplificada
+  ctx.globalAlpha = 0.2;
+  for (let i = 0; i < width; i += 10) {
+    for (let j = 0; j < height; j += 10) {
+      ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
+      ctx.fillRect(x + i, y + j, 2, 2);
+    }
+  }
+  ctx.globalAlpha = 1.0;
+
+  // Reflejo especular simplificado
+  ctx.beginPath();
+  ctx.moveTo(x + width * 0.2, y + height * 0.1);
+  ctx.lineTo(x + width * 0.4, y + height * 0.1);
+  ctx.lineTo(x + width * 0.3, y + height * 0.3);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+  ctx.fill();
+}
+
+  
+/*drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
   // Gradiente de fondo y sombra
   const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
   gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
@@ -161,7 +191,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   ctx.closePath();
   ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
   ctx.fill();
-}
+}*/
 
 /** drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
     const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
