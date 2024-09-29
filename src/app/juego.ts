@@ -188,17 +188,16 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
 
       ctx.fillStyle = gradient;
-
       ctx.beginPath();
-      ctx.moveTo(brickX + radius, brickY);
-      ctx.lineTo(brickX + brickWidth - radius, brickY);
-      ctx.quadraticCurveTo(brickX + brickWidth, brickY, brickX + brickWidth, brickY + radius);
-      ctx.lineTo(brickX + brickWidth, brickY + brickHeight - radius);
-      ctx.quadraticCurveTo(brickX + brickWidth, brickY + brickHeight, brickX + brickWidth - radius, brickY + brickHeight);
-      ctx.lineTo(brickX + radius, brickY + brickHeight);
-      ctx.quadraticCurveTo(brickX, brickY + brickHeight, brickX, brickY + brickHeight - radius);
-      ctx.lineTo(brickX, brickY + radius);
-      ctx.quadraticCurveTo(brickX, brickY, brickX + radius, brickY);
+      ctx.moveTo(brickX + radius + mortar, brickY + mortar);
+      ctx.lineTo(brickX + brickWidth - radius - mortar, brickY + mortar);
+      ctx.quadraticCurveTo(brickX + brickWidth - mortar, brickY + mortar, brickX + brickWidth - mortar, brickY + radius + mortar);
+      ctx.lineTo(brickX + brickWidth - mortar, brickY + brickHeight - radius - mortar);
+      ctx.quadraticCurveTo(brickX + brickWidth - mortar, brickY + brickHeight - mortar, brickX + brickWidth - radius - mortar, brickY + brickHeight - mortar);
+      ctx.lineTo(brickX + radius + mortar, brickY + brickHeight - mortar);
+      ctx.quadraticCurveTo(brickX + mortar, brickY + brickHeight - mortar, brickX + mortar, brickY + brickHeight - radius - mortar);
+      ctx.lineTo(brickX + mortar, brickY + radius + mortar);
+      ctx.quadraticCurveTo(brickX + mortar, brickY + mortar, brickX + radius + mortar, brickY + mortar);
       ctx.closePath();
       ctx.fill();
       /*ctx.fillRect(brickX + mortar, brickY + mortar, brickWidth - mortar * 2, brickHeight - mortar * 2);*/
