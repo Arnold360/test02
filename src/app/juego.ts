@@ -54,6 +54,9 @@ export class Juego {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
+   // Dibujar las paletas
+    this.drawPaddle(ctx, 10, this.leftPaddleY, 10, 100); // Paleta izquierda
+    this.drawPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 100); // Paleta derecha
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
@@ -102,6 +105,12 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
     ctx.stroke();
   } 
+
+  drawPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  ctx.fillStyle = 'black';
+  ctx.fillRect(x, y, width, height);
+}
+
 
    ngAfterViewInit() {
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
