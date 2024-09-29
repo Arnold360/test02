@@ -54,9 +54,9 @@ export class Juego {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
-   // Dibujar las paletas
-    this.drawPaddle(ctx, 10, this.leftPaddleY, 10, 100); // Paleta izquierda
-    this.drawPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 100); // Paleta derecha
+  // Dibujar las paletas realistas
+    this.drawRealisticPaddle(ctx, 10, this.leftPaddleY, 10, 100); // Paleta izquierda
+    this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 100); // Paleta derecha
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
@@ -106,10 +106,42 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     ctx.stroke();
   } 
 
-  drawPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
-  ctx.fillStyle = 'black';
+ drawRealisticPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  // Dibujar el cuerpo de la paleta con un gradiente
+  const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
+  gradient.addColorStop(0, '#8B4513'); // Marrón oscuro
+  gradient.addColorStop(1, '#D2691E'); // Marrón claro
+
+  ctx.fillStyle = gradient;
   ctx.fillRect(x, y, width, height);
+
+  // Dibujar el borde de la paleta
+  ctx.strokeStyle = '#654321'; // Marrón más oscuro
+  ctx.lineWidth = 5;
+  ctx.strokeRect(x, y, width, height);
+
+  // Dibujar sombras para dar un efecto 3D
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  ctx.shadowBlur = 10;
+  ctx.shadowOffsetX = 5;
+  ctx.shadowOffsetY = 5;
+
+  // Dibujar el mango de la paleta
+  ctx.fillStyle = '#A0522D'; // Marrón intermedio
+  ctx.fillRect(x + width / 4, y + height, width / 2, height / 3);
+
+  // Dibujar el borde del mango
+  ctx.strokeStyle = '#654321';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(x + width / 4, y + height, width / 2, height / 3);
+
+  // Restablecer las sombras para no afectar otros dibujos
+  ctx.shadowColor = 'transparent';
+  ctx.shadowBlur = 0;
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 0;
 }
+
 
 
    ngAfterViewInit() {
