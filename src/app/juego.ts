@@ -173,6 +173,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   const brickWidth = width / cols;
   const brickHeight = height / rows;
   const mortar = 2; // Ancho del mortero
+  const radius = 10; // Radio de las esquinas redondeadas
 
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
@@ -187,7 +188,20 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
 
       ctx.fillStyle = gradient;
-      ctx.fillRect(brickX + mortar, brickY + mortar, brickWidth - mortar * 2, brickHeight - mortar * 2);
+
+      ctx.beginPath();
+      ctx.moveTo(brickX + radius, brickY);
+      ctx.lineTo(brickX + brickWidth - radius, brickY);
+      ctx.quadraticCurveTo(brickX + brickWidth, brickY, brickX + brickWidth, brickY + radius);
+      ctx.lineTo(brickX + brickWidth, brickY + brickHeight - radius);
+      ctx.quadraticCurveTo(brickX + brickWidth, brickY + brickHeight, brickX + brickWidth - radius, brickY + brickHeight);
+      ctx.lineTo(brickX + radius, brickY + brickHeight);
+      ctx.quadraticCurveTo(brickX, brickY + brickHeight, brickX, brickY + brickHeight - radius);
+      ctx.lineTo(brickX, brickY + radius);
+      ctx.quadraticCurveTo(brickX, brickY, brickX + radius, brickY);
+      ctx.closePath();
+      ctx.fill();
+      /*ctx.fillRect(brickX + mortar, brickY + mortar, brickWidth - mortar * 2, brickHeight - mortar * 2);*/
 
       // Textura con ruido simplificada
       ctx.globalAlpha = 0.1;
