@@ -56,7 +56,7 @@ export class Juego {
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.leftPaddleY, 10, 100); // Paleta izquierda
-    this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 10); // Paleta derecha
+    this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 100); // Paleta derecha
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
