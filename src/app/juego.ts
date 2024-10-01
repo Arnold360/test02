@@ -18,7 +18,7 @@ export class Juego {
   ctx!:CanvasRenderingContext2D;
   x: number;
   y: number;
-  radius = 20;
+  radius = 5;
   dx = 200;
   dy = 200;
   
