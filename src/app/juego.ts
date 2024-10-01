@@ -8,8 +8,8 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 })
 export class Juego {
  
-  public leftPaddleY = 250;
-  public rightPaddleY = 250;
+  public leftPaddleY = 50;
+  public rightPaddleY = 50;
   ballSpeedX = 2;
   ballSpeedY = 2;
   leftScore = 0;
