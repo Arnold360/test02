@@ -160,8 +160,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
       const width = this.canvas.width;
       const height = this.canvas.height;
       // Draw bricks
-      const wallWidth = 50;
-      const wallHeight = 35;
+      const wallWidth = 250;
+      const wallHeight = 175;
       for (let y = 0; y < height; y += wallHeight) {
         for (let x = 0; x < width; x += wallWidth) {
           this.drawBrickWithGradient(this.ctx, x, y, wallWidth, wallHeight, 10, 14);
