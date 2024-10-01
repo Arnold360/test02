@@ -172,8 +172,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
 drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number, rows: number, cols: number) {
   const brickWidth = width / cols;
   const brickHeight = height / rows;
-  const mortar = 2; // Ancho del mortero
-  const radius = 10; // Radio de las esquinas redondeadas
+  const mortar = 1; // Ancho del mortero
+  const radius = 5; // Radio de las esquinas redondeadas
 
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
