@@ -18,7 +18,7 @@ export class Juego {
   ctx!:CanvasRenderingContext2D;
   x: number;
   y: number;
-  radius = 5;
+  radius = 15;
   dx = 200;
   dy = 200;
   
@@ -38,9 +38,9 @@ export class Juego {
 
    movePaddle(side: 'left' | 'right', y: number) {
     if (side === 'left') {
-      this.leftPaddleY = y - 50; // Center the paddle on the touch point
+      this.leftPaddleY = y - 25; // Center the paddle on the touch point
     } else {
-      this.rightPaddleY = y - 50;
+      this.rightPaddleY = y - 25;
     }
   }
 
