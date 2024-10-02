@@ -21,6 +21,9 @@ export class Juego {
   radius = 15;
   dx = 200;
   dy = 200;
+  const canvasInka = document.getElementById('inka') as HTMLCanvasElement;
+  const ctxInka = this.canvasInka.getContext('2d');
+  const imgData = this.ctxInka.createImageData(800, 600);
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
@@ -47,100 +50,102 @@ export class Juego {
    ngOnInit() {
    
    }
- drawInka(){
-  
-        const canvas = document.getElementById('inka') as HTMLCanvasElement;
-        const ctx = canvas.getContext('2d');
-
-        const imgData = ctx.createImageData(800, 600);
-
-        // Función para establecer un píxel en la imagen
-        function setPixel(imageData:ImageData, x:number, y:number, r:number, g:number, b:number, a:number) {
+  // Función para establecer un píxel en la imagen
+   setPixel(imageData, x, y, r, g, b, a) {
             const index = (x + y * imageData.width) * 4;
             imageData.data[index + 0] = r;
             imageData.data[index + 1] = g;
             imageData.data[index + 2] = b;
             imageData.data[index + 3] = a;
         }
-
-        // Dibujar la cabeza del Inka
+  // Dibujar la silueta del Inka
+ drawInka(imageData:ImageData){
+  
+        
         const centerX = 400;
-        const centerY = 200;
-        const radius = 100;
+        const centerY = 300;
+        const headRadius = 50;
+        const bodyWidth = 100;
+        const bodyHeight = 200;
 
-       for (let y = 0; y < imgData.height; y++) {
-            for (let x = 0; x < imgData.width; x++) {
-                const dx = x - centerX;
-                const dy = y - centerY;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance <= radius) {
-                    const shade = Math.max(0, 255 - distance * 2);
-                    setPixel(imgData, x, y, 245, 198 - shade, 165 - shade, 255); // Color piel con sombra
+            // Cabeza
+            for (let y = 0; y < imageData.height; y++) {
+                for (let x = 0; x < imageData.width; x++) {
+                    const dx = x - centerX;
+                    const dy = y - (centerY - bodyHeight / 2 - headRadius);
+                    if (dx * dx + dy * dy <= headRadius * headRadius) {
+                        setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
+                    }
+                }
+            }
+
+            // Cuerpo
+            for (let y = centerY - bodyHeight / 2; y < centerY + bodyHeight / 2; y++) {
+                for (let x = centerX - bodyWidth / 2; x < centerX + bodyWidth / 2; x++) {
+                    setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
+                }
+            }
+
+            // Brazos
+            for (let y = centerY - bodyHeight / 4; y < centerY + bodyHeight / 4; y++) {
+                for (let x = centerX - bodyWidth; x < centerX - bodyWidth / 2; x++) {
+                    setPixel(imageData, x, y, 0, 0, 0, 255); // Brazo izquierdo
+                }
+                for (let x = centerX + bodyWidth / 2; x < centerX + bodyWidth; x++) {
+                    setPixel(imageData, x, y, 0, 0, 0, 255); // Brazo derecho
+                }
+            }
+
+            // Piernas
+            for (let y = centerY + bodyHeight / 2; y < centerY + bodyHeight; y++) {
+                for (let x = centerX - bodyWidth / 4; x < centerX; x++) {
+                    setPixel(imageData, x, y, 0, 0, 0, 255); // Pierna izquierda
+                }
+                for (let x = centerX; x < centerX + bodyWidth / 4; x++) {
+                    setPixel(imageData, x, y, 0, 0, 0, 255); // Pierna derecha
+                }
+            }
+
+            // Detalles adicionales para mayor realismo
+            // Sombras en la cabeza
+            for (let y = 0; y < imageData.height; y++) {
+                for (let x = 0; x < imageData.width; x++) {
+                    const dx = x - centerX;
+                    const dy = y - (centerY - bodyHeight / 2 - headRadius);
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance <= headRadius) {
+                        const shade = Math.max(0, 255 - distance * 2);
+                        setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en la cabeza
+                    }
+                }
+            }
+
+            // Sombras en el cuerpo
+            for (let y = centerY - bodyHeight / 2; y < centerY + bodyHeight / 2; y++) {
+                for (let x = centerX - bodyWidth / 2; x < centerX + bodyWidth / 2; x++) {
+                    const shade = Math.max(0, 255 - (y - (centerY - bodyHeight / 2)) * 0.5);
+                    setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en el cuerpo
+                }
+            }
+
+            // Detalles en el tocado
+            for (let y = 100; y < 150; y++) {
+                for (let x = 300; x < 500; x++) {
+                    setPixel(imageData, x, y, 255, 204, 0, 255); // Color dorado
+                }
+            }
+
+            // Adornos en el tocado
+            for (let y = 110; y < 120; y++) {
+                for (let x = 320; x < 330; x++) {
+                    setPixel(imageData, x, y, 255, 0, 0, 255); // Adorno rojo
+                }
+                for (let x = 470; x < 480; x++) {
+                    setPixel(imageData, x, y, 0, 0, 255, 255); // Adorno azul
                 }
             }
         }
-   // Dibujar los ojos del Inka
-        for (let y = 180; y < 190; y++) {
-            for (let x = 370; x < 380; x++) {
-                setPixel(imgData, x, y, 0, 0, 0, 255); // Ojo izquierdo
-            }
-            for (let x = 420; x < 430; x++) {
-                setPixel(imgData, x, y, 0, 0, 0, 255); // Ojo derecho
-            }
-        }
 
-        // Dibujar la boca del Inka
-        for (let y = 220; y < 230; y++) {
-            for (let x = 375; x < 425; x++) {
-                setPixel(imgData, x, y, 0, 0, 0, 255); // Boca
-            }
-        }
-  // Dibujar el tocado del Inka
-        for (let y = 100; y < 150; y++) {
-            for (let x = 300; x < 500; x++) {
-                setPixel(imgData, x, y, 255, 204, 0, 255); // Color dorado
-            }
-        }
-   // Dibujar detalles adicionales en el tocado
-        for (let y = 110; y < 120; y++) {
-            for (let x = 320; x < 330; x++) {
-                setPixel(imgData, x, y, 255, 0, 0, 255); // Adorno rojo
-            }
-            for (let x = 470; x < 480; x++) {
-                setPixel(imgData, x, y, 0, 0, 255, 255); // Adorno azul
-            }
-        }
-  // Dibujar el cuerpo del Inka
-        for (let y = 300; y < 500; y++) {
-            for (let x = 350; x < 450; x++) {
-                setPixel(imgData, x, y, 139, 69, 19, 255); // Color marrón
-            }
-        }
-   // Dibujar detalles en el cuerpo (por ejemplo, cinturón)
-        for (let y = 350; y < 360; y++) {
-            for (let x = 360; x < 440; x++) {
-                setPixel(imgData, x, y, 255, 215, 0, 255); // Cinturón dorado
-            }
-        }
-         // Dibujar detalles adicionales en el cuerpo (por ejemplo, adornos)
-        for (let y = 370; y < 380; y++) {
-            for (let x = 370; x < 430; x++) {
-                setPixel(imgData, x, y, 255, 0, 0, 255); // Adorno rojo
-            }
-        }
-
-        // Dibujar detalles adicionales en el cuerpo (por ejemplo, sombras)
-        for (let y = 300; y < 500; y++) {
-            for (let x = 350; x < 450; x++) {
-                const shade = Math.max(0, 255 - (y - 300) * 0.5);
-                setPixel(imgData, x, y, 139 - shade, 69 - shade, 19 - shade, 255); // Sombras en el cuerpo
-            }
-        }
-
-   
-        ctx.putImageData(imgData, 0, 0);
-
-  }
   
   
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
@@ -240,7 +245,8 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
 
 
    ngAfterViewInit() {
-    this.drawInka();
+    this.drawInka(this.imgData);
+    this.ctxInka.putImageData(this.imgData, 0, 0);
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.x = this.canvas.width / 2;
