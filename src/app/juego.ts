@@ -78,6 +78,7 @@ export class Juego {
                     setPixel(imgData, x, y, 245, 198 - shade, 165 - shade, 255); // Color piel con sombra
                 }
             }
+        }
    // Dibujar los ojos del Inka
         for (let y = 180; y < 190; y++) {
             for (let x = 370; x < 380; x++) {
