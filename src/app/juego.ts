@@ -21,9 +21,9 @@ export class Juego {
   radius = 15;
   dx = 200;
   dy = 200;
-  canvasInka = document.getElementById('inka') as HTMLCanvasElement;
-  ctxInka = this.canvasInka.getContext('2d');
-  imgData = this.ctxInka.createImageData(800, 600);
+  canvasInka!:HTMLCanvasElement;
+  ctxInka!:CanvasRenderingContext2D;
+  imgData!:ImageData;
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
@@ -245,6 +245,9 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
 
 
    ngAfterViewInit() {
+    this.canvasInka = document.getElementById('inka') as HTMLCanvasElement;
+    this.ctxInka = this.canvasInka.getContext('2d');
+    this.imgData = this.ctxInka.createImageData(800, 600);
     this.drawInka(this.imgData);
     this.ctxInka.putImageData(this.imgData, 0, 0);
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
