@@ -68,15 +68,16 @@ export class Juego {
         const centerY = 200;
         const radius = 100;
 
-        for (let y = 0; y < imgData.height; y++) {
+       for (let y = 0; y < imgData.height; y++) {
             for (let x = 0; x < imgData.width; x++) {
                 const dx = x - centerX;
                 const dy = y - centerY;
-                if (dx * dx + dy * dy <= radius * radius) {
-                    setPixel(imgData, x, y, 245, 198, 165, 255); // Color piel
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                if (distance <= radius) {
+                    const shade = Math.max(0, 255 - distance * 2);
+                    setPixel(imgData, x, y, 245, 198 - shade, 165 - shade, 255); // Color piel con sombra
                 }
             }
-        }
    // Dibujar los ojos del Inka
         for (let y = 180; y < 190; y++) {
             for (let x = 370; x < 380; x++) {
@@ -120,6 +121,21 @@ export class Juego {
                 setPixel(imgData, x, y, 255, 215, 0, 255); // Cinturón dorado
             }
         }
+         // Dibujar detalles adicionales en el cuerpo (por ejemplo, adornos)
+        for (let y = 370; y < 380; y++) {
+            for (let x = 370; x < 430; x++) {
+                setPixel(imgData, x, y, 255, 0, 0, 255); // Adorno rojo
+            }
+        }
+
+        // Dibujar detalles adicionales en el cuerpo (por ejemplo, sombras)
+        for (let y = 300; y < 500; y++) {
+            for (let x = 350; x < 450; x++) {
+                const shade = Math.max(0, 255 - (y - 300) * 0.5);
+                setPixel(imgData, x, y, 139 - shade, 69 - shade, 19 - shade, 255); // Sombras en el cuerpo
+            }
+        }
+
    
         ctx.putImageData(imgData, 0, 0);
 
