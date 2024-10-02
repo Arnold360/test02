@@ -63,7 +63,7 @@ export class Juego {
             imageData.data[index + 3] = a;
         }
 
-        // Dibujar una figura simple (por ejemplo, un círculo para la cabeza)
+        // Dibujar la cabeza del Inka
         const centerX = 400;
         const centerY = 200;
         const radius = 100;
@@ -77,11 +77,21 @@ export class Juego {
                 }
             }
         }
-
+  // Dibujar el tocado del Inka
+        for (let y = 100; y < 150; y++) {
+            for (let x = 300; x < 500; x++) {
+                setPixel(imgData, x, y, 255, 204, 0, 255); // Color dorado
+            }
+        }
+  // Dibujar el cuerpo del Inka
+        for (let y = 300; y < 500; y++) {
+            for (let x = 350; x < 450; x++) {
+                setPixel(imgData, x, y, 139, 69, 19, 255); // Color marrón
+            }
+        }
         ctx.putImageData(imgData, 0, 0);
 
-
-     }
+  }
   
   
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
