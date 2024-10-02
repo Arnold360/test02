@@ -21,9 +21,9 @@ export class Juego {
   radius = 15;
   dx = 200;
   dy = 200;
-  const canvasInka = document.getElementById('inka') as HTMLCanvasElement;
-  const ctxInka = this.canvasInka.getContext('2d');
-  const imgData = this.ctxInka.createImageData(800, 600);
+  canvasInka = document.getElementById('inka') as HTMLCanvasElement;
+  ctxInka = this.canvasInka.getContext('2d');
+  imgData = this.ctxInka.createImageData(800, 600);
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
