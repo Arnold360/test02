@@ -120,15 +120,7 @@ export class Juego {
                 setPixel(imgData, x, y, 255, 215, 0, 255); // Cinturón dorado
             }
         }
-   // Dibujar detalles adicionales (por ejemplo, adornos en el tocado)
-        for (let y = 110; y < 120; y++) {
-            for (let x = 320; x < 330; x++) {
-                setPixel(imgData, x, y, 255, 0, 0, 255); // Adorno rojo
-            }
-            for (let x = 470; x < 480; x++) {
-                setPixel(imgData, x, y, 0, 0, 255, 255); // Adorno azul
-            }
-        }
+   
         ctx.putImageData(imgData, 0, 0);
 
   }
