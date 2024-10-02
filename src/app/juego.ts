@@ -47,7 +47,49 @@ export class Juego {
    ngOnInit() {
    
    }
+ drawInka(){
+  
+        const canvas = document.getElementById('inka');
+        const ctx = canvas.getContext('2d');
 
+        // Dibujar la cabeza
+        ctx.beginPath();
+        ctx.arc(400, 200, 100, 0, Math.PI * 2, true); // Círculo para la cabeza
+        ctx.fillStyle = '#f5c6a5';
+        ctx.fill();
+        ctx.stroke();
+
+        // Dibujar los ojos
+        ctx.beginPath();
+        ctx.arc(370, 180, 10, 0, Math.PI * 2, true); // Ojo izquierdo
+        ctx.arc(430, 180, 10, 0, Math.PI * 2, true); // Ojo derecho
+        ctx.fillStyle = '#000';
+        ctx.fill();
+
+        // Dibujar la boca
+        ctx.beginPath();
+        ctx.arc(400, 220, 50, 0, Math.PI, false); // Boca (arco)
+        ctx.stroke();
+
+        // Dibujar el tocado
+        ctx.beginPath();
+        ctx.moveTo(300, 100);
+        ctx.lineTo(500, 100);
+        ctx.lineTo(400, 50);
+        ctx.closePath();
+        ctx.fillStyle = '#ffcc00';
+        ctx.fill();
+        ctx.stroke();
+
+        // Dibujar el cuerpo
+        ctx.beginPath();
+        ctx.rect(350, 300, 100, 200); // Cuerpo
+        ctx.fillStyle = '#8b4513';
+        ctx.fill();
+        ctx.stroke();
+     }
+  
+  
  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
     const now = performance.now();
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
@@ -145,6 +187,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
 
 
    ngAfterViewInit() {
+    this.drawInka();
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d')!;
     this.x = this.canvas.width / 2;
