@@ -52,8 +52,6 @@ export class Juego {
         const canvas = document.getElementById('inka') as HTMLCanvasElement;
         const ctx = canvas.getContext('2d');
 
-        const canvas = document.getElementById('miCanvas');
-        const ctx = canvas.getContext('2d');
         const imgData = ctx.createImageData(800, 600);
 
         // Función para establecer un píxel en la imagen
