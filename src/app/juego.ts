@@ -52,41 +52,37 @@ export class Juego {
         const canvas = document.getElementById('inka') as HTMLCanvasElement;
         const ctx = canvas.getContext('2d');
 
-        // Dibujar la cabeza
-        ctx.beginPath();
-        ctx.arc(400, 200, 100, 0, Math.PI * 2, true); // Círculo para la cabeza
-        ctx.fillStyle = '#f5c6a5';
-        ctx.fill();
-        ctx.stroke();
+        const canvas = document.getElementById('miCanvas');
+        const ctx = canvas.getContext('2d');
+        const imgData = ctx.createImageData(800, 600);
 
-        // Dibujar los ojos
-        ctx.beginPath();
-        ctx.arc(370, 180, 10, 0, Math.PI * 2, true); // Ojo izquierdo
-        ctx.arc(430, 180, 10, 0, Math.PI * 2, true); // Ojo derecho
-        ctx.fillStyle = '#000';
-        ctx.fill();
+        // Función para establecer un píxel en la imagen
+        function setPixel(imageData, x, y, r, g, b, a) {
+            const index = (x + y * imageData.width) * 4;
+            imageData.data[index + 0] = r;
+            imageData.data[index + 1] = g;
+            imageData.data[index + 2] = b;
+            imageData.data[index + 3] = a;
+        }
 
-        // Dibujar la boca
-        ctx.beginPath();
-        ctx.arc(400, 220, 50, 0, Math.PI, false); // Boca (arco)
-        ctx.stroke();
+        // Dibujar una figura simple (por ejemplo, un círculo para la cabeza)
+        const centerX = 400;
+        const centerY = 200;
+        const radius = 100;
 
-        // Dibujar el tocado
-        ctx.beginPath();
-        ctx.moveTo(300, 100);
-        ctx.lineTo(500, 100);
-        ctx.lineTo(400, 50);
-        ctx.closePath();
-        ctx.fillStyle = '#ffcc00';
-        ctx.fill();
-        ctx.stroke();
+        for (let y = 0; y < imgData.height; y++) {
+            for (let x = 0; x < imgData.width; x++) {
+                const dx = x - centerX;
+                const dy = y - centerY;
+                if (dx * dx + dy * dy <= radius * radius) {
+                    setPixel(imgData, x, y, 245, 198, 165, 255); // Color piel
+                }
+            }
+        }
 
-        // Dibujar el cuerpo
-        ctx.beginPath();
-        ctx.rect(350, 300, 100, 200); // Cuerpo
-        ctx.fillStyle = '#8b4513';
-        ctx.fill();
-        ctx.stroke();
+        ctx.putImageData(imgData, 0, 0);
+
+
      }
   
   
