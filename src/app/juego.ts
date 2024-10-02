@@ -74,7 +74,7 @@ export class Juego {
                     const dx = x - centerX;
                     const dy = y - (centerY - bodyHeight / 2 - headRadius);
                     if (dx * dx + dy * dy <= headRadius * headRadius) {
-                        setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
+                        this.setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
                     }
                 }
             }
@@ -82,27 +82,27 @@ export class Juego {
             // Cuerpo
             for (let y = centerY - bodyHeight / 2; y < centerY + bodyHeight / 2; y++) {
                 for (let x = centerX - bodyWidth / 2; x < centerX + bodyWidth / 2; x++) {
-                    setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
+                    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
                 }
             }
 
             // Brazos
             for (let y = centerY - bodyHeight / 4; y < centerY + bodyHeight / 4; y++) {
                 for (let x = centerX - bodyWidth; x < centerX - bodyWidth / 2; x++) {
-                    setPixel(imageData, x, y, 0, 0, 0, 255); // Brazo izquierdo
+                    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Brazo izquierdo
                 }
                 for (let x = centerX + bodyWidth / 2; x < centerX + bodyWidth; x++) {
-                    setPixel(imageData, x, y, 0, 0, 0, 255); // Brazo derecho
+                    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Brazo derecho
                 }
             }
 
             // Piernas
             for (let y = centerY + bodyHeight / 2; y < centerY + bodyHeight; y++) {
                 for (let x = centerX - bodyWidth / 4; x < centerX; x++) {
-                    setPixel(imageData, x, y, 0, 0, 0, 255); // Pierna izquierda
+                    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Pierna izquierda
                 }
                 for (let x = centerX; x < centerX + bodyWidth / 4; x++) {
-                    setPixel(imageData, x, y, 0, 0, 0, 255); // Pierna derecha
+                    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Pierna derecha
                 }
             }
 
@@ -115,7 +115,7 @@ export class Juego {
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance <= headRadius) {
                         const shade = Math.max(0, 255 - distance * 2);
-                        setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en la cabeza
+                        this.setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en la cabeza
                     }
                 }
             }
@@ -124,24 +124,24 @@ export class Juego {
             for (let y = centerY - bodyHeight / 2; y < centerY + bodyHeight / 2; y++) {
                 for (let x = centerX - bodyWidth / 2; x < centerX + bodyWidth / 2; x++) {
                     const shade = Math.max(0, 255 - (y - (centerY - bodyHeight / 2)) * 0.5);
-                    setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en el cuerpo
+                    this.setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en el cuerpo
                 }
             }
 
             // Detalles en el tocado
             for (let y = 100; y < 150; y++) {
                 for (let x = 300; x < 500; x++) {
-                    setPixel(imageData, x, y, 255, 204, 0, 255); // Color dorado
+                    this.setPixel(imageData, x, y, 255, 204, 0, 255); // Color dorado
                 }
             }
 
             // Adornos en el tocado
             for (let y = 110; y < 120; y++) {
                 for (let x = 320; x < 330; x++) {
-                    setPixel(imageData, x, y, 255, 0, 0, 255); // Adorno rojo
+                    this.setPixel(imageData, x, y, 255, 0, 0, 255); // Adorno rojo
                 }
                 for (let x = 470; x < 480; x++) {
-                    setPixel(imageData, x, y, 0, 0, 255, 255); // Adorno azul
+                    this.setPixel(imageData, x, y, 0, 0, 255, 255); // Adorno azul
                 }
             }
         }
