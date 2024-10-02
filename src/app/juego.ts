@@ -51,7 +51,7 @@ export class Juego {
    
    }
   // Función para establecer un píxel en la imagen
-   setPixel(imageData, x, y, r, g, b, a) {
+   setPixel(imageData:ImageData, x:number, y:number, r:number, g:number, b:number, a:number) {
             const index = (x + y * imageData.width) * 4;
             imageData.data[index + 0] = r;
             imageData.data[index + 1] = g;
