@@ -77,6 +77,22 @@ export class Juego {
                 }
             }
         }
+   // Dibujar los ojos del Inka
+        for (let y = 180; y < 190; y++) {
+            for (let x = 370; x < 380; x++) {
+                setPixel(imgData, x, y, 0, 0, 0, 255); // Ojo izquierdo
+            }
+            for (let x = 420; x < 430; x++) {
+                setPixel(imgData, x, y, 0, 0, 0, 255); // Ojo derecho
+            }
+        }
+
+        // Dibujar la boca del Inka
+        for (let y = 220; y < 230; y++) {
+            for (let x = 375; x < 425; x++) {
+                setPixel(imgData, x, y, 0, 0, 0, 255); // Boca
+            }
+        }
   // Dibujar el tocado del Inka
         for (let y = 100; y < 150; y++) {
             for (let x = 300; x < 500; x++) {
