@@ -49,7 +49,7 @@ export class Juego {
    }
  drawInka(){
   
-        const canvas = document.getElementById('inka');
+        const canvas = document.getElementById('inka') as HTMLCanvasElement;
         const ctx = canvas.getContext('2d');
 
         // Dibujar la cabeza
