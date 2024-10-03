@@ -5,6 +5,10 @@ export class CrearInka {
   imgData!:ImageData;
 
 
+
+  constructor(){
+    
+  }
    // Función para establecer un píxel en la imagen
    setPixel(imageData:ImageData, x:number, y:number, r:number, g:number, b:number, a:number) {
             let index = (x + y * imageData.width) * 4;
