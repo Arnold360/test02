@@ -20,14 +20,11 @@ export class CrearInka {
 
   drawInka(imageData:ImageData){
   
-        
         const centerX = 400;
         const centerY = 300;
         const headRadius = 50;
         const bodyWidth = 100;
         const bodyHeight = 200;
-
-
        // Ojos
        for (let y = centerY - bodyHeight / 2 - headRadius + 20; y < centerY - bodyHeight / 2 - headRadius + 30; y++) {
          for (let x = centerX - 15; x < centerX + 15; x++) {
@@ -51,7 +48,7 @@ export class CrearInka {
      }
 
             // Cabeza
-            for (let y = 0; y < imageData.height; y++) {
+          /*  for (let y = 0; y < imageData.height; y++) {
                 for (let x = 0; x < imageData.width; x++) {
                     const dx = x - centerX;
                     const dy = y - (centerY - bodyHeight / 2 - headRadius);
@@ -59,7 +56,7 @@ export class CrearInka {
                         this.setPixel(imageData, x, y, 0, 0, 0, 255); // Negro para la silueta
                     }
                 }
-            }
+            }*/
 
             // Cuerpo
             for (let y = centerY - bodyHeight / 2; y < centerY + bodyHeight / 2; y++) {
