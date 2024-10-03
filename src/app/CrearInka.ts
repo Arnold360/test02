@@ -7,7 +7,7 @@ export class CrearInka {
 
    // Función para establecer un píxel en la imagen
    setPixel(imageData:ImageData, x:number, y:number, r:number, g:number, b:number, a:number) {
-            const index = (x + y * imageData.width) * 4;
+            index = (x + y * imageData.width) * 4;
             imageData.data[index + 0] = r;
             imageData.data[index + 1] = g;
             imageData.data[index + 2] = b;
