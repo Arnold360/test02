@@ -25,6 +25,7 @@ export class Juego {
   canvasInka!:HTMLCanvasElement;
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
+  CrearInka:any = CrearInka;
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
@@ -157,7 +158,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.ctx = this.canvas.getContext('2d')!;
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
-    CrearInka.drawInka(this.imgData);
+    this.CrearInka.drawInka(this.imgData);
     this.ctxInka.putImageData(this.imgData, 0, 0);
     this.drawCourt();
     this.drawSilverBall(this.ctx, this.canvas.width / 2, this.canvas.height / 2, 10);
@@ -234,85 +235,6 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 }
 
-
-  
-/*drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
-  // Gradiente de fondo y sombra
-  const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
-  gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
-  gradient.addColorStop(0.7, 'rgb(184, 134, 11)'); // Oro oscuro
-  gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
-
-  ctx.fillStyle = gradient;
-  ctx.fillRect(x, y, width, height);
-
-  // Textura con ruido
-  ctx.globalAlpha = 0.2;
-  for (let i = 0; i < width; i += 5) {
-    for (let j = 0; j < height; j += 5) {
-      ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
-      ctx.fillRect(x + i, y + j, 2, 2);
-    }
-  }
-  ctx.globalAlpha = 1.0;
-
-  // Reflejo especular
-  ctx.beginPath();
-  ctx.moveTo(x + width * 0.2, y + height * 0.1);
-  ctx.lineTo(x + width * 0.4, y + height * 0.1);
-  ctx.lineTo(x + width * 0.3, y + height * 0.3);
-  ctx.closePath();
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-  ctx.fill();
-}*/
-
-/** drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
-    const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
-    gradient.addColorStop(0, 'rgb(255, 215, 0)'); // Gold color
-    gradient.addColorStop(1, 'rgb(184, 134, 11)'); // Darker gold for shadow
-
-    ctx.fillStyle = gradient;
-    ctx.fillRect(x, y, width, height);
-
-    // Optional: Add a border to each brick for better separation
-    ctx.strokeStyle = 'rgb(139, 69, 19)'; // Dark brown color
-    ctx.strokeRect(x, y, width, height);
-
-   // Añadir un reflejo para simular el brillo del oro
-    const highlightGradient = ctx.createLinearGradient(x, y, x + width, y + height);
-    highlightGradient.addColorStop(0, 'rgba(255, 255, 255, 0.6)'); // Blanco semi-transparente
-    highlightGradient.addColorStop(0.3, 'rgba(255, 255, 255, 0)'); // Transparente
-
-    ctx.fillStyle = highlightGradient;
-    ctx.fillRect(x, y, width, height);
-
-  // Añadir una sombra para dar más profundidad
-    const shadowGradient = ctx.createLinearGradient(x, y, x + width, y + height);
-    shadowGradient.addColorStop(0.7, 'rgba(0, 0, 0, 0)'); // Transparente
-    shadowGradient.addColorStop(1, 'rgba(0, 0, 0, 0.5)'); // Negro semi-transparente
-
-    ctx.fillStyle = shadowGradient;
-    ctx.fillRect(x, y, width, height);
-
-   // Añadir textura para mayor realismo
-    ctx.globalAlpha = 0.2; // Hacer la textura semi-transparente
-    for (let i = 0; i < width; i += 5) {
-      for (let j = 0; j < height; j += 5) {
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-        ctx.fillRect(x + i, y + j, 2, 2); // Pequeños puntos blancos
-      }
-    }
-    ctx.globalAlpha = 1.0; // Restaurar la opacidad
-
- // Añadir reflejos especulares
-    ctx.beginPath();
-    ctx.moveTo(x + width * 0.1, y + height * 0.1);
-    ctx.lineTo(x + width * 0.3, y + height * 0.1);
-    ctx.lineTo(x + width * 0.2, y + height * 0.3);
-    ctx.closePath();
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-    ctx.fill();
-  }**/
 
 }
 
