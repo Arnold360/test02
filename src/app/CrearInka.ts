@@ -28,7 +28,7 @@ export class CrearInka {
       
 
 // Ojo izquierdo
-for (let y = centerY - 120; y < centerY - 90; y++) {
+for (let y = centerY - 90; y < centerY - 60; y++) {
   for (let x = centerX - 30; x < centerX + 30; x++) {
     // Blanco del ojo
     if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 105)) ** 2) < 25) {
@@ -71,27 +71,6 @@ for (let y = centerY - 120; y < centerY - 90; y++) {
 for (let y = centerY - 70; y < centerY + 70; y++) {
   for (let x = centerX - 50; x < centerX + 50; x++) {
     this.setPixel(imageData, x, y, 0, 0, 0, 255);
-  }
-}
-
-
-// Ojo derecho
-for (let y = centerY - 70; y < centerY - 40; y++) {
-  for (let x = centerX + 20; x < centerX + 80; x++) {
-    // Blanco del ojo
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 55)) ** 2) < 25) {
-      this.setPixel(imageData, x, y, 255, 255, 255, 255);
-    }
-
-    // Iris
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 55)) ** 2) < 15) {
-      this.setPixel(imageData, x, y, 0, 100, 255, 255);
-    }
-
-    // Pupila
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 55)) ** 2) < 5) {
-      this.setPixel(imageData, x, y, 0, 0, 0, 255);
-    }
   }
 }
 
