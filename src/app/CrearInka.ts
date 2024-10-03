@@ -85,7 +85,7 @@ export class CrearInka {
                 }
             }
 
-            // Detalles adicionales para mayor realismo
+           /* // Detalles adicionales para mayor realismo
             // Sombras en la cabeza
             for (let y = 0; y < imageData.height; y++) {
                 for (let x = 0; x < imageData.width; x++) {
@@ -97,7 +97,7 @@ export class CrearInka {
                         this.setPixel(imageData, x, y, shade, shade, shade, 255); // Sombras en la cabeza
                     }
                 }
-            }
+            }*/
 
             // Sombras en el cuerpo
             for (let y = centerY - bodyHeight / 2; y < centerY + bodyHeight / 2; y++) {
