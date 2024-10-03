@@ -25,41 +25,47 @@ export class CrearInka {
         const headRadius = 50;
         const bodyWidth = 100;
         const bodyHeight = 200;
-       // Ojos
-for (let y = centerY - bodyHeight / 2 - headRadius + 20; y < centerY - bodyHeight / 2 - headRadius + 30; y++) {
-  for (let x = centerX - 15; x < centerX + 15; x++) {
-    // Pupila
-    if (x > centerX - 5 && x < centerX + 5 && y > centerY - bodyHeight / 2 - headRadius + 25 && y < centerY - bodyHeight / 2 - headRadius + 29) {
-      this.setPixel(imageData, x, y, 0, 0, 0, 255); // Negro
-      // Reflejo en la pupila
-      if (x > centerX - 3 && x < centerX + 3 && y > centerY - bodyHeight / 2 - headRadius + 27 && y < centerY - bodyHeight / 2 - headRadius + 28) {
-        this.setPixel(imageData, x, y, 255, 255, 255, 255); // Blanco
-      }
+      
+// Ojo izquierdo
+for (let y = centerY - 70; y < centerY - 40; y++) {
+  for (let x = centerX - 30; x < centerX + 30; x++) {
+    // Blanco del ojo
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 55)) ** 2) < 25) {
+      this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
     // Iris
-    if (x > centerX - 10 && x < centerX + 10 && y > centerY - bodyHeight / 2 - headRadius + 22 && y < centerY - bodyHeight / 2 - headRadius + 28) {
-      const shade = Math.max(0, 255 - Math.abs(x - centerX) * 5);
-      this.setPixel(imageData, x, y, 0, shade, shade, 255); // Azul
-      // Sombreado en el iris
-      if (x > centerX - 8 && x < centerX + 8 && y > centerY - bodyHeight / 2 - headRadius + 24 && y < centerY - bodyHeight / 2 - headRadius + 26) {
-        const shade2 = Math.max(0, 255 - Math.abs(x - centerX) * 3);
-        this.setPixel(imageData, x, y, 0, shade2, shade2, 255); // Azul oscuro
-      }
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 55)) ** 2) < 15) {
+      this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
-    // Blanco del ojo
-    if (x > centerX - 15 && x < centerX + 15 && y > centerY - bodyHeight / 2 - headRadius + 20 && y < centerY - bodyHeight / 2 - headRadius + 30) {
-      const shade = Math.max(0, 255 - Math.abs(x - centerX) * 2);
-      this.setPixel(imageData, x, y, shade, shade, shade, 255); // Blanco
-      // Textura en el blanco del ojo
-      if (x > centerX - 12 && x < centerX + 12 && y > centerY - bodyHeight / 2 - headRadius + 22 && y < centerY - bodyHeight / 2 - headRadius + 28) {
-        const shade2 = Math.max(0, 255 - Math.abs(x - centerX) * 1.5);
-        this.setPixel(imageData, x, y, shade2, shade2, shade2, 255); // Blanco claro
-      }
+    // Pupila
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 55)) ** 2) < 5) {
+      this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
 }
+
+// Ojo derecho
+for (let y = centerY - 70; y < centerY - 40; y++) {
+  for (let x = centerX + 20; x < centerX + 80; x++) {
+    // Blanco del ojo
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 55)) ** 2) < 25) {
+      this.setPixel(imageData, x, y, 255, 255, 255, 255);
+    }
+
+    // Iris
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 55)) ** 2) < 15) {
+      this.setPixel(imageData, x, y, 0, 100, 255, 255);
+    }
+
+    // Pupila
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 55)) ** 2) < 5) {
+      this.setPixel(imageData, x, y, 0, 0, 0, 255);
+    }
+  }
+}
+
 
             // Cabeza
           /*  for (let y = 0; y < imageData.height; y++) {
