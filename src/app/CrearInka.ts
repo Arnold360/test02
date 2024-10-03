@@ -27,6 +27,29 @@ export class CrearInka {
         const bodyWidth = 100;
         const bodyHeight = 200;
 
+
+       // Ojos
+       for (let y = centerY - bodyHeight / 2 - headRadius + 20; y < centerY - bodyHeight / 2 - headRadius + 30; y++) {
+         for (let x = centerX - 15; x < centerX + 15; x++) {
+          // Pupila
+          if (x > centerX - 5 && x < centerX + 5 && y > centerY - bodyHeight / 2 - headRadius + 25 && y < centerY - bodyHeight / 2 - headRadius + 29) {
+            this.setPixel(imageData, x, y, 0, 0, 0, 255); // Negro
+          }
+
+          // Iris
+          if (x > centerX - 10 && x < centerX + 10 && y > centerY - bodyHeight / 2 - headRadius + 22 && y < centerY - bodyHeight / 2 - headRadius + 28) {
+            const shade = Math.max(0, 255 - Math.abs(x - centerX) * 5);
+            this.setPixel(imageData, x, y, 0, shade, shade, 255); // Azul
+          }
+
+          // Blanco del ojo
+          if (x > centerX - 15 && x < centerX + 15 && y > centerY - bodyHeight / 2 - headRadius + 20 && y < centerY - bodyHeight / 2 - headRadius + 30) {
+            const shade = Math.max(0, 255 - Math.abs(x - centerX) * 2);
+            this.setPixel(imageData, x, y, shade, shade, shade, 255); // Blanco
+          }
+        }
+     }
+
             // Cabeza
             for (let y = 0; y < imageData.height; y++) {
                 for (let x = 0; x < imageData.width; x++) {
