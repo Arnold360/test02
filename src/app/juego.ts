@@ -25,7 +25,7 @@ export class Juego {
   canvasInka!:HTMLCanvasElement;
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
-  CrearInka:any = CrearInka;
+  CrearInka:any = new CrearInka();
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
