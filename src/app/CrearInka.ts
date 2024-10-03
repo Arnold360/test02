@@ -121,7 +121,7 @@ for (let y = centerY - bodyHeight / 2 - headRadius + 20; y < centerY - bodyHeigh
                 }
             }
 
-            // Detalles en el tocado
+           /* // Detalles en el tocado
             for (let y = 100; y < 150; y++) {
                 for (let x = 300; x < 500; x++) {
                     this.setPixel(imageData, x, y, 255, 204, 0, 255); // Color dorado
@@ -137,7 +137,7 @@ for (let y = centerY - bodyHeight / 2 - headRadius + 20; y < centerY - bodyHeigh
                     this.setPixel(imageData, x, y, 0, 0, 255, 255); // Adorno azul
                 }
             }
-        }
+        }*/
 
   
 }
