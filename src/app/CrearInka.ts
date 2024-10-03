@@ -136,8 +136,8 @@ for (let y = centerY - bodyHeight / 2 - headRadius + 20; y < centerY - bodyHeigh
                 for (let x = 470; x < 480; x++) {
                     this.setPixel(imageData, x, y, 0, 0, 255, 255); // Adorno azul
                 }
-            }
-        }*/
+            }*/
+        }
 
   
 }
