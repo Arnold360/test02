@@ -48,20 +48,20 @@ for (let y = centerY - 175; y < centerY - 90; y++) {
 }
 
 // Ojo derecho
-for (let y = centerY - 120; y < centerY - 100; y++) {
+for (let y = centerY - 175; y < centerY - 100; y++) {
   for (let x = centerX + 20; x < centerX + 80; x++) {
     // Blanco del ojo
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 105)) ** 2) < 25) {
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 150)) ** 2) < 25) {
       this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
     // Iris
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 105)) ** 2) < 15) {
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 150)) ** 2) < 15) {
       this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
     // Pupila
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 105)) ** 2) < 5) {
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 150)) ** 2) < 5) {
       this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
