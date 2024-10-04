@@ -36,12 +36,12 @@ for (let y = centerY - 175; y < centerY - 145; y++) {
     }
 
     // Iris
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 150)) ** 2) < 15) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 160)) ** 2) < 15) {
       this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
     // Pupila
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 150)) ** 2) < 5) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 160)) ** 2) < 5) {
       this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
