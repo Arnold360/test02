@@ -31,7 +31,7 @@ export class CrearInka {
 for (let y = centerY - 175; y < centerY - 145; y++) {
   for (let x = centerX - 30; x < centerX + 30; x++) {
     // Blanco del ojo
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 150)) ** 2) < 25) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 160)) ** 2) < 25) {
       this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
