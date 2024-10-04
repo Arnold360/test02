@@ -28,7 +28,7 @@ export class CrearInka {
       
 
 // Ojo izquierdo
-for (let y = centerY - 90; y < centerY - 60; y++) {
+for (let y = centerY - 120; y < centerY - 90; y++) {
   for (let x = centerX - 30; x < centerX + 30; x++) {
     // Blanco del ojo
     if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 105)) ** 2) < 25) {
@@ -48,7 +48,7 @@ for (let y = centerY - 90; y < centerY - 60; y++) {
 }
 
 // Ojo derecho
-for (let y = centerY - 90; y < centerY - 60; y++) {
+for (let y = centerY - 120; y < centerY - 100; y++) {
   for (let x = centerX + 20; x < centerX + 80; x++) {
     // Blanco del ojo
     if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 105)) ** 2) < 25) {
