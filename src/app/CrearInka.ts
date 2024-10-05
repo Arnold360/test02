@@ -27,7 +27,11 @@ export class CrearInka {
         const bodyHeight = 200;
         const headWidth = 150; // Ancho de la cabeza
         const headHeight = 200; // Altura de la cabeza
+      
+
 // Cabeza ovalada
+const headWidth = 200; // Ancho de la cabeza
+const headHeight = 250; // Altura de la cabeza
 
 for (let y = centerY - headHeight / 2; y <= centerY + headHeight / 2; y++) {
   for (let x = centerX - headWidth / 2; x <= centerX + headWidth / 2; x++) {
