@@ -25,9 +25,7 @@ export class CrearInka {
         const headRadius = 50;
         const bodyWidth = 100;
         const bodyHeight = 200;
-      
-const centerX = 400;
-const centerY = 300;
+    
 
 // Left Eyebrow
 for (let x = centerX - 50; x < centerX - 10; x++) {
