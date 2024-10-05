@@ -44,44 +44,45 @@ for (let x = centerX + 10; x < centerX + 50; x++) {
 }
 
 // Ojo izquierdo
-for (let y = centerY - 175; y < centerY - 145; y++) {
+for (let y = centerY - 160; y < centerY - 130; y++) { // Movido hacia abajo
   for (let x = centerX - 30; x < centerX + 30; x++) {
     // Blanco del ojo
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 160)) ** 2) < 25) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 145)) ** 2) < 25) {
       this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
     // Iris
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 160)) ** 2) < 15) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 145)) ** 2) < 15) {
       this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
     // Pupila
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 160)) ** 2) < 5) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 145)) ** 2) < 5) {
       this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
 }
 
 // Ojo derecho
-for (let y = centerY - 175; y < centerY - 145; y++) {
+for (let y = centerY - 160; y < centerY - 130; y++) { // Movido hacia abajo
   for (let x = centerX + 20; x < centerX + 80; x++) {
     // Blanco del ojo
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 160)) ** 2) < 25) {
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 145)) ** 2) < 25) {
       this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
     // Iris
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 160)) ** 2) < 15) {
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 145)) ** 2) < 15) {
       this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
     // Pupila
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 160)) ** 2) < 5) {
+    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 145)) ** 2) < 5) {
       this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
 }
+
 
 // Cuerpo
 for (let y = centerY - 70; y < centerY + 70; y++) {
