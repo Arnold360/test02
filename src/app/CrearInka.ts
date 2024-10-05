@@ -26,24 +26,22 @@ export class CrearInka {
         const bodyWidth = 100;
         const bodyHeight = 200;
       
-// Cejas más detalladas con arco
+// Cejas más realistas con arcos detallados
 // Ceja izquierda
 for (let x = centerX - 50; x < centerX - 10; x++) {
-  let y = centerY - 195 - Math.abs(x - (centerX - 30)) / 2;
-  for (let offsetY = -2; offsetY <= 2; offsetY++) {
+  let y = centerY - 200 - Math.sin((x - (centerX - 50)) * Math.PI / 40) * 10;
+  for (let offsetY = -1; offsetY <= 1; offsetY++) {
     this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Color negro para las cejas
   }
 }
 
 // Ceja derecha
 for (let x = centerX + 10; x < centerX + 50; x++) {
-  let y = centerY - 195 - Math.abs(x - (centerX + 30)) / 2;
-  for (let offsetY = -2; offsetY <= 2; offsetY++) {
+  let y = centerY - 200 - Math.sin((x - (centerX + 10)) * Math.PI / 40) * 10;
+  for (let offsetY = -1; offsetY <= 1; offsetY++) {
     this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Color negro para las cejas
   }
 }
-
-
 
 // Ojo izquierdo
 for (let y = centerY - 175; y < centerY - 145; y++) {
