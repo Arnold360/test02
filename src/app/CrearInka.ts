@@ -26,58 +26,60 @@ export class CrearInka {
         const bodyWidth = 100;
         const bodyHeight = 200;
       
-// Cejas más realistas con arcos detallados
-// Ceja izquierda
+const centerX = 400;
+const centerY = 300;
+
+// Left Eyebrow
 for (let x = centerX - 50; x < centerX - 10; x++) {
-  let y = centerY - 200 - Math.sin((x - (centerX - 50)) * Math.PI / 40) * 10;
+  let y = centerY - 150 - Math.sin((x - (centerX - 50)) * Math.PI / 40) * 10;
   for (let offsetY = -1; offsetY <= 1; offsetY++) {
-    this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Color negro para las cejas
+    this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Black color for the eyebrows
   }
 }
 
-// Ceja derecha
+// Right Eyebrow
 for (let x = centerX + 10; x < centerX + 50; x++) {
-  let y = centerY - 200 - Math.sin((x - (centerX + 10)) * Math.PI / 40) * 10;
+  let y = centerY - 150 - Math.sin((x - (centerX + 10)) * Math.PI / 40) * 10;
   for (let offsetY = -1; offsetY <= 1; offsetY++) {
-    this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Color negro para las cejas
+    this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Black color for the eyebrows
   }
 }
 
-// Ojo izquierdo
-for (let y = centerY - 160; y < centerY - 130; y++) { // Movido hacia abajo
-  for (let x = centerX - 30; x < centerX + 30; x++) {
-    // Blanco del ojo
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 145)) ** 2) < 25) {
+// Left Eye
+for (let y = centerY - 130; y < centerY - 100; y++) {
+  for (let x = centerX - 50; x < centerX - 10; x++) {
+    // White of the eye
+    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 115)) ** 2) < 15) {
       this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
     // Iris
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 145)) ** 2) < 15) {
+    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 115)) ** 2) < 10) {
       this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
-    // Pupila
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 145)) ** 2) < 5) {
+    // Pupil
+    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 115)) ** 2) < 5) {
       this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
 }
 
-// Ojo derecho
-for (let y = centerY - 160; y < centerY - 130; y++) { // Movido hacia abajo
-  for (let x = centerX + 20; x < centerX + 80; x++) {
-    // Blanco del ojo
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 145)) ** 2) < 25) {
+// Right Eye
+for (let y = centerY - 130; y < centerY - 100; y++) {
+  for (let x = centerX + 10; x < centerX + 50; x++) {
+    // White of the eye
+    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 115)) ** 2) < 15) {
       this.setPixel(imageData, x, y, 255, 255, 255, 255);
     }
 
     // Iris
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 145)) ** 2) < 15) {
+    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 115)) ** 2) < 10) {
       this.setPixel(imageData, x, y, 0, 100, 255, 255);
     }
 
-    // Pupila
-    if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 145)) ** 2) < 5) {
+    // Pupil
+    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 115)) ** 2) < 5) {
       this.setPixel(imageData, x, y, 0, 0, 0, 255);
     }
   }
