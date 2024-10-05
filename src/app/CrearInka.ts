@@ -25,13 +25,16 @@ export class CrearInka {
         const headRadius = 50;
         const bodyWidth = 100;
         const bodyHeight = 200;
+    
         // Cabeza ovalada
+        const headCenterX = 200;
+        const headCenterY = 150;
         const headWidth = 150; // Ancho de la cabeza
         const headHeight = 200; // Altura de la cabeza
 
-for (let y = centerY - headHeight / 2; y <= centerY + headHeight / 2; y++) {
-  for (let x = centerX - headWidth / 2; x <= centerX + headWidth / 2; x++) {
-    if (((x - centerX) ** 2) / (headWidth / 2) ** 2 + ((y - centerY) ** 2) / (headHeight / 2) ** 2 < 1) {
+for (let y = headCenterY - headHeight / 2; y <= centerY + headHeight / 2; y++) {
+  for (let x = headCenterX - headWidth / 2; x <= centerX + headWidth / 2; x++) {
+    if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - headCenterY) ** 2) / (headHeight / 2) ** 2 < 1) {
       this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color piel
     }
   }
