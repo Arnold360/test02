@@ -25,7 +25,18 @@ export class CrearInka {
         const headRadius = 50;
         const bodyWidth = 100;
         const bodyHeight = 200;
-    
+        const headWidth = 150; // Ancho de la cabeza
+        const headHeight = 200; // Altura de la cabeza
+
+// Dibujar la cabeza
+for (let y = centerY - headHeight / 2; y <= centerY + headHeight / 2; y++) {
+  for (let x = centerX - headWidth / 2; x <= centerX + headWidth / 2; x++) {
+    // Forma ovalada para la cabeza
+    if (((x - centerX) ** 2) / (headWidth / 2) ** 2 + ((y - centerY) ** 2) / (headHeight / 2) ** 2 < 1) {
+      this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color piel
+    }
+  }
+}
 
 // Left Eyebrow
 for (let x = centerX - 50; x < centerX - 10; x++) {
