@@ -26,6 +26,24 @@ export class CrearInka {
         const bodyWidth = 100;
         const bodyHeight = 200;
       
+// Cejas
+// Ceja izquierda
+for (let y = centerY - 200; y < centerY - 190; y++) {
+  for (let x = centerX - 50; x < centerX - 10; x++) {
+    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 195)) ** 2) < 20) {
+      this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para las cejas
+    }
+  }
+}
+
+// Ceja derecha
+for (let y = centerY - 200; y < centerY - 190; y++) {
+  for (let x = centerX + 10; x < centerX + 50; x++) {
+    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 195)) ** 2) < 20) {
+      this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para las cejas
+    }
+  }
+}
 
 // Ojo izquierdo
 for (let y = centerY - 175; y < centerY - 145; y++) {
