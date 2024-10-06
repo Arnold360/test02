@@ -1,13 +1,13 @@
 export class CrearInka {
 
-  canvasInka!:HTMLCanvasElement;
-  ctxInka!:CanvasRenderingContext2D;
-  imgData!:ImageData;
+  canvasInka!: HTMLCanvasElement;
+  ctxInka!: CanvasRenderingContext2D;
+  imgData!: ImageData;
 
   constructor() {}
 
   // Función para establecer un píxel en la imagen
-  setPixel(imageData:ImageData, x:number, y:number, r:number, g:number, b:number, a:number) {
+  setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
     let index = (x + y * imageData.width) * 4;
     imageData.data[index + 0] = r;
     imageData.data[index + 1] = g;
@@ -15,7 +15,7 @@ export class CrearInka {
     imageData.data[index + 3] = a;
   }
 
-  drawInka(imageData:ImageData) {
+  drawInka(imageData: ImageData) {
     const centerX = 400;
     const centerY = 300;
     const headRadius = 50;
@@ -91,7 +91,7 @@ export class CrearInka {
       }
     }
 
-    // Nariz
+    // Nariz mejorada
     const noseStartX = centerX - 10;
     const noseEndX = centerX + 10;
     const noseStartY = centerY - 110;
@@ -99,8 +99,12 @@ export class CrearInka {
 
     for (let y = noseStartY; y <= noseEndY; y++) {
       for (let x = noseStartX; x <= noseEndX; x++) {
-        if (Math.abs(x - centerX) < (y - noseStartY) / 2) {
-          this.setPixel(imageData, x, y, 0, 204, 153, 255); // Color piel
+        const distance = Math.abs(x - centerX);
+        const gradient = (y - noseStartY) / (noseEndY - noseStartY);
+        const colorFactor = Math.floor(204 - gradient * 50); // Gradiente de color para dar profundidad
+
+        if (distance < (y - noseStartY) / 2) {
+          this.setPixel(imageData, x, y, 255, colorFactor, 153, 255); // Color piel con gradiente
         }
       }
     }
