@@ -108,5 +108,19 @@ export class CrearInka {
         }
       }
     }
+
+    // Boca
+    const mouthWidth = 60;
+    const mouthHeight = 20;
+    const mouthCenterX = centerX;
+    const mouthCenterY = centerY - 70;
+
+    for (let y = mouthCenterY - mouthHeight / 2; y <= mouthCenterY + mouthHeight / 2; y++) {
+      for (let x = mouthCenterX - mouthWidth / 2; x <= mouthCenterX + mouthWidth / 2; x++) {
+        if (((x - mouthCenterX) ** 2) / (mouthWidth / 2) ** 2 + ((y - mouthCenterY) ** 2) / (mouthHeight / 2) ** 2 < 1) {
+          this.setPixel(imageData, x, y, 255, 0, 0, 255); // Color rojo para la boca
+        }
+      }
+    }
   }
 }
