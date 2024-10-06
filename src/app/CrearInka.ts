@@ -100,4 +100,57 @@ export class CrearInka {
     for (let y = noseStartY; y <= noseEndY; y++) {
       for (let x = noseStartX; x <= noseEndX; x++) {
         const distance = Math.abs(x - centerX);
-        const gradient = (y -
+        const gradient = (y - noseStartY) / (noseEndY - noseStartY);
+        const colorFactor = Math.floor(204 - gradient * 50); // Gradiente de color para dar profundidad
+
+        if (distance < (y - noseStartY) / 2) {
+          this.setPixel(imageData, x, y, 255, colorFactor, 153, 255); // Color piel con gradiente
+        }
+      }
+    }
+
+    // Boca
+    const mouthWidth = 60;
+    const mouthHeight = 20;
+    const mouthCenterX = centerX;
+    const mouthCenterY = centerY - 70;
+
+    for (let y = mouthCenterY - mouthHeight / 2; y <= mouthCenterY + mouthHeight / 2; y++) {
+      for (let x = mouthCenterX - mouthWidth / 2; x <= mouthCenterX + mouthWidth / 2; x++) {
+        if (((x - mouthCenterX) ** 2) / (mouthWidth / 2) ** 2 + ((y - mouthCenterY) ** 2) / (mouthHeight / 2) ** 2 < 1) {
+          this.setPixel(imageData, x, y, 255, 0, 0, 255); // Color rojo para la boca
+        }
+      }
+    }
+
+    // Cabello negro mejorado
+    const hairStartY = headCenterY - headHeight / 2 - 20;
+    const hairEndY = headCenterY - headHeight / 2;
+    const hairStartX = headCenterX - headWidth / 2;
+    const hairEndX = headCenterX + headWidth / 2;
+
+    for (let y = hairStartY; y <= hairEndY; y++) {
+      for (let x = hairStartX; x <= hairEndX; x++) {
+        if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - (hairStartY + hairEndY) / 2) ** 2) / (20 / 2) ** 2 < 1) {
+          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el cabello
+        }
+      }
+    }
+
+    // Mechones de cabello
+    for (let y = hairStartY; y <= hairEndY; y++) {
+      for (let x = hairStartX; x <= hairEndX; x++) {
+        if (Math.random() < 0.1) { // Añadir mechones aleatorios
+          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para los mechones
+        }
+      }
+    }
+
+    // Cabello que se amolda a la cabeza
+    for (let y = hairStartY; y <= hairEndY + 20; y++) {
+      for (let x = hairStartX; x <= hairEndX; x++) {
+        if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - headCenterY) ** 2) / (headHeight / 2) ** 2 < 1) {
+          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el cabello
+        }
+      }
+    }
