@@ -27,7 +27,7 @@ export class CrearInka {
         const bodyHeight = 200;
     
         // Cabeza ovalada
-        const headCenterX = 200;
+        const headCenterX = 400;
         const headCenterY = 150;
         const headWidth = 150; // Ancho de la cabeza
         const headHeight = 200; // Altura de la cabeza
