@@ -100,7 +100,7 @@ export class CrearInka {
     for (let y = noseStartY; y <= noseEndY; y++) {
       for (let x = noseStartX; x <= noseEndX; x++) {
         if (Math.abs(x - centerX) < (y - noseStartY) / 2) {
-          this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color piel
+          this.setPixel(imageData, x, y, 0, 204, 153, 255); // Color piel
         }
       }
     }
