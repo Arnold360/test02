@@ -122,5 +122,19 @@ export class CrearInka {
         }
       }
     }
+
+    // Cabello negro
+    const hairStartY = headCenterY - headHeight / 2 - 20;
+    const hairEndY = headCenterY - headHeight / 2;
+    const hairStartX = headCenterX - headWidth / 2;
+    const hairEndX = headCenterX + headWidth / 2;
+
+    for (let y = hairStartY; y <= hairEndY; y++) {
+      for (let x = hairStartX; x <= hairEndX; x++) {
+        if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - (hairStartY + hairEndY) / 2) ** 2) / (20 / 2) ** 2 < 1) {
+          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el cabello
+        }
+      }
+    }
   }
 }
