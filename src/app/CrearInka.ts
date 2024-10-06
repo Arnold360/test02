@@ -96,8 +96,5 @@ for (let y = centerY - 130; y < centerY - 100; y++) {
   }
 }
 
-
-
-
-  
+  }
 }
