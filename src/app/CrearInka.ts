@@ -129,22 +129,6 @@ export class CrearInka {
     const hairStartX = headCenterX - headWidth / 2;
     const hairEndX = headCenterX + headWidth / 2;
 
-    for (let y = hairStartY; y <= hairEndY; y++) {
-      for (let x = hairStartX; x <= hairEndX; x++) {
-        if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - (hairStartY + hairEndY) / 2) ** 2) / (20 / 2) ** 2 < 1) {
-          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el cabello
-        }
-      }
-    }
-
-    // Mechones de cabello
-    for (let y = hairStartY; y <= hairEndY; y++) {
-      for (let x = hairStartX; x <= hairEndX; x++) {
-        if (Math.random() < 0.1) { // Añadir mechones aleatorios
-          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para los mechones
-        }
-      }
-    }
 
     // Cabello que se amolda a la cabeza
     for (let y = hairStartY; y <= hairEndY + 20; y++) {
