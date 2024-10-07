@@ -166,11 +166,12 @@ for (let y = centerY - 30; y < centerY ; y++) { // Ajuste en la posición vertic
   }
 }
 // Torso proporcional
-for (let y = centerY - 20; y < centerY + 100; y++) { // Ajuste en la altura del torso
-  for (let x = centerX - 40; x < centerX + 40; x++) { // Ajuste en el ancho del torso
+for (let y = centerY - 20; y < centerY + 120; y++) { // Altura del torso
+  for (let x = centerX - 50; x < centerX + 50; x++) { // Ancho del torso
     this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el torso
   }
 }
+
 
 
 
