@@ -18,13 +18,13 @@ export class CrearInka {
   drawInka(imageData: ImageData) {
     const centerX = 400;
     const centerY = 200;
-    const headRadius = 50;
+    const headRadius = 75;
     const bodyWidth = 100;
     const bodyHeight = 200;
     const headCenterX = 400;
-    const headCenterY = 120;
-    const headWidth = 150; // Ancho de la cabeza
-    const headHeight = 200; // Altura de la cabeza
+    const headCenterY = 100;
+    const headWidth = 200; // Ancho de la cabeza
+    const headHeight = 250; // Altura de la cabeza
 
     // Cabeza ovalada
     for (let y = headCenterY - headHeight / 2; y <= centerY + headHeight / 2; y++) {
