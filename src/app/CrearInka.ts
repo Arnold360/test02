@@ -169,5 +169,4 @@ for (let y = centerY - 50; y < centerY - 20; y++) {
   }
 }
 
-  }
-}
+  
