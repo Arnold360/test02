@@ -91,6 +91,24 @@ export class CrearInka {
       }
     }
 
+    // Oreja izquierda
+for (let y = centerY - 150; y < centerY - 100; y++) {
+  for (let x = centerX - 80; x < centerX - 50; x++) {
+    if (Math.sqrt((x - (centerX - 65)) ** 2 + (y - (centerY - 125)) ** 2) < 15) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para las orejas
+    }
+  }
+}
+
+// Oreja derecha
+for (let y = centerY - 150; y < centerY - 100; y++) {
+  for (let x = centerX + 50; x < centerX + 80; x++) {
+    if (Math.sqrt((x - (centerX + 65)) ** 2 + (y - (centerY - 125)) ** 2) < 15) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para las orejas
+    }
+  }
+}
+
     // Nariz mejorada
     const noseStartX = centerX - 10;
     const noseEndX = centerX + 10;
