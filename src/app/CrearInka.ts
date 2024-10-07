@@ -16,7 +16,7 @@ export class CrearInka {
   }
 
   drawInka(imageData: ImageData) {
-    const centerX = 300;
+    const centerX = 400;
     const centerY = 200;
     const headRadius = 50;
     const bodyWidth = 100;
