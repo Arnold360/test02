@@ -208,7 +208,42 @@ for (let y = centerY + 80; y < centerY + 100; y++) {
   }
 }
 
+// Pierna izquierda
+for (let y = centerY + 120; y < centerY + 200; y++) {
+  for (let x = centerX - 30; x < centerX - 10; x++) {
+    if (((x - (centerX - 20)) ** 2) / (10 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la pierna
+    }
+  }
+}
 
+// Pierna derecha
+for (let y = centerY + 120; y < centerY + 200; y++) {
+  for (let x = centerX + 10; x < centerX + 30; x++) {
+    if (((x - (centerX + 20)) ** 2) / (10 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la pierna
+    }
+  }
+}
+
+// Pies
+// Pie izquierdo
+for (let y = centerY + 200; y < centerY + 220; y++) {
+  for (let x = centerX - 30; x < centerX - 10; x++) {
+    if (((x - (centerX - 20)) ** 2) / (10 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el pie
+    }
+  }
+}
+
+// Pie derecho
+for (let y = centerY + 200; y < centerY + 220; y++) {
+  for (let x = centerX + 10; x < centerX + 30; x++) {
+    if (((x - (centerX + 20)) ** 2) / (10 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el pie
+    }
+  }
+}
   }
 }
 
