@@ -22,7 +22,7 @@ export class CrearInka {
     const bodyWidth = 100;
     const bodyHeight = 200;
     const headCenterX = 400;
-    const headCenterY = 175;
+    const headCenterY = 120;
     const headWidth = 150; // Ancho de la cabeza
     const headHeight = 200; // Altura de la cabeza
 
