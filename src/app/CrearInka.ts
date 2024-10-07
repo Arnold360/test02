@@ -18,9 +18,9 @@ export class CrearInka {
   drawInka(imageData: ImageData) {
     const centerX = 400;
     const centerY = 300;
-    const headRadius = 75;
-    const bodyWidth = 150;
-    const bodyHeight = 350;
+    const headRadius = 35;
+    const bodyWidth = 70;
+    const bodyHeight = 150;
     const headCenterX = 400;
     const headCenterY = 100;
     const headWidth = 200; // Ancho de la cabeza
