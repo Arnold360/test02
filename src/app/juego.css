@@ -10,6 +10,9 @@
   height: 30%;
 }
 }
+#inka{
+  border: 1px solid black;
+}
 .court {
   display: grid;
   place-items: center;
