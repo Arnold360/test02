@@ -1,12 +1,11 @@
-export class CrearInka {
 
+export class CrearInka {
   canvasInka!: HTMLCanvasElement;
   ctxInka!: CanvasRenderingContext2D;
   imgData!: ImageData;
 
   constructor() {}
 
-  // Función para establecer un píxel en la imagen
   setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
     let index = (x + y * imageData.width) * 4;
     imageData.data[index + 0] = r;
@@ -18,233 +17,132 @@ export class CrearInka {
   drawInka(imageData: ImageData) {
     const centerX = 400;
     const centerY = 300;
-    const headRadius = 35;
-    const bodyWidth = 70;
-    const bodyHeight = 150;
-    const headCenterX = 400;
-    const headCenterY = 100;
-    const headWidth = 200; // Ancho de la cabeza
-    const headHeight = 250; // Altura de la cabeza
 
-    // Cabeza ovalada
-    for (let y = headCenterY - headHeight / 2; y <= centerY + headHeight / 2; y++) {
-      for (let x = headCenterX - headWidth / 2; x <= centerX + headWidth / 2; x++) {
-        if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - headCenterY) ** 2) / (headHeight / 2) ** 2 < 1) {
-          this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color piel
+    // Cabeza
+    for (let y = 100; y < 250; y++) {
+      for (let x = centerX - 75; x < centerX + 75; x++) {
+        if (((x - centerX) ** 2) / (75 ** 2) + ((y - 175) ** 2) / (75 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 204, 153, 255);
         }
       }
     }
 
-    // Ceja izquierda
-    for (let x = centerX - 50; x < centerX - 10; x++) {
-      let y = centerY - 150 - Math.sin((x - (centerX - 50)) * Math.PI / 40) * 10;
-      for (let offsetY = -1; offsetY <= 1; offsetY++) {
-        this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Color negro para las cejas
-      }
+    // Cejas
+    for (let x = centerX - 70; x < centerX - 40; x++) {
+      let y = centerY - 220 - Math.sin((x - (centerX - 70)) * Math.PI / 40) * 10;
+      this.setPixel(imageData, x, Math.round(y), 0, 0, 0, 255);
+    }
+    for (let x = centerX + 40; x < centerX + 70; x++) {
+      let y = centerY - 220 - Math.sin((x - (centerX + 40)) * Math.PI / 40) * 10;
+      this.setPixel(imageData, x, Math.round(y), 0, 0, 0, 255);
     }
 
-    // Ceja derecha
-    for (let x = centerX + 10; x < centerX + 50; x++) {
-      let y = centerY - 150 - Math.sin((x - (centerX + 10)) * Math.PI / 40) * 10;
-      for (let offsetY = -1; offsetY <= 1; offsetY++) {
-        this.setPixel(imageData, x, Math.round(y + offsetY), 0, 0, 0, 255); // Color negro para las cejas
-      }
-    }
-
-    // Ojo izquierdo
-    for (let y = centerY - 130; y < centerY - 100; y++) {
-      for (let x = centerX - 50; x < centerX - 10; x++) {
-        // Blanco del ojo
-        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 115)) ** 2) < 15) {
+    // Ojos
+    for (let y = centerY - 240; y < centerY - 210; y++) {
+      for (let x = centerX - 70; x < centerX - 30; x++) {
+        if (Math.sqrt((x - (centerX - 50)) ** 2 + (y - (centerY - 225)) ** 2) < 20) {
           this.setPixel(imageData, x, y, 255, 255, 255, 255);
         }
-
-        // Iris
-        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 115)) ** 2) < 10) {
+        if (Math.sqrt((x - (centerX - 50)) ** 2 + (y - (centerY - 225)) ** 2) < 15) {
           this.setPixel(imageData, x, y, 0, 100, 255, 255);
         }
-
-        // Pupila
-        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 115)) ** 2) < 5) {
+        if (Math.sqrt((x - (centerX - 50)) ** 2 + (y - (centerY - 225)) ** 2) < 5) {
+          this.setPixel(imageData, x, y, 0, 0, 0, 255);
+        }
+      }
+      for (let x = centerX + 30; x < centerX + 70; x++) {
+        if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 225)) ** 2) < 20) {
+          this.setPixel(imageData, x, y, 255, 255, 255, 255);
+        }
+        if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 225)) ** 2) < 15) {
+          this.setPixel(imageData, x, y, 0, 100, 255, 255);
+        }
+        if (Math.sqrt((x - (centerX + 50)) ** 2 + (y - (centerY - 225)) ** 2) < 5) {
           this.setPixel(imageData, x, y, 0, 0, 0, 255);
         }
       }
     }
 
-    // Ojo derecho
-    for (let y = centerY - 130; y < centerY - 100; y++) {
-      for (let x = centerX + 10; x < centerX + 50; x++) {
-        // Blanco del ojo
-        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 115)) ** 2) < 15) {
-          this.setPixel(imageData, x, y, 255, 255, 255, 255);
-        }
-
-        // Iris
-        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 115)) ** 2) < 10) {
-          this.setPixel(imageData, x, y, 0, 100, 255, 255);
-        }
-
-        // Pupila
-        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 115)) ** 2) < 5) {
-          this.setPixel(imageData, x, y, 0, 0, 0, 255);
-        }
+    // Nariz
+    for (let y = centerY - 200; y < centerY - 180; y++) {
+      for (let x = centerX - 10; x < centerX + 10; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255);
       }
     }
-
-  // Oreja izquierda
-for (let y = centerY - 140; y < centerY - 100; y++) {
-  for (let x = centerX - 90; x < centerX - 60; x++) {
-    let distance = Math.sqrt((x - (centerX - 75)) ** 2 + (y - (centerY - 120)) ** 2);
-    if (distance < 10 || (distance < 15 && y < centerY - 120)) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para las orejas
-    }
-  }
-}
-
-// Oreja derecha
-for (let y = centerY - 140; y < centerY - 100; y++) {
-  for (let x = centerX + 60; x < centerX + 90; x++) {
-    let distance = Math.sqrt((x - (centerX + 75)) ** 2 + (y - (centerY - 120)) ** 2);
-    if (distance < 10 || (distance < 15 && y < centerY - 120)) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para las orejas
-    }
-  }
-}
-
-
-    // Nariz mejorada
-    const noseStartX = centerX - 10;
-    const noseEndX = centerX + 10;
-    const noseStartY = centerY - 110;
-    const noseEndY = centerY - 90;
-
-    for (let y = noseStartY; y <= noseEndY; y++) {
-      for (let x = noseStartX; x <= noseEndX; x++) {
-        const distance = Math.abs(x - centerX);
-        const gradient = (y - noseStartY) / (noseEndY - noseStartY);
-        const colorFactor = Math.floor(204 - gradient * 50); // Gradiente de color para dar profundidad
-
-        if (distance < (y - noseStartY) / 2) {
-          this.setPixel(imageData, x, y, 255, colorFactor, 153, 255); // Color piel con gradiente
-        }
-      }
-    }
-
     // Boca
-    const mouthWidth = 60;
-    const mouthHeight = 20;
-    const mouthCenterX = centerX;
-    const mouthCenterY = centerY - 70;
+    for (let y = centerY - 170; y < centerY - 150; y++) {
+      for (let x = centerX - 30; x < centerX + 30; x++) {
+        this.setPixel(imageData, x, y, 255, 0, 0, 255);
+      }
+    }
 
-    for (let y = mouthCenterY - mouthHeight / 2; y <= mouthCenterY + mouthHeight / 2; y++) {
-      for (let x = mouthCenterX - mouthWidth / 2; x <= mouthCenterX + mouthWidth / 2; x++) {
-        if (((x - mouthCenterX) ** 2) / (mouthWidth / 2) ** 2 + ((y - mouthCenterY) ** 2) / (mouthHeight / 2) ** 2 < 1) {
-          this.setPixel(imageData, x, y, 255, 0, 0, 255); // Color rojo para la boca
+    // Cuello
+    for (let y = centerY - 120; y < centerY - 80; y++) {
+      for (let x = centerX - 20 - (y - (centerY - 100)) / 2; x < centerX + 20 + (y - (centerY - 100)) / 2; x++) {
+        this.setPixel(imageData, x, y, 255, 218, 185, 255);
+      }
+    }
+
+    // Torso
+    for (let y = centerY - 80; y < centerY + 120; y++) {
+      for (let x = centerX - 50; x < centerX + 50; x++) {
+        this.setPixel(imageData, x, y, 0, 0, 0, 255);
+      }
+    }
+
+    // Brazos
+    for (let y = centerY; y < centerY + 80; y++) {
+      for (let x = centerX - 70; x < centerX - 40; x++) {
+        if (((x - (centerX - 55)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
+        }
+      }
+      for (let x = centerX + 40; x < centerX + 70; x++) {
+        if (((x - (centerX + 55)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
         }
       }
     }
 
-    // Cabello negro mejorado
-    const hairStartY = headCenterY - headHeight / 2 - 20;
-    const hairEndY = headCenterY - headHeight / 2;
-    const hairStartX = headCenterX - headWidth / 2;
-    const hairEndX = headCenterX + headWidth / 2;
-
-
-    // Cabello que se amolda a la cabeza
-    for (let y = hairStartY; y <= hairEndY + 20; y++) {
-      for (let x = hairStartX; x <= hairEndX; x++) {
-        if (((x - headCenterX) ** 2) / (headWidth / 2) ** 2 + ((y - headCenterY) ** 2) / (headHeight / 2) ** 2 < 1) {
-          this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el cabello
+    // Manos
+    for (let y = centerY + 80; y < centerY + 100; y++) {
+      for (let x = centerX - 90; x < centerX - 70; x++) {
+        if (((x - (centerX - 80)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
+        }
+      }
+      for (let x = centerX + 70; x < centerX + 90; x++) {
+        if (((x - (centerX + 80)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
         }
       }
     }
-// Cuello con mejor forma y posición
-for (let y = centerY - 30; y < centerY ; y++) { // Ajuste en la posición vertical
-  for (let x = centerX - 20 - (y - (centerY - 50)) / 2; x < centerX + 20 + (y - (centerY - 50)) / 2; x++) { // Ajuste en la forma
-    this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el cuello
-  }
-}
-// Torso proporcional
-for (let y = centerY - 20; y < centerY + 120; y++) { // Altura del torso
-  for (let x = centerX - 50; x < centerX + 50; x++) { // Ancho del torso
-    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el torso
-  }
-}
 
-// Brazo izquierdo
-for (let y = centerY; y < centerY + 80; y++) {
-  for (let x = centerX - 50; x < centerX - 20; x++) {
-    if (((x - (centerX - 35)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el brazo
+    // Piernas
+    for (let y = centerY + 120; y < centerY + 200; y++) {
+      for (let x = centerX - 50; x < centerX - 20; x++) {
+        if (((x - (centerX - 35)) ** 2) / (15 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
+        }
+      }
+      for (let x = centerX + 20; x < centerX + 50; x++) {
+        if (((x - (centerX + 35)) ** 2) / (15 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
+        }
+      }
+    }
+    // Pies
+    for (let y = centerY + 200; y < centerY + 220; y++) {
+      for (let x = centerX - 70; x < centerX - 40; x++) {
+        if (((x - (centerX - 55)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
+        }
+      }
+      for (let x = centerX + 40; x < centerX + 70; x++) {
+        if (((x - (centerX + 55)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
+          this.setPixel(imageData, x, y, 255, 218, 185, 255);
+        }
+      }
     }
   }
 }
-
-// Brazo derecho
-for (let y = centerY; y < centerY + 80; y++) {
-  for (let x = centerX + 20; x < centerX + 50; x++) {
-    if (((x - (centerX + 35)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el brazo
-    }
-  }
-}
-
-// Mano izquierda
-for (let y = centerY + 80; y < centerY + 100; y++) {
-  for (let x = centerX - 50; x < centerX - 30; x++) {
-    if (((x - (centerX - 40)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la mano
-    }
-  }
-}
-
-// Mano derecha
-for (let y = centerY + 80; y < centerY + 100; y++) {
-  for (let x = centerX + 30; x < centerX + 50; x++) {
-    if (((x - (centerX + 40)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la mano
-    }
-  }
-}
-
-// Pierna izquierda
-for (let y = centerY + 120; y < centerY + 200; y++) {
-  for (let x = centerX - 30; x < centerX - 10; x++) {
-    if (((x - (centerX - 20)) ** 2) / (10 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la pierna
-    }
-  }
-}
-
-// Pierna derecha
-for (let y = centerY + 120; y < centerY + 200; y++) {
-  for (let x = centerX + 10; x < centerX + 30; x++) {
-    if (((x - (centerX + 20)) ** 2) / (10 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la pierna
-    }
-  }
-}
-
-// Pies
-// Pie izquierdo
-for (let y = centerY + 200; y < centerY + 220; y++) {
-  for (let x = centerX - 30; x < centerX - 10; x++) {
-    if (((x - (centerX - 20)) ** 2) / (10 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el pie
-    }
-  }
-}
-
-// Pie derecho
-for (let y = centerY + 200; y < centerY + 220; y++) {
-  for (let x = centerX + 10; x < centerX + 30; x++) {
-    if (((x - (centerX + 20)) ** 2) / (10 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el pie
-    }
-  }
-}
-  }
-}
-
-  
