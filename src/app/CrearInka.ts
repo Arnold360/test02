@@ -159,12 +159,13 @@ for (let y = centerY - 140; y < centerY - 100; y++) {
         }
       }
     }
-   // Cuello con mejor forma y posición
-for (let y = centerY - 50; y < centerY - 20; y++) {
-  for (let x = centerX - 20 - (y + 50 - centerY) / 2; x < centerX + 20 + (y + 50 - centerY) / 2; x++) {
+// Cuello con mejor forma y posición
+for (let y = centerY - 40; y < centerY - 10; y++) { // Ajuste en la posición vertical
+  for (let x = centerX - 20 - (y - (centerY - 50)) / 2; x < centerX + 20 + (y - (centerY - 50)) / 2; x++) { // Ajuste en la forma
     this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el cuello
   }
 }
+
 
   }
 }
