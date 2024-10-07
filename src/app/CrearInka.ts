@@ -172,7 +172,41 @@ for (let y = centerY - 20; y < centerY + 120; y++) { // Altura del torso
   }
 }
 
+// Brazo izquierdo
+for (let y = centerY; y < centerY + 80; y++) {
+  for (let x = centerX - 50; x < centerX - 20; x++) {
+    if (((x - (centerX - 35)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el brazo
+    }
+  }
+}
 
+// Brazo derecho
+for (let y = centerY; y < centerY + 80; y++) {
+  for (let x = centerX + 20; x < centerX + 50; x++) {
+    if (((x - (centerX + 35)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el brazo
+    }
+  }
+}
+
+// Mano izquierda
+for (let y = centerY + 80; y < centerY + 100; y++) {
+  for (let x = centerX - 50; x < centerX - 30; x++) {
+    if (((x - (centerX - 40)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la mano
+    }
+  }
+}
+
+// Mano derecha
+for (let y = centerY + 80; y < centerY + 100; y++) {
+  for (let x = centerX + 30; x < centerX + 50; x++) {
+    if (((x - (centerX + 40)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para la mano
+    }
+  }
+}
 
 
   }
