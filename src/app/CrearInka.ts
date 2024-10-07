@@ -165,6 +165,12 @@ for (let y = centerY - 30; y < centerY ; y++) { // Ajuste en la posición vertic
     this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color carne para el cuello
   }
 }
+// Torso
+for (let y = centerY - 10; y < centerY + 100; y++) {
+  for (let x = centerX - 40; x < centerX + 40; x++) {
+    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro para el torso
+  }
+}
 
 
   }
