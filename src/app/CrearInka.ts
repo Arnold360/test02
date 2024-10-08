@@ -175,13 +175,13 @@ for (let y = centerY + 220; y < centerY + 230; y++) {
   }
 }
 
-// Sombreado
+/*// Sombreado
 for (let y = centerY - 200; y < centerY + 230; y++) {
   for (let x = centerX - 100; x < centerX + 100; x++) {
     if (((x - centerX) ** 2) / (100 ** 2) + ((y - centerY) ** 2) / (150 ** 2) < 1) {
       this.setPixel(imageData, x, y, 50, 50, 50, 255);
     }
   }
-}
+}*/
   }
 }
