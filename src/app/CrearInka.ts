@@ -155,7 +155,6 @@ for (let y = centerY + 210; y < centerY + 230; y++) {
       this.setPixel(imageData, x, y, 255, 218, 185, 255);
     }
   }
-}
 
 // Detalles de los pies
 for (let y = centerY + 220; y < centerY + 230; y++) {
