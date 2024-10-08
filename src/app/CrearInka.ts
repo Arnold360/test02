@@ -41,25 +41,6 @@ export class CrearInka {
       this.setPixel(imageData, x, Math.round(y), 0, 0, 0, 255);
     }
 
-    // Ojos
-    for (let y = centerY - 140; y < centerY - 110; y++) {
-      for (let x = centerX - 50; x < centerX - 10; x++) {
-        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 20) {
-          this.setPixel(imageData, x, y, 255, 255, 255, 255);
-        }
-        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 15) {
-          this.setPixel(imageData, x, y, 0, 100, 255, 255);
-        }
-        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 5) {
-          this.setPixel(imageData, x, y, 0, 0, 0, 255);
-        }
-      }
-      for (let x = centerX + 10; x < centerX + 50; x++) {
-        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 125)) ** 2) < 20) {
-          this.setPixel(imageData, x, y, 255, 255, 255, 255);
-        }
-        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY -
-
 // Ojos
 for (let y = centerY - 140; y < centerY - 110; y++) {
   for (let x = centerX - 50; x < centerX - 10; x++) {
