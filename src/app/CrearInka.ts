@@ -17,7 +17,7 @@ export class CrearInka {
 
   drawInka(imageData: ImageData) {
     const centerX = 400;
-    const centerY = 100;
+    const centerY = 300;
     const cabezaRadio = 75;
     const cuerpoAncho = 150;
     const cuerpoAlto = 250;
@@ -40,6 +40,26 @@ export class CrearInka {
       let y = centerY - 120 - Math.sin((x - (centerX + 30)) * Math.PI / 40) * 10;
       this.setPixel(imageData, x, Math.round(y), 0, 0, 0, 255);
     }
+
+    // Ojos
+    for (let y = centerY - 140; y < centerY - 110; y++) {
+      for (let x = centerX - 50; x < centerX - 10; x++) {
+        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 20) {
+          this.setPixel(imageData, x, y, 255, 255, 255, 255);
+        }
+        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 15) {
+          this.setPixel(imageData, x, y, 0, 100, 255, 255);
+        }
+        if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 5) {
+          this.setPixel(imageData, x, y, 0, 0, 0, 255);
+        }
+      }
+      for (let x = centerX + 10; x < centerX + 50; x++) {
+        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 125)) ** 2) < 20) {
+          this.setPixel(imageData, x, y, 255, 255, 255, 255);
+        }
+        if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY -
+
 // Ojos
 for (let y = centerY - 140; y < centerY - 110; y++) {
   for (let x = centerX - 50; x < centerX - 10; x++) {
@@ -149,8 +169,6 @@ for (let y = centerY - 130; y < centerY - 120; y++) {
             }
           }
         }
-
-        
 // Pies
 for (let y = centerY + 210; y < centerY + 230; y++) {
   for (let x = centerX - 70; x < centerX - 40; x++) {
@@ -175,13 +193,5 @@ for (let y = centerY + 220; y < centerY + 230; y++) {
   }
 }
 
-/*// Sombreado
-for (let y = centerY - 200; y < centerY + 230; y++) {
-  for (let x = centerX - 100; x < centerX + 100; x++) {
-    if (((x - centerX) ** 2) / (100 ** 2) + ((y - centerY) ** 2) / (150 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 50, 50, 50, 255);
-    }
-  }
-}*/
-  }
+}
 }
