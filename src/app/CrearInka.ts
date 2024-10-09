@@ -136,33 +136,43 @@ for (let y = centerY + 80; y < centerY + 100; y++) {
     }
   }
 }
-
 // Piernas
+const piernaAncho = 20;
+const piernaAlto = 80;
 for (let y = centerY + 130; y < centerY + 210; y++) {
-  for (let x = centerX - 50; x < centerX - 20; x++) {
-    if (((x - (centerX - 35)) ** 2) / (15 ** 2) + ((y - (centerY + 160)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData,
+  for (let x = centerX - piernaAncho; x < centerX + piernaAncho; x++) {
+    if (((x - centerX) ** 2) / (piernaAncho ** 2) + ((y - (centerY + 170)) ** 2) / (piernaAlto ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
+    }
+  }
+  for (let x = centerX + 40; x < centerX + 60; x++) {
+    if (((x - (centerX + 50)) ** 2) / (piernaAncho ** 2) + ((y - (centerY + 170)) ** 2) / (piernaAlto ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
+    }
+  }
+}
 
 // Pies
 for (let y = centerY + 210; y < centerY + 230; y++) {
-  for (let x = centerX - 70; x < centerX - 40; x++) {
-    if (((x - (centerX - 55)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255);
+  for (let x = centerX - 30; x < centerX - 10; x++) {
+    if (((x - (centerX - 20)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
     }
   }
-  for (let x = centerX + 40; x < centerX + 70; x++) {
-    if (((x - (centerX + 55)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255);
+  for (let x = centerX + 10; x < centerX + 30; x++) {
+    if (((x - (centerX + 20)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
+      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
     }
   }
+}
 
 // Detalles de los pies
 for (let y = centerY + 220; y < centerY + 230; y++) {
-  for (let x = centerX - 60; x < centerX - 50; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255);
+  for (let x = centerX - 35; x < centerX - 25; x++) {
+    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro
   }
-  for (let x = centerX + 50; x < centerX + 60; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255);
+  for (let x = centerX + 25; x < centerX + 35; x++) {
+    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro
   }
 }
 
