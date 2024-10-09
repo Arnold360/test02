@@ -25,7 +25,7 @@ export class CrearInka {
     // Cabeza
     for (let y = (centerY / 2) - cabezaAlturaRadio; y < (centerY / 2) + cabezaAlturaRadio; y++) {
       for (let x = (centerX / 2) - cabezaAnchoRadio; x < (centerX / 2) + cabezaAnchoRadio; x++) {
-        if (((x - (centerX / 2) ** 2) / (cabezaAnchoRadio ** 2) + ((y - centerY) ** 2) / (cabezaAlturaRadio ** 2) < 1) {
+        if (((x - (centerX / 2)) ** 2) / (cabezaAnchoRadio ** 2) + ((y - centerY) ** 2) / (cabezaAlturaRadio ** 2) < 1) {
           this.setPixel(imageData, x, y, 255, 204, 153, 255);
         }
       }
