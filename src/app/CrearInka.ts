@@ -6,7 +6,7 @@ export class CrearInka {
   constructor() {}
 
   setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
-    let index = (x + y * imageData.width) * 4;
+    const index = (x + y * imageData.width) * 4;
     imageData.data[index + 0] = r;
     imageData.data[index + 1] = g;
     imageData.data[index + 2] = b;
@@ -55,6 +55,12 @@ export class CrearInka {
 
     // Draw Legs
     this.drawLegs(imageData, centerX, centerY);
+
+    // Draw Hands
+    this.drawHands(imageData, centerX, centerY);
+
+    // Draw Feet
+    this.drawFeet(imageData, centerX, centerY);
   }
 
   drawHead(imageData: ImageData, centerX: number, centerY: number) {
@@ -97,5 +103,21 @@ export class CrearInka {
 
     // Right Leg
     this.drawEllipse(imageData, centerX + 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
+  }
+
+  drawHands(imageData: ImageData, centerX: number, centerY: number) {
+    // Left Hand
+    this.drawEllipse(imageData, centerX - 55, centerY + 40, 10, 15, [255, 204, 153, 255]);
+
+    // Right Hand
+    this.drawEllipse(imageData, centerX + 55, centerY + 40, 10, 15, [255, 204, 153, 255]);
+  }
+
+  drawFeet(imageData: ImageData, centerX: number, centerY: number) {
+    // Left Foot
+    this.drawEllipse(imageData, centerX - 20, centerY + 190, 12, 15, [255, 204, 153, 255]);
+
+    // Right Foot
+    this.drawEllipse(imageData, centerX + 20, centerY + 190, 12, 15, [255, 204, 153, 255]);
   }
 }
