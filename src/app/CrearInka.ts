@@ -64,6 +64,12 @@ export class CrearInka {
 
     // Draw Feet
     this.drawFeet(imageData, centerX, centerY);
+
+    // Draw Hair
+    this.drawHair(imageData, centerX, centerY);
+
+    // Draw Clothes
+    this.drawClothes(imageData, centerX, centerY);
   }
 
   drawHead(imageData: ImageData, centerX: number, centerY: number) {
@@ -126,5 +132,17 @@ export class CrearInka {
 
     // Right Foot
     this.drawEllipse(imageData, centerX + 20, centerY + 190, 12, 15, [255, 204, 153, 255]);
+  }
+
+  drawHair(imageData: ImageData, centerX: number, centerY: number) {
+    // Add hair details
+    this.drawEllipse(imageData, centerX, centerY - 170, 50, 20, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX - 50, centerY - 150, 100, 20, [0, 0, 0, 255]);
+  }
+
+  drawClothes(imageData: ImageData, centerX: number, centerY: number) {
+    // Add clothes details
+    this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 80, [0, 0, 255, 255]); // Shirt
+    this.drawRectangle(imageData, centerX - 35, centerY + 44, 70, 50, [0, 255, 0, 255]); // Pants
   }
 }
