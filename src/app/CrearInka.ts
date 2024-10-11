@@ -1,4 +1,3 @@
-
 export class CrearInka {
   canvasInka!: HTMLCanvasElement;
   ctxInka!: CanvasRenderingContext2D;
@@ -15,210 +14,99 @@ export class CrearInka {
   }
 
   drawInka(imageData: ImageData) {
-    const centerX = 400;
-    const centerY = 300;
-    const cabezaAlturaRadio = 70;
-    const cabezaAnchoRadio = 60;
-    const cuerpoAncho = 100;
-    const cuerpoAlto = 160;
-// Cabeza
-const cabezaProfundidadRadio = 40;
+    const centerX = imageData.width / 2;
+    const centerY = imageData.height / 2;
 
-for (let y = (centerY / 2) - cabezaAlturaRadio; y < (centerY / 2) + cabezaAlturaRadio; y++) {
-  for (let x = centerX - cabezaAnchoRadio; x < centerX + cabezaAnchoRadio; x++) {
-    const profundidad = Math.sqrt(cabezaProfundidadRadio ** 2 - ((x - centerX) ** 2) - ((y - centerY / 2) ** 2));
-    if (Math.sqrt((x - centerX) ** 2 + (y - centerY / 2) ** 2) < cabezaAlturaRadio) {
-      this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color de piel
-    }
-    // Sombreado
-    if (profundidad < 20) {
-      this.setPixel(imageData, x, y, 200, 180, 130, 255); // Sombreado claro
-    } else if (profundidad < 30) {
-      this.setPixel(imageData, x, y, 150, 130, 90, 255); // Sombreado medio
-    } else {
-      this.setPixel(imageData, x, y, 100, 90, 60, 255); // Sombreado oscuro
-    }
-  }
-}
-
-// Frente
-for (let y = (centerY / 2) - 40; y < (centerY / 2) - 20; y++) {
-  for (let x = centerX - 40; x < centerX + 40; x++) {
-    if (Math.sqrt((x - centerX) ** 2 + (y - centerY / 2) ** 2) < 30) {
-      this.setPixel(imageData, x, y, 220, 200, 170, 255); // Color de frente
-    }
-  }
-}
-
-// Pómulos
-for (let y = (centerY / 2) - 30; y < (centerY / 2) - 10; y++) {
-  for (let x = centerX - 50; x < centerX - 20; x++) {
-    if (Math.sqrt((x - (centerX - 35)) ** 2 + (y - (centerY / 2 - 20)) ** 2) < 15) {
-      this.setPixel(imageData, x, y, 240, 220, 190, 255); // Color de pómulo
-    }
-  }
-  for (let x = centerX + 20; x < centerX + 50; x++) {
-    if (Math.sqrt((x - (centerX + 35)) ** 2 + (y - (centerY / 2 - 20)) ** 2) < 15) {
-      this.setPixel(imageData, x, y, 240, 220, 190, 255); // Color de pómulo
-    }
-  }
-}
-
-// Mentón
-for (let y = (centerY / 2) + 10; y < (centerY / 2) + 30; y++) {
-  for (let x = centerX - 20; x < centerX + 20; x++) {
-    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY / 2 + 20)) ** 2) < 10) {
-      this.setPixel(imageData, x, y, 200, 180, 150, 255); // Color de mentón
-    }
-  }
-}
-
-    // Cejas
-    for (let x = centerX - 60; x < centerX - 30; x++) {
-      let y = centerY - 120 - Math.sin((x - (centerX - 60)) * Math.PI / 40) * 10;
-      this.setPixel(imageData, x, Math.round(y), 0, 0, 0, 255);
-    }
-    for (let x = centerX + 30; x < centerX + 60; x++) {
-      let y = centerY - 120 - Math.sin((x - (centerX + 30)) * Math.PI / 40) * 10;
-      this.setPixel(imageData, x, Math.round(y), 0, 0, 0, 255);
+    // Cabeza
+    const cabezaRadio = 70;
+    for (let y = centerY - 100; y < centerY - 30; y++) {
+      for (let x = centerX - cabezaRadio; x < centerX + cabezaRadio; x++) {
+        if (Math.sqrt((x - centerX) ** 2 + (y - (centerY - 65)) ** 2) < cabezaRadio) {
+          this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color de piel
+        }
+      }
     }
 
-    
-// Ojos
-for (let y = centerY - 140; y < centerY - 110; y++) {
-  for (let x = centerX - 50; x < centerX - 10; x++) {
-    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 20) {
-      this.setPixel(imageData, x, y, 255, 255, 255, 255);
+    // Ojos
+    const ojoRadio = 10;
+    const ojoY = centerY - 75;
+    const ojoDistanciaX = 30;
+    for (let oy = ojoY - ojoRadio; oy < ojoY + ojoRadio; oy++) {
+      for (let ox = centerX - ojoDistanciaX - ojoRadio; ox < centerX - ojoDistanciaX + ojoRadio; ox++) {
+        if (Math.sqrt((ox - (centerX - ojoDistanciaX)) ** 2 + (oy - ojoY) ** 2) < ojoRadio) {
+          this.setPixel(imageData, ox, oy, 255, 255, 255, 255); // Blanco del ojo
+        }
+      }
     }
-    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 15) {
-      this.setPixel(imageData, x, y, 0, 100, 255, 255);
+    for (let oy = ojoY - ojoRadio; oy < ojoY + ojoRadio; oy++) {
+      for (let ox = centerX + ojoDistanciaX - ojoRadio; ox < centerX + ojoDistanciaX + ojoRadio; ox++) {
+        if (Math.sqrt((ox - (centerX + ojoDistanciaX)) ** 2 + (oy - ojoY) ** 2) < ojoRadio) {
+          this.setPixel(imageData, ox, oy, 255, 255, 255, 255); // Blanco del ojo
+        }
+      }
     }
-    if (Math.sqrt((x - (centerX - 30)) ** 2 + (y - (centerY - 125)) ** 2) < 5) {
-      this.setPixel(imageData, x, y, 0, 0, 0, 255);
-    }
-  }
-  for (let x = centerX + 10; x < centerX + 50; x++) {
-    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 125)) ** 2) < 20) {
-      this.setPixel(imageData, x, y, 255, 255, 255, 255);
-    }
-    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 125)) ** 2) < 15) {
-      this.setPixel(imageData, x, y, 0, 100, 255, 255);
-    }
-    if (Math.sqrt((x - (centerX + 30)) ** 2 + (y - (centerY - 125)) ** 2) < 5) {
-      this.setPixel(imageData, x, y, 0, 0, 0, 255);
-    }
-  }
-}
 
-// Pupila izquierda
-for (let y = centerY - 130; y < centerY - 120; y++) {
-  for (let x = centerX - 35; x < centerX - 25; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255);
-  }
-}
+    // Pupilas
+    const pupilaRadio = 5;
+    for (let py = ojoY - pupilaRadio; py < ojoY + pupilaRadio; py++) {
+      for (let px = centerX - ojoDistanciaX - pupilaRadio; px < centerX - ojoDistanciaX + pupilaRadio; px++) {
+        if (Math.sqrt((px - (centerX - ojoDistanciaX)) ** 2 + (py - ojoY) ** 2) < pupilaRadio) {
+          this.setPixel(imageData, px, py, 0, 0, 0, 255); // Pupila
+        }
+      }
+    }
+    for (let py = ojoY - pupilaRadio; py < ojoY + pupilaRadio; py++) {
+      for (let px = centerX + ojoDistanciaX - pupilaRadio; px < centerX + ojoDistanciaX + pupilaRadio; px++) {
+        if (Math.sqrt((px - (centerX + ojoDistanciaX)) ** 2 + (py - ojoY) ** 2) < pupilaRadio) {
+          this.setPixel(imageData, px, py, 0, 0, 0, 255); // Pupila
+        }
+      }
+    }
 
-// Pupila derecha
-for (let y = centerY - 130; y < centerY - 120; y++) {
-  for (let x = centerX + 25; x < centerX + 35; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255);
-  }
-}
+    // Boca
+    const bocaY = centerY - 40;
+    const bocaAncho = 40;
+    const bocaAlto = 10;
+    for (let by = bocaY - bocaAlto; by < bocaY + bocaAlto; by++) {
+      for (let bx = centerX - bocaAncho; bx < centerX + bocaAncho; bx++) {
+        if (Math.sqrt((bx - centerX) ** 2 + (by - bocaY) ** 2) < bocaAncho) {
+          this.setPixel(imageData, bx, by, 255, 0, 0, 255); // Boca
+        }
+      }
+    }
 
-// Nariz
-for (let y = centerY - 100; y < centerY - 80; y++) {
-  for (let x = centerX - 10; x < centerX + 10; x++) {
-    this.setPixel(imageData, x, y, 255, 204, 153, 255);
-  }
-}
+    // Cuello
+    for (let y = centerY - 30; y < centerY; y++) {
+      for (let x = centerX - 20; x < centerX + 20; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255); // Cuello
+      }
+    }
 
-// Boca
-for (let y = centerY - 70; y < centerY - 50; y++) {
-  for (let x = centerX - 30; x < centerX + 30; x++) {
-    this.setPixel(imageData, x, y, 255, 0, 0, 255);
-  }
-}
+    // Torso
+    for (let y = centerY; y < centerY + 150; y++) {
+      for (let x = centerX - 50; x < centerX + 50; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255); // Torso
+      }
+    }
 
-// Cuello
-for (let y = centerY - 50; y < centerY - 20; y++) {
-  for (let x = centerX - 20 - (y - (centerY - 35)) / 2; x < centerX + 20 + (y - (centerY - 35)) / 2; x++) {
-    this.setPixel(imageData, x, y, 255, 218, 185, 255);
-  }
-}
+    // Piernas
+    for (let y = centerY + 150; y < centerY + 300; y++) {
+      for (let x = centerX - 20; x < centerX; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255); // Pierna izquierda
+      }
+      for (let x = centerX; x < centerX + 20; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255); // Pierna derecha
+      }
+    }
 
-// Torso
-for (let y = centerY - 20; y < centerY + 130; y++) {
-  for (let x = centerX - cuerpoAncho / 2; x < centerX + cuerpoAncho / 2; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255);
-  }
-}
-
-// Brazos
-for (let y = centerY; y < centerY + 80; y++) {
-  for (let x = centerX - 70; x < centerX - 40; x++) {
-    if (((x - (centerX - 55)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255);
+    // Brazos
+    for (let y = centerY; y < centerY + 100; y++) {
+      for (let x = centerX - 70; x < centerX - 50; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255); // Brazo izquierdo
+      }
+      for (let x = centerX + 50; x < centerX + 70; x++) {
+        this.setPixel(imageData, x, y, 255, 204, 153, 255); // Brazo derecho
+      }
     }
   }
-  for (let x = centerX + 40; x < centerX + 70; x++) {
-    if (((x - (centerX + 55)) ** 2) / (15 ** 2) + ((y - (centerY + 40)) ** 2) / (40 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255);
-    }
-  }
-}
-
-// Manos
-for (let y = centerY + 80; y < centerY + 100; y++) {
-  for (let x = centerX - 90; x < centerX - 70; x++) {
-    if (((x - (centerX - 80)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255);
-    }
-  }
-  for (let x = centerX + 70; x < centerX + 90; x++) {
-    if (((x - (centerX + 80)) ** 2) / (10 ** 2) + ((y - (centerY + 90)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255);
-    }
-  }
-}
-// Piernas
-const piernaAncho = 20;
-const piernaAlto = 80;
-for (let y = centerY + 130; y < centerY + 210; y++) {
-  for (let x = centerX - piernaAncho; x < centerX + piernaAncho; x++) {
-    if (((x - centerX) ** 2) / (piernaAncho ** 2) + ((y - (centerY + 170)) ** 2) / (piernaAlto ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
-    }
-  }
-  for (let x = centerX + 40; x < centerX + 60; x++) {
-    if (((x - (centerX + 50)) ** 2) / (piernaAncho ** 2) + ((y - (centerY + 170)) ** 2) / (piernaAlto ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
-    }
-  }
-}
-
-// Pies
-for (let y = centerY + 210; y < centerY + 230; y++) {
-  for (let x = centerX - 30; x < centerX - 10; x++) {
-    if (((x - (centerX - 20)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
-    }
-  }
-  for (let x = centerX + 10; x < centerX + 30; x++) {
-    if (((x - (centerX + 20)) ** 2) / (15 ** 2) + ((y - (centerY + 210)) ** 2) / (10 ** 2) < 1) {
-      this.setPixel(imageData, x, y, 255, 218, 185, 255); // Color de piel
-    }
-  }
-}
-
-// Detalles de los pies
-for (let y = centerY + 220; y < centerY + 230; y++) {
-  for (let x = centerX - 35; x < centerX - 25; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro
-  }
-  for (let x = centerX + 25; x < centerX + 35; x++) {
-    this.setPixel(imageData, x, y, 0, 0, 0, 255); // Color negro
-  }
-}
-
-
-}
 }
