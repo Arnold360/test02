@@ -18,18 +18,60 @@ export class CrearInka {
     const centerX = 400;
     const centerY = 300;
     const cabezaAlturaRadio = 70;
-    const cabezaAnchoRadio = 50;
+    const cabezaAnchoRadio = 60;
     const cuerpoAncho = 100;
-    const cuerpoAlto = 200;
+    const cuerpoAlto = 160;
+// Cabeza
+const cabezaProfundidadRadio = 40;
 
-    // Cabeza
-    for (let y = (centerY / 2) - cabezaAlturaRadio; y < (centerY / 2) + cabezaAlturaRadio; y++) {
-      for (let x = centerX - cabezaAnchoRadio; x < centerX + cabezaAnchoRadio; x++) {
-        if ((x - centerX ** 2) / (cabezaAnchoRadio ** 2) + ((y - centerY / 2) ** 2) / (cabezaAlturaRadio ** 2) < 1) {
-          this.setPixel(imageData, x, y, 255, 204, 153, 255);
-        }
-      }
+for (let y = (centerY / 2) - cabezaAlturaRadio; y < (centerY / 2) + cabezaAlturaRadio; y++) {
+  for (let x = centerX - cabezaAnchoRadio; x < centerX + cabezaAnchoRadio; x++) {
+    const profundidad = Math.sqrt(cabezaProfundidadRadio ** 2 - ((x - centerX) ** 2) - ((y - centerY / 2) ** 2));
+    if (Math.sqrt((x - centerX) ** 2 + (y - centerY / 2) ** 2) < cabezaAlturaRadio) {
+      this.setPixel(imageData, x, y, 255, 204, 153, 255); // Color de piel
     }
+    // Sombreado
+    if (profundidad < 20) {
+      this.setPixel(imageData, x, y, 200, 180, 130, 255); // Sombreado claro
+    } else if (profundidad < 30) {
+      this.setPixel(imageData, x, y, 150, 130, 90, 255); // Sombreado medio
+    } else {
+      this.setPixel(imageData, x, y, 100, 90, 60, 255); // Sombreado oscuro
+    }
+  }
+}
+
+// Frente
+for (let y = (centerY / 2) - 40; y < (centerY / 2) - 20; y++) {
+  for (let x = centerX - 40; x < centerX + 40; x++) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - centerY / 2) ** 2) < 30) {
+      this.setPixel(imageData, x, y, 220, 200, 170, 255); // Color de frente
+    }
+  }
+}
+
+// Pómulos
+for (let y = (centerY / 2) - 30; y < (centerY / 2) - 10; y++) {
+  for (let x = centerX - 50; x < centerX - 20; x++) {
+    if (Math.sqrt((x - (centerX - 35)) ** 2 + (y - (centerY / 2 - 20)) ** 2) < 15) {
+      this.setPixel(imageData, x, y, 240, 220, 190, 255); // Color de pómulo
+    }
+  }
+  for (let x = centerX + 20; x < centerX + 50; x++) {
+    if (Math.sqrt((x - (centerX + 35)) ** 2 + (y - (centerY / 2 - 20)) ** 2) < 15) {
+      this.setPixel(imageData, x, y, 240, 220, 190, 255); // Color de pómulo
+    }
+  }
+}
+
+// Mentón
+for (let y = (centerY / 2) + 10; y < (centerY / 2) + 30; y++) {
+  for (let x = centerX - 20; x < centerX + 20; x++) {
+    if (Math.sqrt((x - centerX) ** 2 + (y - (centerY / 2 + 20)) ** 2) < 10) {
+      this.setPixel(imageData, x, y, 200, 180, 150, 255); // Color de mentón
+    }
+  }
+}
 
     // Cejas
     for (let x = centerX - 60; x < centerX - 30; x++) {
