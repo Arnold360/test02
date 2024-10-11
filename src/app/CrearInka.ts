@@ -36,31 +36,31 @@ export class CrearInka {
     const centerY = imageData.height / 2;
 
     // Head
-    this.drawEllipse(imageData, centerX, centerY - 120, 50, 70, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX, centerY - 120, 50, 60, [255, 204, 153, 255]);
 
     // Eyes
-    this.drawEllipse(imageData, centerX - 20, centerY - 130, 10, 15, [255, 255, 255, 255]);
-    this.drawEllipse(imageData, centerX + 20, centerY - 130, 10, 15, [255, 255, 255, 255]);
+    this.drawEllipse(imageData, centerX - 18, centerY - 135, 8, 12, [255, 255, 255, 255]);
+    this.drawEllipse(imageData, centerX + 18, centerY - 135, 8, 12, [255, 255, 255, 255]);
 
     // Pupils
-    this.drawEllipse(imageData, centerX - 20, centerY - 130, 5, 5, [0, 0, 0, 255]);
-    this.drawEllipse(imageData, centerX + 20, centerY - 130, 5, 5, [0, 0, 0, 255]);
+    this.drawEllipse(imageData, centerX - 18, centerY - 135, 4, 4, [0, 0, 0, 255]);
+    this.drawEllipse(imageData, centerX + 18, centerY - 135, 4, 4, [0, 0, 0, 255]);
 
     // Mouth
-    this.drawEllipse(imageData, centerX, centerY - 80, 20, 10, [255, 0, 0, 255]);
+    this.drawEllipse(imageData, centerX, centerY - 110, 15, 8, [255, 0, 0, 255]);
 
     // Neck
-    this.drawRectangle(imageData, centerX - 10, centerY - 70, 20, 20, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX - 12, centerY - 60, 24, 24, [255, 204, 153, 255]);
 
     // Torso
-    this.drawRectangle(imageData, centerX - 30, centerY - 50, 60, 120, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 130, [255, 204, 153, 255]);
 
     // Arms
-    this.drawEllipse(imageData, centerX - 50, centerY, 10, 40, [255, 204, 153, 255]);
-    this.drawEllipse(imageData, centerX + 50, centerY, 10, 40, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX - 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
 
     // Legs
-    this.drawEllipse(imageData, centerX - 15, centerY + 100, 10, 50, [255, 204, 153, 255]);
-    this.drawEllipse(imageData, centerX + 15, centerY + 100, 10, 50, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX - 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
   }
 }
