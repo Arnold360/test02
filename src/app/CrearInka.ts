@@ -41,6 +41,9 @@ export class CrearInka {
     // Draw Eyes
     this.drawEyes(imageData, centerX, centerY);
 
+    // Draw Nose
+    this.drawNose(imageData, centerX, centerY);
+
     // Draw Mouth
     this.drawMouth(imageData, centerX, centerY);
 
@@ -75,6 +78,10 @@ export class CrearInka {
     // Right Eye
     this.drawEllipse(imageData, centerX + 18, centerY - 135, 8, 12, [255, 255, 255, 255]);
     this.drawEllipse(imageData, centerX + 18, centerY - 135, 4, 4, [0, 0, 0, 255]);
+  }
+
+  drawNose(imageData: ImageData, centerX: number, centerY: number) {
+    this.drawEllipse(imageData, centerX, centerY - 125, 5, 8, [255, 204, 153, 255]);
   }
 
   drawMouth(imageData: ImageData, centerX: number, centerY: number) {
