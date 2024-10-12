@@ -60,7 +60,8 @@ export class CrearInka {
     this.drawLegs(imageData, centerX, centerY);
 
     // Draw Hands
-    this.drawHands(imageData, centerX, centerY);
+    this.drawHand(imageData, centerX - 55, centerY + 40);
+    this.drawHand(imageData, centerX + 55, centerY + 40);
 
     // Draw Feet
     this.drawFeet(imageData, centerX, centerY);
@@ -128,12 +129,6 @@ export class CrearInka {
 
     // Right Arm
     this.drawEllipse(imageData, centerX + 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
-
-    // Left Hand
-    this.drawHand(imageData, centerX - 55, centerY + 40);
-
-    // Right Hand
-    this.drawHand(imageData, centerX + 55, centerY + 40);
   }
 
   drawHand(imageData: ImageData, centerX: number, centerY: number) {
