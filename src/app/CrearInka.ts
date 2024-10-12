@@ -135,10 +135,10 @@ export class CrearInka {
   }
 
   drawEars(imageData: ImageData, centerX: number, centerY: number) {
-    // Adjusted ear positions to be closer to the head
-    this.drawEllipse(imageData, centerX - 50, centerY - 120, 10, 20, [255, 204, 153, 255]);
-    this.drawEllipse(imageData, centerX + 50, centerY - 120, 10, 20, [255, 204, 153, 255]);
-  }
+  // Ajustar las posiciones de las orejas para que estén más cerca de la cabeza
+  this.drawEllipse(imageData, centerX - 30, centerY - 120, 10, 20, [255, 204, 153, 255]);
+  this.drawEllipse(imageData, centerX + 30, centerY - 120, 10, 20, [255, 204, 153, 255]);
+}
 
   drawNeck(imageData: ImageData, centerX: number, centerY: number) {
     this.drawRectangle(imageData, centerX - 12, centerY - 60, 24, 24, [255, 204, 153, 255]);
