@@ -70,10 +70,17 @@ export class CrearInka {
 
     // Draw Clothes
     this.drawClothes(imageData, centerX, centerY);
+
+    // Draw Accessories
+    this.drawAccessories(imageData, centerX, centerY);
+
+    // Draw Background
+    this.drawBackground(imageData);
   }
 
   drawHead(imageData: ImageData, centerX: number, centerY: number) {
     this.drawEllipse(imageData, centerX, centerY - 120, 50, 60, [255, 204, 153, 255]);
+    this.drawEars(imageData, centerX, centerY - 120);
   }
 
   drawEyes(imageData: ImageData, centerX: number, centerY: number) {
@@ -84,6 +91,14 @@ export class CrearInka {
     // Right Eye
     this.drawEllipse(imageData, centerX + 18, centerY - 135, 8, 12, [255, 255, 255, 255]);
     this.drawEllipse(imageData, centerX + 18, centerY - 135, 4, 4, [0, 0, 0, 255]);
+
+    // Eyebrows
+    this.drawRectangle(imageData, centerX - 26, centerY - 150, 16, 4, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX + 10, centerY - 150, 16, 4, [0, 0, 0, 255]);
+
+    // Eyelashes
+    this.drawRectangle(imageData, centerX - 22, centerY - 142, 2, 6, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX + 20, centerY - 142, 2, 6, [0, 0, 0, 255]);
   }
 
   drawNose(imageData: ImageData, centerX: number, centerY: number) {
@@ -92,6 +107,11 @@ export class CrearInka {
 
   drawMouth(imageData: ImageData, centerX: number, centerY: number) {
     this.drawEllipse(imageData, centerX, centerY - 110, 15, 8, [255, 0, 0, 255]);
+  }
+
+  drawEars(imageData: ImageData, centerX: number, centerY: number) {
+    this.drawEllipse(imageData, centerX - 60, centerY, 10, 20, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + 60, centerY, 10, 20, [255, 204, 153, 255]);
   }
 
   drawNeck(imageData: ImageData, centerX: number, centerY: number) {
@@ -108,6 +128,22 @@ export class CrearInka {
 
     // Right Arm
     this.drawEllipse(imageData, centerX + 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
+
+    // Left Hand
+    this.drawHand(imageData, centerX - 55, centerY + 40);
+
+    // Right Hand
+    this.drawHand(imageData, centerX + 55, centerY + 40);
+  }
+
+  drawHand(imageData: ImageData, centerX: number, centerY: number) {
+    this.drawEllipse(imageData, centerX, centerY, 10, 15, [255, 204, 153, 255]);
+    // Fingers
+    this.drawRectangle(imageData, centerX - 8, centerY - 15, 2, 15, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX - 4, centerY - 15, 2, 15, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX, centerY - 15, 2, 15, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX + 4, centerY - 15, 2, 15, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX + 8, centerY - 15, 2, 15, [255, 204, 153, 255]);
   }
 
   drawLegs(imageData: ImageData, centerX: number, centerY: number) {
@@ -116,22 +152,22 @@ export class CrearInka {
 
     // Right Leg
     this.drawEllipse(imageData, centerX + 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
-  }
 
-  drawHands(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Hand
-    this.drawEllipse(imageData, centerX - 55, centerY + 40, 10, 15, [255, 204, 153, 255]);
-
-    // Right Hand
-    this.drawEllipse(imageData, centerX + 55, centerY + 40, 10, 15, [255, 204, 153, 255]);
-  }
-
-  drawFeet(imageData: ImageData, centerX: number, centerY: number) {
     // Left Foot
-    this.drawEllipse(imageData, centerX - 20, centerY + 190, 12, 15, [255, 204, 153, 255]);
+    this.drawFoot(imageData, centerX - 20, centerY + 190);
 
     // Right Foot
-    this.drawEllipse(imageData, centerX + 20, centerY + 190, 12, 15, [255, 204, 153, 255]);
+    this.drawFoot(imageData, centerX + 20, centerY + 190);
+  }
+
+  drawFoot(imageData: ImageData, centerX: number, centerY: number) {
+    this.drawEllipse(imageData, centerX, centerY, 12, 15, [255, 204, 153, 255]);
+    // Toes
+    this.drawRectangle(imageData, centerX - 10, centerY + 15, 2, 8, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX - 5, centerY + 15, 2, 8, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX, centerY + 15, 2, 8, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX + 5, centerY + 15, 2, 8, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX + 10, centerY + 15, 2, 8, [255, 204, 153, 255]);
   }
 
   drawHair(imageData: ImageData, centerX: number, centerY: number) {
@@ -144,5 +180,45 @@ export class CrearInka {
     // Add clothes details
     this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 80, [0, 0, 255, 255]); // Shirt
     this.drawRectangle(imageData, centerX - 35, centerY + 44, 70, 50, [0, 255, 0, 255]); // Pants
+  }
+
+  drawAccessories(imageData: ImageData, centerX: number, centerY: number) {
+    // Hat
+    this.drawEllipse(imageData, centerX, centerY - 180, 60, 20, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX - 60, centerY - 170, 120, 20, [0, 0, 0, 255]);
+
+    // Glasses
+    this.drawRectangle(imageData, centerX - 30, centerY - 135, 20, 10, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX + 10, centerY - 135, 20, 10, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX - 10, centerY - 135, 20, 2, [0, 0, 0, 255]);
+
+    // Necklace
+    this.drawEllipse(imageData, centerX, centerY - 70, 30, 5, [255, 215, 0, 255]);
+  }
+
+  drawBackground(imageData: ImageData) {
+    // Sky
+    this.drawRectangle(imageData, 0, 0, imageData.width, imageData.height / 2, [135, 206, 235, 255]);
+
+    // Ground
+    this.drawRectangle(imageData, 0, imageData.height / 2, imageData.width, imageData.height / 2, [34, 139, 34, 255]);
+
+    // Sun
+    this.drawEllipse(imageData, imageData.width - 60, 60, 30, 30, [255, 255, 0, 255]);
+
+    // Trees
+    this.drawTree(imageData, 100, imageData.height / 2);
+    this.drawTree(imageData, 300, imageData.height / 2);
+    this.drawTree(imageData, 500, imageData.height / 2);
+  }
+
+  drawTree(imageData: ImageData, baseX: number, baseY: number) {
+    // Trunk
+    this.drawRectangle(imageData, baseX - 10, baseY, 20, 60, [139, 69, 19, 255]);
+
+    // Leaves
+    this.drawEllipse(imageData, baseX, baseY - 30, 30, 40, [34, 139, 34, 255]);
+    this.drawEllipse(imageData, baseX - 20, baseY - 20, 30, 40, [34, 139, 34, 255]);
+    this.drawEllipse(imageData, baseX + 20, baseY - 20, 30, 40, [34, 139, 34, 255]);
   }
 }
