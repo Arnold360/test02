@@ -23,6 +23,25 @@ export class CrearInka {
     }
   }
 
+  drawGradientEllipse(imageData: ImageData, centerX: number, centerY: number, radiusX: number, radiusY: number, startColor: [number, number, number, number], endColor: [number, number, number, number]) {
+    for (let y = -radiusY; y <= radiusY; y++) {
+      for (let x = -radiusX; x <= radiusX; x++) {
+        if ((x * x) / (radiusX * radiusX) + (y * y) / (radiusY * radiusY) <= 1) {
+          const t = Math.sqrt((x * x) / (radiusX * radiusX) + (y * y) / (radiusY * radiusY));
+          const r = startColor[0] * (1 - t) + endColor[0] * t;
+          const g = startColor[1] * (1 - t) + endColor[1] * t;
+          const b = startColor[2] * (1 - t) + endColor[2] * t;
+          const a = startColor[3] * (1 - t) + endColor[3] * t;
+          this.setPixel(imageData, centerX + x, centerY + y, r, g, b, a);
+        }
+      }
+    }
+  }
+
+  drawShading(imageData: ImageData, centerX: number, centerY: number, radiusX: number, radiusY: number) {
+    this.drawEllipse(imageData, centerX, centerY + radiusY / 2, radiusX, radiusY / 4, [0, 0, 0, 50]); // semi-transparent black
+  }
+
   drawRectangle(imageData: ImageData, xStart: number, yStart: number, width: number, height: number, color: [number, number, number, number]) {
     for (let y = yStart; y < yStart + height; y++) {
       for (let x = xStart; x < xStart + width; x++) {
@@ -94,13 +113,15 @@ export class CrearInka {
   drawEyes(imageData: ImageData, centerX: number, centerY: number) {
     // Left Eye
     this.drawEllipse(imageData, centerX - 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
-    this.drawEllipse(imageData, centerX - 25, centerY - 130, 4, 4, [0, 0, 0, 255]); // Pupil
+    this.drawGradientEllipse(imageData, centerX - 25, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
     this.drawEllipse(imageData, centerX - 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
+    this.drawShading(imageData, centerX - 25, centerY - 130, 8, 12); // Add shading for depth
 
     // Right Eye
     this.drawEllipse(imageData, centerX + 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
-    this.drawEllipse(imageData, centerX + 25, centerY - 130, 4, 4, [0, 0, 0, 255]); // Pupil
+    this.drawGradientEllipse(imageData, centerX + 25, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
     this.drawEllipse(imageData, centerX + 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
+    this.drawShading(imageData, centerX + 25, centerY - 130, 8, 12); // Add shading for depth
   }
 
   drawNose(imageData: ImageData, centerX: number, centerY: number) {
