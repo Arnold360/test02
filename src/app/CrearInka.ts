@@ -93,27 +93,27 @@ export class CrearInka {
 
   drawEyes(imageData: ImageData, centerX: number, centerY: number) {
     // Left Eye
-    this.drawEllipse(imageData, centerX - 20, centerY - 135, 10, 15, [255, 255, 255, 255]); // Larger white part
-    this.drawEllipse(imageData, centerX - 20, centerY - 135, 5, 8, [0, 0, 0, 255]); // Larger pupil
-    this.drawEllipse(imageData, centerX - 20, centerY - 135, 2, 3, [255, 255, 255, 255]); // Highlight
+    this.drawEllipse(imageData, centerX - 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
+    this.drawEllipse(imageData, centerX - 25, centerY - 130, 4, 4, [0, 0, 0, 255]); // Pupil
+    this.drawEllipse(imageData, centerX - 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
 
     // Right Eye
-    this.drawEllipse(imageData, centerX + 20, centerY - 135, 10, 15, [255, 255, 255, 255]); // Larger white part
-    this.drawEllipse(imageData, centerX + 20, centerY - 135, 5, 8, [0, 0, 0, 255]); // Larger pupil
-    this.drawEllipse(imageData, centerX + 20, centerY - 135, 2, 3, [255, 255, 255, 255]); // Highlight
+    this.drawEllipse(imageData, centerX + 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
+    this.drawEllipse(imageData, centerX + 25, centerY - 130, 4, 4, [0, 0, 0, 255]); // Pupil
+    this.drawEllipse(imageData, centerX + 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
   }
 
   drawNose(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY - 125, 5, 8, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX, centerY - 115, 5, 8, [255, 204, 153, 255]);
   }
 
   drawMouth(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY - 110, 15, 8, [255, 0, 0, 255]);
+    this.drawEllipse(imageData, centerX, centerY - 100, 15, 8, [255, 0, 0, 255]);
   }
 
   drawEars(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX - 60, centerY, 10, 20, [255, 204, 153, 255]);
-    this.drawEllipse(imageData, centerX + 60, centerY, 10, 20, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX - 60, centerY - 120, 10, 20, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + 60, centerY - 120, 10, 20, [255, 204, 153, 255]);
   }
 
   drawNeck(imageData: ImageData, centerX: number, centerY: number) {
@@ -203,9 +203,9 @@ export class CrearInka {
     this.drawRectangle(imageData, centerX - 60, centerY - 170, 120, 20, [0, 0, 0, 255]);
 
     // Glasses
-    this.drawRectangle(imageData, centerX - 30, centerY - 135, 20, 10, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX + 10, centerY - 135, 20, 10, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX - 10, centerY - 135, 20, 2, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX - 30, centerY - 130, 20, 10, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX + 10, centerY - 130, 20, 10, [0, 0, 0, 255]);
+    this.drawRectangle(imageData, centerX - 10, centerY - 130, 20, 2, [0, 0, 0, 255]);
 
     // Necklace
     this.drawEllipse(imageData, centerX, centerY - 70, 30, 5, [255, 215, 0, 255]);
