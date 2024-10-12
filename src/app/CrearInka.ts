@@ -57,20 +57,16 @@ export class CrearInka {
     this.drawTorso(imageData, centerX, centerY);
 
     // Draw Arms
-    this.drawArms(imageData, centerX, centerY);
-
-    // Draw Elbows
-    this.drawElbows(imageData, centerX, centerY);
+    this.drawFlexedLimb(imageData, centerX, centerY, true, "arm"); // Left Arm
+    this.drawFlexedLimb(imageData, centerX, centerY, false, "arm"); // Right Arm
 
     // Draw Legs
-    this.drawLegs(imageData, centerX, centerY);
-
-    // Draw Knees
-    this.drawKnees(imageData, centerX, centerY);
+    this.drawFlexedLimb(imageData, centerX, centerY, true, "leg"); // Left Leg
+    this.drawFlexedLimb(imageData, centerX, centerY, false, "leg"); // Right Leg
 
     // Draw Hands
-    this.drawHand(imageData, centerX - 55, centerY + 40);
-    this.drawHand(imageData, centerX + 55, centerY + 40);
+    this.drawHand(imageData, centerX - 70, centerY + 50); // Adjusted for left forearm
+    this.drawHand(imageData, centerX + 70, centerY + 50); // Adjusted for right forearm
 
     // Draw Feet
     this.drawFeet(imageData, centerX, centerY);
@@ -128,28 +124,37 @@ export class CrearInka {
     this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 130, [255, 204, 153, 255]);
   }
 
-  drawArms(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Arm
-    this.drawEllipse(imageData, centerX - 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
-
-    // Right Arm
-    this.drawEllipse(imageData, centerX + 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
+  drawUpperArm(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
+    const offset = isLeft ? -55 : 55;
+    this.drawEllipse(imageData, centerX + offset, centerY - 10, 12, 25, [255, 204, 153, 255]);
   }
 
-  drawElbows(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Elbow
-    this.drawEllipse(imageData, centerX - 55, centerY + 20, 10, 15, [255, 204, 153, 255]);
-
-    // Right Elbow
-    this.drawEllipse(imageData, centerX + 55, centerY + 20, 10, 15, [255, 204, 153, 255]);
+  drawForearm(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
+    const offset = isLeft ? -70 : 70;
+    this.drawEllipse(imageData, centerX + offset, centerY + 20, 12, 25, [255, 204, 153, 255]);
   }
 
-  drawKnees(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Knee
-    this.drawEllipse(imageData, centerX - 20, centerY + 90, 10, 15, [255, 204, 153, 255]);
-    
-    // Right Knee
-    this.drawEllipse(imageData, centerX + 20, centerY + 90, 10, 15, [255, 204, 153, 255]);
+  drawThigh(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
+    const offset = isLeft ? -20 : 20;
+    this.drawEllipse(imageData, centerX + offset, centerY + 90, 12, 35, [255, 204, 153, 255]);
+  }
+
+  drawLowerLeg(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
+    const offset = isLeft ? -20 : 20;
+    this.drawEllipse(imageData, centerX + offset, centerY + 150, 12, 35, [255, 204, 153, 255]);
+  }
+
+  drawFlexedLimb(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean, part: string) {
+    const offset = isLeft ? -20 : 20;
+    const flexOffset = 10; // Adjust this value for desired flexion
+
+    if (part === "arm") {
+      this.drawUpperArm(imageData, centerX, centerY, isLeft);
+      this.drawForearm(imageData, centerX, centerY + flexOffset, isLeft);
+    } else if (part === "leg") {
+      this.drawThigh(imageData, centerX, centerY, isLeft);
+      this.drawLowerLeg(imageData, centerX, centerY + flexOffset, isLeft);
+    }
   }
 
   drawHand(imageData: ImageData, centerX: number, centerY: number) {
@@ -160,14 +165,6 @@ export class CrearInka {
     this.drawRectangle(imageData, centerX, centerY - 15, 2, 15, [255, 204, 153, 255]);
     this.drawRectangle(imageData, centerX + 4, centerY - 15, 2, 15, [255, 204, 153, 255]);
     this.drawRectangle(imageData, centerX + 8, centerY - 15, 2, 15, [255, 204, 153, 255]);
-  }
-
-  drawLegs(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Leg
-    this.drawEllipse(imageData, centerX - 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
-
-    // Right Leg
-    this.drawEllipse(imageData, centerX + 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
   }
 
   drawFoot(imageData: ImageData, centerX: number, centerY: number) {
