@@ -35,6 +35,9 @@
     const centerX = imageData.width / 2;
     const centerY = imageData.height / 2;
 
+     // Draw Background
+    this.drawBackground(imageData);
+
     // Draw Head
     this.drawHead(imageData, centerX, centerY);
 
@@ -72,8 +75,7 @@
     // Draw Accessories
     this.drawAccessories(imageData, centerX, centerY);
 
-    // Draw Background
-    this.drawBackground(imageData);
+   
   }
 
   drawHead(imageData: ImageData, centerX: number, centerY: number) {
