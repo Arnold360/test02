@@ -1,4 +1,4 @@
-export class CrearInka {
+ export class CrearInka {
   canvasInka!: HTMLCanvasElement;
   ctxInka!: CanvasRenderingContext2D;
   imgData!: ImageData;
@@ -62,9 +62,6 @@ export class CrearInka {
     // Draw Hands
     this.drawHand(imageData, centerX - 55, centerY + 40);
     this.drawHand(imageData, centerX + 55, centerY + 40);
-
-    // Draw Feet
-    this.drawFeet(imageData, centerX, centerY);
 
     // Draw Hair
     this.drawHair(imageData, centerX, centerY);
