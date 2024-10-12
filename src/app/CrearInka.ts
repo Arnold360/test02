@@ -59,8 +59,14 @@ export class CrearInka {
     // Draw Arms
     this.drawArms(imageData, centerX, centerY);
 
+    // Draw Elbows
+    this.drawElbows(imageData, centerX, centerY);
+
     // Draw Legs
     this.drawLegs(imageData, centerX, centerY);
+
+    // Draw Knees
+    this.drawKnees(imageData, centerX, centerY);
 
     // Draw Hands
     this.drawHand(imageData, centerX - 55, centerY + 40);
@@ -128,6 +134,22 @@ export class CrearInka {
 
     // Right Arm
     this.drawEllipse(imageData, centerX + 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
+  }
+
+  drawElbows(imageData: ImageData, centerX: number, centerY: number) {
+    // Left Elbow
+    this.drawEllipse(imageData, centerX - 55, centerY + 20, 10, 15, [255, 204, 153, 255]);
+
+    // Right Elbow
+    this.drawEllipse(imageData, centerX + 55, centerY + 20, 10, 15, [255, 204, 153, 255]);
+  }
+
+  drawKnees(imageData: ImageData, centerX: number, centerY: number) {
+    // Left Knee
+    this.drawEllipse(imageData, centerX - 20, centerY + 90, 10, 15, [255, 204, 153, 255]);
+    
+    // Right Knee
+    this.drawEllipse(imageData, centerX + 20, centerY + 90, 10, 15, [255, 204, 153, 255]);
   }
 
   drawHand(imageData: ImageData, centerX: number, centerY: number) {
