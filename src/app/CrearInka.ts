@@ -107,7 +107,7 @@ export class CrearInka {
   drawHead(imageData: ImageData, centerX: number, centerY: number) {
     this.drawShadow(imageData, centerX, centerY - 120, 60, 20); // Head shadow
     this.drawEllipse(imageData, centerX, centerY - 120, 50, 60, [255, 204, 153, 255]);
-    this.drawEars(imageData, centerX, centerY - 90);
+    this.drawEars(imageData, centerX, centerY );
   }
 
   drawEyes(imageData: ImageData, centerX: number, centerY: number) {
@@ -136,8 +136,8 @@ export class CrearInka {
 
   drawEars(imageData: ImageData, centerX: number, centerY: number) {
   // Ajustar las posiciones de las orejas para que estén más cerca de la cabeza
-  this.drawEllipse(imageData, centerX - 40, centerY - 100, 10, 20, [255, 204, 153, 255]); // Ajustar el valor de centerY
-  this.drawEllipse(imageData, centerX + 40, centerY - 100, 10, 20, [255, 204, 153, 255]); // Ajustar el valor de centerY
+  this.drawEllipse(imageData, centerX - 50, centerY - 100, 10, 20, [255, 204, 153, 255]); // Ajustar el valor de centerY
+  this.drawEllipse(imageData, centerX + 50, centerY - 100, 10, 20, [255, 204, 153, 255]); // Ajustar el valor de centerY
 }
 
   drawNeck(imageData: ImageData, centerX: number, centerY: number) {
