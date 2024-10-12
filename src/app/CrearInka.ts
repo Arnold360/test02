@@ -107,7 +107,7 @@ export class CrearInka {
   drawHead(imageData: ImageData, centerX: number, centerY: number) {
     this.drawShadow(imageData, centerX, centerY - 120, 60, 20); // Head shadow
     this.drawEllipse(imageData, centerX, centerY - 120, 50, 60, [255, 204, 153, 255]);
-    this.drawEars(imageData, centerX, centerY );
+    this.drawEars(imageData, centerX, centerY - 10);
   }
 
   drawEyes(imageData: ImageData, centerX: number, centerY: number) {
