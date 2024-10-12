@@ -1,224 +1,240 @@
-export class CrearInka {
-  canvasInka!: HTMLCanvasElement;
-  ctxInka!: CanvasRenderingContext2D;
-  imgData!: ImageData;
 
-  constructor() {}
+import { Component, ElementRef, HostListener } from '@angular/core';
+import { CrearInka } from './CrearInka';
 
-  setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
-    const index = (x + y * imageData.width) * 4;
-    imageData.data[index + 0] = r;
-    imageData.data[index + 1] = g;
-    imageData.data[index + 2] = b;
-    imageData.data[index + 3] = a;
+@Component({
+  selector: 'juego',
+  templateUrl: './juego.html',
+  styleUrls: ['./juego.css'],
+})
+export class Juego {
+ 
+  public leftPaddleY = 50;
+  public rightPaddleY = 50;
+  ballSpeedX = 2;
+  ballSpeedY = 2;
+  leftScore = 0;
+  rightScore = 0;
+  canvas!:HTMLCanvasElement;
+  ctx!:CanvasRenderingContext2D;
+  x: number;
+  y: number;
+  radius = 15;
+  dx = 200;
+  dy = 200;
+  canvasInka!:HTMLCanvasElement;
+  ctxInka!:CanvasRenderingContext2D;
+  imgData!:ImageData;
+  CrearInka:any = new CrearInka();
+  
+ @HostListener('window:touchstart', ['$event'])
+  onTouch(event: TouchEvent) {
+    const touch = event.touches[0];
+    const courtRect = (event.target as HTMLElement).getBoundingClientRect();
+    const touchX = touch.clientX - courtRect.left;
+    const touchY = touch.clientY - courtRect.top;
+
+    if (touchX < courtRect.width / 2) {
+      this.movePaddle('left', touchY);
+    } else {
+      this.movePaddle('right', touchY);
+    }
   }
 
-  drawEllipse(imageData: ImageData, centerX: number, centerY: number, radiusX: number, radiusY: number, color: [number, number, number, number]) {
-    for (let y = -radiusY; y <= radiusY; y++) {
-      for (let x = -radiusX; x <= radiusX; x++) {
-        if ((x * x) / (radiusX * radiusX) + (y * y) / (radiusY * radiusY) <= 1) {
-          this.setPixel(imageData, centerX + x, centerY + y, ...color);
+   movePaddle(side: 'left' | 'right', y: number) {
+    if (side === 'left') {
+      this.leftPaddleY = y - 25; // Center the paddle on the touch point
+    } else {
+      this.rightPaddleY = y - 25;
+    }
+  }
+
+   ngOnInit() {
+   
+   }
+ 
+  animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
+    const now = performance.now();
+    const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    this.drawCourt();
+    this.drawSilverBall(ctx, this.x, this.y, this.radius);
+  // Dibujar las paletas realistas
+    this.drawRealisticPaddle(ctx, 10, this.leftPaddleY, 10, 50); // Paleta izquierda
+    this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 50); // Paleta derecha
+    this.update(canvas, deltaTime);
+    requestAnimationFrame(() => this.animate(ctx, canvas, now));
+ }
+  
+ update(canvas: HTMLCanvasElement, deltaTime: number) {
+    
+    this.x += this.dx * deltaTime;
+    this.y += this.dy * deltaTime;
+   /* ajustar posicion de la pelota para que no pase demasiado el limite y
+     evitar bugs*/
+    if (this.x + this.radius > canvas.width) {
+      this.x = canvas.width - (this.radius - 1);
+    }
+    if (this.x - this.radius < 0) {
+      this.x = this.radius - 1;
+    }
+    if (this.y + this.radius > canvas.height) {
+      this.y = canvas.height - (this.radius - 1);
+    }
+    if (this.y - this.radius < 0) {
+      this.y = this.radius - 1;
+    }
+    // Check for collision with the walls
+    if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+      this.dx = -this.dx;
+    }
+    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+      this.dy = -this.dy;
+    }
+  }
+  
+drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
+    const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
+    gradient.addColorStop(0, 'white');
+    gradient.addColorStop(0.3, 'silver');
+    gradient.addColorStop(1, 'gray');
+
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Add some highlights for a metallic effect
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.beginPath();
+    ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
+    ctx.stroke();
+  } 
+
+ drawRealisticPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
+  // Dibujar el cuerpo de la paleta con un gradiente
+  const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
+  gradient.addColorStop(0, '#8B4513'); // Marrón oscuro
+  gradient.addColorStop(1, '#D2691E'); // Marrón claro
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(x, y, width, height);
+
+  // Dibujar el borde de la paleta
+  ctx.strokeStyle = '#654321'; // Marrón más oscuro
+  ctx.lineWidth = 5;
+  ctx.strokeRect(x, y, width, height);
+
+  // Dibujar sombras para dar un efecto 3D
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  ctx.shadowBlur = 10;
+  ctx.shadowOffsetX = 5;
+  ctx.shadowOffsetY = 5;
+
+  // Dibujar el mango de la paleta
+  ctx.fillStyle = '#A0522D'; // Marrón intermedio
+  ctx.fillRect(x + width / 4, y + height, width / 2, height / 3);
+
+  // Dibujar el borde del mango
+  ctx.strokeStyle = '#654321';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(x + width / 4, y + height, width / 2, height / 3);
+
+  // Restablecer las sombras para no afectar otros dibujos
+  ctx.shadowColor = 'transparent';
+  ctx.shadowBlur = 0;
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 0;
+}
+
+
+
+   ngAfterViewInit() {
+    this.canvasInka = document.getElementById('inka') as HTMLCanvasElement;
+    this.ctxInka = this.canvasInka.getContext('2d');
+    this.imgData = this.ctxInka.createImageData(800, 600);
+    this.CrearInka.drawInka(this.imgData);
+    this.ctxInka.putImageData(this.imgData, 0, 0);
+    this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
+    this.ctx = this.canvas.getContext('2d')!;
+    this.x = this.canvas.width / 2;
+    this.y = this.canvas.height / 2;
+    
+    this.drawCourt();
+    this.drawSilverBall(this.ctx, this.canvas.width / 2, this.canvas.height / 2, 10);
+    this.animate(this.ctx, this.canvas);
+
+  }
+
+ drawCourt() {
+    if (this.ctx) {
+      const width = this.canvas.width;
+      const height = this.canvas.height;
+      // Draw bricks
+      const wallWidth = 250;
+      const wallHeight = 175;
+      for (let y = 0; y < height; y += wallHeight) {
+        for (let x = 0; x < width; x += wallWidth) {
+          this.drawBrickWithGradient(this.ctx, x, y, wallWidth, wallHeight, 10, 14);
+         }
+       }
+     }
+   }
+drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number, rows: number, cols: number) {
+  const brickWidth = width / cols;
+  const brickHeight = height / rows;
+  const mortar = 1; // Ancho del mortero
+  const radius = 5; // Radio de las esquinas redondeadas
+
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const offsetX = (row % 2 === 0) ? 0 : brickWidth / 2;
+      const brickX = x + col * brickWidth + offsetX;
+      const brickY = y + row * brickHeight;
+
+      // Gradiente de fondo y sombra
+      const gradient = ctx.createLinearGradient(brickX, brickY, brickX + brickWidth, brickY + brickHeight);
+      gradient.addColorStop(0, 'rgb(245, 196, 0)'); // Oro claro
+      gradient.addColorStop(0.7, 'rgb(184, 134, 11)'); // Oro oscuro
+      gradient.addColorStop(1, 'rgb(139, 69, 19)'); // Sombra oscura
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.moveTo(brickX + radius + mortar, brickY + mortar);
+      ctx.lineTo(brickX + brickWidth - radius - mortar, brickY + mortar);
+      ctx.quadraticCurveTo(brickX + brickWidth - mortar, brickY + mortar, brickX + brickWidth - mortar, brickY + radius + mortar);
+      ctx.lineTo(brickX + brickWidth - mortar, brickY + brickHeight - radius - mortar);
+      ctx.quadraticCurveTo(brickX + brickWidth - mortar, brickY + brickHeight - mortar, brickX + brickWidth - radius - mortar, brickY + brickHeight - mortar);
+      ctx.lineTo(brickX + radius + mortar, brickY + brickHeight - mortar);
+      ctx.quadraticCurveTo(brickX + mortar, brickY + brickHeight - mortar, brickX + mortar, brickY + brickHeight - radius - mortar);
+      ctx.lineTo(brickX + mortar, brickY + radius + mortar);
+      ctx.quadraticCurveTo(brickX + mortar, brickY + mortar, brickX + radius + mortar, brickY + mortar);
+      ctx.closePath();
+      ctx.fill();
+      /*ctx.fillRect(brickX + mortar, brickY + mortar, brickWidth - mortar * 2, brickHeight - mortar * 2);*/
+
+      // Textura con ruido simplificada
+      ctx.globalAlpha = 0.1;
+      for (let i = 0; i < brickWidth; i += 15) {
+        for (let j = 0; j < brickHeight; j += 15) {
+          ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
+          ctx.fillRect(brickX + i + mortar, brickY + j + mortar, 2, 2);
         }
       }
+      ctx.globalAlpha = 1.0;
+
+      // Reflejo especular simplificado
+      ctx.beginPath();
+      ctx.moveTo(brickX + brickWidth * 0.2, brickY + brickHeight * 0.1);
+      ctx.lineTo(brickX + brickWidth * 0.4, brickY + brickHeight * 0.1);
+      ctx.lineTo(brickX + brickWidth * 0.3, brickY + brickHeight * 0.3);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+      ctx.fill();
     }
-  }
-
-  drawRectangle(imageData: ImageData, xStart: number, yStart: number, width: number, height: number, color: [number, number, number, number]) {
-    for (let y = yStart; y < yStart + height; y++) {
-      for (let x = xStart; x < xStart + width; x++) {
-        this.setPixel(imageData, x, y, ...color);
-      }
-    }
-  }
-
-  drawInka(imageData: ImageData) {
-    const centerX = imageData.width / 2;
-    const centerY = imageData.height / 2;
-
-    // Draw Head
-    this.drawHead(imageData, centerX, centerY);
-
-    // Draw Eyes
-    this.drawEyes(imageData, centerX, centerY);
-
-    // Draw Nose
-    this.drawNose(imageData, centerX, centerY);
-
-    // Draw Mouth
-    this.drawMouth(imageData, centerX, centerY);
-
-    // Draw Neck
-    this.drawNeck(imageData, centerX, centerY);
-
-    // Draw Torso
-    this.drawTorso(imageData, centerX, centerY);
-
-    // Draw Arms
-    this.drawArms(imageData, centerX, centerY);
-
-    // Draw Legs
-    this.drawLegs(imageData, centerX, centerY);
-
-    // Draw Hands
-    this.drawHands(imageData, centerX, centerY);
-
-    // Draw Feet
-    this.drawFeet(imageData, centerX, centerY);
-
-    // Draw Hair
-    this.drawHair(imageData, centerX, centerY);
-
-    // Draw Clothes
-    this.drawClothes(imageData, centerX, centerY);
-
-    // Draw Accessories
-    this.drawAccessories(imageData, centerX, centerY);
-
-    // Draw Background
-    this.drawBackground(imageData);
-  }
-
-  drawHead(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY - 120, 50, 60, [255, 204, 153, 255]);
-    this.drawEars(imageData, centerX, centerY - 120);
-  }
-
-  drawEyes(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Eye
-    this.drawEllipse(imageData, centerX - 18, centerY - 135, 8, 12, [255, 255, 255, 255]);
-    this.drawEllipse(imageData, centerX - 18, centerY - 135, 4, 4, [0, 0, 0, 255]);
-
-    // Right Eye
-    this.drawEllipse(imageData, centerX + 18, centerY - 135, 8, 12, [255, 255, 255, 255]);
-    this.drawEllipse(imageData, centerX + 18, centerY - 135, 4, 4, [0, 0, 0, 255]);
-
-    // Eyebrows
-    this.drawRectangle(imageData, centerX - 26, centerY - 150, 16, 4, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX + 10, centerY - 150, 16, 4, [0, 0, 0, 255]);
-
-    // Eyelashes
-    this.drawRectangle(imageData, centerX - 22, centerY - 142, 2, 6, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX + 20, centerY - 142, 2, 6, [0, 0, 0, 255]);
-  }
-
-  drawNose(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY - 125, 5, 8, [255, 204, 153, 255]);
-  }
-
-  drawMouth(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY - 110, 15, 8, [255, 0, 0, 255]);
-  }
-
-  drawEars(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX - 60, centerY, 10, 20, [255, 204, 153, 255]);
-    this.drawEllipse(imageData, centerX + 60, centerY, 10, 20, [255, 204, 153, 255]);
-  }
-
-  drawNeck(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawRectangle(imageData, centerX - 12, centerY - 60, 24, 24, [255, 204, 153, 255]);
-  }
-
-  drawTorso(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 130, [255, 204, 153, 255]);
-  }
-
-  drawArms(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Arm
-    this.drawEllipse(imageData, centerX - 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
-
-    // Right Arm
-    this.drawEllipse(imageData, centerX + 55, centerY - 10, 12, 50, [255, 204, 153, 255]);
-
-    // Left Hand
-    this.drawHand(imageData, centerX - 55, centerY + 40);
-
-    // Right Hand
-    this.drawHand(imageData, centerX + 55, centerY + 40);
-  }
-
-  drawHand(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY, 10, 15, [255, 204, 153, 255]);
-    // Fingers
-    this.drawRectangle(imageData, centerX - 8, centerY - 15, 2, 15, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX - 4, centerY - 15, 2, 15, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX, centerY - 15, 2, 15, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX + 4, centerY - 15, 2, 15, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX + 8, centerY - 15, 2, 15, [255, 204, 153, 255]);
-  }
-
-  drawLegs(imageData: ImageData, centerX: number, centerY: number) {
-    // Left Leg
-    this.drawEllipse(imageData, centerX - 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
-
-    // Right Leg
-    this.drawEllipse(imageData, centerX + 20, centerY + 120, 12, 70, [255, 204, 153, 255]);
-
-    // Left Foot
-    this.drawFoot(imageData, centerX - 20, centerY + 190);
-
-    // Right Foot
-    this.drawFoot(imageData, centerX + 20, centerY + 190);
-  }
-
-  drawFoot(imageData: ImageData, centerX: number, centerY: number) {
-    this.drawEllipse(imageData, centerX, centerY, 12, 15, [255, 204, 153, 255]);
-    // Toes
-    this.drawRectangle(imageData, centerX - 10, centerY + 15, 2, 8, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX - 5, centerY + 15, 2, 8, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX, centerY + 15, 2, 8, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX + 5, centerY + 15, 2, 8, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX + 10, centerY + 15, 2, 8, [255, 204, 153, 255]);
-  }
-
-  drawHair(imageData: ImageData, centerX: number, centerY: number) {
-    // Add hair details
-    this.drawEllipse(imageData, centerX, centerY - 170, 50, 20, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX - 50, centerY - 150, 100, 20, [0, 0, 0, 255]);
-  }
-
-  drawClothes(imageData: ImageData, centerX: number, centerY: number) {
-    // Add clothes details
-    this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 80, [0, 0, 255, 255]); // Shirt
-    this.drawRectangle(imageData, centerX - 35, centerY + 44, 70, 50, [0, 255, 0, 255]); // Pants
-  }
-
-  drawAccessories(imageData: ImageData, centerX: number, centerY: number) {
-    // Hat
-    this.drawEllipse(imageData, centerX, centerY - 180, 60, 20, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX - 60, centerY - 170, 120, 20, [0, 0, 0, 255]);
-
-    // Glasses
-    this.drawRectangle(imageData, centerX - 30, centerY - 135, 20, 10, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX + 10, centerY - 135, 20, 10, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX - 10, centerY - 135, 20, 2, [0, 0, 0, 255]);
-
-    // Necklace
-    this.drawEllipse(imageData, centerX, centerY - 70, 30, 5, [255, 215, 0, 255]);
-  }
-
-  drawBackground(imageData: ImageData) {
-    // Sky
-    this.drawRectangle(imageData, 0, 0, imageData.width, imageData.height / 2, [135, 206, 235, 255]);
-
-    // Ground
-    this.drawRectangle(imageData, 0, imageData.height / 2, imageData.width, imageData.height / 2, [34, 139, 34, 255]);
-
-    // Sun
-    this.drawEllipse(imageData, imageData.width - 60, 60, 30, 30, [255, 255, 0, 255]);
-
-    // Trees
-    this.drawTree(imageData, 100, imageData.height / 2);
-    this.drawTree(imageData, 300, imageData.height / 2);
-    this.drawTree(imageData, 500, imageData.height / 2);
-  }
-
-  drawTree(imageData: ImageData, baseX: number, baseY: number) {
-    // Trunk
-    this.drawRectangle(imageData, baseX - 10, baseY, 20, 60, [139, 69, 19, 255]);
-
-    // Leaves
-    this.drawEllipse(imageData, baseX, baseY - 30, 30, 40, [34, 139, 34, 255]);
-    this.drawEllipse(imageData, baseX - 20, baseY - 20, 30, 40, [34, 139, 34, 255]);
-    this.drawEllipse(imageData, baseX + 20, baseY - 20, 30, 40, [34, 139, 34, 255]);
   }
 }
+
+
+}
+
