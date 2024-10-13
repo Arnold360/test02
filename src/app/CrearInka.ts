@@ -119,13 +119,13 @@ export class CrearInka {
     this.drawEllipse(imageData, centerX - 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
     this.drawGradientEllipse(imageData, centerX - 25, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
     this.drawEllipse(imageData, centerX - 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
-    this.drawShading(imageData, centerX - 25, centerY - 130, 8, 12); // Add shading for depth
+  
 
     // Right Eye
     this.drawEllipse(imageData, centerX + 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
     this.drawGradientEllipse(imageData, centerX + 25, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
     this.drawEllipse(imageData, centerX + 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
-    this.drawShading(imageData, centerX + 25, centerY - 130, 8, 12); // Add shading for depth
+
   }
 
   drawNose(imageData: ImageData, centerX: number, centerY: number) {
