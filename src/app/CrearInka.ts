@@ -101,8 +101,7 @@ export class CrearInka {
     // Draw Clothes
     this.drawClothes(imageData, centerX, centerY);
 
-    // Draw Accessories
-    this.drawAccessories(imageData, centerX, centerY);
+   
   }
 
   drawShadow(imageData: ImageData, centerX: number, centerY: number, radiusX: number, radiusY: number) {
