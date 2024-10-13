@@ -2,6 +2,8 @@ export class CrearInka {
   canvasInka!: HTMLCanvasElement;
   ctxInka!: CanvasRenderingContext2D;
   imgData!: ImageData;
+  pupilOffset = 0;
+  direction = 1;
 
   constructor() {}
 
@@ -117,15 +119,13 @@ export class CrearInka {
   drawEyes(imageData: ImageData, centerX: number, centerY: number) {
     // Left Eye
     this.drawEllipse(imageData, centerX - 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
-    this.drawGradientEllipse(imageData, centerX - 25, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
-    this.drawEllipse(imageData, centerX - 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
+    this.drawGradientEllipse(imageData, centerX - 25 + this.pupilOffset, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
+    this.drawEllipse(imageData, centerX - 25 + this.pupilOffset, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
   
-
     // Right Eye
     this.drawEllipse(imageData, centerX + 25, centerY - 130, 8, 12, [255, 255, 255, 255]); // White part
-    this.drawGradientEllipse(imageData, centerX + 25, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
-    this.drawEllipse(imageData, centerX + 25, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
-
+    this.drawGradientEllipse(imageData, centerX + 25 + this.pupilOffset, centerY - 130, 4, 4, [0, 0, 0, 255], [0, 0, 128, 255]); // Iris with gradient
+    this.drawEllipse(imageData, centerX + 25 + this.pupilOffset, centerY - 130, 2, 2, [255, 255, 255, 255]); // Highlight
   }
 
   drawNose(imageData: ImageData, centerX: number, centerY: number) {
@@ -279,5 +279,20 @@ export class CrearInka {
     this.drawEllipse(imageData, baseX, baseY - 30, 30, 40, [34, 139, 34, 255]);
     this.drawEllipse(imageData, baseX - 20, baseY - 20, 30, 40, [34, 139, 34, 255]);
     this.drawEllipse(imageData, baseX + 20, baseY - 20, 30, 40, [34, 139, 34, 255]);
+  }
+
+  animatePupils() {
+    if (this.pupilOffset >= 4 || this.pupilOffset <= -4) {
+      this.direction *= -1;
+    }
+    this.pupilOffset += this.direction;
+    this.ctxInka.putImageData(this.imgData, 0, 0);
+    this.drawInka(this.imgData);
+  }
+
+  startAnimation() {
+    setInterval(() => {
+      this.animatePupils();
+    }, 100);
   }
 }
