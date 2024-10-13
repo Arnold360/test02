@@ -230,7 +230,7 @@ export class CrearInka {
   drawHair(imageData: ImageData, centerX: number, centerY: number) {
     // Add hair details
     this.drawEllipse(imageData, centerX, centerY - 170, 50, 20, [0, 0, 0, 255]);
-    this.drawRectangle(imageData, centerX - 50, centerY - 150, 100, 20, [0, 0, 0, 255]);
+  
   }
 
   drawClothes(imageData: ImageData, centerX: number, centerY: number) {
