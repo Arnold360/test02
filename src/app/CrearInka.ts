@@ -184,11 +184,11 @@ export class CrearInka {
   drawHand(imageData: ImageData, centerX: number, centerY: number) {
     this.drawEllipse(imageData, centerX, centerY, 10, 15, [255, 204, 153, 255]);
     // Fingers
-    this.drawRectangle(imageData, centerX - 8, centerY - 15, 2, 20, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX - 4, centerY - 15, 2, 30, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX, centerY - 15, 2, 35, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX + 4, centerY - 15, 2, 28, [255, 204, 153, 255]);
-    this.drawRectangle(imageData, centerX + 8, centerY - 15, 2, 15, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX - 8, centerY - 15, 2, 35, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX - 4, centerY - 15, 2, 37, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX, centerY - 15, 2, 38 , [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX + 4, centerY - 15, 2, 36, [255, 204, 153, 255]);
+    this.drawRectangle(imageData, centerX + 8, centerY - 15, 2, 33, [255, 204, 153, 255]);
   }
 
   drawFoot(imageData: ImageData, centerX: number, centerY: number) {
