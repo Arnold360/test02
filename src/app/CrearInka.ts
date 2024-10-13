@@ -72,6 +72,9 @@ export class CrearInka {
     // Draw Neck
     this.drawNeck(imageData, centerX, centerY);
 
+    // Draw Shoulders
+    this.drawShoulders(imageData, centerX, centerY);
+
     // Draw Torso
     this.drawTorso(imageData, centerX, centerY);
 
@@ -143,7 +146,14 @@ export class CrearInka {
   drawNeck(imageData: ImageData, centerX: number, centerY: number) {
     this.drawRectangle(imageData, centerX - 12, centerY - 60, 24, 24, [255, 204, 153, 255]);
   }
-
+  
+  drawShoulders(imageData: ImageData, centerX: number, centerY: number) {
+    // Left Shoulder
+    this.drawEllipse(imageData, centerX - 45, centerY - 35, 15, 10, [255, 204, 153, 255]);
+    // Right Shoulder
+    this.drawEllipse(imageData, centerX + 45, centerY - 35, 15, 10, [255, 204, 153, 255]);
+  }
+  
   drawTorso(imageData: ImageData, centerX: number, centerY: number) {
     this.drawRectangle(imageData, centerX - 35, centerY - 36, 70, 130, [255, 204, 153, 255]);
   }
