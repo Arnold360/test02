@@ -5,7 +5,9 @@ export class CrearInka {
   pupilOffset = 0;
   direction = 1;
 
-  constructor() {}
+  constructor(imgData : ImageData) {
+    this.imgData = imgData;
+  }
 
   setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
     const index = (x + y * imageData.width) * 4;
