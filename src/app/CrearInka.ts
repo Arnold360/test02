@@ -6,7 +6,7 @@ export class CrearInka {
   direction = 1;
 
   constructor(imgData : ImageData) {
-    this.imgData = imageData;
+    this.imgData = imgData;
   }
 
   setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
