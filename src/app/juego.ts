@@ -25,7 +25,7 @@ export class Juego {
   canvasInka!:HTMLCanvasElement;
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
-  CrearInka:any = new CrearInka();
+  CrearInka!:any;
   
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
@@ -57,6 +57,7 @@ export class Juego {
     const now = performance.now();
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    this.CrearInka.animatePupils();
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
   // Dibujar las paletas realistas
@@ -153,6 +154,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.canvasInka = document.getElementById('inka') as HTMLCanvasElement;
     this.ctxInka = this.canvasInka.getContext('2d');
     this.imgData = this.ctxInka.createImageData(800, 600);
+    this.CrearInka = new CrearInka(this.imgData);
     this.CrearInka.drawInka(this.imgData);
     this.ctxInka.putImageData(this.imgData, 0, 0);
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
