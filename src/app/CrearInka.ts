@@ -71,7 +71,9 @@ export class CrearInka {
 
     // Draw Neck
     this.drawNeck(imageData, centerX, centerY);
-
+    // Draw Clavicle
+    this.drawClavicle(imageData, centerX, centerY);
+    
     // Draw Shoulders
     this.drawShoulders(imageData, centerX, centerY);
 
@@ -145,6 +147,12 @@ export class CrearInka {
 
   drawNeck(imageData: ImageData, centerX: number, centerY: number) {
     this.drawRectangle(imageData, centerX - 12, centerY - 60, 24, 24, [255, 204, 153, 255]);
+  }
+
+  drawClavicle(imageData: ImageData, centerX: number, centerY: number) {
+    // Dibujar la clavícula como dos líneas curvas
+    this.drawEllipse(imageData, centerX - 25, centerY - 50, 15, 5, [255, 204, 153, 255]); // Clavícula izquierda
+    this.drawEllipse(imageData, centerX + 25, centerY - 50, 15, 5, [255, 204, 153, 255]); // Clavícula derecha
   }
   
   drawShoulders(imageData: ImageData, centerX: number, centerY: number) {
