@@ -58,6 +58,7 @@ export class Juego {
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.CrearInka.animatePupils();
+    this.CrearInka.drawInka(this.imgData);
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
   // Dibujar las paletas realistas
