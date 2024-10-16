@@ -288,8 +288,9 @@ export class CrearInka {
       this.direction *= -1;
     }
     this.pupilOffset += this.direction;
-    this.ctxInka.putImageData(this.imgData, 0, 0);
+    
     this.drawInka(this.imgData);
+    this.ctxInka.putImageData(this.imgData, 0, 0);
   }
 
   startAnimation() {
