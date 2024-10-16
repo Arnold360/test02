@@ -57,12 +57,12 @@ export class Juego {
     const now = performance.now();
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    this.CrearInka.animatePupils();
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.leftPaddleY, 10, 50); // Paleta izquierda
     this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 50); // Paleta derecha
+     this.CrearInka.animatePupils();
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
