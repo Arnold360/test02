@@ -154,7 +154,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.canvasInka = document.getElementById('inka') as HTMLCanvasElement;
     this.ctxInka = this.canvasInka.getContext('2d');
     this.imgData = this.ctxInka.createImageData(800, 600);
-    this.CrearInka = new CrearInka(this.imgData);
+    this.CrearInka = new CrearInka(this.ctxInka);
     this.CrearInka.drawInka(this.imgData);
     this.ctxInka.putImageData(this.imgData, 0, 0);
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
