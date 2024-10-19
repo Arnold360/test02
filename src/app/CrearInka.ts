@@ -5,8 +5,9 @@ export class CrearInka {
   pupilOffset = 0;
   direction = 1;
 
-  constructor(imgData : ImageData) {
-    this.imgData = imgData;
+  constructor(ctxInka:CanvasRenderingContext2D) {
+    this.ctxInka = ctxInka;
+    this.imgData = ctxInka.createImageData(800, 600);
   }
 
   setPixel(imageData: ImageData, x: number, y: number, r: number, g: number, b: number, a: number) {
