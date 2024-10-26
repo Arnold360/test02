@@ -18,15 +18,31 @@ export class CrearInka {
     imageData.data[index + 3] = a;
   }
 
-  drawEllipse(imageData: ImageData, centerX: number, centerY: number, radiusX: number, radiusY: number, color: [number, number, number, number]) {
-    for (let y = -radiusY; y <= radiusY; y++) {
-      for (let x = -radiusX; x <= radiusX; x++) {
-        if ((x * x) / (radiusX * radiusX) + (y * y) / (radiusY * radiusY) <= 1) {
-          this.setPixel(imageData, centerX + x, centerY + y, ...color);
-        }
+  drawEllipse(
+  imageData: ImageData,
+  centerX: number,
+  centerY: number,
+  radiusX: number,
+  radiusY: number,
+  color: [number, number, number, number],
+  rotation: number = 0 // Rotation in degrees, default is 0 (no rotation)
+) {
+  const radians = (Math.PI / 180) * rotation; // Convert degrees to radians
+  const cos = Math.cos(radians);
+  const sin = Math.sin(radians);
+
+  for (let y = -radiusY; y <= radiusY; y++) {
+    for (let x = -radiusX; x <= radiusX; x++) {
+      // Apply rotation
+      const xRot = x * cos - y * sin;
+      const yRot = x * sin + y * cos;
+
+      if ((xRot * xRot) / (radiusX * radiusX) + (yRot * yRot) / (radiusY * radiusY) <= 1) {
+        this.setPixel(imageData, centerX + xRot, centerY + yRot, ...color);
       }
     }
   }
+}
 
   drawGradientEllipse(imageData: ImageData, centerX: number, centerY: number, radiusX: number, radiusY: number, startColor: [number, number, number, number], endColor: [number, number, number, number]) {
     for (let y = -radiusY; y <= radiusY; y++) {
@@ -170,7 +186,7 @@ export class CrearInka {
 
   drawUpperArm(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
     const offset = isLeft ? -55 : 55;
-    this.drawEllipse(imageData, centerX + offset, centerY - 10, 12, 25, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + offset, centerY - 10, 12, 25, [255, 204, 153, 255], 20);
   }
 
   drawForearm(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
