@@ -186,12 +186,12 @@ export class CrearInka {
 
   drawUpperArm(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
     const offset = isLeft ? -55 : 55;
-    this.drawEllipse(imageData, centerX + offset, centerY - 10, 12, 25, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + offset, centerY - 10, 12, 25, [255, 204, 153, 255],1);
   }
 
   drawForearm(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
     const offset = isLeft ? -70 : 70;
-    this.drawEllipse(imageData, centerX + offset, centerY + 20, 12, 25, [255, 204, 153, 255]);
+    this.drawEllipse(imageData, centerX + offset, centerY + 20, 12, 25, [255, 204, 153, 255],);
   }
 
   drawThigh(imageData: ImageData, centerX: number, centerY: number, isLeft: boolean) {
