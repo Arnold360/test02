@@ -18,7 +18,7 @@ export class CrearInka {
     imageData.data[index + 3] = a;
   }
 
-  drawEllipse(
+ drawEllipse(
   imageData: ImageData,
   centerX: number,
   centerY: number,
@@ -33,12 +33,20 @@ export class CrearInka {
 
   for (let y = -radiusY; y <= radiusY; y++) {
     for (let x = -radiusX; x <= radiusX; x++) {
-      // Apply rotation
-      const xRot = x * cos - y * sin;
-      const yRot = x * sin + y * cos;
+      // Translate point to origin for rotation
+      const translatedX = x;
+      const translatedY = y + radiusY; // Shift y by radiusY to rotate around upper join
 
-      if ((xRot * xRot) / (radiusX * radiusX) + (yRot * yRot) / (radiusY * radiusY) <= 1) {
-        this.setPixel(imageData, centerX + xRot, centerY + yRot, ...color);
+      // Apply rotation
+      const xRot = translatedX * cos - translatedY * sin;
+      const yRot = translatedX * sin + translatedY * cos;
+
+      // Translate point back
+      const finalX = xRot;
+      const finalY = yRot - radiusY; // Shift y back by radiusY
+
+      if ((finalX * finalX) / (radiusX * radiusX) + (finalY * finalY) / (radiusY * radiusY) <= 1) {
+        this.setPixel(imageData, centerX + finalX, centerY + finalY, ...color);
       }
     }
   }
