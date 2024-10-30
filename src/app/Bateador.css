@@ -1,1 +1,112 @@
 
+.bateador {
+ position: relative;
+ width: 200px;
+ height: 300px;
+ margin: 50px auto;
+}
+
+.cuerpo {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 50px;
+ height: 150px;
+ background-color: #ccc;
+ border-radius: 50%;
+}
+
+.brazo-izquierdo {
+ position: absolute;
+ top: 60%;
+ left: 30%;
+ transform: translate(-50%, -50%);
+ width: 20px;
+ height: 80px;
+ background-color: #ccc;
+ border-radius: 50%;
+ animation: brazo-izquierdo 2s infinite;
+}
+
+.brazo-derecho {
+ position: absolute;
+ top: 60%;
+ right: 30%;
+ transform: translate(50%, -50%);
+ width: 20px;
+ height: 80px;
+ background-color: #ccc;
+ border-radius: 50%;
+ animation: brazo-derecho 2s infinite;
+}
+
+.mano-izquierda {
+ position: absolute;
+ top: 80%;
+ left: 20%;
+ transform: translate(-50%, -50%);
+ width: 10px;
+ height: 20px;
+ background-color: #ccc;
+ border-radius: 50%;
+}
+
+.mano-derecha {
+ position: absolute;
+ top: 80%;
+ right: 20%;
+ transform: translate(50%, -50%);
+ width: 10px;
+ height: 20px;
+ background-color: #ccc;
+ border-radius: 50%;
+}
+
+.bate {
+ position: absolute;
+ top: 80%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 50px;
+ height: 10px;
+ background-color: #666;
+ border-radius: 50%;
+ animation: bate 2s infinite;
+}
+
+@keyframes brazo-izquierdo {
+ 0% {
+  transform: translate(-50%, -50%) rotate(0deg);
+ }
+ 50% {
+  transform: translate(-50%, -50%) rotate(-30deg);
+ }
+ 100% {
+  transform: translate(-50%, -50%) rotate(0deg);
+ }
+}
+
+@keyframes brazo-derecho {
+ 0% {
+  transform: translate(50%, -50%) rotate(0deg);
+ }
+ 50% {
+  transform: translate(50%, -50%) rotate(30deg);
+ }
+ 100% {
+  transform: translate(50%, -50%) rotate(0deg);
+ }
+}
+
+@keyframes bate {
+ 0% {
+  transform: translate(-50%, -50%) rotate(0deg);
+ }
+ 50% {
+  transform: translate(-50%, -50%) rotate(-60deg);
+ }
+ 100% {
+  transform: translate(-50%, -50%) rotate(0deg);
+ }
+}
