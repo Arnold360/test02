@@ -58,7 +58,7 @@
 .left-score, .right-score {
   margin: 0 20px;
 }
-
+/*
 .bateador {
  position: relative;
  width: 200px;
@@ -170,7 +170,7 @@
   transform: translate(-50%, -50%) rotate(0deg);
  }
 }
-
+*/
 
 .cuerpo {
   position: relative;
