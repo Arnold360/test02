@@ -256,7 +256,7 @@
 .pierna-izquierda {
   position: absolute;
   top: 350px;
-  left: 50%;
+  left: 35%;
   transform: translateX(-50%);
   width: 20px;
   height: 150px;
@@ -266,7 +266,7 @@
 .pierna-derecha {
   position: absolute;
   top: 350px;
-  right: 50%;
+  right: 35%;
   transform: translateX(50%);
   width: 20px;
   height: 150px;
@@ -275,7 +275,7 @@
 
 .pie-izquierdo {
   position: absolute;
-  bottom: 0;
+  bottom: -50%;
   left: 40%;
   transform: translateX(-50%);
   width: 40px;
@@ -285,7 +285,7 @@
 
 .pie-derecho {
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   right: 40%;
   transform: translateX(50%);
   width: 40px;
