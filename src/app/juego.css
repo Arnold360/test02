@@ -275,7 +275,7 @@
 
 .pie-izquierdo {
   position: absolute;
-  bottom: -50%;
+  bottom: -25%;
   left: 40%;
   transform: translateX(-50%);
   width: 40px;
@@ -285,7 +285,7 @@
 
 .pie-derecho {
   position: absolute;
-  bottom: 50%;
+  bottom: -25%;
   right: 40%;
   transform: translateX(50%);
   width: 40px;
