@@ -239,7 +239,7 @@
   transform: translate(45%, -45%) rotate(30deg);
  }
  100% {
-  transform: translate(40%, -40%) rotate(0deg);
+  transform: translate(50%, -40%) rotate(0deg);
  }
 }
 
