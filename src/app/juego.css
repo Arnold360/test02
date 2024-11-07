@@ -233,7 +233,7 @@
 }
 @keyframes brazo-derecho {
  0% {
-  transform: translate(50%, -50%) rotate(0deg);
+  transform: translate(0%, -0%) rotate(0deg);
  }
  50% {
   transform: translate(45%, -45%) rotate(30deg);
