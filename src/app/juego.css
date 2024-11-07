@@ -224,7 +224,7 @@
 .brazo-derecho {
   position: absolute;
   top: 250px;
-  right: 65%;
+  right: 75%;
   transform: translateX(50%);
   width: 20px;
   height: 100px;
