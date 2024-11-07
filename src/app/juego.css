@@ -236,10 +236,10 @@
   transform: translate(0px, -0x) rotate(0deg);
  }
  50% {
-  transform: translate(-30px, -30px) rotate(30deg);
+  transform: translate(-30px, -15px) rotate(30deg);
  }
  100% {
-  transform: translate(0px, -0px) rotate(0deg);
+  transform: translate(50%, -0px) rotate(0deg);
  }
 }
 
