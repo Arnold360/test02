@@ -264,6 +264,17 @@
   background-color: blue;
   border-radius: 50%;
 }
+@keyframes mano-derecha {
+ 0% {
+  transform: translate(0px, -0x) rotate(0deg);
+ }
+ 50% {
+  transform: translate(-25px, -25px) rotate(30deg);
+ }
+ 100% {
+  transform: translate(50%, -0px) rotate(0deg);
+ }
+}
 
 .pierna-izquierda {
   position: absolute;
