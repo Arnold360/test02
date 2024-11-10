@@ -269,11 +269,9 @@
  0% {
   transform: translate(0px, -0x) rotate(0deg);
  }
- 50% {
-  transform: translate(-55px, -55px) rotate(30deg);
- }
+
  100% {
-  transform: translate(0px, -110px) rotate(0deg);
+  transform: translate(0px, -0px) rotate(360deg);
  }
 }
 
