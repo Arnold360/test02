@@ -273,9 +273,9 @@
   
   }
   100%{
-    transform:rotate(360deg)
+    transform:rotate(180deg)
               translate(-165px)
-              rotate(-360deg);
+              rotate(-180deg);
   }
 }
 
