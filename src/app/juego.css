@@ -263,7 +263,7 @@
   height: 30px;
   background-color: blue;
   border-radius: 50%;
-  animation: mano-derecha 2s infinite;
+  animation: mano-derecha 2s linear infinite;
 }
 @keyframes mano-derecha {
  0% {
