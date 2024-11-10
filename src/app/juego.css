@@ -266,13 +266,17 @@
   animation: mano-derecha 6s linear infinite;
 }
 @keyframes mano-derecha {
- 0% {
-  transform: rotate(0deg) translate(0px, -0x) rotate(0deg);
- }
-
- 100% {
-  transform: rotate(-360deg) translate(0px, -0px) rotate(360deg);
- }
+ 0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
 }
 
 .pierna-izquierda {
