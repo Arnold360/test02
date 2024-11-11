@@ -229,7 +229,7 @@
   width: 20px;
   height: 100px;
   background-color: orange;
-  animation: brazo-derecho 2s infinite;
+  animation: brazo-derecho 6s infinite;
 }
 @keyframes brazo-derecho {
  0% {
