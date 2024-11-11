@@ -223,7 +223,7 @@
 
 .brazo-derecho {
   position: absolute;
-  top: 350px;
+  top: 250px;
   right: 75%;
   transform: translateX(50%);
   width: 20px;
@@ -259,7 +259,7 @@
 
 .mano-derecha {
   position: absolute;
-  top: 240px;
+  top: 110px;
   right: 70%;
  
   width: 30px;
