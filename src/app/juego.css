@@ -273,7 +273,7 @@
   
   }
 50%{
-    transform:rotate(180deg)
+    transform:rotate(90deg)
               translateY(100px)
               rotate(-90deg);
   }
