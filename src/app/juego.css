@@ -256,7 +256,7 @@
 
 .mano-derecha {
   position: absolute;
-  top: 350px;
+  top: 250px;
   right: 75%;
   transform: translateX(50%);
   width: 30px;
@@ -268,13 +268,13 @@
 @keyframes mano-derecha {
  0%{
     transform:rotate(0deg)
-              translate(-60px,-600px)
+              translate(-60px,-60px)
               rotate(0deg);
   
   }
   100%{
     transform:rotate(360deg)
-              translate(-60px,-600px)
+              translate(-60px,-60px)
               rotate(-360deg);
   }
 }
