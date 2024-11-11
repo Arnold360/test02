@@ -268,13 +268,13 @@
 @keyframes mano-derecha {
  0%{
     transform:rotate(0deg)
-              translate(-0px)
+              translate(-60px)
               rotate(0deg);
   
   }
   50%{
     transform:rotate(180deg)
-              translate(-0px)
+              translate(-60px)
               rotate(-180deg);
   }
 }
