@@ -229,7 +229,7 @@
   width: 20px;
   height: 100px;
   background-color: orange;
- /* animation: brazo-derecho 6s linear infinite;*/
+  animation: brazo-derecho 6s linear infinite;
 }
 @keyframes brazo-derecho {
  0% {
@@ -266,7 +266,7 @@
   height: 30px;
   background-color: blue;
   border-radius: 50%;
-  animation: mano-derecha 6s linear infinite;
+  /*animation: mano-derecha 6s linear infinite;*/
 }
 @keyframes mano-derecha {
  0%{
