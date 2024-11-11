@@ -256,7 +256,7 @@
 
 .mano-derecha {
   position: absolute;
-  top: 260px;
+  top: 250px;
   right: 75%;
   transform: translateX(50%);
   width: 30px;
