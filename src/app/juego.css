@@ -221,7 +221,7 @@
   background-color: orange;
   animation: brazo-izquierdo 6s linear infinite;
 }
-}
+
 @keyframes brazo-izquierdo {
  0% {
   transform-origin: top;
