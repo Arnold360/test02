@@ -223,15 +223,15 @@
 @keyframes brazo-izquierdo {
  0% {
   transform-origin: top;
-  transform: translate(50%, -0x) rotate(0deg);
+  transform: translate(-50%, -0x) rotate(0deg);
  }
  50% {
   transform-origin: top;
-  transform: translate(0px, 0px) rotate(90deg);
+  transform: translate(0px, 0px) rotate(-90deg);
  }
  100% {
   transform-origin: top;
-  transform: translate(50%, -0px) rotate(0deg);
+  transform: translate(-50%, -0px) rotate(0deg);
  }
 }
 
