@@ -250,6 +250,7 @@
   height: 100px;
   border: solid red;
   border-width: 0 2px 2px 0;
+  border-radius: 50%;
   
  
   background-color: orange;
