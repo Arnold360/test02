@@ -250,7 +250,7 @@
   height: 100px;
   border-width: 0 2px 2px 0;
   border: solid red;
-  border-radius: 40%;
+ 
   background-color: orange;
   animation: brazo-derecho 6s linear infinite;
 }
