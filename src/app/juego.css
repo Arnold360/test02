@@ -218,6 +218,7 @@
   transform: translateX(-50%);
   width: 20px;
   height: 100px;
+  border-radius: 10%;
   background-color: orange;
   animation: brazo-izquierdo 6s linear infinite;
 }
@@ -246,13 +247,9 @@
   top: 250px;
   right: 75%;
   transform: translateX(50%);
-  width: 100px;
+  width: 20px;
   height: 100px;
-  border: solid red;
-  border-width: 0 20px 0 0;
-  border-radius: 50%;
-  
- 
+  border-radius: 10%;
   background-color: orange;
   animation: brazo-derecho 6s linear infinite;
 }
