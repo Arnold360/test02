@@ -268,7 +268,7 @@
  }
 }
 
-.mano-izquierda {
+.mano-izq {
   position: absolute;
   top: 100px;
   left: -5px;
@@ -278,7 +278,7 @@
   border-radius: 50%;
 }
 
-.mano-derecha {
+.mano-drch {
   position: absolute;
   top: 100px;
   right: -5px;
