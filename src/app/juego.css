@@ -272,7 +272,7 @@
   top: 100%;
   left: 75%;
   width: 20px;
-  height: 50px;
+  height: 60px;
   border-radius: 8px;
   background-color: blue;
   animation: brazo-izquierdo 6s linear infinite;
@@ -282,14 +282,14 @@
   top: 100%;
   right: 75%;
   width: 20px;
-  height: 50px;
+  height: 60px;
   border-radius: 8px;
   background-color: blue;
   animation: brazo-derecho 6s linear infinite;
 }
 .mano-izq {
   position: absolute;
-  top: 100px;
+  top: 100%;
   left: -5px;
   width: 30px;
   height: 30px;
@@ -299,7 +299,7 @@
 
 .mano-drch {
   position: absolute;
-  top: 100px;
+  top: 100%;
   right: -5px;
   width: 30px;
   height: 30px;
