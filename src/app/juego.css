@@ -272,7 +272,7 @@
   top: 100%;
   left: 75%;
   width: 20px;
-  height: 60px;
+  height: ;
   border-radius: 8px;
   background-color: blue;
   animation: brazo-izquierdo 6s linear infinite;
@@ -282,7 +282,7 @@
   top: 100%;
   right: 75%;
   width: 20px;
-  height: 60px;
+  height: 80%;
   border-radius: 8px;
   background-color: blue;
   animation: brazo-derecho 6s linear infinite;
