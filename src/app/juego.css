@@ -258,13 +258,13 @@
   transform-origin: top;
   transform: translate(50%, 0x) rotate(0deg);
  }
- 50% {
+ 50%, 90% {
   transform-origin: top;
   transform: translate(0px, 0px) rotate(50deg);
  }
  100% {
   transform-origin: top;
-  transform: translate(50%, 0px) rotate(0deg);
+  transform: translate(50%, 0px) rotate(-45deg);
  }
 }
 .antebrazo-izquierdo{
@@ -293,7 +293,7 @@
   transform-origin: top;
   transform: translate(0%, 0) rotate(0);
   }
-  50% {
+  50%, 90%{
   transform-origin: top;
   transform: translate(-50%, 0) rotate(45deg);
   }
