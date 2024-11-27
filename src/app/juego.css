@@ -301,7 +301,11 @@
   transform-origin: top;
   transform: translate(-50%, 0) rotate(45deg);
   }
-  100% {
+  92% {
+  transform-origin: top;
+  transform: translate(0%, 0) rotate(-25deg);
+  }
+  95% {
   transform-origin: top;
   transform: translate(0%, 0) rotate(0);
   }
