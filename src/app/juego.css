@@ -256,15 +256,15 @@
 @keyframes brazo-derecho {
  0% {
   transform-origin: top;
-  transform: translate(50%, -0x) rotate(0deg);
+  transform: translate(50%, 0x) rotate(0deg);
  }
  50% {
   transform-origin: top;
-  transform: translate(0px, 0px) rotate(90deg);
+  transform: translate(0px, 0px) rotate(50deg);
  }
  100% {
   transform-origin: top;
-  transform: translate(50%, -0px) rotate(0deg);
+  transform: translate(50%, 0px) rotate(0deg);
  }
 }
 .antebrazo-izquierdo{
@@ -288,8 +288,19 @@
   background-color: blue;
   animation: antebrazo-derecho 6s linear infinite;
 }
-@antebrazo-derecho{
-  
+@keyframes antebrazo-derecho {
+  0% {
+  transform-origin: top;
+  transform: translate(0%, 0) rotate(0);
+  }
+  50% {
+  transform-origin: top;
+  transform: translate(-50%, 0) rotate(45deg);
+  }
+  100% {
+  transform-origin: top;
+  transform: translate(0%, 0) rotate(0);
+  }
 }
 .mano-izquierda {
   position: absolute;
