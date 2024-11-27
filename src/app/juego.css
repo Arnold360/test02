@@ -262,9 +262,9 @@
   transform-origin: top;
   transform: translate(0px, 0px) rotate(60deg);
  }
- 95% {
+ 93%, 95% {
   transform-origin: top;
-  transform: translate(50%, 0px) rotate(-45deg);
+  transform: translate(50%, 0px) rotate(-60deg);
  }
  100% {
   transform-origin: top;
