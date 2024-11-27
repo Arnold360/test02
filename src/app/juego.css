@@ -275,7 +275,10 @@
   height: 80%;
   border-radius: 8px;
   background-color: blue;
-  animation: brazo-izquierdo 6s linear infinite;
+  animation: antebrazo-izquierdo 6s linear infinite;
+}
+@keyframes antebrazo-derecho{
+  
 }
 .antebrazo-derecho{
   position: absolute;
@@ -285,7 +288,7 @@
   height: 80%;
   border-radius: 8px;
   background-color: blue;
-  animation: brazo-derecho 6s linear infinite;
+  animation: antebrazo-derecho 6s linear infinite;
 }
 .mano-izquierda {
   position: absolute;
