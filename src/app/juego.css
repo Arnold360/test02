@@ -270,25 +270,26 @@
 .antebrazo-izquierdo{
   position: absolute;
   top: 100%;
-  left: 75%;
   width: 20px;
   height: 80%;
   border-radius: 8px;
   background-color: blue;
   animation: antebrazo-izquierdo 6s linear infinite;
 }
-@keyframes antebrazo-derecho{
+@keyframes antebrazo-izquierdo{
   
 }
 .antebrazo-derecho{
   position: absolute;
   top: 100%;
-  right: 75%;
   width: 20px;
   height: 80%;
   border-radius: 8px;
   background-color: blue;
   animation: antebrazo-derecho 6s linear infinite;
+}
+@antebrazo-derecho{
+  
 }
 .mano-izquierda {
   position: absolute;
