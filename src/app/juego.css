@@ -301,14 +301,11 @@
   transform-origin: top;
   transform: translate(-50%, 0) rotate(45deg);
   }
-  92% {
+  93%, 100% {
   transform-origin: top;
-  transform: translate(0%, 0) rotate(-25deg);
+  transform: translate(0%, 0) rotate(0deg);
   }
-  95% {
-  transform-origin: top;
-  transform: translate(0%, 0) rotate(0);
-  }
+  
 }
 .mano-izquierda {
   position: absolute;
