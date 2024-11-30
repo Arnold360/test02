@@ -248,7 +248,7 @@
   right: 75%;
   transform: translateX(50%);
   width: 20px;
-  height: 60px;
+  height: 10%;
   border-radius: 8px;
   background-color: orange;
   animation: brazo-derecho 6s linear infinite;
