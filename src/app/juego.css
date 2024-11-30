@@ -299,7 +299,7 @@
   }
   50%, 90%{
   transform-origin: top;
-  transform: translate(-50%, 0) rotate(45deg);
+  transform: translate(-50%, 0) rotate(75deg);
   }
   93%, 100% {
   transform-origin: top;
