@@ -217,7 +217,7 @@
   left: 75%;
   transform: translateX(-50%);
   width: 20px;
-  height: 20%;
+  height: 15%;
   border-radius: 8px;
   background-color: orange;
   animation: brazo-izquierdo 6s linear infinite;
@@ -248,7 +248,7 @@
   right: 75%;
   transform: translateX(50%);
   width: 20px;
-  height: 20%;
+  height: 15%;
   border-radius: 8px;
   background-color: orange;
   animation: brazo-derecho 6s linear infinite;
@@ -267,12 +267,12 @@
  93%, 95% {
   transform-origin: top;
   transform: translate(50%, 0px) rotate(-60deg);
-  height: 25%;
+  height: 20%;
  }
  100% {
   transform-origin: top;
   transform: translate(50%, 0px) rotate(0deg);
-  height: 20%;
+  height: 15%;
   }
 }
 .antebrazo-izquierdo{
@@ -297,7 +297,7 @@
   animation: antebrazo-derecho 6s linear infinite;
 }
 @keyframes antebrazo-derecho {
-  0%, 40% {
+  0% {
   transform-origin: top;
   transform: translate(0%, 0) rotate(0);
   }
