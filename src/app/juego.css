@@ -228,17 +228,20 @@
   transform-origin: top;
   transform: translate(-50%, -0x) rotate(0deg);
  }
- 40%,50%,60% {
+ 50%, 90% {
   transform-origin: top;
-  transform: translate(0px, 0px) rotate(-160deg);
+  transform: translate(0px, 0px) rotate(80deg);
+  height: 30%;
  }
- 45%,55% {
+ 93%,95% {
   transform-origin: top;
-  transform: translate(0px, 0px) rotate(-140deg);
+  transform: translate(0px, 0px) rotate(-60deg);
+  height: 10%;
  }
  100% {
   transform-origin: top;
   transform: translate(-50%, -0px) rotate(0deg);
+  height: 15%;
  }
 }
 
