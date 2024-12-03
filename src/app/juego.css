@@ -230,8 +230,8 @@
  }
  50%, 90% {
   transform-origin: top;
-  transform: translate(0px, 0px) rotate(80deg);
-  height: 30%;
+  transform: translate(0px, 0px) rotate(100deg);
+  height: 25%;
  }
  93%,95% {
   transform-origin: top;
