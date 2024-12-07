@@ -293,11 +293,9 @@
   transform: translate(0%, 0) rotate(0);
   }
  
- 
-  } 
   95%{
   transform-origin: top;
-  transform: translate(50%, 0) rotate(0deg);
+  transform: translate(50%, 0) rotate(-75deg);
   } 
   100% {
   transform-origin: top;
