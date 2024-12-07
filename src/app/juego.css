@@ -228,12 +228,12 @@
   transform-origin: top;
   transform: translate(-50%, -0x) rotate(0deg);
  }
- 50%, 90% {
+ 50%, 80% {
   transform-origin: top;
   transform: translate(0px, 0px) rotate(100deg);
   height: 25%;
  }
- 93%,95% {
+ 83%,95% {
   transform-origin: top;
   transform: translate(0px, 0px) rotate(-60deg);
   height: 10%;
@@ -262,12 +262,12 @@
   transform: translate(50%, 0x) rotate(0deg);
    
  }
- 50%, 90% {
+ 50%, 80% {
   transform-origin: top;
   transform: translate(0px, 0px) rotate(60deg);
   height: 10%;
  }
- 93%, 95% {
+ 83%, 95% {
   transform-origin: top;
   transform: translate(50%, 0px) rotate(-100deg);
   height: 20%;
