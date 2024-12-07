@@ -288,14 +288,16 @@
   animation: antebrazo-izquierdo 6s linear infinite;
 }
 @keyframes antebrazo-izquierdo{
-  0%, 90%{
+  0%, 93%{
   transform-origin: top;
   transform: translate(0%, 0) rotate(0);
   }
  
-  93%{
+ 
+  } 
+  95%{
   transform-origin: top;
-  transform: translate(50%, 0) rotate(-75deg);
+  transform: translate(50%, 0) rotate(0deg);
   } 
   100% {
   transform-origin: top;
