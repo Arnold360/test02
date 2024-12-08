@@ -198,6 +198,18 @@
   width: 25px;
   height: 20px;
   background-color: purple;
+  animation: cuello 6s linear infinite;
+}
+@keyframes cuello {
+0%, 80% {
+  transform: skew(0deg);
+}
+83%, 95%{
+  transform: skew(20deg);
+}
+100% {
+   transform: skew(0deg);
+ } 
 }
 
 .torso {
