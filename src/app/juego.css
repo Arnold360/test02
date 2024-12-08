@@ -212,8 +212,11 @@
   animation: torso 6s linear infinite;
 }
 @keyframes torso {
-0%, 80% {
+0% {
   transform: translateX(-50%) skew(0deg);
+} 
+80% {
+  transform: translateX(-50%) skew(-10deg);
  }
 83%, 95%{
   transform: translateX(-50%) skew(20deg);
