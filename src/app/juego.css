@@ -216,7 +216,7 @@
   transform: skew(0deg);
  }
 83%, 95%{
-  transform: skew(20deg);
+  transform: skew(0deg);
  }
 100% {
    transform: skew(0deg);
