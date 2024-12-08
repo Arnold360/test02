@@ -213,13 +213,13 @@
 }
 @keyframes torso {
 0%, 80% {
-  transform: transform(-50%) skew(0deg);
+  transform: translateX(-50%) skew(0deg);
  }
 83%, 95%{
-  transform: transform(-50%) skew(20deg);
+  transform: translateX(-50%) skew(20deg);
  }
 100% {
-   transform: transform(-50%) skew(0deg);
+   transform: translateX(-50%) skew(0deg);
  } 
 }
 .brazo-izquierdo {
