@@ -371,6 +371,9 @@
   height: 150px;
   background-color: green;
 }
+@keyframes pierna-izquierda {
+   
+}
 
 .pierna-derecha {
   position: absolute;
@@ -380,6 +383,9 @@
   width: 20px;
   height: 150px;
   background-color: green;
+}
+@keyframes pierna-derecha {
+   
 }
 
 .pie-izquierdo {
