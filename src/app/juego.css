@@ -360,7 +360,7 @@
   border-radius: 50%;
   /*animation: mano-derecha 6s linear infinite;*/
 }
-muslo-izquierdo{
+.muslo-izquierdo{
   top: 350px;
   left: 38%;
   height: 75px;
@@ -372,7 +372,7 @@ muslo-izquierdo{
   transform-origin: top;
   }
 }
-muslo-derecho{t
+.muslo-derecho{
   top: 350px;
   right: 38%;
   height: 75px;
