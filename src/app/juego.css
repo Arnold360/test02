@@ -365,12 +365,22 @@ muslo-izquierdo{
   left: 38%;
   height: 75px;
   width: 20px;
+  animation: muslo-izquierdo 6s linear infinite;
 }
-muslo-derecho{
+@keyframes muslo-izquierdo{
+  0%, 50%  {
+  transform-origin: top;
+  }
+}
+muslo-derecho{t
   top: 350px;
   right: 38%;
   height: 75px;
   width: 20px;
+  animation: muslo-izquierdo 6s linear infinite;
+}
+@keyframes muslo-derecho{
+  
 }
 .pierna-izquierda {
   position: absolute;
