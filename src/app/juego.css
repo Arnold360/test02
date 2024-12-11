@@ -361,6 +361,7 @@
   /*animation: mano-derecha 6s linear infinite;*/
 }
 .muslo-izquierdo{
+  position: absolute;
   top: 350px;
   left: 38%;
   height: 75px;
@@ -373,6 +374,7 @@
   }
 }
 .muslo-derecho{
+  position: absolute;
   top: 350px;
   right: 38%;
   height: 75px;
