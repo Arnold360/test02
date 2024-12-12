@@ -276,7 +276,18 @@
   animation: muslo-derecho 6s linear infinite;
 }
 @keyframes muslo-derecho{
-  
+  0% {
+  transform-origin: top;
+  transform: rotate(0deg);
+  }
+  50%, 90% {
+  transform-origin: top;
+  transform: rotate(-45deg);
+  }
+  100% {
+  transform-origin: top;
+  transform: rotate(0deg);
+  }
 }
 .pierna-izquierda {
   position: absolute;
@@ -299,7 +310,18 @@
   background-color: green;
 }
 @keyframes pierna-derecha {
-   
+   0% {
+     transform-origin: top;
+     transform: rotate(45deg);
+   }
+   50% {
+     transform-origin: top;
+     transform: rotate(45deg);
+   }
+   100% {
+     transform-origin: top;
+     transform: rotate(0deg);
+   }
 }
 
 .pie-izquierdo {
