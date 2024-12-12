@@ -254,8 +254,17 @@
   animation: muslo-izquierdo 6s linear infinite;
 }
 @keyframes muslo-izquierdo{
-  0%, 50%  {
+  0% {
   transform-origin: top;
+  transform: rotate(0deg);
+  }
+  50%, 90% {
+  transform-origin: top;
+  transform: rotate(-45deg);
+  }
+  100% {
+  transform-origin: top;
+  transform: rotate(0deg);
   }
 }
 .muslo-derecho{
