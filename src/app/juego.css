@@ -303,8 +303,7 @@
 
 .pierna-derecha {
   position: absolute;
-  
-  transform: translateX(50%);
+ transform: translateX(50%);
   width: 20px;
   height: 150px;
   background-color: green;
@@ -312,7 +311,7 @@
 @keyframes pierna-derecha {
    0% {
      transform-origin: top;
-     transform: rotate(45deg);
+     transform: rotate(0deg);
    }
    50% {
      transform-origin: top;
