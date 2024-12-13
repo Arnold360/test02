@@ -262,7 +262,7 @@
   }
   50%, 90% {
   transform-origin: top;
-  transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(45deg);
   }
   100% {
   transform-origin: top;
