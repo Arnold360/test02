@@ -294,7 +294,7 @@
   }
 }
 .pierna-izquierda {
-  
+  position: absolute;
   top: 100%;
   width: 20px;
   height: 150px;
@@ -306,7 +306,7 @@
 }
 
 .pierna-derecha {
-  
+  position: absolute;
   top: 100%;
   width: 20px;
   height: 150px;
