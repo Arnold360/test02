@@ -96,7 +96,7 @@
   border-radius: 10%;
   animation: torso 6s linear infinite;
 }
-@keyframes torso {
+/*@keyframes torso {
 0% {
   transform: translateX(-50%) skew(0deg);
 } 
@@ -109,7 +109,7 @@
 100% {
    transform: translateX(-50%) skew(0deg);
  } 
-}
+}*/
 .brazo-izquierdo {
   position: absolute;
   top: 250px;
