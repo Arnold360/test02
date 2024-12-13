@@ -307,7 +307,7 @@
 
 .pierna-derecha {
   position: absolute;
-  top: 100%;
+  top: 75px;
   width: 20px;
   height: 150px;
   background-color: green;
