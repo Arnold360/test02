@@ -260,11 +260,12 @@
   transform-origin: top;
   transform: translateX(-50%) rotate(0deg);
   }
-  50%, 90% {
+  50%, 80% {
   transform-origin: top;
-  transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(25deg);
   }
-  100% {
+  
+  83%, 100% {
   transform-origin: top;
   transform: translateX(-50%) rotate(0deg);
   }
@@ -302,7 +303,18 @@
   animation: pierna-izquierda 6s linear infinite;
 }
 @keyframes pierna-izquierda {
-   
+   0%, 80% {
+     transform-origin: top;
+     transform: rotate(0deg);
+   }
+   83% {
+     transform-origin: top;
+     transform: rotate(45deg);
+   }
+   100% {
+     transform-origin: top;
+     transform: rotate(0deg);
+   }
 }
 
 .pierna-derecha {
