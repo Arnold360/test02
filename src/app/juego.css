@@ -310,8 +310,8 @@
   top: 75px;
   width: 20px;
   height: 150px;
-  background-color: green;
-  animation: pierna-izquierda 6s linear infinite;
+  background-color: green; 
+  animation: pierna-derecha 6s linear infinite;
 }
 @keyframes pierna-derecha {
    0% {
