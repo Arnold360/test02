@@ -375,6 +375,7 @@
   background-color: red;
 }
 .bate {
+  position: absolute;
   top: 1000px;
   height: 100px;
   width: 20px;
