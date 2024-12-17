@@ -382,4 +382,7 @@
   width: 20px;
   background-color: yellow;
   border-radius: 8px;
+  padding: 1rem;
+  background: dodgerblue;
+  clip-path: polygon(0 1rem, 100% 0, 100% 100%, 0 calc(100% - 1rem));
 }
