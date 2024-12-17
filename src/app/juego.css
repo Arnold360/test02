@@ -376,6 +376,8 @@
 }
 .bate {
   position: absolute;
+  hight: 100%;
+  width: 20px;
   top: 110%;
   left: -20px;
   background-color: yellow;
