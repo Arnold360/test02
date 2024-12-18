@@ -392,13 +392,13 @@
     clip-path: polygon(2rem 1rem, 80% 1rem, 200% 50%, 0 calc(50% - 0rem));
   }
   50%, 80% {
-    clip-path: polygon(2rem 1rem, 80% 1rem, 100% 100%, 0 calc(100% - 0rem));
+    clip-path: polygon(2rem 1rem, 80% 1rem, 100% 100%, 1rem calc(100% - 0rem));
   }
   81%, 82% {
     clip-path: polygon(2rem 1rem, 80% 1rem, 200% 50%, 0 calc(50% - 0rem));
   }
   83%, 95% {
-    clip-path: polygon(2rem 1rem, 80% 1rem, 100% 100%, 0 calc(100% - 0rem));
+    clip-path: polygon(2rem 1rem, 80% 1rem, 100% 100%, 1rem calc(100% - 0rem));
   }
   100% {
     clip-path: polygon(2rem 1rem, 80% 1rem, 200% 50%, 0 calc(50% - 0rem));
