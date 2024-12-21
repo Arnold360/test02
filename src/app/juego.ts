@@ -38,6 +38,23 @@ export class Juego implements OnInit, OnDestroy {
   this.disconnectSocket();
  }
 
+  // Initializes socket connection
+ initializeSocketConnection() {
+  this.websocketService.connectSocket('message');
+ }
+
+ // Receives response from socket connection 
+ receiveSocketResponse() {
+  this.websocketService.receiveStatus().subscribe((receivedMessage: string) => {
+   console.log(receivedMessage);
+  });
+ }
+
+ // Disconnects socket connection
+ disconnectSocket() {
+  this.websocketService.disconnectSocket();
+ }
+
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
     const touch = event.touches[0];
