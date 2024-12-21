@@ -1,5 +1,6 @@
 
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, onDestroy } from '@angular/core';
+import { WebsocketService } from './websocket.service';
 import { CrearInka } from './CrearInka';
 
 @Component({
