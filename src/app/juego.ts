@@ -1,5 +1,5 @@
 
-import { Component, ElementRef, HostListener, onDestroy } from '@angular/core';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { WebsocketService } from './websocket.service';
 import { CrearInka } from './CrearInka';
 
@@ -8,7 +8,7 @@ import { CrearInka } from './CrearInka';
   templateUrl: './juego.html',
   styleUrls: ['./juego.css'],
 })
-export class Juego {
+export class Juego implements OnInit, OnDestroy {
  
   public leftPaddleY = 50;
   public rightPaddleY = 50;
@@ -27,7 +27,11 @@ export class Juego {
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
   CrearInka!:any;
+
+  constructor(private websocketService: WebSocketService) { }
+
   
+
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
     const touch = event.touches[0];
@@ -50,9 +54,6 @@ export class Juego {
     }
   }
 
-   ngOnInit() {
-   
-   }
  
   animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
     const now = performance.now();
