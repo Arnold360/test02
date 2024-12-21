@@ -30,7 +30,13 @@ export class Juego implements OnInit, OnDestroy {
 
   constructor(private websocketService: webSocketService) { }
 
-  
+  ngOnInit(): void {
+  this.initializeSocketConnection();
+ }
+
+ ngOnDestroy() {
+  this.disconnectSocket();
+ }
 
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
