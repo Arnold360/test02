@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "ngx-socket-io": 4.1.0,
+    "ngx-socket-io": "4.1.0",
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     
-   
     "@types/youtube":"~0.0.29",
     "@angular/youtube-player": "~16.2.0",
     "@angular-devkit/build-angular": "^16.2.3",
