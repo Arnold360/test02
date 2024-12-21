@@ -45,7 +45,7 @@ export class Juego implements OnInit, OnDestroy {
 
  // Receives response from socket connection 
  receiveSocketResponse() {
-  this.websocketService.receiveStatus().subscribe((receivedMessage: string) => {
+  this.websocketService.receiveStatus().subscribe((receivedMessage: unknown) => {
    console.log(receivedMessage);
   });
  }
