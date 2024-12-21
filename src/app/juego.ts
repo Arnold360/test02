@@ -28,7 +28,7 @@ export class Juego implements OnInit, OnDestroy {
   imgData!:ImageData;
   CrearInka!:any;
 
-  constructor(private websocketService: WebSocketService) { }
+  constructor(private websocketService: webSocketService) { }
 
   
 
