@@ -13,7 +13,7 @@ export class webSocketService {
  }
 
  // this method is used to start connection/handhshake of socket with server
- connectSocket(message) {
+ connectSocket(message:any) {
   this.webSocket.emit('connect', message);
  }
 
