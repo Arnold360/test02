@@ -4,6 +4,9 @@ Aquí tienes un ejemplo básico de un juego de tenis utilizando HTML Canvas y Ty
 *index.html*
 ```
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+<head>
 	<title>Tenis</title>
 </head>
 
@@ -12,7 +15,7 @@ Aquí tienes un ejemplo básico de un juego de tenis utilizando HTML Canvas y Ty
   <div class="right-score">{{ rightScore }}</div>
 </div>
 <canvas id="inka" width="800" height="600"></canvas>
-<div class="court" (touchstart)="onTouch($event)" style="width:100dvw;">
+<div class="court" (touchstart)="onTouch($event)" style="width:100vw;">
   <!--TEXTO-->
   <canvas id="tennisCourt" style="width:100vw;" ></canvas>
   <div class="paddle left" [style.top.px]="leftPaddleY"></div>
