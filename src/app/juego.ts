@@ -71,9 +71,9 @@ export class Juego implements OnInit, OnDestroy {
 
    movePaddle(side: 'left' | 'right', y: number) {
     if (side === 'left') {
-      this.leftPaddleY = y - 25; // Center the paddle on the touch point
+      this.leftPaddleY = y - 50; // Center the paddle on the touch point
     } else {
-      this.rightPaddleY = y - 25;
+      this.rightPaddleY = y - 50;
     }
   }
 
