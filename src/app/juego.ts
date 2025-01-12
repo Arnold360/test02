@@ -87,7 +87,7 @@ export class Juego implements OnInit, OnDestroy {
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.leftPaddleY, 10, 50); // Paleta izquierda
     this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 10, 50); // Paleta derecha
-     this.CrearInka.animatePupils();
+     /*this.CrearInka.animatePupils();*/
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
