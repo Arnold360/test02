@@ -10,8 +10,8 @@ import { CrearInka } from './CrearInka';
 })
 export class Juego implements OnInit, OnDestroy {
  
-  public leftPaddleY = 100;
-  public rightPaddleY = 100;
+  public leftPaddleY = 300;
+  public rightPaddleY = 500;
   ballSpeedX = 2;
   ballSpeedY = 2;
   leftScore = 0;
@@ -71,9 +71,9 @@ export class Juego implements OnInit, OnDestroy {
 
    movePaddle(side: 'left' | 'right', y: number) {
     if (side === 'left') {
-      this.leftPaddleY = y - 50; // Center the paddle on the touch point
+      this.leftPaddleY = y + 50; // Center the paddle on the touch point
     } else {
-      this.rightPaddleY = y - 50;
+      this.rightPaddleY = y + 50;
     }
   }
 
