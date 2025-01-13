@@ -10,8 +10,8 @@ import { CrearInka } from './CrearInka';
 })
 export class Juego implements OnInit, OnDestroy {
  
-  public leftPaddleY = 300;
-  public rightPaddleY = 500;
+  public leftPaddleY = 0;
+  public rightPaddleY = 0;
   ballSpeedX = 2;
   ballSpeedY = 2;
   leftScore = 0;
