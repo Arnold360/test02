@@ -63,9 +63,9 @@ export class Juego implements OnInit, OnDestroy {
     const touchY = touch.clientY - courtRect.top;
 
     if (touchX < courtRect.width / 2) {
-      this.movePaddle('left', touch.clientY);
+      this.movePaddle('left', touchX);
     } else {
-      this.movePaddle('right', touch.clientY);
+      this.movePaddle('right', touchY);
     }
   }
 
