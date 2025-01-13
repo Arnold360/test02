@@ -13,7 +13,7 @@
 .court {
   display: grid;
   place-items: center;
-  position: relative;
+  
   border: 2px solid  black;
 }
 
