@@ -138,7 +138,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   } 
 
  drawRealisticPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
-   y = y - 100;
+   y =  0;
   // Dibujar el cuerpo de la paleta con un gradiente
   const gradient = ctx.createLinearGradient(x, y, x + width, y + height);
   gradient.addColorStop(0, '#8B4513'); // Marrón oscuro
