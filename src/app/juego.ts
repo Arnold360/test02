@@ -150,7 +150,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
   // Dibujar el borde de la paleta
   ctx.strokeStyle = '#654321'; // Marrón más oscuro
   ctx.lineWidth = 5;
-  ctx.strokeRect(x, y - 50, width, height);
+  ctx.strokeRect(x, y , width, height);
 
   // Dibujar sombras para dar un efecto 3D
   ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
