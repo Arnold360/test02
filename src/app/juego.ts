@@ -30,7 +30,7 @@ export class Juego implements OnInit, OnDestroy {
   cordenada!:number;
   cordenada2!:number;
   cordenada3!:number;
-  innerwidth!:number;
+  innerWidth!:number;
 
   constructor(private websocketService: webSocketService) { }
 
