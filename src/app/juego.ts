@@ -69,9 +69,9 @@ export class Juego implements OnInit, OnDestroy {
     this.cordenada3 = touchY;
 
     if (touchX < courtRect.width / 2) {
-      this.movePaddle('left', touchY);
+      this.movePaddle('left', touch.clientY);
     } else {
-      this.movePaddle('right', touchY);
+      this.movePaddle('right', courtRect.top);
     }
   }
 
