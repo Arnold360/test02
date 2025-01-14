@@ -27,6 +27,7 @@ export class Juego implements OnInit, OnDestroy {
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
   CrearInka!:any;
+  cordenada!:string;
 
   constructor(private websocketService: webSocketService) { }
 
@@ -61,6 +62,7 @@ export class Juego implements OnInit, OnDestroy {
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
     const touchX = touch.clientX - courtRect.left;
     const touchY = touch.clientY - courtRect.top;
+    this.cordenada = courtRect.top;
 
     if (touchX < courtRect.width / 2) {
       this.movePaddle('left', touchX);
