@@ -27,7 +27,7 @@ export class Juego implements OnInit, OnDestroy {
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
   CrearInka!:any;
-  cordenada!:string;
+  cordenada!:number;
 
   constructor(private websocketService: webSocketService) { }
 
