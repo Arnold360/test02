@@ -30,11 +30,13 @@ export class Juego implements OnInit, OnDestroy {
   cordenada!:number;
   cordenada2!:number;
   cordenada3!:number;
+  innerwidth!:number;
 
   constructor(private websocketService: webSocketService) { }
 
   ngOnInit(): void {
   this.initializeSocketConnection();
+  this.innerWidth = window.innerWidth;
  }
 
  ngOnDestroy() {
