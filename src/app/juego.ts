@@ -70,7 +70,7 @@ export class Juego implements OnInit, OnDestroy {
     const touchY = touch.clientY + (this.courtRect2.top - courtRect.top);
     this.cordenada = courtRect.top;
     this.cordenada2 = touch.clientY;
-    this.cordenada3 = touchY;
+    this.cordenada3 = touch.clientY - courtRect.top;
 
     if (touchX < courtRect.width / 2) {
       this.movePaddle('left', touchY);
