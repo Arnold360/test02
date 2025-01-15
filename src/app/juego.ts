@@ -31,6 +31,7 @@ export class Juego implements OnInit, OnDestroy {
   cordenada2!:number;
   cordenada3!:number;
   innerWidth!:any;
+  courtRect2!:number;
   
 
   constructor(private websocketService: webSocketService) { }
@@ -66,13 +67,13 @@ export class Juego implements OnInit, OnDestroy {
     const touch = event.touches[0];
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
     const touchX = touch.clientX - courtRect.left;
-    const touchY = touch.clientY - courtRect.top;
+    const touchY = touch.clientY - this.courtRect2.top;
     this.cordenada = courtRect.top;
     this.cordenada2 = touch.clientY;
     this.cordenada3 = touchY;
 
     if (touchX < courtRect.width / 2) {
-      this.movePaddle('left', touch.clientY);
+      this.movePaddle('left', touchY);
     } else {
       this.movePaddle('right', courtRect.top);
     }
@@ -193,6 +194,7 @@ drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: numb
     this.CrearInka.drawInka(this.imgData);
     this.ctxInka.putImageData(this.imgData, 0, 0);*/
     this.canvas = document.getElementById('tennisCourt')! as HTMLCanvasElement;
+    this.courtRect2 = this.canvas.getBoundingClientRect();
     this.ctx = this.canvas.getContext('2d')!;
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
