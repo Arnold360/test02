@@ -31,7 +31,7 @@ export class Juego implements OnInit, OnDestroy {
   cordenada2!:number;
   cordenada3!:number;
   innerWidth!:any;
-  courtRect2!:number;
+  courtRect2!:any;
   
 
   constructor(private websocketService: webSocketService) { }
@@ -67,7 +67,7 @@ export class Juego implements OnInit, OnDestroy {
     const touch = event.touches[0];
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
     const touchX = touch.clientX - courtRect.left;
-    const touchY = touch.clientY - this.courtRect2.top;
+    const touchY = touch.clientY + (this.courtRect2.top - courtRect.top);
     this.cordenada = courtRect.top;
     this.cordenada2 = touch.clientY;
     this.cordenada3 = touchY;
