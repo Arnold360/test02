@@ -30,11 +30,8 @@ export class Juego implements OnInit, OnDestroy {
   cordenada!:number;
   cordenada2!:number;
   cordenada3!:number;
-  innerWidth!:any;
-  courtRect2!:any;
-  realisticPaddleY!:any;
-  leftRealPaddleY!:any;
-  rightRealPaddleY!:any;
+  
+  
   
 
   constructor(private websocketService: webSocketService) { }
@@ -71,7 +68,7 @@ export class Juego implements OnInit, OnDestroy {
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
     const touchX = touch.clientX - courtRect.left;
     const touchY = touch.clientY + (this.courtRect2.top - courtRect.top);
-    this.realisticPaddleY = touch.clientY - courtRect.top;
+    
     this.cordenada = courtRect.top;
     this.cordenada2 = touch.clientY;
     this.cordenada3 = touch.clientY - courtRect.top;
@@ -86,10 +83,10 @@ export class Juego implements OnInit, OnDestroy {
    movePaddle(side: 'left' | 'right', y: number) {
     if (side === 'left') {
       this.leftPaddleY = y - 25; // Center the paddle on the touch point
-      this.leftRealPaddleY = this.realisticPaddleY;
+      
     } else {
       this.rightPaddleY = y - 25;
-      this.rightRealPaddleY = this.realisticPaddleY;
+      
     }
   }
 
