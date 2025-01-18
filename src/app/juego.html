@@ -19,7 +19,7 @@ Aquí tienes un ejemplo básico de un juego de tenis utilizando HTML Canvas y Ty
 <p> {{ realPaddleY }} </p>
 
   <!--TEXTO-->
-<canvas id="tennisCourt" (touchstart)="onTouch($event)" style="width:100vw; height:400px; border:2px solid black;" ></canvas>
+<canvas id="tennisCourt" (touchstart)="onTouch($event)" style="width:100vw; height:auto; border:2px solid black;" ></canvas>
 <div class="paddle left" [style.top.px]="leftPaddleY"></div>
 <div class="paddle right" [style.top.px]="rightPaddleY"></div>
 
