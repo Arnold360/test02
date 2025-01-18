@@ -31,6 +31,7 @@ export class Juego implements OnInit, OnDestroy {
   cordenada2!:number;
   cordenada3!:number;
   courtRect2!:any;
+  realPaddleY!:number;
   
   
   
@@ -69,7 +70,7 @@ export class Juego implements OnInit, OnDestroy {
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
     const touchX = touch.clientX - courtRect.left;
     const touchY = touch.clientY + (this.courtRect2.top - courtRect.top);
-    
+    this.realPaddleY = (this.courtRect2.top + this.courtRect2.bottom + this.canvas.height) / this.canvas.height;
     this.cordenada = courtRect.top;
     this.cordenada2 = touch.clientY;
     this.cordenada3 = touch.clientY - courtRect.top;
@@ -99,7 +100,7 @@ export class Juego implements OnInit, OnDestroy {
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
   // Dibujar las paletas realistas
-    this.drawRealisticPaddle(ctx, 10, this.leftPaddleY , 4, 20); // Paleta izquierda
+    this.drawRealisticPaddle(ctx, 10, this.realPaddleY , 4, 20); // Paleta izquierda
     this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 4, 20); // Paleta derecha
      /*this.CrearInka.animatePupils();*/
     this.update(canvas, deltaTime);
