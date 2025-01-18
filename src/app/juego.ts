@@ -38,7 +38,7 @@ export class Juego implements OnInit, OnDestroy {
 
   ngOnInit(): void {
   this.initializeSocketConnection();
-  this.innerWidth = document.documentElement.clientWidth;
+  
  }
 
  ngOnDestroy() {
