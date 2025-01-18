@@ -31,7 +31,8 @@ export class Juego implements OnInit, OnDestroy {
   cordenada2!:number;
   cordenada3!:number;
   courtRect2!:any;
-  realPaddleY:number = 0;
+  realRightPaddleY:number = 0;
+  realLeftPaddleY:number = 0;
   
   
   
@@ -77,15 +78,16 @@ export class Juego implements OnInit, OnDestroy {
 
     if (touchX < courtRect.width / 2) {
       this.movePaddle('left', touchY);
+      this.realLeftPaddleY = (touch.clientY / 2.6) - 185;
     } else {
       this.movePaddle('right', touchY);
+      this.realRightPaddleY = (touch.clientY / 2.6) - 185;
     }
   }
 
    movePaddle(side: 'left' | 'right', y: number) {
     if (side === 'left') {
-      this.leftPaddleY = y - 25; // Center the paddle on the touch point
-      
+      this.leftPaddleY = y - 25; // Center the paddle on the touch point 
     } else {
       this.rightPaddleY = y - 25;
       
@@ -100,8 +102,8 @@ export class Juego implements OnInit, OnDestroy {
     this.drawCourt();
     this.drawSilverBall(ctx, this.x, this.y, this.radius);
   // Dibujar las paletas realistas
-    this.drawRealisticPaddle(ctx, 10, this.realPaddleY , 4, 20); // Paleta izquierda
-    this.drawRealisticPaddle(ctx, canvas.width - 20, this.rightPaddleY, 4, 20); // Paleta derecha
+    this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
+    this.drawRealisticPaddle(ctx, canvas.width - 20, this.realRightPaddleY, 4, 20); // Paleta derecha
      /*this.CrearInka.animatePupils();*/
     this.update(canvas, deltaTime);
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
