@@ -70,7 +70,7 @@ export class Juego implements OnInit, OnDestroy {
     const courtRect = (event.target as HTMLElement).getBoundingClientRect();
     const touchX = touch.clientX - courtRect.left;
     const touchY = touch.clientY + (this.courtRect2.top - courtRect.top);
-    this.realPaddleY += (((touch.clientY - this.courRect2.top) - this.realPaddleY) / 7);/*(this.courtRect2.top + this.courtRect2.bottom + this.canvas.height) / this.canvas.height;*/
+    this.realPaddleY += (((touch.clientY - this.courtRect2.top) - this.realPaddleY) / 7);/*(this.courtRect2.top + this.courtRect2.bottom + this.canvas.height) / this.canvas.height;*/
     this.cordenada = courtRect.top;
     this.cordenada2 = touch.clientY;
     this.cordenada3 = touch.clientY - courtRect.top;
