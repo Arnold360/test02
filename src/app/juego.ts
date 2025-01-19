@@ -77,10 +77,10 @@ export class Juego implements OnInit, OnDestroy {
 
     if (touchX < courtRect.width / 2) {
       this.movePaddle('left', touchY);
-      this.realLeftPaddleY = (((touch.clientY + this.courtRect2.top - courtRect.top) / 2.6) - 170);
+      this.realLeftPaddleY = (((touch.clientY + this.courtRect2.top - courtRect.top) / 2.6) - 150);
     } else {
       this.movePaddle('right', touchY);
-      this.realRightPaddleY = (((touch.clientY + this.courtRect2.top - courtRect.top) / 2.6) - 170);
+      this.realRightPaddleY = (((touch.clientY + this.courtRect2.top - courtRect.top) / 2.6) - 150);
     }
   }
 
