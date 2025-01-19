@@ -65,6 +65,16 @@ export class Juego implements OnInit, OnDestroy {
   this.websocketService.disconnectSocket();
  }
 
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 's' || event.key === 'S') { 
+      this.realLeftPaddle += 10 );
+    } 
+    else if (event.key === 'w' || event.key === 'W' ){
+      this.realLeftPaddle += 10 );
+    }
+  }
+
  @HostListener('window:touchstart', ['$event'])
   onTouch(event: TouchEvent) {
     const touch = event.touches[0];
@@ -92,6 +102,7 @@ export class Juego implements OnInit, OnDestroy {
       
     }
   }
+  
 
  
   animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
