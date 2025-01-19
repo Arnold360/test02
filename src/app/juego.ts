@@ -71,7 +71,7 @@ export class Juego implements OnInit, OnDestroy {
       this.realLeftPaddleY += 10;
     } 
     else if (event.key === 'w' || event.key === 'W' ){
-      this.realLeftPaddleY += 10;
+      this.realLeftPaddleY -= 10;
     }
   }
 
