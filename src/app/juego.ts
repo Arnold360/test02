@@ -68,10 +68,10 @@ export class Juego implements OnInit, OnDestroy {
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
     if (event.key === 's' || event.key === 'S') { 
-      this.realLeftPaddle += 10;
+      this.realLeftPaddleY += 10;
     } 
     else if (event.key === 'w' || event.key === 'W' ){
-      this.realLeftPaddle += 10;
+      this.realLeftPaddleY += 10;
     }
   }
 
