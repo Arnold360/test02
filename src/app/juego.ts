@@ -138,7 +138,7 @@ export class Juego implements OnInit, OnDestroy {
       this.y = this.radius - 1;
     }
     // Check for collision with the walls
-    if (this.x + this.radius > canvas.width || this.x - this.radius < 0 || (this.radius + 50 < this.x && this.y > this.realLeftPaddleY - this.radius && this.y + this.radius < this.realLeftPaddleY )) {
+    if (this.x + this.radius > canvas.width || this.x - this.radius < 0 || (this.radius + 50 > this.x && this.y > this.realLeftPaddleY - this.radius && this.y + this.radius < this.realLeftPaddleY )) {
       this.dx = -this.dx;
     }
     if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
