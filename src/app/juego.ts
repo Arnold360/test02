@@ -33,6 +33,8 @@ export class Juego implements OnInit, OnDestroy {
   courtRect2!:any;
   realRightPaddleY:number = 0;
   realLeftPaddleY:number = 0;
+  controladorDeBote:number = 0;
+
   
   
   
@@ -138,14 +140,20 @@ export class Juego implements OnInit, OnDestroy {
       this.y = this.radius - 1;
     }
     // Check for collision with the walls
-    if (this.x + this.radius > canvas.width || this.x - this.radius < 0 || (this.radius + 20 > this.x && 
-        this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY )) {
-      this.dx = -this.dx;
-    }
-    if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
-      this.dy = -this.dy;
-    }
-  }
+    if (this.controladorDeBote == 1) {
+         if (this.x + this.radius > canvas.width || this.x - this.radius < 0 || (this.radius + 20 > this.x && 
+             this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY )) {
+             this.dx = -this.dx;
+             this.controladorDeBote = 0;
+            }
+        }
+    if (this.controladorDeBote == 0) {
+         if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+             this.dy = -this.dy;
+             this.controladorDeBote = 1;
+            }
+        }
+   }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
