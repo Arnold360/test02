@@ -190,7 +190,7 @@ ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
 ctx.beginPath();
 ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
 ctx.stroke();
-*/En este código, he cambiado los colores del gradiente para que vayan desde un azul claro hasta un azul oscuro. También he mantenido el mismo efecto de resplandor metálico con un color blanco opaco.*/
+//En este código, he cambiado los colores del gradiente para que vayan desde un azul claro hasta un azul oscuro. También he mantenido el mismo efecto de resplandor metálico con un color blanco opaco.*/
 }
   
  drawRealisticPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
