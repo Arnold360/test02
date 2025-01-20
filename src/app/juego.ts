@@ -177,22 +177,22 @@ export class Juego implements OnInit, OnDestroy {
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
-    gradient.addColorStop(0, 'white');
-    gradient.addColorStop(0.3, this.colorDeLaPelota);
-    gradient.addColorStop(1, 'gray');
+gradient.addColorStop(0, 'rgba(0, 0, 255, 1)'); // Azul claro
+gradient.addColorStop(0.3, 'rgba(0, 0, 200, 1)'); // Azul medio
+gradient.addColorStop(1, 'rgba(0, 0, 150, 1)'); // Azul oscuro
+ctx.fillStyle = gradient;
+ctx.beginPath();
+ctx.arc(x, y, radius, 0, Math.PI * 2);
+ctx.fill();
 
-    ctx.fillStyle = gradient;
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Add some highlights for a metallic effect
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
-    ctx.beginPath();
-    ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
-    ctx.stroke();
-  } 
-
+// Add some highlights for a metallic effect
+ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+ctx.beginPath();
+ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
+ctx.stroke();
+*/En este código, he cambiado los colores del gradiente para que vayan desde un azul claro hasta un azul oscuro. También he mantenido el mismo efecto de resplandor metálico con un color blanco opaco.*/
+}
+  
  drawRealisticPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
    
   // Dibujar el cuerpo de la paleta con un gradiente
