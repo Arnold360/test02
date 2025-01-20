@@ -14,8 +14,8 @@ export class Juego implements OnInit, OnDestroy {
   public rightPaddleY = 25;
   ballSpeedX = 2;
   ballSpeedY = 2;
-  leftScore = 0;
-  rightScore = 0;
+  leftScore = 10;
+  rightScore = 10;
   canvas!:HTMLCanvasElement;
   ctx!:CanvasRenderingContext2D;
   x: number;
@@ -146,14 +146,18 @@ export class Juego implements OnInit, OnDestroy {
              this.dx = -this.dx;
              this.controladorDeBote = 0;
             }
-          if (this.radius + 20 > this.x && 
-             this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY || 
-             this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
-             this.y + this.radius > this.realRightPaddleY){
-
-             this.dx = -this.dx;
-             this.controladorDeBote = 0;
+          if ( this.radius + 20 > this.x && 
+               this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY){
+                this.leftScore -= 1;
+                this.dx = -this.dx;
+                this.controladorDeBote = 0;
              }
+          if ( this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
+               this.y + this.radius > this.realRightPaddleY){
+                this.rightScore -= 1;
+                this.dx = -this.dx;
+                this.controladorDeBote = 0;
+          }
         }
 
          if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
