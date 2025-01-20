@@ -48,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 24px;
-  color: white;
+  color: black;
 }
 
 .left-score, .right-score {
