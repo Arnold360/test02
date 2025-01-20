@@ -147,12 +147,12 @@ export class Juego implements OnInit, OnDestroy {
              this.controladorDeBote = 0;
             }
         }
-    if (this.controladorDeBote == 0) {
+
          if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
              this.dy = -this.dy;
              this.controladorDeBote = 1;
             }
-        }
+        
    }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
