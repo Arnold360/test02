@@ -141,14 +141,19 @@ export class Juego implements OnInit, OnDestroy {
     }
     // Check for collision with the walls
     if (this.controladorDeBote == 1) {
-         if (this.x + this.radius > canvas.width || this.x - this.radius < 0 || this.radius + 20 > this.x && 
-             this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY || 
-             this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
-             this.y + this.radius > this.realRightPaddleY ) {
+          if (this.x + this.radius > canvas.width || this.x - this.radius < 0 ) {
            
              this.dx = -this.dx;
              this.controladorDeBote = 0;
             }
+          if (this.radius + 20 > this.x && 
+             this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY || 
+             this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
+             this.y + this.radius > this.realRightPaddleY){
+
+             this.dx = -this.dx;
+             this.controladorDeBote = 0;
+             }
         }
 
          if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
