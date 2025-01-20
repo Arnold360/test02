@@ -34,7 +34,7 @@ export class Juego implements OnInit, OnDestroy {
   realRightPaddleY:number = 0;
   realLeftPaddleY:number = 0;
   controladorDeBote:number = 0;
-  colorDeLaPelota:string = 'white';
+  colorDeLaPelota:string = 'silver';
 
   
   
@@ -177,8 +177,8 @@ export class Juego implements OnInit, OnDestroy {
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
-    gradient.addColorStop(0, this.colorDeLaPelota);
-    gradient.addColorStop(0.3, 'silver');
+    gradient.addColorStop(0, 'white');
+    gradient.addColorStop(0.3, this.colorDeLaPelota);
     gradient.addColorStop(1, 'gray');
 
     ctx.fillStyle = gradient;
