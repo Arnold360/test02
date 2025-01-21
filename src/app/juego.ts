@@ -189,9 +189,9 @@ changeColor(){
 }
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
-gradient.addColorStop(0, 'rgba(0, 0, 255, 1)'); // Azul claro
-gradient.addColorStop(0.3, 'rgba(0, 0, 200, 1)'); // Azul medio
-gradient.addColorStop(1, 'rgba(0, 0, 150, 1)'); // Azul oscuro
+gradient.addColorStop(0, this.colorDeLaPelota1); // Azul claro
+gradient.addColorStop(0.3, this.colorDeLaPelota2); // Azul medio
+gradient.addColorStop(1, this.colorDeLaPelota3); // Azul oscuro
 ctx.fillStyle = gradient;
 ctx.beginPath();
 ctx.arc(x, y, radius, 0, Math.PI * 2);
