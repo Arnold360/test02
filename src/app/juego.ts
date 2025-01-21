@@ -145,38 +145,36 @@ export class Juego implements OnInit, OnDestroy {
     // Check for collision with the walls
     if (this.controladorDeBote == 1) {
           if ( this.x - this.radius < 0 ) {
+             this.controladorDeBote = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
              this.colorDeLaPelota2 = '#ff5253';
              this.colorDeLaPelota3 = '#f00005';
              this.leftScore -= 1;
              this.dx = -this.dx;
-             this.controladorDeBote = 0;
              setTimeout(() => {
                this.changeColor();
                }, 150);
               }
           if ( this.x + this.radius > canvas.width ) {
+             this.controladorDeBote = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
              this.colorDeLaPelota2 = '#ff5253';
              this.colorDeLaPelota3 = '#f00005';
              this.rightScore -= 1;
              this.dx = -this.dx;
-             this.controladorDeBote = 0;
-             setTimeout(() => {
+              setTimeout(() => {
                this.changeColor();
                }, 150);
               }
           if ( this.radius + 20 > this.x && 
                this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY){
-            
-                this.dx = (-this.dx) * 1.1;
                 this.controladorDeBote = 0;
+                this.dx = (-this.dx) * 1.1;
              }
           if ( this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
                this.y + this.radius > this.realRightPaddleY){
-                
-                this.dx = (-this.dx) * 1.1;
                 this.controladorDeBote = 0;
+                this.dx = (-this.dx) * 1.1;
           }
         }
 
