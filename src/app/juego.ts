@@ -150,7 +150,7 @@ export class Juego implements OnInit, OnDestroy {
              this.colorDeLaPelota3 = '#f00005';
              setTimeout(() => {
                this.changeColor();
-               }, 500);
+               }, 150);
              this.leftScore -= 1;
              this.dx = -this.dx;
              this.controladorDeBote = 0;
@@ -161,7 +161,7 @@ export class Juego implements OnInit, OnDestroy {
              this.colorDeLaPelota3 = '#f00005';
              setTimeout(() => {
                this.changeColor();
-               }, 100);
+               }, 150);
              this.rightScore -= 1;
              this.dx = -this.dx;
              this.controladorDeBote = 0;
