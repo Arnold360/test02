@@ -276,7 +276,7 @@ ctx.stroke();
       const wallHeight = height;
       for (let y = 0; y < height; y += wallHeight) {
         for (let x = 0; x < width; x += wallWidth) {
-          this.drawBrickWithGradient(this.ctx, x, y, wallWidth, wallHeight, 10, 14);
+          this.drawBrickWithGradient(this.ctx, x, y, wallWidth, wallHeight, 10, 20);
          }
        }
      }
