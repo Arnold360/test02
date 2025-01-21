@@ -154,7 +154,10 @@ export class Juego implements OnInit, OnDestroy {
              this.controladorDeBote = 0;
             }
           if ( this.x + this.radius > canvas.width ) {
-             this.colorDeLaPelota = 'blue';
+             this.colorDeLaPelota1 = '#ff7a7b';
+             this.colorDeLaPelota2 = '#ff5253';
+             this.colorDeLaPelota3 = '#f00005';
+             setTimeout(this.changeColor, 500);
              this.rightScore -= 1;
              this.dx = -this.dx;
              this.controladorDeBote = 0;
