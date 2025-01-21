@@ -34,7 +34,9 @@ export class Juego implements OnInit, OnDestroy {
   realRightPaddleY:number = 0;
   realLeftPaddleY:number = 0;
   controladorDeBote:number = 0;
-  colorDeLaPelota:string = 'silver';
+  colorDeLaPelota1:string = 'white';
+  colorDeLaPelota2:string = 'silver';
+  colorDeLaPelota3:string = 'gray';
 
   
   
@@ -143,7 +145,10 @@ export class Juego implements OnInit, OnDestroy {
     // Check for collision with the walls
     if (this.controladorDeBote == 1) {
           if ( this.x - this.radius < 0 ) {
-             this.colorDeLaPelota = 'red';
+             this.colorDeLaPelota1 = '#ff7a7b';
+             this.colorDeLaPelota2 = '#ff5253';
+             this.colorDeLaPelota3 = '#f00005';
+             setTimeout(this.changeColor, 500);
              this.leftScore -= 1;
              this.dx = -this.dx;
              this.controladorDeBote = 0;
@@ -174,7 +179,11 @@ export class Juego implements OnInit, OnDestroy {
             }
         
    }
-  
+changeColor(){
+  this.colorDeLaPelota1 = 'white';
+  this.colorDeLaPelota2 = 'silver';
+  this.colorDeLaPelota3 = 'gray';
+}
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
 gradient.addColorStop(0, 'rgba(0, 0, 255, 1)'); // Azul claro
