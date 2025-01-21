@@ -20,7 +20,7 @@ export class Juego implements OnInit, OnDestroy {
   ctx!:CanvasRenderingContext2D;
   x: number;
   y: number;
-  radius = 15;
+  radius = 10;
   dx = 200;
   dy = 200;
   canvasInka!:HTMLCanvasElement;
