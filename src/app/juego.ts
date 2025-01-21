@@ -168,14 +168,14 @@ export class Juego implements OnInit, OnDestroy {
           }
           if ( this.radius + 20 > this.x && 
                this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY){
-                
-                this.dx = -this.dx;
+            
+                this.dx = -this.dx - 20;
                 this.controladorDeBote = 0;
              }
           if ( this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
                this.y + this.radius > this.realRightPaddleY){
                 
-                this.dx = -this.dx;
+                this.dx = -this.dx - 20;
                 this.controladorDeBote = 0;
           }
         }
