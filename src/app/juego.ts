@@ -176,7 +176,7 @@ export class Juego implements OnInit, OnDestroy {
             
                   this.controladorDeBote = 0;
             
-                  if ( this.dx < 400 ) {
+                  if ( this.dx < 250 ) {
                     this.dx = (-this.dx) * 1.1;
                    }
                   else {
@@ -189,7 +189,7 @@ export class Juego implements OnInit, OnDestroy {
                this.y + this.radius > this.realRightPaddleY) {
             
                     this.controladorDeBote = 0;
-                    if ( this.dx < 400 ) {
+                    if ( this.dx < 250 ) {
                         this.dx = (-this.dx) * 1.1;
                        }
                     else {
