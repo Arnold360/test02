@@ -171,15 +171,31 @@ export class Juego implements OnInit, OnDestroy {
                }, 150);
               }
           if ( this.radius + 20 > this.x && 
-               this.y - this.radius < this.realLeftPaddleY + 25  && this.y + this.radius > this.realLeftPaddleY){
-                this.controladorDeBote = 0;
-                this.dx = (-this.dx) * 1.1;
-             }
-          if ( this.x + this.radius > canvas.width - 20 && this.y - this.radius < this.realRightPaddleY + 25  && 
-               this.y + this.radius > this.realRightPaddleY){
-                this.controladorDeBote = 0;
-                this.dx = (-this.dx) * 1.1;
-          }
+               this.y - this.radius < this.realLeftPaddleY + 25  &&
+               this.y + this.radius > this.realLeftPaddleY) {
+            
+                  this.controladorDeBote = 0;
+            
+                  if ( this.dx < 400 ) {
+                    this.dx = (-this.dx) * 1.1;
+                   }
+                  else {
+                    this.dx = -this.dx;
+                   }
+               }
+      
+          if ( this.x + this.radius > canvas.width - 20 && 
+               this.y - this.radius < this.realRightPaddleY + 25  && 
+               this.y + this.radius > this.realRightPaddleY) {
+            
+                    this.controladorDeBote = 0;
+                    if ( this.dx < 400 ) {
+                        this.dx = (-this.dx) * 1.1;
+                       }
+                    else {
+                        this.dx = -this.dx;
+                     }
+              }
         }
 
          if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
