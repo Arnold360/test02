@@ -178,6 +178,7 @@ export class Juego implements OnInit, OnDestroy {
             
                   if ( Math.abs(this.dx) < 400 ) {
                     this.dx = (-this.dx) * 1.1;
+                    this.dy = this.dy * 1.1;
                    }
                   else {
                     this.dx = -this.dx;
@@ -191,6 +192,7 @@ export class Juego implements OnInit, OnDestroy {
                     this.controladorDeBote = 0;
                     if ( Math.abs(this.dx) < 400 ) {
                         this.dx = (-this.dx) * 1.1;
+                        this.dy = this.dy * 1.1;
                        }
                     else {
                         this.dx = -this.dx;
