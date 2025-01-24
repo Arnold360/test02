@@ -170,7 +170,9 @@ export class Juego implements OnInit, OnDestroy {
                this.changeColor();
                }, 150);
               }
-          if ( this.radius + 20 > this.x && 
+    }
+        if (this.controladorDeBote == 1) {
+             if ( this.radius + 20 > this.x && 
                this.y - this.radius < this.realLeftPaddleY + 25  &&
                this.y + this.radius > this.realLeftPaddleY) {
             
