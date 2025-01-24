@@ -143,7 +143,7 @@ export class Juego implements OnInit, OnDestroy {
       this.y = this.radius - 1;
     }
    //controla la posicion de el balon para evitar bugs
-    if (this.x > this.canvas.width / 4 && this.x < (this.canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
+    if (this.x > canvas.width / 4 && this.x < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
       this.controladorDeBote = 1;
     }
     // Check for collision with the walls
