@@ -49,6 +49,7 @@
   justify-content: space-between;
   font-size: 24px;
   color: black;
+  border: 2px solid black;
 }
 
 .left-score, .right-score {
