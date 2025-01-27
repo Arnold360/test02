@@ -10,6 +10,16 @@
   height: 30%;
 }
 }*/
+.poder {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: black;
+  border: 2px solid black;
+}
 .court {
   display: grid;
   place-items: center;
