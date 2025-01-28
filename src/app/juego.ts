@@ -358,16 +358,16 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 }
 
-  usarPoder(poder:string) {
-    if(){
-      if(){}
-      if(){}
-      if(){}
+  usarPoder(poder:HTMLButtonElement) {
+    if(poder.parentNode.id === "poderP1"){
+      if(poder.className === "fuego"){}
+      if(poder.className === "hielo"){}
+      if(poder.className === "racimo"){}
     }
-    if(){
-      if(){}
-      if(){}
-      if(){}
+    if(poder.parentNode.id === "poderP2"){
+      if(poder.className === "fuego"){}
+      if(poder.className === "hielo"){}
+      if(poder.className === "racimo"){}
     }
    
   }
