@@ -358,6 +358,20 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 }
 
+  usarPoder(poder:string) {
+    if(){
+      if(){}
+      if(){}
+      if(){}
+    }
+    if(){
+      if(){}
+      if(){}
+      if(){}
+    }
+   
+  }
+
 
 }
 
