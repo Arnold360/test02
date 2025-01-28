@@ -359,12 +359,12 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 }
 
   usarPoder(poder:HTMLButtonElement) {
-    if(poder.parentNode.id === "poderP1"){
+    if(poder.parentElement.id === "poderP1"){
       if(poder.className === "fuego"){}
       if(poder.className === "hielo"){}
       if(poder.className === "racimo"){}
     }
-    if(poder.parentNode.id === "poderP2"){
+    if(poder.parentElement.id === "poderP2"){
       if(poder.className === "fuego"){}
       if(poder.className === "hielo"){}
       if(poder.className === "racimo"){}
