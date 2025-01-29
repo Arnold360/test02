@@ -34,6 +34,7 @@ export class Juego implements OnInit, OnDestroy {
   realRightPaddleY:number = 0;
   realLeftPaddleY:number = 0;
   controladorDeBote:number = 0;
+  controladorDeCantidad:boolean = false;
   colorDeLaPelota1:string = 'white';
   colorDeLaPelota2:string = 'silver';
   colorDeLaPelota3:string = 'gray';
@@ -390,6 +391,12 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   dibujarPelota(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number){
 
     this.drawSilverBall(ctx, x, y, radius );
+
+    if ( this.controladorDeCantidad ) {
+       for(let i = 0 ; i < 5; i++){
+         this.drawSilverBall(ctx, x, y, radius );
+       }
+    }
   }
 
 
