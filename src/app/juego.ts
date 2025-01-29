@@ -213,6 +213,7 @@ changeColor(){
   this.colorDeLaPelota2 = 'silver';
   this.colorDeLaPelota3 = 'gray';
 }
+  
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
 gradient.addColorStop(0, this.colorDeLaPelota1); // Azul claro
@@ -363,12 +364,14 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     if(poder.parentElement.id === "poderP1"){
       
          if(poder.className === "fuego"){
-           this.dx = 500;
+            this.dx = 500;
          }
          else if(poder.className === "hielo"){
             this.dx = 100;
          }
-         else if(poder.className === "racimo"){}
+         else if(poder.className === "racimo"){
+           
+         }
        }
     
    if(poder.parentElement.id === "poderP2"){
@@ -382,6 +385,11 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          else if(poder.className === "racimo"){}
        }
    
+  }
+
+  dibujarPelota(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number){
+
+    this.drawSilverBall(ctx, x, y, radius );
   }
 
 
