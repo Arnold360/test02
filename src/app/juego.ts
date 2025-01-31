@@ -484,5 +484,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              this.controladorDeBote = 1;
             }
 
+     }
+
 }
 
