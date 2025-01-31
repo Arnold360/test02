@@ -20,8 +20,8 @@ export class Juego implements OnInit, OnDestroy {
   ctx!:CanvasRenderingContext2D;
   x: number;
   y: number;
-  silverBallRacimo: number[] = [a:number, b:number, c:number, d:number,
-           e:number, f:number, g:number, h:number, i:number, j:number];
+  silverBallRacimo: number[] = [this.a:number, this.b:number, this.c:number, this.d:number,
+           this.e:number, this.f:number, this.g:number, this.h:number, this.i:number, this.j:number];
   radius = 10;
   dx = 200;
   dy = 200;
