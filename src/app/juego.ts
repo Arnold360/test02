@@ -399,6 +399,88 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     }
   }
 
+   update2(canvas: HTMLCanvasElement, deltaTime: number) {
+    
+    this.x += this.dx * deltaTime;
+    this.y += this.dy * deltaTime;
+   /* ajustar posicion de la pelota para que no pase demasiado el limite y
+     evitar bugs*/
+    if (this.x + this.radius > canvas.width) {
+      this.x = canvas.width - (this.radius - 1);
+    }
+    if (this.x - this.radius < 0) {
+      this.x = this.radius - 1;
+    }
+    if (this.y + this.radius > canvas.height) {
+      this.y = canvas.height - (this.radius - 1);
+    }
+    if (this.y - this.radius < 0) {
+      this.y = this.radius - 1;
+    }
+   //controla la posicion de el balon para evitar bugs
+    if (this.x > canvas.width / 4 && this.x < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
+      this.controladorDeBote = 1;
+    }
+    // Check for collision with the walls
+    if (this.controladorDeBote == 1) {
+          if ( this.x - this.radius < 0 ) {
+             this.controladorDeBote = 0;
+             this.colorDeLaPelota1 = '#ff7a7b';
+             this.colorDeLaPelota2 = '#ff5253';
+             this.colorDeLaPelota3 = '#f00005';
+             this.leftScore -= 1;
+             this.dx = -this.dx;
+             setTimeout(() => {
+               this.changeColor();
+               }, 150);
+              }
+          if ( this.x + this.radius > canvas.width ) {
+             this.controladorDeBote = 0;
+             this.colorDeLaPelota1 = '#ff7a7b';
+             this.colorDeLaPelota2 = '#ff5253';
+             this.colorDeLaPelota3 = '#f00005';
+             this.rightScore -= 1;
+             this.dx = -this.dx;
+              setTimeout(() => {
+               this.changeColor();
+               }, 150);
+              }
+    }
+        if (this.controladorDeBote == 1) {
+             if ( this.radius + 20 > this.x && 
+               this.y - this.radius < this.realLeftPaddleY + 25  &&
+               this.y + this.radius > this.realLeftPaddleY) {
+            
+                  this.controladorDeBote = 0;
+            
+                  if ( Math.abs(this.dx) < 400 ) {
+                    this.dx = (-this.dx) * 1.1;
+                    this.dy = this.dy * 1.1;
+                   }
+                  else {
+                    this.dx = -this.dx;
+                   }
+               }
+      
+          if ( this.x + this.radius > canvas.width - 20 && 
+               this.y - this.radius < this.realRightPaddleY + 25  && 
+               this.y + this.radius > this.realRightPaddleY) {
+            
+                    this.controladorDeBote = 0;
+                    if ( Math.abs(this.dx) < 400 ) {
+                        this.dx = (-this.dx) * 1.1;
+                        this.dy = this.dy * 1.1;
+                       }
+                    else {
+                        this.dx = -this.dx;
+                     }
+              }
+        }
+
+         if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+             this.dy = -this.dy;
+             this.controladorDeBote = 1;
+            }
 
 }
 
