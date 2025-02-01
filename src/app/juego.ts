@@ -390,13 +390,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
    
   }
 
-  dibujarPelota(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number){
+  dibujarPelota(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number, canvas: HTMLCanvasElement, deltaTime:number){
 
     this.drawSilverBall(ctx, x, y, radius );
 
     if ( this.controladorDeCantidad ) {
        for(let i = 0 ; i < 5; i++){
-         this.update2()
+         this.update2(canvas, )
          this.drawSilverBall(ctx, x, y, radius );
          
        }
