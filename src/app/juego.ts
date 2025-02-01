@@ -119,7 +119,7 @@ export class Juego implements OnInit, OnDestroy {
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
-    dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime)
+    this.dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime)
     
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
