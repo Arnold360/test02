@@ -396,7 +396,9 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
     if ( this.controladorDeCantidad ) {
        for(let i = 0 ; i < 5; i++){
+         this.update2()
          this.drawSilverBall(ctx, x, y, radius );
+         
        }
     }
   }
