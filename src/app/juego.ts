@@ -289,7 +289,11 @@ ctx.stroke();
     this.ctx = this.canvas.getContext('2d')!;
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height / 2;
-    
+    this.silverBallRacimoX = [this.canvas.width / 2, this.canvas.width / 2,
+            this.canvas.width / 2, this.canvas.width / 2, this.canvas.width / 2];
+     
+    this.silverBallRacimoY = [this.canvas.height / 5, this.canvas.height / 3.5 ,
+            this.canvas.height / 2, this.canvas.height / 1.6, this.canvas.height / 1.2];
     this.drawCourt();
     this.drawSilverBall(this.ctx, this.canvas.width / 2, this.canvas.height / 2, 10);
     this.animate(this.ctx, this.canvas);
