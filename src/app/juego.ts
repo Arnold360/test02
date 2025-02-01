@@ -36,6 +36,7 @@ export class Juego implements OnInit, OnDestroy {
   realRightPaddleY:number = 0;
   realLeftPaddleY:number = 0;
   controladorDeBote:number = 0;
+  controladorDeBoteRacimo: number[] = [0, 0, 0, 0, 0];
   controladorDeCantidad:boolean = false;
   colorDeLaPelota1:string = 'white';
   colorDeLaPelota2:string = 'silver';
@@ -118,12 +119,14 @@ export class Juego implements OnInit, OnDestroy {
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
-    this.drawSilverBall(ctx, this.x, this.y, this.radius);
+    dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime)
+    
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
     this.drawRealisticPaddle(ctx, canvas.width - 20, this.realRightPaddleY, 4, 20); // Paleta derecha
      /*this.CrearInka.animatePupils();*/
     this.update(canvas, deltaTime);
+    
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
   
@@ -396,39 +399,39 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
     if ( this.controladorDeCantidad ) {
        for(let i = 0 ; i < 5; i++){
-         this.update2(canvas, )
-         this.drawSilverBall(ctx, x, y, radius );
+         this.update2(canvas, deltaTime, i)
+         this.drawSilverBall(ctx, this.silverBallRacimoX[i], this.silverBallRacimoY[i], radius );
          
        }
     }
   }
 
-   update2(canvas:HTMLCanvasElement, deltaTime:number, x:number, y:number) {
+   update2(canvas:HTMLCanvasElement, deltaTime:number, i:number) {
     
-    x += this.dx * deltaTime;
-    y += this.dy * deltaTime;
+    this.silverBallRacimoX[i] += this.dx * deltaTime;
+    this.silverBallRacimoY[i] += this.dy * deltaTime;
    /* ajustar posicion de la pelota para que no pase demasiado el limite y
      evitar bugs*/
-    if (x + this.radius > canvas.width) {
-         x = canvas.width - (this.radius - 1);
+    if (this.silverBallRacimoX[i] + this.radius > canvas.width) {
+         this.silverBallRacimoX[i] = canvas.width - (this.radius - 1);
     }
-    if (x - this.radius < 0) {
-         x = this.radius - 1;
+    if (this.silverBallRacimoX[i] - this.radius < 0) {
+         this.silverBallRacimoX[i] = this.radius - 1;
     }
-    if (y + this.radius > canvas.height) {
-         y = canvas.height - (this.radius - 1);
+    if (this.silverBallRacimoY[i]  + this.radius > canvas.height) {
+         this.silverBallRacimoY[i] = canvas.height - (this.radius - 1);
     }
-    if (y - this.radius < 0) {
-         y = this.radius - 1;
+    if (this.silverBallRacimoY[i]  - this.radius < 0) {
+         this.silverBallRacimoY[i]  = this.radius - 1;
     }
    //controla la posicion de el balon para evitar bugs
-    if (x > canvas.width / 4 && x < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
-      this.controladorDeBote = 1;
+    if (this.silverBallRacimoX[i] > canvas.width / 4 && this.silverBallRacimoX[i] < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
+      this.controladorDeBoteRacimo[i] = 1;
     }
     // Check for collision with the walls
-    if (this.controladorDeBote == 1) {
-          if ( x - this.radius < 0 ) {
-             this.controladorDeBote = 0;
+    if (this.controladorDeBoteRacimo[i] == 1) 
+          if ( this.silverBallRacimoX[i] - this.radius < 0 ) {
+             this.controladorDeBoteRacimo[i] = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
              this.colorDeLaPelota2 = '#ff5253';
              this.colorDeLaPelota3 = '#f00005';
@@ -438,8 +441,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                this.changeColor();
                }, 150);
               }
-          if ( x + this.radius > canvas.width ) {
-             this.controladorDeBote = 0;
+          if ( this.silverBallRacimoX[i] + this.radius > canvas.width ) {
+             this.controladorDeBoteRacimo[i] = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
              this.colorDeLaPelota2 = '#ff5253';
              this.colorDeLaPelota3 = '#f00005';
@@ -450,12 +453,12 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                }, 150);
               }
     }
-        if (this.controladorDeBote == 1) {
+        if (this.controladorDeBoteRacimo[i] == 1) {
              if ( this.radius + 20 > x && 
-               y - this.radius < this.realLeftPaddleY + 25  &&
-               y + this.radius > this.realLeftPaddleY) {
+               this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25  &&
+               this.silverBallRacimoY[i]  + this.radius > this.realLeftPaddleY) {
             
-                  this.controladorDeBote = 0;
+                  this.controladorDeBoteRacimo[i] = 0;
             
                   if ( Math.abs(this.dx) < 400 ) {
                     this.dx = (-this.dx) * 1.1;
@@ -466,11 +469,11 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                    }
                }
       
-          if ( x + this.radius > canvas.width - 20 && 
-               y - this.radius < this.realRightPaddleY + 25  && 
-               y + this.radius > this.realRightPaddleY) {
+          if ( this.silverBallRacimoX[i] + this.radius > canvas.width - 20 && 
+               this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25  && 
+               this.silverBallRacimoY[i] + this.radius > this.realRightPaddleY) {
             
-                    this.controladorDeBote = 0;
+                    this.controladorDeBoteRacimo[i] = 0;
                     if ( Math.abs(this.dx) < 400 ) {
                         this.dx = (-this.dx) * 1.1;
                         this.dy = this.dy * 1.1;
@@ -481,9 +484,9 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
               }
         }
 
-         if (y + this.radius > canvas.height || y - this.radius < 0) {
+         if (this.silverBallRacimoY[i] + this.radius > canvas.height || this.silverBallRacimoY[i] - this.radius < 0) {
              this.dy = -this.dy;
-             this.controladorDeBote = 1;
+             this.controladorDeBoteRacimo[i] = 1;
             }
 
      }
