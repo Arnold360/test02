@@ -454,7 +454,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
               }
     }
         if (this.controladorDeBoteRacimo[i] == 1) {
-             if ( this.radius + 20 > x && 
+             if ( this.radius + 20 > this.x && 
                this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25  &&
                this.silverBallRacimoY[i]  + this.radius > this.realLeftPaddleY) {
             
