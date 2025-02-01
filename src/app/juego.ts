@@ -376,7 +376,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.dx = 100;
          }
          else if(poder.className === "racimo"){
-           
+            this.controladorDeCantidad = true;
          }
        }
     
