@@ -429,7 +429,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       this.controladorDeBoteRacimo[i] = 1;
     }
     // Check for collision with the walls
-    if (this.controladorDeBoteRacimo[i] == 1) 
+    if (this.controladorDeBoteRacimo[i] == 1) {
           if ( this.silverBallRacimoX[i] - this.radius < 0 ) {
              this.controladorDeBoteRacimo[i] = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
