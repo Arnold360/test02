@@ -25,8 +25,8 @@ export class Juego implements OnInit, OnDestroy {
   radius = 10;
   dx = 200;
   dy = 200;
-  dxRacimo: number[] = [Math.abs(this.dx), Math.abs(this.dx), Math.abs(this.dx), Math.abs(this.dx), Math.abs(this.dx)];
-  dyRacimo: number[] = [Math.abs(this.dy), Math.abs(this.dy), Math.abs(this.dy), Math.abs(this.dy), Math.abs(this.dy)];
+  dxRacimo: number[] = [200, 200, 200, 200, 200];
+  dyRacimo: number[] = [200, 200, 200, 200, 200];
   canvasInka!:HTMLCanvasElement;
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
@@ -378,10 +378,14 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          if(poder.className === "fuego"){
             this.dx = 500;
             this.dy = 500;
+            this.dyRacimo = [500, 500, 500, 500, 500];
+            this.dxRacimo = [500, 500, 500, 500, 500];
          }
          else if(poder.className === "hielo"){
             this.dx = 100;
             this.dy = 100;
+            this.dyRacimo = [100, 100, 100, 100, 100];
+            this.dyRacimo = [100, 100, 100, 100, 100];
          }
          else if(poder.className === "racimo"){
             this.controladorDeCantidad = true;
@@ -393,10 +397,14 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          if(poder.className === "fuego"){
            this.dx = -500;
            this.dy = -500;
+           this.dyRacimo = [-500, -500, -500, -500, -500];
+           this.dxRacimo = [-500, -500, -500, -500, -500];
          }
          else if(poder.className === "hielo"){
            this.dx = -100;
            this.dy = -100;
+           this.dyRacimo = [-100, -100, -100, -100, -100];
+           this.dyRacimo = [-100, -100, -100, -100, -100];
          }
          else if(poder.className === "racimo"){
             this.controladorDeCantidad = true;
