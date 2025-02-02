@@ -377,9 +377,11 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       
          if(poder.className === "fuego"){
             this.dx = 500;
+            this.dy = 500;
          }
          else if(poder.className === "hielo"){
             this.dx = 100;
+            this.dy = 100;
          }
          else if(poder.className === "racimo"){
             this.controladorDeCantidad = true;
@@ -390,11 +392,15 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
      
          if(poder.className === "fuego"){
            this.dx = -500;
+           this.dy = -500;
          }
          else if(poder.className === "hielo"){
            this.dx = -100;
+           this.dy = -100;
          }
-         else if(poder.className === "racimo"){}
+         else if(poder.className === "racimo"){
+            this.controladorDeCantidad = true;
+         }
        }
    
   }
