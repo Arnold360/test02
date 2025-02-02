@@ -460,15 +460,16 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     }
     // Check for collision with the walls
     if (this.controladorDeBoteRacimo[i] == 1) {
+      
           if ( this.silverBallRacimoX[i] - this.radius < 0 ) {
              this.controladorDeBoteRacimo[i] = 0;
-             this.colorDeLaPelota1 = '#ff7a7b';
-             this.colorDeLaPelota2 = '#ff5253';
-             this.colorDeLaPelota3 = '#f00005';
+             this.colorDeLaPelota1Racimo[i] = '#ff7a7b';
+             this.colorDeLaPelota2Racimo[i] = '#ff5253';
+             this.colorDeLaPelota3Racimo[i] = '#f00005';
              this.leftScore -= 1;
              this.dxRacimo[i] = -this.dxRacimo[i];
              setTimeout(() => {
-               this.changeColor();
+               this.changeColorRacimo(i);
                }, 150);
               }
           if ( this.silverBallRacimoX[i] + this.radius > canvas.width ) {
@@ -479,7 +480,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              this.rightScore -= 1;
              this.dxRacimo[i] = -this.dxRacimo[i];
               setTimeout(() => {
-               this.changeColorRacimo();
+               this.changeColorRacimo(i);
                }, 150);
               }
     }
