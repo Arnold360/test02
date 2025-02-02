@@ -385,7 +385,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.dx = 100;
             this.dy = 100;
             this.dyRacimo = [100, 100, 100, 100, 100];
-            this.dyRacimo = [100, 100, 100, 100, 100];
+            this.dxRacimo = [100, 100, 100, 100, 100];
          }
          else if(poder.className === "racimo"){
             this.controladorDeCantidad = true;
@@ -404,7 +404,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
            this.dx = -100;
            this.dy = -100;
            this.dyRacimo = [-100, -100, -100, -100, -100];
-           this.dyRacimo = [-100, -100, -100, -100, -100];
+           this.dxRacimo = [-100, -100, -100, -100, -100];
          }
          else if(poder.className === "racimo"){
             this.controladorDeCantidad = true;
