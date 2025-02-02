@@ -247,6 +247,24 @@ ctx.stroke();
 //En este código, he cambiado los colores del gradiente para que vayan desde un azul claro hasta un azul oscuro. También he mantenido el mismo efecto de resplandor metálico con un color blanco opaco.*/
 }
   
+drawSilverBallRacimo(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number, i:number) {
+    const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
+gradient.addColorStop(0, this.colorDeLaPelota1Racimo[i]); // Azul claro
+gradient.addColorStop(0.3, this.colorDeLaPelota2Racimo[i]); // Azul medio
+gradient.addColorStop(1, this.colorDeLaPelota3Racimo[i]); // Azul oscuro
+ctx.fillStyle = gradient;
+ctx.beginPath();
+ctx.arc(x, y, radius, 0, Math.PI * 2);
+ctx.fill();
+
+// Add some highlights for a metallic effect
+ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+ctx.beginPath();
+ctx.arc(x - radius / 3, y - radius / 3, radius / 2, 0, Math.PI * 2);
+ctx.stroke();
+//En este código, he cambiado los colores del gradiente para que vayan desde un azul claro hasta un azul oscuro. También he mantenido el mismo efecto de resplandor metálico con un color blanco opaco.*/
+}
+  
  drawRealisticPaddle(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number) {
    
   // Dibujar el cuerpo de la paleta con un gradiente
@@ -430,7 +448,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       
        for(let i = 0 ; i < 5; i++){
          this.update2(canvas, deltaTime, i)
-         this.drawSilverBall(ctx, this.silverBallRacimoX[i], this.silverBallRacimoY[i], radius );
+         this.drawSilverBallRacimo(ctx, this.silverBallRacimoX[i], this.silverBallRacimoY[i], radius, i );
          
        }
     }
