@@ -25,8 +25,8 @@ export class Juego implements OnInit, OnDestroy {
   radius = 10;
   dx = 200;
   dy = 200;
-  dxRacimo: number[] = [200, 200, 200, 200, 200];
-  dyRacimo: number[] = [200, 200, 200, 200, 200];
+  dxRacimo: number[] = [Math.abs(this.dx), Math.abs(this.dx), Math.abs(this.dx), Math.abs(this.dx), Math.abs(this.dx)];
+  dyRacimo: number[] = [Math.abs(this.dy), Math.abs(this.dy), Math.abs(this.dy), Math.abs(this.dy), Math.abs(this.dy)];
   canvasInka!:HTMLCanvasElement;
   ctxInka!:CanvasRenderingContext2D;
   imgData!:ImageData;
