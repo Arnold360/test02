@@ -43,7 +43,9 @@ export class Juego implements OnInit, OnDestroy {
   colorDeLaPelota1:string = 'white';
   colorDeLaPelota2:string = 'silver';
   colorDeLaPelota3:string = 'gray';
-
+  colorDeLaPelota1Racimo:string = 'white';
+  colorDeLaPelota2Racimo:string = 'silver';
+  colorDeLaPelota3Racimo:string = 'gray';
   
   
   
