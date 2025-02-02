@@ -43,9 +43,9 @@ export class Juego implements OnInit, OnDestroy {
   colorDeLaPelota1:string = 'white';
   colorDeLaPelota2:string = 'silver';
   colorDeLaPelota3:string = 'gray';
-  colorDeLaPelota1Racimo:string = 'white';
-  colorDeLaPelota2Racimo:string = 'silver';
-  colorDeLaPelota3Racimo:string = 'gray';
+  colorDeLaPelota1Racimo:string[] = ['white','white','white','white','white'];
+  colorDeLaPelota2Racimo:string[] = ['silver','silver','silver','silver','silver'];
+  colorDeLaPelota3Racimo:string[] = ['gray','gray','gray','gray','gray'];
   
   
   
@@ -223,6 +223,11 @@ changeColor(){
   this.colorDeLaPelota2 = 'silver';
   this.colorDeLaPelota3 = 'gray';
 }
+changeColorRacimo(i:number){
+  this.colorDeLaPelota1Racimo[i] = 'white';
+  this.colorDeLaPelota2Racimo[i] = 'silver';
+  this.colorDeLaPelota3Racimo[i] = 'gray';
+  }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
@@ -468,13 +473,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
               }
           if ( this.silverBallRacimoX[i] + this.radius > canvas.width ) {
              this.controladorDeBoteRacimo[i] = 0;
-             this.colorDeLaPelota1 = '#ff7a7b';
-             this.colorDeLaPelota2 = '#ff5253';
-             this.colorDeLaPelota3 = '#f00005';
+             this.colorDeLaPelota1Racimo[i] = '#ff7a7b';
+             this.colorDeLaPelota2Racimo[i] = '#ff5253';
+             this.colorDeLaPelota3Racimo[i] = '#f00005';
              this.rightScore -= 1;
              this.dxRacimo[i] = -this.dxRacimo[i];
               setTimeout(() => {
-               this.changeColor();
+               this.changeColorRacimo();
                }, 150);
               }
     }
