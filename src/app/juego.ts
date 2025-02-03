@@ -543,9 +543,16 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
   predictorDeMovimiento(){
 
-    if(this.x > this.canvas.width - (this.radius + 50) ){ 
-      this.realRightPaddleY = this.y;
+    if(this.x > this.canvas.width - (this.radius + 50) ) { 
+        this.realRightPaddleY = this.y;
     }
+    else {
+        for(let i = 0; i < 5; i++) {
+          if(this.silverBallRacimoX[i] > this.canvas.width - (this.radius + 50)) {
+            this.realRightPaddleY = this.silverBallRacimoY[i];
+          }
+        }
+     }
   }
 
 }
