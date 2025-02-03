@@ -565,7 +565,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          if (  this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
              || this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
              && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
-             || this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius) {
+             || this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
+             && i !== e) {
 
                   this.dyRacimo[i] += this.dyRacimo[i] - this.dyRacimo[e];
                   this.dxRacimo[i] += this.dxRacimo[i] - this.dxRacimo[e];
