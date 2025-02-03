@@ -445,14 +445,15 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
     if ( this.controladorDeCantidad ) {
       
-       
-      
-       for(let i = 0 ; i < 5; i++){
-         this.update2(canvas, deltaTime, i)
-         this.drawSilverBallRacimo(ctx, this.silverBallRacimoX[i], this.silverBallRacimoY[i], radius, i );
+        for( let i = 0 ; i < 5; i++) {
+          
+           this.update2(canvas, deltaTime, i)
+           this.drawSilverBallRacimo(ctx, this.silverBallRacimoX[i], this.silverBallRacimoY[i], radius, i );
          
        }
     }
+
+    this.colisionDePelota();
   }
 
    update2(canvas:HTMLCanvasElement, deltaTime:number, i:number) {
@@ -543,7 +544,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
   predictorDeMovimiento(){
 
-    if(this.x > this.canvas.width - (this.radius + 50) ) { 
+    if (this.x > this.canvas.width - (this.radius + 50) ) { 
         this.realRightPaddleY = this.y;
     }
     else {
@@ -557,18 +558,24 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
   colisionDePelota() {
 
-    for(let i = 0; i < 5; i++){
-       for(let e = 0; e < 5; e++){
-          if( this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
-           || this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
-           && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
-           || this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius){
+    for (let i = 0; i < 5; i++) {
+      
+       for (let e = 0; e < 5; e++) {
+         
+         if (  this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
+             || this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
+             && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
+             || this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius) {
 
+                  this.dyRacimo[i] += this.dyRacimo[i] - this.dyRacimo[e];
+                  this.dxRacimo[i] += this.dxRacimo[i] - this.dxRacimo[e];
+                  this.dyRacimo[e] += this.dyRacimo[e] - this.dyRacimo[i];
+                  this.dxRacimo[e] += this.dyRacimo[e] - this.dyRacimo[i];
             
-           
-        }
+          }
+         
       }
-    }
+      
   }
 
 }
