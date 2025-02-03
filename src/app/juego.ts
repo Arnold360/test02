@@ -555,5 +555,21 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
      }
   }
 
+  colisionDePelota() {
+
+    for(let i = 0; i < 5; i++){
+       for(let e = 0; e < 5; e++){
+          if( this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
+           || this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
+           && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
+           || this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius){
+
+            
+           
+        }
+      }
+    }
+  }
+
 }
 
