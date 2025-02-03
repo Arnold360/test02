@@ -572,11 +572,10 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                   this.dyRacimo[e] += this.dyRacimo[e] - this.dyRacimo[i];
                   this.dxRacimo[e] += this.dyRacimo[e] - this.dyRacimo[i];
             
-          }
-         
+               }
+            }
+         }
       }
-      
-  }
 
 }
 
