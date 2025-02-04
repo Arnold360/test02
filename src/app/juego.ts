@@ -574,17 +574,18 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              && i !== e ) {
 
 
-                     this.changeColorRacimo2(i);
-                     this.changeColorRacimo2(e)
-                     setTimeout(() => {
-                         this.changeColorRacimo(i);
-                         this.changeColorRacimo(e);
-                         }, 350);
+                  this.changeColorRacimo2(i);
+                  this.changeColorRacimo2(e);
 
                   this.dyRacimo[i] += ( this.dyRacimo[i] - this.dyRacimo[e] );
                   this.dxRacimo[i] += ( this.dxRacimo[i] - this.dxRacimo[e] );
                   this.dyRacimo[e] += ( this.dyRacimo[e] - this.dyRacimo[i] );
                   this.dxRacimo[e] += ( this.dyRacimo[e] - this.dyRacimo[i] );
+
+                  setTimeout(() => {
+                         this.changeColorRacimo(i);
+                         this.changeColorRacimo(e);
+                         }, 350);
             
                }
             }
