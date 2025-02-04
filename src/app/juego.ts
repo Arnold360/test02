@@ -229,7 +229,7 @@ changeColorRacimo(i:number){
   this.colorDeLaPelota2Racimo[i] = 'silver';
   this.colorDeLaPelota3Racimo[i] = 'gray';
   }
-changeColorRacimo(i:number){
+changeColorRacimo2(i:number){
   this.colorDeLaPelota1Racimo[i] = 'white';
   this.colorDeLaPelota2Racimo[i] = 'gray';
   this.colorDeLaPelota3Racimo[i] = 'black';
@@ -573,10 +573,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              || this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
              && i !== e ) {
 
-                  this.dyRacimo[i] += ( this.dyRacimo[i] - this.dyRacimo[e] );
+
+                     this.changeColorRacimo2(i);
+
+                 /* this.dyRacimo[i] += ( this.dyRacimo[i] - this.dyRacimo[e] );
                   this.dxRacimo[i] += ( this.dxRacimo[i] - this.dxRacimo[e] );
                   this.dyRacimo[e] += ( this.dyRacimo[e] - this.dyRacimo[i] );
-                  this.dxRacimo[e] += ( this.dyRacimo[e] - this.dyRacimo[i] );
+                  this.dxRacimo[e] += ( this.dyRacimo[e] - this.dyRacimo[i] );*/
             
                }
             }
