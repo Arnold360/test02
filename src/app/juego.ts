@@ -229,6 +229,11 @@ changeColorRacimo(i:number){
   this.colorDeLaPelota2Racimo[i] = 'silver';
   this.colorDeLaPelota3Racimo[i] = 'gray';
   }
+changeColorRacimo(i:number){
+  this.colorDeLaPelota1Racimo[i] = 'white';
+  this.colorDeLaPelota2Racimo[i] = 'gray';
+  this.colorDeLaPelota3Racimo[i] = 'black';
+  }
   
 drawSilverBall(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) {
     const gradient = ctx.createRadialGradient(x, y, radius / 2, x, y, radius);
