@@ -575,7 +575,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
 
                      this.changeColorRacimo2(i);
-                     this.changrColorRacimo2(e)
+                     this.changeColorRacimo2(e)
                      setTimeout(() => {
                          this.changeColorRacimo(i);
                          this.changeColorRacimo(e);
