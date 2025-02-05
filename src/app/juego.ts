@@ -589,7 +589,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                   setTimeout(() => {
                          this.changeColorRacimo(i);
                          this.changeColorRacimo(e);
-                         }, 350);
+                         }, 50);
             
                }
             }
