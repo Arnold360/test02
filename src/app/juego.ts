@@ -579,8 +579,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                   this.changeColorRacimo2(i);
                   this.changeColorRacimo2(e);
            
-                  this.silverBallRespaldoY: this.dyRacimo[i];
-                  this.silverBallRespaldoX: this.dxRacimo[i];
+                  this.silverBallRespaldoY = this.dyRacimo[i];
+                  this.silverBallRespaldoX = this.dxRacimo[i];
                   this.dyRacimo[i] =  this.dyRacimo[e] ;
                   this.dxRacimo[i] =  this.dxRacimo[e] ;
                   this.dyRacimo[e] =  this.silverBallRespaldoY;
