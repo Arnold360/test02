@@ -22,6 +22,8 @@ export class Juego implements OnInit, OnDestroy {
   y: number;
   silverBallRacimoX: number[] = [0, 0, 0, 0, 0];
   silverBallRacimoY: number[] = [0, 0, 0, 0, 0];
+  silverBallRespaldoX: number = 0;
+  silverBallRespaldoY: number = 0;
   radius = 10;
   dx = 200;
   dy = 200;
@@ -576,11 +578,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
                   this.changeColorRacimo2(i);
                   this.changeColorRacimo2(e);
-
+           
+                  this.silverBallRespaldoY: this.dyRacimo[i];
+                  this.silverBallRespaldoX: this.dxRacimo[i];
                   this.dyRacimo[i] =  this.dyRacimo[e] ;
                   this.dxRacimo[i] =  this.dxRacimo[e] ;
-                  this.dyRacimo[e] =  this.dyRacimo[i] ;
-                  this.dxRacimo[e] =  this.dyRacimo[i] ;
+                  this.dyRacimo[e] =  this.silverBallRespaldoY;
+                  this.dxRacimo[e] =  this.silverBallRespaldoX;
 
                   setTimeout(() => {
                          this.changeColorRacimo(i);
