@@ -598,5 +598,58 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          }
       }
 
+  /*checkCollisions(): void {
+  for (let i = 0; i < this.balls.length; i++) {
+    for (let j = i + 1; j < this.balls.length; j++) {
+      const ball1 = this.balls[i];
+      const ball2 = this.balls[j];
+
+      // Calcular la distancia entre las pelotas
+      const dx = ball2.x - ball1.x;
+      const dy = ball2.y - ball1.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      // Verificar si hay colisión
+      if (distance < ball1.radius + ball2.radius) {
+        // Calcular el ángulo de colisión
+        const angle = Math.atan2(dy, dx);
+
+        // Calcular las velocidades en el sistema de coordenadas de la colisión
+        const speed1 = Math.sqrt(ball1.dx * ball1.dx + ball1.dy * ball1.dy);
+        const speed2 = Math.sqrt(ball2.dx * ball2.dx + ball2.dy * ball2.dy);
+
+        const direction1 = Math.atan2(ball1.dy, ball1.dx);
+        const direction2 = Math.atan2(ball2.dy, ball2.dx);
+
+        // Calcular las nuevas velocidades en el eje x e y
+        const velocityX1 = speed1 * Math.cos(direction1 - angle);
+        const velocityY1 = speed1 * Math.sin(direction1 - angle);
+        const velocityX2 = speed2 * Math.cos(direction2 - angle);
+        const velocityY2 = speed2 * Math.sin(direction2 - angle);
+
+        // Intercambiar velocidades en el eje x (rebote elástico)
+        const finalVelocityX1 = velocityX2;
+        const finalVelocityX2 = velocityX1;
+
+        // Convertir las velocidades de vuelta al sistema de coordenadas original
+        ball1.dx = Math.cos(angle) * finalVelocityX1 + Math.cos(angle + Math.PI / 2) * velocityY1;
+        ball1.dy = Math.sin(angle) * finalVelocityX1 + Math.sin(angle + Math.PI / 2) * velocityY1;
+        ball2.dx = Math.cos(angle) * finalVelocityX2 + Math.cos(angle + Math.PI / 2) * velocityY2;
+        ball2.dy = Math.sin(angle) * finalVelocityX2 + Math.sin(angle + Math.PI / 2) * velocityY2;
+
+        // Separar las pelotas para evitar que se superpongan
+        const overlap = ball1.radius + ball2.radius - distance;
+        const overlapX = overlap * Math.cos(angle);
+        const overlapY = overlap * Math.sin(angle);
+
+        ball1.x -= overlapX / 2;
+        ball1.y -= overlapY / 2;
+        ball2.x += overlapX / 2;
+        ball2.y += overlapY / 2;
+      }
+    }
+  }
+}*/
+
 }
 
