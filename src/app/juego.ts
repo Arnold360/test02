@@ -565,6 +565,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 
   colisionDePelota() {
+    let a = -1;
     let o = -1;
     let u = -1;
     for (let i = 0; i < 5; i++) {
@@ -575,8 +576,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              && this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
              && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
              && this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
-             && i !== e && e !== o && e !== u ) {
-           
+             && i !== e && e !== o && e !== u && e !== a ) {
+                  a = u;
                   u = o;
                   o = i;
                  
