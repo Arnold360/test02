@@ -1,4 +1,4 @@
-
+8
 import { Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { webSocketService } from './websocket.service';
 import { CrearInka } from './CrearInka';
@@ -565,12 +565,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 
   colisionDePelota() {
-    let a = -1;
-    let o = -1;
-    let u = -1;
-    let y = -1;
+    
     for (let i = 0; i < 5; i++) {
-      
+
+      let a = -1;
+      let o = -1;
+      let u = -1;
+      let y = -1;
        for (let e = 0; e < 5; e++) {
          
          if (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
