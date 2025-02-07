@@ -1,4 +1,4 @@
-8
+
 import { Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { webSocketService } from './websocket.service';
 import { CrearInka } from './CrearInka';
@@ -578,7 +578,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              && this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
              && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
              && this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
-             && i !== e && e !== o && e !== u && e !== a && e !== y) {
+             && i !== e ) {
                   y = a;
                   a = u;
                   u = o;
