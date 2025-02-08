@@ -568,10 +568,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     
     for (let i = 0; i < 5; i++) {
 
-      let a = -1;
-      let o = -1;
-      let u = -1;
-      let y = -1;
+     
        for (let e = 0; e < 5; e++) {
          
          if (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
@@ -579,10 +576,6 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
              && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
              && this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
              && i !== e ) {
-                  y = a;
-                  a = u;
-                  u = o;
-                  o = i;
                   
                  
                   this.changeColorRacimo2(i);
@@ -599,7 +592,17 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                          this.changeColorRacimo(i);
                          this.changeColorRacimo(e);
                          }, 50);
-            
+
+        while (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
+             && this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
+             && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
+             && this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
+             && i !== e ) {
+                 
+                  this.silverBallRacimoX[i] += -1 * (this.dxRacimo[i] * deltaTime);
+                  this.silverBallRacimoY[i] += -1 * (this.dyRacimo[i] * deltaTime);
+
+                
                }
             }
          }
