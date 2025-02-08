@@ -449,7 +449,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   dibujarPelota(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number, canvas: HTMLCanvasElement, deltaTime:number){
 
     this.drawSilverBall(ctx, x, y, radius );
-    this.colisionDePelota();
+    this.colisionDePelota(deltaTime);
     
     if ( this.controladorDeCantidad ) {
       
@@ -564,7 +564,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
      }
   }
 
-  colisionDePelota() {
+  colisionDePelota(deltaTime:number) {
     
     for (let i = 0; i < 5; i++) {
 
