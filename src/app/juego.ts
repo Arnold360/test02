@@ -601,6 +601,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                  
                   this.silverBallRacimoX[i] += -1 * (this.dxRacimo[i] * deltaTime);
                   this.silverBallRacimoY[i] += -1 * (this.dyRacimo[i] * deltaTime);
+                  this.dyRacimo[i] = -1 * this.dyRacimo[i];
+                  this.dxRacimo[i] = -1 * this.dxRacimo[i];
 
                   }
                }
