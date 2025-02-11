@@ -132,7 +132,7 @@ export class Juego implements OnInit, OnDestroy {
     this.drawRealisticPaddle(ctx, canvas.width - 20, this.realRightPaddleY, 4, 20); // Paleta derecha
      /*this.CrearInka.animatePupils();*/
     this.update(canvas, deltaTime);
-    /*this.predictorDeMovimiento();*/
+    this.predictorDeMovimiento();
     
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
@@ -565,7 +565,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 
   colisionDePelota(deltaTime:number) {
-   /* 
+   
     for (let i = 0; i < 5; i++) {
 
      
@@ -593,7 +593,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                          this.changeColorRacimo(e);
                          }, 50);
 
-        /*while (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
+        while (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
              && this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
              && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
              && this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
@@ -606,7 +606,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                   }
                }
             } 
-         }*/
+         }
       }
 
   /*checkCollisions(): void {
