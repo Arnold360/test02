@@ -565,7 +565,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   }
 
   colisionDePelota(deltaTime:number) {
-    
+   /* 
     for (let i = 0; i < 5; i++) {
 
      
@@ -603,10 +603,10 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                   this.silverBallRacimoY[i] += (this.dyRacimo[i] * deltaTime);
                   
 
-                  }*/
+                  }
                }
-            }
-         }
+            } 
+         }*/
       }
 
   /*checkCollisions(): void {
