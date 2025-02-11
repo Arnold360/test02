@@ -593,7 +593,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                          this.changeColorRacimo(e);
                          }, 50);
 
-        while (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
+        /*while (   this.silverBallRacimoX[i] + this.radius > this.silverBallRacimoX[e] - this.radius
              && this.silverBallRacimoX[i] - this.radius < this.silverBallRacimoX[e] + this.radius
              && this.silverBallRacimoY[i] + this.radius > this.silverBallRacimoY[e] - this.radius
              && this.silverBallRacimoY[i] - this.radius < this.silverBallRacimoY[e] + this.radius
@@ -603,7 +603,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                   this.silverBallRacimoY[i] += (this.dyRacimo[i] * deltaTime);
                   
 
-                  }
+                  }*/
                }
             }
          }
