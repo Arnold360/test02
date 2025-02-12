@@ -428,10 +428,10 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
    if(poder.parentElement.id === "poderP2"){
      
          if(poder.className === "fuego"){
-           this.dx = -500;
-           this.dy = -500;
-           this.dyRacimo = [-500, -500, -500, -500, -500];
-           this.dxRacimo = [-500, -500, -500, -500, -500];
+           this.dx = -300;
+           this.dy = -300;
+           this.dyRacimo = [-300, -300, -300, -300, -300];
+           this.dxRacimo = [-300, -300, -300, -300, -300];
          }
          else if(poder.className === "hielo"){
            this.dx = -100;
