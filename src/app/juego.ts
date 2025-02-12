@@ -42,9 +42,9 @@ export class Juego implements OnInit, OnDestroy {
   controladorDeBote:number = 0;
   controladorDeBoteRacimo: number[] = [0, 0, 0, 0, 0];
   controladorDeCantidad:boolean = false;
-  colorDeLaPelota1:string = 'white';
-  colorDeLaPelota2:string = 'silver';
-  colorDeLaPelota3:string = 'gray';
+  colorDeLaPelota1:string = '#F5F6CE';
+  colorDeLaPelota2:string = '#F7FE2E';
+  colorDeLaPelota3:string = '#D7DF01';
   colorDeLaPelota1Racimo:string[] = ['white','white','white','white','white'];
   colorDeLaPelota2Racimo:string[] = ['silver','silver','silver','silver','silver'];
   colorDeLaPelota3Racimo:string[] = ['gray','gray','gray','gray','gray'];
