@@ -191,7 +191,7 @@ export class Juego implements OnInit, OnDestroy {
             
                   this.controladorDeBote = 0;
             
-                  if ( Math.abs(this.dx) < 400 ) {
+                  if ( Math.abs(this.dx) < 300 ) {
                     this.dx = (-this.dx) * 1.1;
                     this.dy = this.dy * 1.1;
                    }
@@ -205,7 +205,7 @@ export class Juego implements OnInit, OnDestroy {
                this.y + this.radius > this.realRightPaddleY) {
             
                     this.controladorDeBote = 0;
-                    if ( Math.abs(this.dx) < 400 ) {
+                    if ( Math.abs(this.dx) < 300 ) {
                         this.dx = (-this.dx) * 1.1;
                         this.dy = this.dy * 1.1;
                        }
@@ -519,7 +519,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             
                   this.controladorDeBoteRacimo[i] = 0;
             
-                  if ( Math.abs(this.dxRacimo[i]) < 400 ) {
+                  if ( Math.abs(this.dxRacimo[i]) < 300 ) {
                     this.dxRacimo[i] = (-this.dxRacimo[i]) * 1.1;
                     this.dyRacimo[i] = this.dyRacimo[i] * 1.1;
                    }
@@ -533,7 +533,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                this.silverBallRacimoY[i] + this.radius > this.realRightPaddleY) {
             
                     this.controladorDeBoteRacimo[i] = 0;
-                    if ( Math.abs(this.dxRacimo[i]) < 400 ) {
+                    if ( Math.abs(this.dxRacimo[i]) < 300 ) {
                         this.dxRacimo[i] = (-this.dxRacimo[i]) * 1.1;
                         this.dyRacimo[i] = this.dyRacimo[i] * 1.1;
                        }
