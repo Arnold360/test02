@@ -48,6 +48,11 @@ export class Juego implements OnInit, OnDestroy {
   colorDeLaPelota1Racimo:string[] = ['white','white','white','white','white'];
   colorDeLaPelota2Racimo:string[] = ['silver','silver','silver','silver','silver'];
   colorDeLaPelota3Racimo:string[] = ['gray','gray','gray','gray','gray'];
+  haloCenterX = 100;
+  haloCenterY = 100;
+  haloInnerRadius = 20;
+  haloOuterRadius = 40;
+
   
   
   
@@ -611,11 +616,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       }
 
   drawHalo(): void {
-    const centerX = 100;
-    const centerY = 100;
-    const innerRadius = 20;
-    const outerRadius = 40;
-
+    
     const gradient = this.ctx.createRadialGradient(centerX, centerY, innerRadius, centerX, centerY, outerRadius);
     gradient.addColorStop(0, 'rgba(255, 255, 0, 0)');
     gradient.addColorStop(1, 'rgba(255, 255, 0, 1)');
@@ -624,6 +625,11 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     this.ctx.beginPath();
     this.ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
     this.ctx.fill();
+    
+    if(haloInnerRadius < 40){
+         this.haloInnerRadius += 0.1;
+         this.haloOuterRadius += 0.1;
+    }
   }
 
   /*checkCollisions(): void {
