@@ -626,7 +626,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     this.ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
     this.ctx.fill();
     
-    if(innerRadius < 40){
+    if(this.haloInnerRadius < 40){
          this.haloInnerRadius += 0.1;
          this.haloOuterRadius += 0.1;
     }
