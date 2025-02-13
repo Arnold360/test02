@@ -611,8 +611,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       }
 
   drawHalo(): void {
-    const centerX = 250;
-    const centerY = 250;
+    const centerX = 100;
+    const centerY = 100;
     const innerRadius = 50;
     const outerRadius = 100;
 
