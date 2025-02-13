@@ -222,9 +222,9 @@ export class Juego implements OnInit, OnDestroy {
         
    }
 changeColor(){
-  this.colorDeLaPelota1 = 'white';
-  this.colorDeLaPelota2 = 'silver';
-  this.colorDeLaPelota3 = 'gray';
+  this.colorDeLaPelota1 = '#F5F6CE';
+  this.colorDeLaPelota2 = '#F7FE2E';
+  this.colorDeLaPelota3 = '#D7DF01';
 }
 changeColorRacimo(i:number){
   this.colorDeLaPelota1Racimo[i] = 'white';
