@@ -131,7 +131,7 @@ export class Juego implements OnInit, OnDestroy {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime);
-    this.drawHalo(this.haloCenterX, this.haloCenterY, this.haloOuterRadius, this.haloInnerRadius);
+    this.drawHalo(this.haloCenterX, this.haloCenterY, this.haloOuterRadius, this.haloInnerRadius, canvas);
     
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
@@ -430,7 +430,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.controladorDeCantidad = true;
          }
          else if(poder.className === "campoDeFuerza"){
-             this.drawHalo(this.realLeftPaddleX, this.realLeftPaddleY, this.haloOuterRadius, this.haloInnerRadius:number);
+             this.drawHalo( 20, this.realLeftPaddleY, this.haloOuterRadius, this.haloInnerRadius:number);
          }
        }
     
@@ -452,7 +452,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.controladorDeCantidad = true;
          }
          else if(poder.className === "campoDeFuerza"){
-            this.drawHalo(this.realRightPaddleX, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius:number);
+            this.drawHalo(canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius:number);
          }
        }
    
@@ -621,7 +621,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          }
       }
 
-  drawHalo(centerX:number, centerY:number, outerRadius:number, innerRadius:number): void {
+  drawHalo(centerX:number, centerY:number, outerRadius:number, innerRadius:number, canvas:HTMLCanvasElement): void {
     
     const gradient = this.ctx.createRadialGradient(centerX, centerY, innerRadius, centerX, centerY, outerRadius);
     gradient.addColorStop(0, 'rgba(255, 255, 0, 0)');
