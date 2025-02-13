@@ -609,6 +609,22 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          }
       }
 
+  drawHalo(): void {
+    const centerX = 250;
+    const centerY = 250;
+    const innerRadius = 50;
+    const outerRadius = 100;
+
+    const gradient = this.ctx.createRadialGradient(centerX, centerY, innerRadius, centerX, centerY, outerRadius);
+    gradient.addColorStop(0, 'rgba(255, 255, 0, 0)');
+    gradient.addColorStop(1, 'rgba(255, 255, 0, 1)');
+
+    this.ctx.fillStyle = gradient;
+    this.ctx.beginPath();
+    this.ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
+    this.ctx.fill();
+  }
+
   /*checkCollisions(): void {
   for (let i = 0; i < this.balls.length; i++) {
     for (let j = i + 1; j < this.balls.length; j++) {
