@@ -429,6 +429,9 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          else if(poder.className === "racimo"){
             this.controladorDeCantidad = true;
          }
+         else if(poder.className === "campoDeFuerza"){
+             this.controladorDeCantidad = true;
+         }
        }
     
    if(poder.parentElement.id === "poderP2"){
@@ -446,6 +449,9 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
            this.dxRacimo = [-100, -100, -100, -100, -100];
          }
          else if(poder.className === "racimo"){
+            this.controladorDeCantidad = true;
+         }
+         else if(poder.className === "campoDeFuerza"){
             this.controladorDeCantidad = true;
          }
        }
