@@ -623,10 +623,10 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
     this.ctx.fillStyle = gradient;
     this.ctx.beginPath();
-    this.ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
+    this.ctx.arc(haloCenterX, haloCenterY, haloOuterRadius, 0, 2 * Math.PI);
     this.ctx.fill();
     
-    if(haloInnerRadius < 40){
+    if(this.haloInnerRadius < 40){
          this.haloInnerRadius += 0.1;
          this.haloOuterRadius += 0.1;
     }
