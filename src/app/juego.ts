@@ -613,8 +613,8 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
   drawHalo(): void {
     const centerX = 100;
     const centerY = 100;
-    const innerRadius = 50;
-    const outerRadius = 100;
+    const innerRadius = 20;
+    const outerRadius = 40;
 
     const gradient = this.ctx.createRadialGradient(centerX, centerY, innerRadius, centerX, centerY, outerRadius);
     gradient.addColorStop(0, 'rgba(255, 255, 0, 0)');
