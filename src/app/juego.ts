@@ -131,7 +131,7 @@ export class Juego implements OnInit, OnDestroy {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime);
-    this.drawHalo(100, this.haloCenterX, this.haloCenterY, this.haloOuterRadius, this.haloInnerRadius);
+    this.drawHalo(this.haloCenterX, this.haloCenterY, this.haloOuterRadius, this.haloInnerRadius);
     
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
@@ -452,7 +452,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.controladorDeCantidad = true;
          }
          else if(poder.className === "campoDeFuerza"){
-            this.drawHalo(this.canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius:number );
+            this.drawHalo(this.canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius );
          }
        }
    
