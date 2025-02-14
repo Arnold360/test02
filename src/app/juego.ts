@@ -52,6 +52,8 @@ export class Juego implements OnInit, OnDestroy {
   haloCenterY = 100;
   haloInnerRadius = 20;
   haloOuterRadius = 40;
+  activarHaloLeft = false;
+  activarHaloRight = false;
 
   
   
@@ -131,8 +133,7 @@ export class Juego implements OnInit, OnDestroy {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime);
-    this.drawHalo(canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius);
-    
+    this.halos();
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
     this.drawRealisticPaddle(ctx, canvas.width - 20, this.realRightPaddleY, 4, 20); // Paleta derecha
@@ -452,7 +453,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.controladorDeCantidad = true;
          }
          else if(poder.className === "campoDeFuerza"){
-            this.drawHalo(50, 50, this.haloOuterRadius, this.haloInnerRadius );
+            this.activarHaloRight = true;
          }
        }
    
@@ -632,14 +633,18 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     this.ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
     this.ctx.fill();
     
-    if(this.haloInnerRadius < 40){
+    if (this.haloInnerRadius < 40){
          this.haloInnerRadius += 0.1;
          this.haloOuterRadius += 0.1;
     }
   }
 
-  halos(){
+  halos() {
     
+    if ( this.activarHaloRight ) {
+         this.drawHalo(this.canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius);
+    
+    }
   }
 
   /*checkCollisions(): void {
