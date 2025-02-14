@@ -438,6 +438,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
               this.activarHaloRight = false;
              }
        }
+    }
     
    if(poder.parentElement.id === "poderP2"){
      
