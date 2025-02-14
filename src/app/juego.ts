@@ -430,7 +430,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.controladorDeCantidad = true;
          }
          else if(poder.className === "campoDeFuerza"){
-             this.drawHalo( 20, this.realLeftPaddleY, this.haloOuterRadius, this.haloInnerRadius);
+             this.drawHalo( 150, 100, this.haloOuterRadius, this.haloInnerRadius);
          }
        }
     
@@ -452,7 +452,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             this.controladorDeCantidad = true;
          }
          else if(poder.className === "campoDeFuerza"){
-            this.drawHalo(this.canvas.width - 20, 50, this.haloOuterRadius, this.haloInnerRadius );
+            this.drawHalo(50, 50, this.haloOuterRadius, this.haloInnerRadius );
          }
        }
    
