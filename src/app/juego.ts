@@ -652,7 +652,10 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
     
     if ( this.activarHaloRight ) {
          this.drawHalo(this.canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius);
+    }
     
+    if ( this.activarHaloLeft ) {
+         this.drawHalo(20, this.realLeftPaddleY, this.haloOuterRadius, this.haloInnerRadius);
     }
   }
 
