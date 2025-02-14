@@ -131,7 +131,7 @@ export class Juego implements OnInit, OnDestroy {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     this.drawCourt();
     this.dibujarPelota(ctx, this.x, this.y, this.radius, canvas, deltaTime);
-    this.drawHalo(this.realRightPaddleX, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius);
+    this.drawHalo(canvas.width - 20, this.realRightPaddleY, this.haloOuterRadius, this.haloInnerRadius);
     
   // Dibujar las paletas realistas
     this.drawRealisticPaddle(ctx, 10, this.realLeftPaddleY , 4, 20); // Paleta izquierda
