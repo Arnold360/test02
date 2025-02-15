@@ -490,28 +490,28 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
 
    update2(canvas:HTMLCanvasElement, deltaTime:number, i:number) {
     
-    this.silverBallRacimoX[i] += this.dxRacimo[i] * deltaTime;
-    this.silverBallRacimoY[i] += this.dyRacimo[i] * deltaTime;
+      this.silverBallRacimoX[i] += this.dxRacimo[i] * deltaTime;
+      this.silverBallRacimoY[i] += this.dyRacimo[i] * deltaTime;
    /* ajustar posicion de la pelota para que no pase demasiado el limite y
      evitar bugs*/
-    if (this.silverBallRacimoX[i] + this.radius > canvas.width) {
-         this.silverBallRacimoX[i] = canvas.width - (this.radius - 1);
-    }
-    if (this.silverBallRacimoX[i] - this.radius < 0) {
-         this.silverBallRacimoX[i] = this.radius - 1;
-    }
-    if (this.silverBallRacimoY[i]  + this.radius > canvas.height) {
+      if (this.silverBallRacimoX[i] + this.radius > canvas.width) {
+           this.silverBallRacimoX[i] = canvas.width - (this.radius - 1);
+      }
+      if (this.silverBallRacimoX[i] - this.radius < 0) {
+           this.silverBallRacimoX[i] = this.radius - 1;
+      }
+      if (this.silverBallRacimoY[i]  + this.radius > canvas.height) {
          this.silverBallRacimoY[i] = canvas.height - (this.radius - 1);
-    }
-    if (this.silverBallRacimoY[i]  - this.radius < 0) {
+      }
+      if (this.silverBallRacimoY[i]  - this.radius < 0) {
          this.silverBallRacimoY[i]  = this.radius - 1;
-    }
+      }
    //controla la posicion de el balon para evitar bugs
-    if (this.silverBallRacimoX[i] > canvas.width / 4 && this.silverBallRacimoX[i] < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
-      this.controladorDeBoteRacimo[i] = 1;
-    }
+      if (this.silverBallRacimoX[i] > canvas.width / 4 && this.silverBallRacimoX[i] < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
+        this.controladorDeBoteRacimo[i] = 1;
+      }
     // Check for collision with the walls
-    if (this.controladorDeBoteRacimo[i] == 1) {
+      if (this.controladorDeBoteRacimo[i] == 1) {
       
           if ( this.silverBallRacimoX[i] - this.radius < 0 ) {
              this.controladorDeBoteRacimo[i] = 0;
@@ -524,6 +524,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                this.changeColorRacimo(i);
                }, 150);
               }
+        
           if ( this.silverBallRacimoX[i] + this.radius > canvas.width ) {
              this.controladorDeBoteRacimo[i] = 0;
              this.colorDeLaPelota1Racimo[i] = '#ff7a7b';
@@ -535,22 +536,23 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                this.changeColorRacimo(i);
                }, 150);
               }
-    }
-        if (this.controladorDeBoteRacimo[i] == 1) {
-             if ( this.radius + 20 > this.silverBallRacimoX[i] && 
+      }
+      if (this.controladorDeBoteRacimo[i] == 1) {
+        
+          if ( this.radius + 20 > this.silverBallRacimoX[i] && 
                this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25  &&
                this.silverBallRacimoY[i]  + this.radius > this.realLeftPaddleY) {
             
-                  this.controladorDeBoteRacimo[i] = 0;
+                 this.controladorDeBoteRacimo[i] = 0;
             
-                  if ( Math.abs(this.dxRacimo[i]) < 300 ) {
-                    this.dxRacimo[i] = (-this.dxRacimo[i]) * 1.1;
-                    this.dyRacimo[i] = this.dyRacimo[i] * 1.1;
-                   }
-                  else {
-                    this.dxRacimo[i] = -this.dxRacimo[i];
-                   }
-               }
+                    if ( Math.abs(this.dxRacimo[i]) < 300 ) {
+                      this.dxRacimo[i] = (-this.dxRacimo[i]) * 1.1;
+                      this.dyRacimo[i] = this.dyRacimo[i] * 1.1;
+                     }
+                    else {
+                      this.dxRacimo[i] = -this.dxRacimo[i];
+                     }
+                }
       
           if ( this.silverBallRacimoX[i] + this.radius > canvas.width - 20 && 
                this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25  && 
@@ -558,19 +560,26 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
             
                     this.controladorDeBoteRacimo[i] = 0;
                     if ( Math.abs(this.dxRacimo[i]) < 300 ) {
-                        this.dxRacimo[i] = (-this.dxRacimo[i]) * 1.1;
-                        this.dyRacimo[i] = this.dyRacimo[i] * 1.1;
-                       }
+                         this.dxRacimo[i] = (-this.dxRacimo[i]) * 1.1;
+                         this.dyRacimo[i] = this.dyRacimo[i] * 1.1;
+                        }
                     else {
-                        this.dxRacimo[i] = -this.dxRacimo[i];
-                     }
-              }
-        }
+                         this.dxRacimo[i] = -this.dxRacimo[i];
+                      }
+                }
+          }
+     
+           if ( this.activarHaloLeft ) {
+           
+           }
+           if ( this.activarHaloRight ) {
+           
+           }
 
-         if (this.silverBallRacimoY[i] + this.radius > canvas.height || this.silverBallRacimoY[i] - this.radius < 0) {
+           if (this.silverBallRacimoY[i] + this.radius > canvas.height || this.silverBallRacimoY[i] - this.radius < 0) {
              this.dyRacimo[i] = -this.dyRacimo[i];
              this.controladorDeBoteRacimo[i] = 1;
-            }
+             }
 
      }
 
