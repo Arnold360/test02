@@ -552,7 +552,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       }
       if (this.controladorDeBoteRacimo[i] == 1) {
 
-          const margenLeftDePaleta = 20;
+          let margenLeftDePaleta = 20;
 
           if ( this.activarHaloLeft ) {
                margenLeftDePaleta+ = this.haloOuterRadius;
@@ -572,7 +572,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                      }
                 }
           
-          const margenRightDePaleta = 20;
+          let margenRightDePaleta = 20;
 
           if ( this.activarHaloLeft ) {
                margenRightDePaleta+ = this.haloOuterRadius;
