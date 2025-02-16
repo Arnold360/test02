@@ -195,14 +195,14 @@ export class Juego implements OnInit, OnDestroy {
         }
     if (this.controladorDeBote == 1) {
 
-          let margenLeftDePaleta = 20;
+          let margenLeftDePaleta = 0;
       
           if (this.activarHaloLeft){
-             margenLeftDePaleta += this.haloOuterRadius;
+             margenLeftDePaleta = this.haloOuterRadius;
           }
           if ( margenLeftDePaleta > this.x - this.radius && 
-               this.y - this.radius < this.realLeftPaddleY + 25  &&
-               this.y + this.radius > this.realLeftPaddleY) {
+               this.y - this.radius < this.realLeftPaddleY + 25 + margenLeftDePaleta  &&
+               this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta ) {
             
                   this.controladorDeBote = 0;
             
@@ -215,14 +215,14 @@ export class Juego implements OnInit, OnDestroy {
                    }
                }
 
-          let margenRightDePaleta = 20;
+          let margenRightDePaleta = 0;
       
           if (this.activarHaloRight){
-             margenRightDePaleta += this.haloOuterRadius;
+             margenRightDePaleta = this.haloOuterRadius;
           }
           if ( this.x + this.radius > canvas.width - margenRightDePaleta && 
-               this.y - this.radius < this.realRightPaddleY + 25  && 
-               this.y + this.radius > this.realRightPaddleY) {
+               this.y - this.radius < this.realRightPaddleY + 25 + margenRightDePaleta && 
+               this.y + this.radius > this.realRightPaddleY - margenRightDePaleta ) {
             
                     this.controladorDeBote = 0;
                     if ( Math.abs(this.dx) < 300 ) {
@@ -552,15 +552,15 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
       }
       if (this.controladorDeBoteRacimo[i] == 1) {
 
-          let margenLeftDePaleta = 20;
+          let margenLeftDePaleta = 0;
 
           if ( this.activarHaloLeft ) {
-               margenLeftDePaleta += this.haloOuterRadius;
+               margenLeftDePaleta = this.haloOuterRadius;
                 }
-          if (  margenLeftDePaleta > this.silverBallRacimoX[i] - this.radius  && 
-               this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25  &&
-               this.silverBallRacimoY[i]  + this.radius > this.realLeftPaddleY) {
-            
+          if (  20 + margenLeftDePaleta > this.silverBallRacimoX[i] - this.radius  && 
+               this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25 + margenLeftDePaleta   &&
+               this.silverBallRacimoY[i]  + this.radius > this.realLeftPaddleY - margenLeftDePaleta ) {
+          
                  this.controladorDeBoteRacimo[i] = 0;
             
                     if ( Math.abs(this.dxRacimo[i]) < 300 ) {
@@ -572,14 +572,14 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                      }
                 }
           
-          let margenRightDePaleta = 20;
+          let margenRightDePaleta = 0;
 
           if ( this.activarHaloLeft ) {
-               margenRightDePaleta += this.haloOuterRadius;
+               margenRightDePaleta = this.haloOuterRadius;
                 }
           if ( this.silverBallRacimoX[i] + this.radius > canvas.width - margenRightDePaleta && 
-               this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25  && 
-               this.silverBallRacimoY[i] + this.radius > this.realRightPaddleY) {
+               this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25 + margenRightDePaleta && 
+               this.silverBallRacimoY[i] + this.radius > this.realRightPaddleY - margenRightDePaleta) {
             
                     this.controladorDeBoteRacimo[i] = 0;
                     if ( Math.abs(this.dxRacimo[i]) < 300 ) {
