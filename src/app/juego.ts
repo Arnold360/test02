@@ -168,6 +168,8 @@ export class Juego implements OnInit, OnDestroy {
     }
     // Check for collision with the walls
     if (this.controladorDeBote == 1) {
+      
+         
           if ( this.x - this.radius < 0 ) {
              this.controladorDeBote = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
@@ -189,10 +191,16 @@ export class Juego implements OnInit, OnDestroy {
               setTimeout(() => {
                this.changeColor();
                }, 150);
-              }
-    }
-        if (this.controladorDeBote == 1) {
-             if ( this.radius + 20 > this.x && 
+           }
+        }
+    if (this.controladorDeBote == 1) {
+
+          let margenLeftDePelota = 20;
+      
+          if (this.activarHaloLeft){
+             margenLeftDePelota+ = this.haloOuterRadius;
+          }
+          if ( margenLeftDePelota > this.x - this.radius && 
                this.y - this.radius < this.realLeftPaddleY + 25  &&
                this.y + this.radius > this.realLeftPaddleY) {
             
@@ -206,8 +214,13 @@ export class Juego implements OnInit, OnDestroy {
                     this.dx = -this.dx;
                    }
                }
+
+          let margenRightDePelota = 20;
       
-          if ( this.x + this.radius > canvas.width - 20 && 
+          if (this.activarHaloRight){
+             margenRightDePelota+ = this.haloOuterRadius;
+          }
+          if ( this.x + this.radius > canvas.width - marginRightDePelota && 
                this.y - this.radius < this.realRightPaddleY + 25  && 
                this.y + this.radius > this.realRightPaddleY) {
             
@@ -460,10 +473,10 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
          else if(poder.className === "campoDeFuerza"){
            
             if(this.activarHaloRight == false){
-              this.activarHaloRight = true;
+               this.activarHaloRight = true;
             }
             else {
-              this.activarHaloRight = false;
+               this.activarHaloRight = false;
             }
          }
        }
@@ -538,8 +551,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
               }
       }
       if (this.controladorDeBoteRacimo[i] == 1) {
-        
-          if ( this.radius + 20 > this.silverBallRacimoX[i] && 
+
+          const margenLeftDePaleta = 20;
+
+          if ( this.activarHaloLeft ) {
+               margenLeftDePaleta+ = this.haloOuterRadius;
+                }
+          if (  margenLeftDePaleta > this.silverBallRacimoX[i] - this.radius  && 
                this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25  &&
                this.silverBallRacimoY[i]  + this.radius > this.realLeftPaddleY) {
             
@@ -553,8 +571,13 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                       this.dxRacimo[i] = -this.dxRacimo[i];
                      }
                 }
-      
-          if ( this.silverBallRacimoX[i] + this.radius > canvas.width - 20 && 
+          
+          const margenRightDePaleta = 20;
+
+          if ( this.activarHaloLeft ) {
+               margenRightDePaleta+ = this.haloOuterRadius;
+                }
+          if ( this.silverBallRacimoX[i] + this.radius > canvas.width - margenRightDePaleta && 
                this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25  && 
                this.silverBallRacimoY[i] + this.radius > this.realRightPaddleY) {
             
@@ -569,14 +592,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
                 }
           }
      
-           if ( this.activarHaloLeft ) {
-           
-           }
-           if ( this.activarHaloRight ) {
-           
-           }
-
-           if (this.silverBallRacimoY[i] + this.radius > canvas.height || this.silverBallRacimoY[i] - this.radius < 0) {
+          if (this.silverBallRacimoY[i] + this.radius > canvas.height || this.silverBallRacimoY[i] - this.radius < 0) {
              this.dyRacimo[i] = -this.dyRacimo[i];
              this.controladorDeBoteRacimo[i] = 1;
              }
