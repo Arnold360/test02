@@ -198,7 +198,7 @@ export class Juego implements OnInit, OnDestroy {
           let margenLeftDePaleta = 20;
       
           if (this.activarHaloLeft){
-             margenLeftDePaleta+ = this.haloOuterRadius;
+             margenLeftDePaleta += this.haloOuterRadius;
           }
           if ( margenLeftDePaleta > this.x - this.radius && 
                this.y - this.radius < this.realLeftPaddleY + 25  &&
@@ -218,7 +218,7 @@ export class Juego implements OnInit, OnDestroy {
           let margenRightDePaleta = 20;
       
           if (this.activarHaloRight){
-             margenRightDePaleta+ = this.haloOuterRadius;
+             margenRightDePaleta += this.haloOuterRadius;
           }
           if ( this.x + this.radius > canvas.width - marginRightDePaleta && 
                this.y - this.radius < this.realRightPaddleY + 25  && 
@@ -555,7 +555,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
           let margenLeftDePaleta = 20;
 
           if ( this.activarHaloLeft ) {
-               margenLeftDePaleta+ = this.haloOuterRadius;
+               margenLeftDePaleta += this.haloOuterRadius;
                 }
           if (  margenLeftDePaleta > this.silverBallRacimoX[i] - this.radius  && 
                this.silverBallRacimoY[i]  - this.radius < this.realLeftPaddleY + 25  &&
@@ -575,7 +575,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
           let margenRightDePaleta = 20;
 
           if ( this.activarHaloLeft ) {
-               margenRightDePaleta+ = this.haloOuterRadius;
+               margenRightDePaleta += this.haloOuterRadius;
                 }
           if ( this.silverBallRacimoX[i] + this.radius > canvas.width - margenRightDePaleta && 
                this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25  && 
