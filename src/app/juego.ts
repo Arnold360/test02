@@ -220,7 +220,7 @@ export class Juego implements OnInit, OnDestroy {
           if (this.activarHaloRight){
              margenRightDePaleta += this.haloOuterRadius;
           }
-          if ( this.x + this.radius > canvas.width - marginRightDePaleta && 
+          if ( this.x + this.radius > canvas.width - margenRightDePaleta && 
                this.y - this.radius < this.realRightPaddleY + 25  && 
                this.y + this.radius > this.realRightPaddleY) {
             
