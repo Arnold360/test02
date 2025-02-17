@@ -164,13 +164,18 @@ export class Juego implements OnInit, OnDestroy {
       this.y = this.radius - 1;
     }
    //controla la posicion de el balon para evitar bugs
-    if (this.x > canvas.width / 4 && this.x < (canvas.width / 4) * 3 && this.controladorDeBote == 0 ) {
-      this.controladorDeBote = 1;
-    }
+    
+   
+    if(margenLeftDePaleta + 20 < this.x - this.radius && 
+       this.y - this.radius < this.realLeftPaddleY + 25 + margenLeftDePaleta  &&
+       this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta){
+            
+               this.controladorDeBote = 1;
+         }
+        
     // Check for collision with the walls
     if (this.controladorDeBote == 1) {
       
-         
           if ( this.x - this.radius < 0 ) {
              this.controladorDeBote = 0;
              this.colorDeLaPelota1 = '#ff7a7b';
@@ -215,10 +220,8 @@ export class Juego implements OnInit, OnDestroy {
                     this.dx = -this.dx;
                    }
                }
-          if (  ) {
-              this.controladorDeBote = 0;
-           }
-
+          
+ 
           let margenRightDePaleta = 0;
       
           if (this.activarHaloRight){
