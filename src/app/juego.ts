@@ -128,6 +128,7 @@ export class Juego implements OnInit, OnDestroy {
 
  
   animate(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, lastTime: number = 0) {
+    
     const now = performance.now();
     const deltaTime = (now - lastTime) / 1000; // Convertir a segundos
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -200,7 +201,7 @@ export class Juego implements OnInit, OnDestroy {
           if (this.activarHaloLeft){
              margenLeftDePaleta = this.haloOuterRadius;
           }
-          if ( margenLeftDePaleta > this.x - this.radius && 
+          if ( margenLeftDePaleta + 20 > this.x - this.radius && 
                this.y - this.radius < this.realLeftPaddleY + 25 + margenLeftDePaleta  &&
                this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta ) {
             
@@ -220,7 +221,7 @@ export class Juego implements OnInit, OnDestroy {
           if (this.activarHaloRight){
              margenRightDePaleta = this.haloOuterRadius;
           }
-          if ( this.x + this.radius > canvas.width - margenRightDePaleta && 
+          if ( this.x + this.radius > canvas.width - margenRightDePaleta - 20 && 
                this.y - this.radius < this.realRightPaddleY + 25 + margenRightDePaleta && 
                this.y + this.radius > this.realRightPaddleY - margenRightDePaleta ) {
             
@@ -577,7 +578,7 @@ drawBrickWithGradient(ctx: CanvasRenderingContext2D, x: number, y: number, width
           if ( this.activarHaloLeft ) {
                margenRightDePaleta = this.haloOuterRadius;
                 }
-          if ( this.silverBallRacimoX[i] + this.radius > canvas.width - margenRightDePaleta && 
+          if ( this.silverBallRacimoX[i] + this.radius > canvas.width - margenRightDePaleta - 20 && 
                this.silverBallRacimoY[i] - this.radius < this.realRightPaddleY + 25 + margenRightDePaleta && 
                this.silverBallRacimoY[i] + this.radius > this.realRightPaddleY - margenRightDePaleta) {
             
