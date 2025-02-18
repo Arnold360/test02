@@ -250,7 +250,7 @@ export class Juego implements OnInit, OnDestroy {
 
          if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
              this.dy = -this.dy;
-             this.controladorDeBote = 1;
+            
             }
         
    }
