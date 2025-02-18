@@ -163,6 +163,17 @@ export class Juego implements OnInit, OnDestroy {
     if (this.y - this.radius < 0) {
       this.y = this.radius - 1;
     }
+
+    let margenLeftDePaleta = 0;
+      
+          if (this.activarHaloLeft){
+             margenLeftDePaleta = this.haloOuterRadius;
+          }
+    let margenRightDePaleta = 0;
+      
+          if (this.activarHaloRight){
+             margenRightDePaleta = this.haloOuterRadius;
+          }
    //controla la posicion de el balon para evitar bugs
     
    
@@ -204,11 +215,7 @@ export class Juego implements OnInit, OnDestroy {
         }
     if (this.controladorDeBote == 1) {
 
-          let margenLeftDePaleta = 0;
-      
-          if (this.activarHaloLeft){
-             margenLeftDePaleta = this.haloOuterRadius;
-          }
+         
           if ( margenLeftDePaleta + 20 > this.x - this.radius && 
                this.y - this.radius < this.realLeftPaddleY + 25 + margenLeftDePaleta  &&
                this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta ) {
@@ -225,11 +232,7 @@ export class Juego implements OnInit, OnDestroy {
                }
           
  
-          let margenRightDePaleta = 0;
-      
-          if (this.activarHaloRight){
-             margenRightDePaleta = this.haloOuterRadius;
-          }
+         
           if ( this.x + this.radius > canvas.width - margenRightDePaleta - 20 && 
                this.y - this.radius < this.realRightPaddleY + 25 + margenRightDePaleta && 
                this.y + this.radius > this.realRightPaddleY - margenRightDePaleta ) {
