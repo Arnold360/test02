@@ -229,6 +229,15 @@ export class Juego implements OnInit, OnDestroy {
                   else {
                     this.dx = -this.dx;
                    }
+
+                 while ( margenLeftDePaleta + 20 > this.x - this.radius && 
+                         this.y - this.radius < this.realLeftPaddleY + 25 + margenLeftDePaleta  &&
+                         this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta ) {
+                 
+                                this.x += (this.dx * deltaTime);
+                                this.y += (this.dy * deltaTime);
+                  
+                   }
                }
           
  
@@ -245,6 +254,14 @@ export class Juego implements OnInit, OnDestroy {
                     else {
                         this.dx = -this.dx;
                      }
+                    while ( this.x + this.radius > canvas.width - margenRightDePaleta - 20 && 
+                            this.y - this.radius < this.realRightPaddleY + 25 + margenRightDePaleta && 
+                            this.y + this.radius > this.realRightPaddleY - margenRightDePaleta ) {
+
+                                this.x += (this.dx * deltaTime);
+                                this.y += (this.dy * deltaTime);
+                       
+                    }
               }
         }
 
