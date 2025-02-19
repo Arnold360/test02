@@ -39,7 +39,7 @@ export class Juego implements OnInit, OnDestroy {
   courtRect2!:any;
   realRightPaddleY:number = 0;
   realLeftPaddleY:number = 0;
-  controladorDeBote:number = 0;
+  controladorDeBote:number = 1;
   controladorDeBoteRacimo: number[] = [0, 0, 0, 0, 0];
   controladorDeCantidad:boolean = false;
   colorDeLaPelota1:string = '#F5F6CE';
