@@ -215,19 +215,32 @@ export class Juego implements OnInit, OnDestroy {
         }
     if (this.controladorDeBote == 1) {
 
-         
           if ( this.x - this.radius < margenLeftDePaleta + 20 - Math.abs(this.realLeftPaddleY - this.y) &&
                this.y - this.radius < this.realLeftPaddleY + margenLeftDePaleta  &&
                this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta && this.dx < 0) {
             
-                 
                   this.controladorDeBote = 0;
+            
                   if ( Math.abs(this.dx) < 300 ) {
-                    this.dx = (-this.dx) * 1.1;
-                    this.dy = this.dy * 1.1;
+                    
+                      this.dx = (-this.dx + Math.abs(this.realLeftPaddleY - this.y)) * 1.1;
+                      if (this.dy > 0) {
+                          this.dy = ( this.dy - Math.abs(this.realLeftPaddleY - this.y)) * 1.1;
+                        }
+                      else {
+                          this.dy = (this.dy + Math.abs(this.realLeftPaddleY - this.y)) * 1.1;
+                      }
                    }
+                    
                   else {
-                    this.dx = -this.dx;
+                    
+                      this.dx = -this.dx + Math.abs(this.realLeftPaddleY - this.y);
+                      if (this.dy > 0) {
+                          this.dy = this.dy - Math.abs(this.realLeftPaddleY - this.y);
+                        }
+                      else {
+                          this.dy = this.dy + Math.abs(this.realLeftPaddleY - this.y);
+                      }
                    }
 
                  while ( margenLeftDePaleta + 20 > this.x - this.radius && 
@@ -240,8 +253,6 @@ export class Juego implements OnInit, OnDestroy {
                    }
                }
           
- 
-         
           if ( this.x + this.radius > canvas.width - margenRightDePaleta - 20 + Math.abs(this.realRightPaddleY - this.y) && 
                this.y - this.radius < this.realRightPaddleY + margenRightDePaleta && 
                this.y + this.radius > this.realRightPaddleY - margenRightDePaleta && this.dx > 0) {
