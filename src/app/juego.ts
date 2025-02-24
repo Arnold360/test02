@@ -223,15 +223,6 @@ export class Juego implements OnInit, OnDestroy {
             
                   
                     
-                      this.dx = (-this.dx - Math.abs(this.realLeftPaddleY - this.y)) * 1.1;
-                      if (this.dy > 0) {
-                          this.dy = ( this.dy + Math.abs(this.realLeftPaddleY - this.y)) * 1.1;
-                        }
-                      else {
-                          this.dy = (this.dy - Math.abs(this.realLeftPaddleY - this.y)) * 1.1;
-                      }
-                   
-              
                 
                     
                       this.dx = -this.dx - Math.abs(this.realLeftPaddleY - this.y);
@@ -258,13 +249,10 @@ export class Juego implements OnInit, OnDestroy {
                this.y + this.radius > this.realRightPaddleY - margenRightDePaleta && this.dx > 0) {
             
                     this.controladorDeBote = 0;
-                    if ( Math.abs(this.dx) < 300 ) {
-                        this.dx = (-this.dx) * 1.1;
-                        this.dy = this.dy * 1.1;
-                       }
-                    else {
+                   
+                   
                         this.dx = -this.dx;
-                     }
+                     
                     while ( this.x + this.radius > canvas.width - margenRightDePaleta - 20 && 
                             this.y - this.radius < this.realRightPaddleY + margenRightDePaleta && 
                             this.y + this.radius > this.realRightPaddleY - margenRightDePaleta ) {
