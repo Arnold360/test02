@@ -223,9 +223,6 @@ export class Juego implements OnInit, OnDestroy {
             
                   
                     
-                
-                    
-                     
                       if (this.dy > 0) {
                           this.dy = this.dy - Math.abs(this.realLeftPaddleY - this.y);
                           this.dx = -this.dx + Math.abs(this.realLeftPaddleY - this.y);
@@ -236,9 +233,9 @@ export class Juego implements OnInit, OnDestroy {
                       }
                    
 
-                 while ( margenLeftDePaleta + 20 > this.x - this.radius && 
+                 while ( this.x - this.radius < margenLeftDePaleta + 20 - Math.abs(this.realLeftPaddleY - this.y) &&
                          this.y - this.radius < this.realLeftPaddleY + margenLeftDePaleta  &&
-                         this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta ) {
+                         this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta && this.dx < 0 ) {
                  
                                 this.x += (this.dx * deltaTime);
                                 this.y += (this.dy * deltaTime);
