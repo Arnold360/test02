@@ -228,17 +228,17 @@ export class Juego implements OnInit, OnDestroy {
                           this.dx = -this.dx + Math.abs(this.realLeftPaddleY - this.y);
                           }
                       else {
-                          this.dy =  this.dy + Math.abs(this.realLeftPaddleY - this.y);
-                          this.dx = -this.dx - Math.abs(this.realLeftPaddleY - this.y);
+                          this.dy =  this.dy - Math.abs(this.realLeftPaddleY - this.y);
+                          this.dx =  this.dx + Math.abs(this.realLeftPaddleY - this.y);
                           }
                        }
                   else {
                        if (this.dy > 0) {
                           this.dy =  this.dy + Math.abs(this.realLeftPaddleY - this.y);
-                          this.dx = -this.dx - Math.abs(this.realLeftPaddleY - this.y);
+                          this.dx =  this.dx + Math.abs(this.realLeftPaddleY - this.y);
                         }
                       else {
-                          this.dy =  this.dy - Math.abs(this.realLeftPaddleY - this.y);
+                          this.dy =  this.dy + Math.abs(this.realLeftPaddleY - this.y);
                           this.dx = -this.dx + Math.abs(this.realLeftPaddleY - this.y);
                       }
                   }
