@@ -223,8 +223,8 @@ export class Juego implements OnInit, OnDestroy {
             
                   
             
-                          this.dy = this.dy - ((this.dy / this.haloOuterRadius) * this.realLeftPaddleY - this.y);
-                          this.dx = this.dx - ((this.dy / this.haloOuterRadius) * this.realLeftPaddleY - this.y);
+                          this.dy = this.dy - ((this.dy / this.haloOuterRadius) * (this.realLeftPaddleY - this.y));
+                          this.dx = this.dx - ((this.dy / this.haloOuterRadius) * (this.realLeftPaddleY - this.y));
                           
                     
                        
