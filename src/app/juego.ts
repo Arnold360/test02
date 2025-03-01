@@ -222,9 +222,9 @@ export class Juego implements OnInit, OnDestroy {
                   this.controladorDeBote = 0;
             
                   
-                          this.dx =   ( (this.dy / this.haloOuterRadius ) * ( this.y - this.realLeftPaddleY ));
+                          let dyRespaldo = this.dy;
                           this.dy =  this.dy + ( Math.abs(this.dy / this.haloOuterRadius ) * ( this.y - this.realLeftPaddleY ));
-                          
+                          this.dx += this.dyRespaldo - this.dy;
                           
                     
                        
