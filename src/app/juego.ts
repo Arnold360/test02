@@ -224,7 +224,7 @@ export class Juego implements OnInit, OnDestroy {
                   
                           let dyRespaldo = this.dy;
                           this.dy =  this.dy + ( Math.abs(this.dy / this.haloOuterRadius ) * ( this.y - this.realLeftPaddleY ));
-                          this.dx += dyRespaldo - this.dy;
+                          this.dx += this.dy - dyRespaldo;
                           
                     
                        
