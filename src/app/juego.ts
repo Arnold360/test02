@@ -1,4 +1,4 @@
-  
+   
 import { Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { webSocketService } from './websocket.service';
 import { CrearInka } from './CrearInka';
@@ -222,8 +222,8 @@ export class Juego implements OnInit, OnDestroy {
                     < this.haloOuterRadius + this.radius ) {
             
                  this.controladorDeBote = 0;
-            
-                 this.dx = -this.dx;
+                 this.dx = -this.dx + 2 * ((this.dy / this.haloOuterRadius) * ( this.realLeftPaddleY - this.y ));
+                 this.dy = -this.dy - 2 * ((this.dx / this.haloOuterRadius) * ( 20 - this.x ));
                     
                  while ( Math.sqrt( Math.pow(Math.abs(this.realLeftPaddleY - this.y), 2) + Math.pow(Math.abs(20 - this.x), 2) ) 
                           < this.haloOuterRadius + this.radius ) {
