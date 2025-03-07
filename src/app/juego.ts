@@ -225,7 +225,7 @@ export class Juego implements OnInit, OnDestroy {
                  let respaldo = this.dy;
                  let respaldo2 = Math.abs(this.dx) + Math.abs(this.dy);
                  this.dy =  this.dy + (( respaldo2 / this.haloOuterRadius) * (this.realLeftPaddleY - this.y));
-                 this.dx =  (this.dx + this.dy - this.dy);
+                 this.dx =  this.dx + (( respaldo2 / this.haloOuterRadius) * (20 - this.x);
               
                  while ( Math.sqrt( Math.pow(Math.abs(this.realLeftPaddleY - this.y), 2) + Math.pow(Math.abs(20 - this.x), 2) ) 
                           < this.haloOuterRadius + this.radius ) {
