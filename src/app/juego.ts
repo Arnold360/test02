@@ -147,13 +147,13 @@ export class Juego implements OnInit, OnDestroy {
 // Función para simular el rebote
  simularRebote(deltaTime:number) {
   const ánguloIncidencia = Math.atan2(
-    this.y - this.realLeftPaddleY,
-    this.x - 20
+    this.realLeftPaddleY - this.y,
+     20 - this.x
   );
 
   const ánguloReflexión = 2 * ánguloIncidencia - Math.atan2(
-    this.dy * deltaTime,
-    this.dx * deltaTime
+    this.dy,
+    this.dx 
   );
 
   this.dx = Math.cos(ánguloReflexión) * 2;
