@@ -229,9 +229,9 @@ const ctx = canvas.getContext('2d');
 
 // Definir la pelota y el campo de fuerza
 const pelota = {
-  x: 100,
-  y: 100,
-  radio: 10,
+  x: this.x,
+  y: this.y,
+  radio: this.radius,
   velocidadX: 2,
   velocidadY: 2
 };
@@ -245,8 +245,8 @@ const campoFuerza = {
 // Función para detectar colisiones
 function detectarColision(pelota, campoFuerza) {
   const distancia = Math.sqrt(
-    Math.pow(pelota.x - campoFuerza.x, 2) +
-    Math.pow(pelota.y - campoFuerza.y, 2)
+    Math.pow(this.x - 20, 2) +
+    Math.pow(this.y - campoFuerza.y, 2)
   );
 
   if (distancia < pelota.radio + campoFuerza.radio) {
