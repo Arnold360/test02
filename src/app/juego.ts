@@ -273,19 +273,7 @@ function simularRebote(pelota, campoFuerza) {
 }
 
 // Función principal
-function dibujar() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Dibujar la pelota y el campo de fuerza
-  ctx.beginPath();
-  ctx.arc(pelota.x, pelota.y, pelota.radio, 0, 2 * Math.PI);
-  ctx.fillStyle = 'red';
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.arc(campoFuerza.x, campoFuerza.y, campoFuerza.radio, 0, 2 * Math.PI);
-  ctx.strokeStyle = 'blue';
-  ctx.stroke();
 
   // Actualizar la posición de la pelota
   pelota.x += pelota.velocidadX;
@@ -296,17 +284,7 @@ function dibujar() {
     simularRebote(pelota, campoFuerza);
   }
 
-  // Llamar a la función principal nuevamente
-  requestAnimationFrame(dibujar);
-}
 
-// Llamar a la función principal por primera vez
-dibujar();
-```
-
-Este código crea un canvas y dibuja una pelota y un campo de fuerza. La pelota se mueve y rebota cuando choca con el campo de fuerza. La función `detectarColision` verifica si la pelota ha chocado con el campo de fuerza, y la función `simularRebote` simula el rebote de la pelota.
-
-Recuerda que este es solo un ejemplo básico y que debes ajustar el código según las necesidades específicas de tu juego. ¡Buena suerte!
                  this.controladorDeBote = 0;
                  let respaldo = this.dy;
                  let respaldo2 = Math.abs(this.dx) + Math.abs(this.dy);
