@@ -144,6 +144,21 @@ export class Juego implements OnInit, OnDestroy {
     
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
+// Función para simular el rebote
+ simularRebote() {
+  const ánguloIncidencia = Math.atan2(
+    this.y - this.realLeftPaddleY,
+    this.x - 20
+  );
+
+  const ánguloReflexión = 2 * ánguloIncidencia - Math.atan2(
+    this.dy,
+    this.dx
+  );
+
+  this.dx = Math.cos(ánguloReflexión) * 2;
+  this.dy = Math.sin(ánguloReflexión) * 2;
+}
   
  update(canvas: HTMLCanvasElement, deltaTime: number) {
     
@@ -220,77 +235,15 @@ export class Juego implements OnInit, OnDestroy {
                this.y + this.radius > this.realLeftPaddleY - margenLeftDePaleta && this.dx < 0) {*/
             if ( Math.sqrt( Math.pow(Math.abs(this.realLeftPaddleY - this.y), 2) + Math.pow(Math.abs(20 - this.x), 2) )
                     < this.haloOuterRadius + this.radius ) {
-                 En ese caso, puedes utilizar las funciones de canvas para detectar colisiones y simular el rebote de la pelota. Aquí te presento un ejemplo básico de cómo podrías implementar esto:
-
-```
-// Obtener el contexto del canvas
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-// Definir la pelota y el campo de fuerza
-const pelota = {
-  x: this.x,
-  y: this.y,
-  radio: this.radius,
-  velocidadX: 2,
-  velocidadY: 2
-};
-
-const campoFuerza = {
-  x: 200,
-  y: 200,
-  radio: 50
-};
-
-// Función para detectar colisiones
-function detectarColision(pelota, campoFuerza) {
-  const distancia = Math.sqrt(
-    Math.pow(this.x - 20, 2) +
-    Math.pow(this.y - this.realLeftPaddleY, 2)
-  );
-
-  if (distancia < this.radius +  this.haloOuterRadius) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-// Función para simular el rebote
-function simularRebote(pelota, campoFuerza) {
-  const ánguloIncidencia = Math.atan2(
-    pelota.y - campoFuerza.y,
-    pelota.x - campoFuerza.x
-  );
-
-  const ánguloReflexión = 2 * ánguloIncidencia - Math.atan2(
-    pelota.velocidadY,
-    pelota.velocidadX
-  );
-
-  pelota.velocidadX = Math.cos(ánguloReflexión) * 2;
-  pelota.velocidadY = Math.sin(ánguloReflexión) * 2;
-}
-
-// Función principal
-
-
-  // Actualizar la posición de la pelota
-  pelota.x += pelota.velocidadX;
-  pelota.y += pelota.velocidadY;
-
-  // Detectar colisiones y simular el rebote
-  if (detectarColision(pelota, campoFuerza)) {
-    simularRebote(pelota, campoFuerza);
-  }
-
-
+                 
+                 simularRebote(pelota, campoFuerza);
                  this.controladorDeBote = 0;
-                 let respaldo = this.dy;
+              
+               /*  let respaldo = this.dy;
                  let respaldo2 = Math.abs(this.dx) + Math.abs(this.dy);
                  this.dy =  this.dy + (( respaldo2 / this.haloOuterRadius) * (this.realLeftPaddleY - this.y));
                  this.dx =  this.dx + (( respaldo2 / this.haloOuterRadius) * (20 - this.x));
-              
+              */
                  while ( Math.sqrt( Math.pow(Math.abs(this.realLeftPaddleY - this.y), 2) + Math.pow(Math.abs(20 - this.x), 2) ) 
                           < this.haloOuterRadius + this.radius ) {
                  
