@@ -162,8 +162,8 @@ export class Juego implements OnInit, OnDestroy {
   
  update(canvas: HTMLCanvasElement, deltaTime: number) {
     
-    this.x += this.dx * deltaTime;
-    this.y += this.dy * deltaTime;
+    this.x += this.dx ;
+    this.y += this.dy ;
    /* ajustar posicion de la pelota para que no pase demasiado el limite y
      evitar bugs*/
     if (this.x + this.radius > canvas.width) {
