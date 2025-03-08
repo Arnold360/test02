@@ -236,7 +236,7 @@ export class Juego implements OnInit, OnDestroy {
             if ( Math.sqrt( Math.pow(Math.abs(this.realLeftPaddleY - this.y), 2) + Math.pow(Math.abs(20 - this.x), 2) )
                     < this.haloOuterRadius + this.radius ) {
                  
-                 simularRebote(pelota, campoFuerza);
+                 simularRebote();
                  this.controladorDeBote = 0;
               
                /*  let respaldo = this.dy;
