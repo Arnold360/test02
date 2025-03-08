@@ -246,10 +246,10 @@ const campoFuerza = {
 function detectarColision(pelota, campoFuerza) {
   const distancia = Math.sqrt(
     Math.pow(this.x - 20, 2) +
-    Math.pow(this.y - campoFuerza.y, 2)
+    Math.pow(this.y - this.realLeftPaddleY, 2)
   );
 
-  if (distancia < pelota.radio + campoFuerza.radio) {
+  if (distancia < this.radius +  this.haloOuterRadius) {
     return true;
   } else {
     return false;
