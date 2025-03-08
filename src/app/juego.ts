@@ -145,15 +145,15 @@ export class Juego implements OnInit, OnDestroy {
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
 // Función para simular el rebote
- simularRebote() {
+ simularRebote(deltaTime:number) {
   const ánguloIncidencia = Math.atan2(
     this.y - this.realLeftPaddleY,
     this.x - 20
   );
 
   const ánguloReflexión = 2 * ánguloIncidencia - Math.atan2(
-    this.dy,
-    this.dx
+    this.dy * deltaTime,
+    this.dx * deltaTime
   );
 
   this.dx = Math.cos(ánguloReflexión) * 2;
@@ -236,7 +236,7 @@ export class Juego implements OnInit, OnDestroy {
             if ( Math.sqrt( Math.pow(Math.abs(this.realLeftPaddleY - this.y), 2) + Math.pow(Math.abs(20 - this.x), 2) )
                     < this.haloOuterRadius + this.radius ) {
                  
-                 this.simularRebote();
+                 this.simularRebote(deltaTime);
                  this.controladorDeBote = 0;
               
                /*  let respaldo = this.dy;
