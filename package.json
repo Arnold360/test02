@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    "phaser": "3.88.2",
+    "phaserjs/game": "3.88.2",
     "ngx-socket-io": "4.5.0",
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",
