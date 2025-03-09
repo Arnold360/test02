@@ -27,7 +27,9 @@
       "ES2022",
       "dom",
       "scripthost"
-    ]
+    ],
+    "typeRoots": ["./node_modules/phaser/types"],
+    "types": ["Phaser"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
