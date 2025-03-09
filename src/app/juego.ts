@@ -145,7 +145,7 @@ export class Juego implements OnInit, OnDestroy {
     requestAnimationFrame(() => this.animate(ctx, canvas, now));
  }
 // Función para simular el rebote
- simularRebote(deltaTime:number) {
+ /*simularRebote(deltaTime:number) {
   const ánguloIncidencia = Math.atan2(
      this.y - this.realLeftPaddleY ,
      this.x - 20 
@@ -158,7 +158,26 @@ export class Juego implements OnInit, OnDestroy {
 
   this.dx = Math.cos(ánguloReflexión) * 2;
   this.dy = Math.sin(ánguloReflexión) * 2;
-}
+}*/
+  simularRebote(deltaTime:number) {
+  // Calcular la distancia entre la pelota y el centro del campo de fuerza
+  const distX = this.x - 20;
+  const distY = this.y - this.campoDeFuerzaY;
+  const distancia = Math.sqrt(distX * distX + distY * distY);
+
+  
+    // Calcular el ángulo de incidencia
+    const ánguloIncidencia = Math.atan2(distY, distX);
+
+    // Reflejar la velocidad de la pelota en función del ángulo de incidencia
+    this.dx = -Math.cos(ánguloIncidencia) * Math.abs(this.dx);
+    this.dy = -Math.sin(ánguloIncidencia) * Math.abs(this.dy);
+
+    // Ajustar la posición de la pelota para evitar que quede dentro del campo de fuerza
+    const overlap = this.radio + campoDeFuerzaRadio - distancia;
+    this.x += Math.cos(ánguloIncidencia) * overlap;
+    this.y += Math.sin(ánguloIncidencia) * overlap;
+  }
   
  update(canvas: HTMLCanvasElement, deltaTime: number) {
     
