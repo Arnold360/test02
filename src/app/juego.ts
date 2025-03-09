@@ -1,4 +1,4 @@
-import { Phaser }  from 'phaser';
+import { Phaser }  from 'phaser-ce';
 import { Component, ElementRef, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { webSocketService } from './websocket.service';
 import { CrearInka } from './CrearInka';
