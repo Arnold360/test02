@@ -174,7 +174,7 @@ export class Juego implements OnInit, OnDestroy {
     this.dy = -Math.sin(ánguloIncidencia) * Math.abs(this.dy);
 
     // Ajustar la posición de la pelota para evitar que quede dentro del campo de fuerza
-    const overlap = this.radio + campoDeFuerzaRadio - distancia;
+    const overlap = this.radio + this.haloOuterRadius - distancia;
     this.x += Math.cos(ánguloIncidencia) * overlap;
     this.y += Math.sin(ánguloIncidencia) * overlap;
   }
