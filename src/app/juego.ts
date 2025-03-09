@@ -162,7 +162,7 @@ export class Juego implements OnInit, OnDestroy {
   simularRebote(deltaTime:number) {
   // Calcular la distancia entre la pelota y el centro del campo de fuerza
   const distX = this.x - 20;
-  const distY = this.y - this.campoDeFuerzaY;
+  const distY = this.y - this.realLeftPaddleY;
   const distancia = Math.sqrt(distX * distX + distY * distY);
 
   
@@ -174,7 +174,7 @@ export class Juego implements OnInit, OnDestroy {
     this.dy = -Math.sin(ánguloIncidencia) * Math.abs(this.dy);
 
     // Ajustar la posición de la pelota para evitar que quede dentro del campo de fuerza
-    const overlap = this.radio + this.haloOuterRadius - distancia;
+    const overlap = this.radius + this.haloOuterRadius - distancia;
     this.x += Math.cos(ánguloIncidencia) * overlap;
     this.y += Math.sin(ánguloIncidencia) * overlap;
   }
